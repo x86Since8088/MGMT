@@ -1,9 +1,15 @@
 pushd
 cd $PSScriptRoot
 $Date = Get-Date
-$Timestamp = $Date.ToString('yyyMMdd-HHmm')
+[string]$Timestamp = $Date.ToString('yyyMMdd')
 git branch $Timestamp
 git add *;
 git commit -m "GitFastPush $Timestamp"
-git push
+[string]$To=''
+git push | 
+    ForEach-Object{
+        $_;
+        if ($_ -match '^To '){$To = $_ -split '\s'|Select-Object -Last 1}
+    }
 popd
+start $To
