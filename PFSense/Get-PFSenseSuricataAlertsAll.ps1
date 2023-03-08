@@ -68,15 +68,27 @@
     ELSE {
         $Global:Cred_PFSense=$Credential
     }
-
+    [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]'Tls11,Tls12'
+    add-type @"
+        using System.Net;
+        using System.Security.Cryptography.X509Certificates;
+        public class TrustAllCertsPolicy : ICertificatePolicy {
+            public bool CheckValidationResult(
+                ServicePoint srvPoint, X509Certificate certificate,
+                WebRequest request, int certificateProblem) {
+                return true;
+            }
+        }
+"@
+    [System.Net.ServicePointManager]::CertificatePolicy = New-Object TrustAllCertsPolicy
     if ($null -ne $Global:WebSession_PFSense_Web_UI){$WebSession_PFSense_Web_UI=$global:WebSession_PFSense_Web_UI}
     Try{
         $JSTimeInteger=$(((get-date).ToFileTimeUtc() - ('01/01/1970'|get-date).ToFileTimeUtc()))
-        $results = Invoke-WebRequest -WebSession $WebSession_PFSense_Web_UI -Uri "$PFSenseBaseURI/suricata/suricata_alerts.php?instance=0"
+        $results = Invoke-WebRequest -WebSession $WebSession_PFSense_Web_UI -Uri "$PFSenseBaseURI/suricata/suricata_alerts.php?instance=0" 
         #if ($results -like "<!DOCTYPE html>*") {Write-Error -Message goto_catch}
     }
     catch {
-        $login = Invoke-WebRequest -SessionVariable WebSession_PFSense_Web_UI -Uri $PFSenseBaseURI
+        $login = Invoke-WebRequest -SessionVariable WebSession_PFSense_Web_UI -Uri $PFSenseBaseURI 
         $forgeryToken = ($login.InputFields | 
                     Where { $_.name -eq "__csrf_magic" }).value
         $authentication=
@@ -87,13 +99,13 @@
                     passwordfld=$Credential.GetNetworkCredential().password;
                     login='Sign In';
                     __csrf_magic=$forgeryToken
-                } -Method Post
+                } -Method Post -UseBasicParsing
         
-        $results = Invoke-WebRequest -WebSession $WebSession_PFSense_Web_UI -Uri "$PFSenseBaseURI/suricata/suricata_alerts.php?instance=0"
+        $results = Invoke-WebRequest -WebSession $WebSession_PFSense_Web_UI -Uri "$PFSenseBaseURI/suricata/suricata_alerts.php?instance=0" 
     }
 
     GetTable -WebRequest $results -TableNumber 0
-    $results = Invoke-WebRequest -WebSession $WebSession_PFSense_Web_UI -Uri "$PFSenseBaseURI/suricata/suricata_alerts.php?instance=1"
+    $results = Invoke-WebRequest -WebSession $WebSession_PFSense_Web_UI -Uri "$PFSenseBaseURI/suricata/suricata_alerts.php?instance=1" 
     GetTable -WebRequest $results -TableNumber 0
 
     $global:WebSession_PFSense_Web_UI=$WebSession_PFSense_Web_UI
