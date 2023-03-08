@@ -3,7 +3,8 @@
         $Credential=$Global:Cred_PFSense,
         $PFSenseBaseURI=$global:URL_PFSense
     )
-
+    $WorkingFolder = $PSscriptroot
+    $ProjectFolder = split-path -parent $WorkingFolder
     Function GetTable {
         param(
             [Parameter(Mandatory = $true)]
@@ -68,19 +69,8 @@
     ELSE {
         $Global:Cred_PFSense=$Credential
     }
-    [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]'Tls11,Tls12'
-    add-type @"
-        using System.Net;
-        using System.Security.Cryptography.X509Certificates;
-        public class TrustAllCertsPolicy : ICertificatePolicy {
-            public bool CheckValidationResult(
-                ServicePoint srvPoint, X509Certificate certificate,
-                WebRequest request, int certificateProblem) {
-                return true;
-            }
-        }
-"@
-    [System.Net.ServicePointManager]::CertificatePolicy = New-Object TrustAllCertsPolicy
+    . "$ProjectFolder\web\Set-PSTLS.ps1" -TLS 'Tls12,Tls13'
+    . "$projectFolder\web\Set-PSCertificatePolicy.ps1"
     if ($null -ne $Global:WebSession_PFSense_Web_UI){$WebSession_PFSense_Web_UI=$global:WebSession_PFSense_Web_UI}
     Try{
         $JSTimeInteger=$(((get-date).ToFileTimeUtc() - ('01/01/1970'|get-date).ToFileTimeUtc()))
