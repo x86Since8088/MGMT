@@ -37,6 +37,8 @@ function Set-MGMTConfig {
         [switch]$PassThru
     )
     begin{
+        $ParamName = $Name
+        $ParamValue = $Value
         $Data = . Get-MGMTConfig 2> $Null
         if ($null -eq $Data) {
             $Data = [ordered]@{}
@@ -66,11 +68,10 @@ function Set-MGMTConfig {
                                                 )
                                                 $Changed=$true
                                             }
-        if ($Name -match '\w')              {
-                                                if ($null -ne $Value) {
-                                                    Set-DataObject -InputObject $Data -Name $Name -Value $Name
-                                                    $Changed=$true
-                                                }
+        if ($ParamName -notmatch '\w')           {}
+        elseif ($null -ne $ParamValue)           {
+                                                Set-DataObject -InputObject $Data -Name $ParamName -Value $ParamValue
+                                                $Changed=$true
                                             }
         if ($Changed)                       {
                                                 $Yaml = $Data|ConvertTo-Yaml
@@ -84,15 +85,20 @@ function Set-DataObject {
     param(
         $InputObject,
         $Name,
-        $Value
+        $Value,
+        [switch]$Passthru
     )
     begin{
-        $NameSplit = $Name -split '\.|\[|\]' | Where-Object{$_ -match '\w'}
-        $Reference = $InputObject
-        foreach ($NameItem in $NameSplit) {
-            $Reference=$Reference[$NameItem]
+        [array]$NameSplit = $Name -split '\.|\[|\]' | Where-Object{$_ -match '\w'}
+        if ($NameSplit.count -eq 1) {
+            $InputObject[$NameSplit[0]]=$Value
         }
-        $Reference = $Value
+        else {
+            $InputObject[$NameSplit[0]] = Set-DataObject -InputObject $InputObject[$NameSplit[0]] -Name ($NameSplit|Select-Object -Skip 1) -Value $Value -Passthru
+        }
+        if ($PassThru.IsPresent) {
+            $InputObject
+        }
     }
 }
 
