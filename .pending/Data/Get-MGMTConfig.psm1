@@ -17,7 +17,7 @@ function Get-MGMTConfig {
                             }
         try{
             $Data = [system.io.file]::ReadAllLines($ConfigFile)|ConvertFrom-Yaml
-            if ($Name -match '\n') {
+            if ($Name -match '\w') {
                 Get-DataObject -InputObject $Data -Name $Name
             }
             else {
@@ -66,16 +66,17 @@ function Set-MGMTConfig {
                                                 )
                                                 $Changed=$true
                                             }
-        if ($Changed) {
-            $Yaml = $Data|ConvertTo-Yaml
-            [system.io.file]::WriteAllLines($ConfigFile,$Yaml,[System.Text.Encoding]::UTF8)
-        }
-        if ($Name -match '\w') {
-            if ($null -ne $Value) {
-                Set-DataObject -InputObject $Data -Name $Name -Value $Name
-            }
-        }
-        if ($PassThru) {$Data}
+        if ($Name -match '\w')              {
+                                                if ($null -ne $Value) {
+                                                    Set-DataObject -InputObject $Data -Name $Name -Value $Name
+                                                    $Changed=$true
+                                                }
+                                            }
+        if ($Changed)                       {
+                                                $Yaml = $Data|ConvertTo-Yaml
+                                                [system.io.file]::WriteAllLines($ConfigFile,$Yaml,[System.Text.Encoding]::UTF8)
+                                            }
+        if ($PassThru)                      {$Data}
     }
 }
 
@@ -86,7 +87,7 @@ function Set-DataObject {
         $Value
     )
     begin{
-        $NameSplit = $Name -split '\.'
+        $NameSplit = $Name -split '\.|\[|\]' | Where-Object{$_ -match '\w'}
         $Reference = $InputObject
         foreach ($NameItem in $NameSplit) {
             $Reference=$Reference[$NameItem]
@@ -101,7 +102,7 @@ function Get-DataObject {
         $Name
     )
     begin{
-        $NameSplit = $Name -split '\.'
+        $NameSplit = $Name -split '\.|\[|\]' | Where-Object{$_ -match '\w'}
         $Reference = $InputObject
         foreach ($NameItem in $NameSplit) {
             $Reference=$Reference[$NameItem]
