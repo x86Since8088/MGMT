@@ -69,9 +69,9 @@ function Set-MGMTConfig {
                                                             $Changed=$true
                                                         }
         if (!$Data.Contains('Crypto'))                  {$Data['Crypto']=[hashtable]::Synchronized(@{});$Changed=$true}
-        if (($Data['crypto']['salt']).length -ne 64)    {$Data['Crypto']['salt']=Get-RandomBytes -ByteLength 64}
-        if (($Data['crypto']['key']).length -ne 256)    {$Data['Crypto']['key']=Get-RandomBytes -ByteLength 256}
-        if (($Data['crypto']['iv']).length -ne 128)     {$Data['Crypto']['iv']=Get-RandomBytes -ByteLength 128}
+        if (($Data['crypto']['salt']).length -ne 8)     {$Data['Crypto']['salt']=Get-RandomBytes -ByteLength 8}
+        if (($Data['crypto']['key']).length -ne 32)     {$Data['Crypto']['key']=Get-RandomBytes -ByteLength 32}
+        if (($Data['crypto']['iv']).length -ne 16)      {$Data['Crypto']['iv']=Get-RandomBytes -ByteLength 16}
         if ($ParamName -notmatch '\w')                  {}
         elseif ($null -ne $ParamValue)                  {
                                                             Set-DataObject -InputObject $Data -Name $ParamName -Value $ParamValue
@@ -137,7 +137,7 @@ function Get-MGMTCredential {
         if ($Null -eq $Global:MGMTCred) {
             
         }
-       }
+    }
 }
 
 function Get-RandomBytes {

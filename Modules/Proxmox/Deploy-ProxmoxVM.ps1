@@ -15,7 +15,8 @@ param (
 )
 begin {
 # Import the Proxmox PowerShell module
-Import-Module Proxmox
+#Import-Module Proxmox
+Import-Module Corsinvest.ProxmoxVE.Api
 
 # Connect to the Proxmox server
 Connect-ProxmoxServer -Server $ProxmoxServer -User $ProxmoxUser -Password $ProxmoxPassword -Node $ProxmoxNode
