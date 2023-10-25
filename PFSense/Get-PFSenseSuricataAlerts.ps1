@@ -27,7 +27,7 @@
     catch {
         $login = Invoke-WebRequest -SessionVariable WebSession_PFSense_Web_UI -Uri $PFSenseBaseURI
         $forgeryToken = ($login.InputFields | 
-                    Where { $_.name -eq "__csrf_magic" }).value
+                    Where-Object { $_.name -eq "__csrf_magic" }).value
         $authentication=
             Invoke-RestMethod -WebSession $WebSession_PFSense_Web_UI `
                 -Uri $PFSenseBaseURI `
