@@ -27,14 +27,14 @@
             ## If we've found a table header, remember its titles
             if($cells[0].tagName -eq "TH")
             {
-                $titles = @($cells | % { ("" + $_.InnerText).Trim() })
+                $titles = @($cells | ForEach-ObjectorEach-Object { ("" + $_.InnerText).Trim() })
                 continue
             }
 
             ## If we haven't found any table headers, make up names "P1", "P2", etc.
             if(-not $titles)
             {
-                $titles = @(1..($cells.Count + 2) | % { "P$_" })
+                $titles = @(1..($cells.Count + 2) | ForEach-Object { "P$_" })
             }
 
             ## Now go through the cells in the the row. For each, try to find the
@@ -90,7 +90,7 @@
     catch {
         $login = Invoke-WebRequest -SessionVariable WebSession_PFSense_Web_UI -Uri $PFSenseBaseURI 
         $forgeryToken = ($login.InputFields | 
-                    Where { $_.name -eq "__csrf_magic" }).value
+                    Where-Object { $_.name -eq "__csrf_magic" }).value
         $authentication=
             Invoke-RestMethod -WebSession $WebSession_PFSense_Web_UI `
                 -Uri $PFSenseBaseURI `
