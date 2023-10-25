@@ -22,9 +22,15 @@ function Clone-GitRepo {
             param($commandName, $parameterName, $wordToComplete, $commandAst, $fakeBoundParameter)
             
             $jsonPath = Join-Path $env:APPDATA 'PSGitSupport\recent.json'
-            if (Test-Path $jsonPath) {
+            if ($null -eq $fakeBoundParameter.repoUrl) {
+                "'Autocomplete for branchName requires -repoURL.'" | 
+                ForEach-Object{
+                    [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
+                }
+            }
+            elseif (Test-Path $jsonPath) {
                 $json = Get-Content $jsonPath | ConvertFrom-Json
-                if ($json.BranchNames) {
+                if ($json[$fakeBoundParameter.repoUrl].BranchNames) {
                     return $json.BranchNames | Where-Object { $_ -like "$wordToComplete*" } | ForEach-Object {
                         [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
                     }
@@ -53,10 +59,11 @@ function Clone-GitRepo {
         param (
             [string]$command
         )
-        
         Write-Warning "Executing: git $command"
-        & git $command
+        Invoke-Expression -Command "git $command"
     }
+
+    if (Test-Path "$localFolder\*") {return Write-Error -Message "LocalFolder must be empty or not exist. '$localFolder'"}
 
     # Check for credentials or API token
     if (-not $apiKey) {
@@ -79,22 +86,25 @@ function Clone-GitRepo {
         
         # Save the successful values to JSON
         $jsonPath = Join-Path $env:APPDATA 'PSGitSupport\recent.json'
-        $json = if (Test-Path $jsonPath) { Get-Content $jsonPath | ConvertFrom-Json } else { @{} }
+        $json                     = if (Test-Path $jsonPath)                { Get-Content $jsonPath | ConvertFrom-Json -AsHashtable } else { @{} }
+        $json.RepoUrls            = if ($null -ne $json.RepoUrls)           {[hashtable]$json.RepoUrls}           else {@{}}
+        $json.RepoUrls[$repoUrl]  = if ($null -ne $json.RepoUrls[$repoUrl]) {[hashtable]$json.RepoUrls[$repoUrl]} else {@{}}
+        $json.RepoUrls[$repoUrl].BranchNames = 
+                                    if ($null -ne $json.RepoUrls[$repoUrl].BranchNames) 
+                                        {[string[]]$json.RepoUrls[$repoUrl].BranchNames + $branchName | Sort-Object -Unique} 
+                                    else {$branchName}
         
-        $json.RepoUrls = [System.Collections.ArrayList]@(($json.RepoUrls | Select-Object -First 9) + $repoUrl)
-        $json.BranchNames = [System.Collections.ArrayList]@(($json.BranchNames | Select-Object -First 9) + $branchName)
-
         # Ensure the PSGitSupport folder exists
         $folderPath = Join-Path $env:APPDATA 'PSGitSupport'
         if (-not (Test-Path $folderPath)) {
-            New-Item -Type Directory -Path $folderPath
+            New-Item -Type Directory -Path $folderPath | Out-Null
         }
 
         # Write the data to JSON
         $json | ConvertTo-Json | Set-Content -Path $jsonPath
 
     } catch {
-        Write-Error "Failed to clone the repository. Error: $_"
+        Write-Error "Failed to clone the repository. Error: $($_)`n$($_.InvocationInfo.line)"
     }
 }
 
