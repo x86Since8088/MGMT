@@ -1,0 +1,72 @@
+{
+    "PasswordPolicy": {
+        "MaxPasswordAge": 60,
+        "MinPasswordAge": 1,
+        "MinPasswordLength": 14,
+        "PasswordHistorySize": 24,
+        "PasswordComplexity": true
+    },
+    "LockoutPolicy": {
+        "LockoutDuration": 30,
+        "LockoutBadCount": 5,
+        "ResetLockoutCounter": 15
+    },
+    "UserRightsAssignment": {
+        "ForceShutdown": ["Administrators"],
+        "LogonLocally": ["Administrators", "Users"],
+        "BackupFilesAndDirs": ["Backup Operators"]
+    },
+    "SecurityOptions": {
+        "UACAdminApproval": true,
+        "UACSecureDesktop": true,
+        "ClearPagefileAtShutdown": true,
+        "SendUnencryptedPasswordToThirdPartySMBServers": false,
+        "AnonymousSIDNameTranslation": "Restrict",
+        "GuestAccountStatus": "Disabled"
+    },
+    "AdvancedAuditPolicy": {
+        "LogonEvents": "Success and Failure",
+        "AccountLockout": "Success and Failure",
+        "ObjectAccess": "No Auditing",
+        "ProcessCreation": "Success",
+        "PolicyChange": "Success and Failure"
+    },
+    "FirewallRules": {
+        "AllowInboundRemoteDesktop": false,
+        "BlockAllOutbound": false,
+        "AllowPing": true,
+        "BlockFTP": true,
+        "BlockTelnet": true
+    },
+    "RegistrySettings": {
+        "RunKey": ["Program1", "Program2"],
+        "ScreenSaverTimeout": 900,
+        "DisableRegedit": true
+    },
+    "Services": {
+        "RemoteDesktop": "Disabled",
+        "WindowsUpdate": "Automatic",
+        "WindowsFirewall": "Enabled",
+        "WindowsDefender": "Enabled"
+    },
+    "FilePermissions": {
+        "System32": {
+            "Administrators": "Full Control",
+            "Users": "Read & Execute"
+        },
+        "ProgramFiles": {
+            "Administrators": "Full Control",
+            "Users": "Read & Execute"
+        }
+    },
+    "EventLogs": {
+        "RetentionMethod": "OverwriteOlder",
+        "RetainDays": 7,
+        "MaxSizeMB": 200
+    },
+    "SystemSettings": {
+        "TimeSync": "NTP",
+        "NTPServer": "time.windows.com",
+        "RemoteAssistance": "Disabled"
+    }
+}
