@@ -1,4 +1,4 @@
-function Flatten-Object {
+function ConvertTo-FlattObject {
     [cmdletbinding()]
     param(
         [parameter(ValueFromPipeline)]
@@ -13,12 +13,12 @@ function Flatten-Object {
     }
     process {
         $Depth--
-        foreach ($InputobjectItem in ($Inputobject|%{$_}|?{$null -ne $_}))
+        foreach ($InputobjectItem in ($Inputobject|ForEach-Object{$_}|Where-Object{$null -ne $_}))
         {
-            foreach ($Property in ($InputobjectItem.psobject.properties|?{$_.name -ne 'syncroot|parent|(inner|outer)(xml|html)'}))
+            foreach ($Property in ($InputobjectItem.psobject.properties|Where-Object{$_.name -ne 'syncroot|parent|(inner|outer)(xml|html)'}))
             {
-                $NewPrefix = ($prefix,$property.name|?{$_ -match '\w'}) -join ' '
-                if ($NewPrefix|?{$_ -match '\w'}|?{$SubstitutionScriptBlockTable.contains($_)}) {
+                $NewPrefix = ($prefix,$property.name|Where-Object{$_ -match '\w'}) -join ' '
+                if ($NewPrefix|Where-Object{$_ -match '\w'}|Where-Object{$SubstitutionScriptBlockTable.contains($_)}) {
                     $NewObject[$NewPrefix]= . $SubstitutionScriptBlockTable[$NewPrefix]
                 }
                 elseif ($null -ne ($Property.value).Name) {$NewObject[$NewPrefix]=$Property.value.name}
@@ -38,7 +38,7 @@ function Flatten-Object {
                         default    {
                             if ($depth -eq 0)
                             {
-                                $NewObject[$NewPrefix]=($Property.value|fl|out-string) -replace '\s*(\n)','$1' -replace '\n\s*$'
+                                $NewObject[$NewPrefix]=($Property.value|Format-List|out-string) -replace '\s*(\n)','$1' -replace '\n\s*$'
                             }
                             else {
                                 Flatten-Object -NewObject $NewObject -Inputobject $property.value -Prefix $NewPrefix -Depth $Depth
@@ -55,3 +55,4 @@ function Flatten-Object {
         }
     }
 }
+New-Alias -Force -Name Flatten-Object -Value ConvertTo-FlattObject

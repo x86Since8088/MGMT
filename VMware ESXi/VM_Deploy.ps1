@@ -1,5 +1,5 @@
 param(
-    [string]s$sitename,
+    [string]$sitename,
     [pscredential]$vccredential,
     [pscredential]$DomainCredential,
     [pscredential]$LocalAccountCredential,
