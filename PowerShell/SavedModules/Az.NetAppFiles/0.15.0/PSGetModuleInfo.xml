@@ -1,0 +1,291 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.NetAppFiles</S>
+      <S N="Version">0.15.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell - Azure NetApp Files (ANF) service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on Azure NetApp Files (ANF), please visit the following: https://learn.microsoft.com/azure/azure-netapp-files/</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2024-02-06T01:45:36-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>NetApp</S>
+          <S>NetAppFiles</S>
+          <S>ANF</S>
+          <S>PSModule</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Approve-AzNetAppFilesReplication</S>
+                <S>Get-AzNetAppFilesAccount</S>
+                <S>Get-AzNetAppFilesActiveDirectory</S>
+                <S>Get-AzNetAppFilesBackup</S>
+                <S>Get-AzNetAppFilesBackupPolicy</S>
+                <S>Get-AzNetAppFilesPool</S>
+                <S>Get-AzNetAppFilesQuotaLimit</S>
+                <S>Get-AzNetAppFilesRegionInfo</S>
+                <S>Get-AzNetAppFilesReplicationStatus</S>
+                <S>Get-AzNetAppFilesSnapshot</S>
+                <S>Get-AzNetAppFilesSnapshotPolicy</S>
+                <S>Get-AzNetAppFilesSubvolume</S>
+                <S>Get-AzNetAppFilesSubvolumeMetadata</S>
+                <S>Get-AzNetAppFilesVolume</S>
+                <S>Get-AzNetAppFilesVolumeBackupStatus</S>
+                <S>Get-AzNetAppFilesVolumeGroup</S>
+                <S>Get-AzNetAppFilesVolumeGroupIdListForLDAPUser</S>
+                <S>Get-AzNetAppFilesVolumeQuotaRule</S>
+                <S>Get-AzNetAppFilesVolumeReplication</S>
+                <S>Get-AzNetAppFilesVolumeRestoreStatus</S>
+                <S>Initialize-AzNetAppFilesReplication</S>
+                <S>New-AzNetAppFilesAccount</S>
+                <S>New-AzNetAppFilesActiveDirectory</S>
+                <S>New-AzNetAppFilesBackup</S>
+                <S>New-AzNetAppFilesBackupPolicy</S>
+                <S>New-AzNetAppFilesExportPolicyObject</S>
+                <S>New-AzNetAppFilesExportPolicyRuleObject</S>
+                <S>New-AzNetAppFilesPool</S>
+                <S>New-AzNetAppFilesSnapshot</S>
+                <S>New-AzNetAppFilesSnapshotPolicy</S>
+                <S>New-AzNetAppFilesSubvolume</S>
+                <S>New-AzNetAppFilesVolume</S>
+                <S>New-AzNetAppFilesVolumeGroup</S>
+                <S>New-AzNetAppFilesVolumeQuotaRule</S>
+                <S>Remove-AzNetAppFilesAccount</S>
+                <S>Remove-AzNetAppFilesActiveDirectory</S>
+                <S>Remove-AzNetAppFilesBackup</S>
+                <S>Remove-AzNetAppFilesBackupPolicy</S>
+                <S>Remove-AzNetAppFilesPool</S>
+                <S>Remove-AzNetAppFilesReplication</S>
+                <S>Remove-AzNetAppFilesSnapshot</S>
+                <S>Remove-AzNetAppFilesSnapshotPolicy</S>
+                <S>Remove-AzNetAppFilesSubvolume</S>
+                <S>Remove-AzNetAppFilesVolume</S>
+                <S>Remove-AzNetAppFilesVolumeGroup</S>
+                <S>Remove-AzNetAppFilesVolumeQuotaRule</S>
+                <S>Reset-AzNetAppFilesVolumeCifsPassword</S>
+                <S>Restore-AzNetAppFilesBackupFile</S>
+                <S>Restore-AzNetAppFilesReplication</S>
+                <S>Restore-AzNetAppFilesSnapshotFile</S>
+                <S>Restore-AzNetAppFilesVolume</S>
+                <S>Resume-AzNetAppFilesReplication</S>
+                <S>Set-AzNetAppFilesAccount</S>
+                <S>Set-AzNetAppFilesBackupPolicy</S>
+                <S>Set-AzNetAppFilesPool</S>
+                <S>Set-AzNetAppFilesSnapshotPolicy</S>
+                <S>Set-AzNetAppFilesVolumePool</S>
+                <S>Suspend-AzNetAppFilesReplication</S>
+                <S>Unlock-AzNetAppFilesVolumeFileLock</S>
+                <S>Update-AzNetAppFilesAccount</S>
+                <S>Update-AzNetAppFilesAccountCredential</S>
+                <S>Update-AzNetAppFilesActiveDirectory</S>
+                <S>Update-AzNetAppFilesBackup</S>
+                <S>Update-AzNetAppFilesBackupPolicy</S>
+                <S>Update-AzNetAppFilesPool</S>
+                <S>Update-AzNetAppFilesSnapshotPolicy</S>
+                <S>Update-AzNetAppFilesSubvolume</S>
+                <S>Update-AzNetAppFilesVolume</S>
+                <S>Update-AzNetAppFilesVolumeQuotaRule</S>
+                <S>Get-AzNetAppFilesNetworkSiblingSet</S>
+                <S>Update-AzNetAppFilesNetworkSiblingSet</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Approve-AzNetAppFilesReplication</S>
+                <S>Get-AzNetAppFilesAccount</S>
+                <S>Get-AzNetAppFilesActiveDirectory</S>
+                <S>Get-AzNetAppFilesBackup</S>
+                <S>Get-AzNetAppFilesBackupPolicy</S>
+                <S>Get-AzNetAppFilesPool</S>
+                <S>Get-AzNetAppFilesQuotaLimit</S>
+                <S>Get-AzNetAppFilesRegionInfo</S>
+                <S>Get-AzNetAppFilesReplicationStatus</S>
+                <S>Get-AzNetAppFilesSnapshot</S>
+                <S>Get-AzNetAppFilesSnapshotPolicy</S>
+                <S>Get-AzNetAppFilesSubvolume</S>
+                <S>Get-AzNetAppFilesSubvolumeMetadata</S>
+                <S>Get-AzNetAppFilesVolume</S>
+                <S>Get-AzNetAppFilesVolumeBackupStatus</S>
+                <S>Get-AzNetAppFilesVolumeGroup</S>
+                <S>Get-AzNetAppFilesVolumeGroupIdListForLDAPUser</S>
+                <S>Get-AzNetAppFilesVolumeQuotaRule</S>
+                <S>Get-AzNetAppFilesVolumeReplication</S>
+                <S>Get-AzNetAppFilesVolumeRestoreStatus</S>
+                <S>Initialize-AzNetAppFilesReplication</S>
+                <S>New-AzNetAppFilesAccount</S>
+                <S>New-AzNetAppFilesActiveDirectory</S>
+                <S>New-AzNetAppFilesBackup</S>
+                <S>New-AzNetAppFilesBackupPolicy</S>
+                <S>New-AzNetAppFilesExportPolicyObject</S>
+                <S>New-AzNetAppFilesExportPolicyRuleObject</S>
+                <S>New-AzNetAppFilesPool</S>
+                <S>New-AzNetAppFilesSnapshot</S>
+                <S>New-AzNetAppFilesSnapshotPolicy</S>
+                <S>New-AzNetAppFilesSubvolume</S>
+                <S>New-AzNetAppFilesVolume</S>
+                <S>New-AzNetAppFilesVolumeGroup</S>
+                <S>New-AzNetAppFilesVolumeQuotaRule</S>
+                <S>Remove-AzNetAppFilesAccount</S>
+                <S>Remove-AzNetAppFilesActiveDirectory</S>
+                <S>Remove-AzNetAppFilesBackup</S>
+                <S>Remove-AzNetAppFilesBackupPolicy</S>
+                <S>Remove-AzNetAppFilesPool</S>
+                <S>Remove-AzNetAppFilesReplication</S>
+                <S>Remove-AzNetAppFilesSnapshot</S>
+                <S>Remove-AzNetAppFilesSnapshotPolicy</S>
+                <S>Remove-AzNetAppFilesSubvolume</S>
+                <S>Remove-AzNetAppFilesVolume</S>
+                <S>Remove-AzNetAppFilesVolumeGroup</S>
+                <S>Remove-AzNetAppFilesVolumeQuotaRule</S>
+                <S>Reset-AzNetAppFilesVolumeCifsPassword</S>
+                <S>Restore-AzNetAppFilesBackupFile</S>
+                <S>Restore-AzNetAppFilesReplication</S>
+                <S>Restore-AzNetAppFilesSnapshotFile</S>
+                <S>Restore-AzNetAppFilesVolume</S>
+                <S>Resume-AzNetAppFilesReplication</S>
+                <S>Set-AzNetAppFilesAccount</S>
+                <S>Set-AzNetAppFilesBackupPolicy</S>
+                <S>Set-AzNetAppFilesPool</S>
+                <S>Set-AzNetAppFilesSnapshotPolicy</S>
+                <S>Set-AzNetAppFilesVolumePool</S>
+                <S>Suspend-AzNetAppFilesReplication</S>
+                <S>Unlock-AzNetAppFilesVolumeFileLock</S>
+                <S>Update-AzNetAppFilesAccount</S>
+                <S>Update-AzNetAppFilesAccountCredential</S>
+                <S>Update-AzNetAppFilesActiveDirectory</S>
+                <S>Update-AzNetAppFilesBackup</S>
+                <S>Update-AzNetAppFilesBackupPolicy</S>
+                <S>Update-AzNetAppFilesPool</S>
+                <S>Update-AzNetAppFilesSnapshotPolicy</S>
+                <S>Update-AzNetAppFilesSubvolume</S>
+                <S>Update-AzNetAppFilesVolume</S>
+                <S>Update-AzNetAppFilesVolumeQuotaRule</S>
+                <S>Get-AzNetAppFilesNetworkSiblingSet</S>
+                <S>Update-AzNetAppFilesNetworkSiblingSet</S>
+              </LST>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Fixed some minor issues_x000D__x000A_* Updated to api-version 2023-07-01</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.15.1</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.15.1</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell - Azure NetApp Files (ANF) service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on Azure NetApp Files (ANF), please visit the following: https://learn.microsoft.com/azure/azure-netapp-files/</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">* Fixed some minor issues_x000D__x000A_* Updated to api-version 2023-07-01</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">10532</S>
+          <S N="downloadCount">254432</S>
+          <S N="packageSize">430658</S>
+          <S N="published">2/6/2024 1:45:36 AM -06:00</S>
+          <S N="created">2/6/2024 1:45:36 AM -06:00</S>
+          <S N="lastUpdated">2/16/2024 12:07:59 AM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM NetApp NetAppFiles ANF PSModule PSEdition_Core PSEdition_Desktop</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-16T00:07:59Z</S>
+          <S N="NormalizedVersion">0.15.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.NetAppFiles.nuspec|Az.NetAppFiles.psd1|Microsoft.Azure.PowerShell.Cmdlets.NetAppFiles.dll|Az.NetAppFiles.psm1|Microsoft.Azure.PowerShell.Cmdlets.NetAppFiles.dll-Help.xml|Microsoft.Azure.PowerShell.NetAppFiles.Management.Sdk.dll</S>
+          <S N="Cmdlets">Approve-AzNetAppFilesReplication Get-AzNetAppFilesAccount Get-AzNetAppFilesActiveDirectory Get-AzNetAppFilesBackup Get-AzNetAppFilesBackupPolicy Get-AzNetAppFilesPool Get-AzNetAppFilesQuotaLimit Get-AzNetAppFilesRegionInfo Get-AzNetAppFilesReplicationStatus Get-AzNetAppFilesSnapshot Get-AzNetAppFilesSnapshotPolicy Get-AzNetAppFilesSubvolume Get-AzNetAppFilesSubvolumeMetadata Get-AzNetAppFilesVolume Get-AzNetAppFilesVolumeBackupStatus Get-AzNetAppFilesVolumeGroup Get-AzNetAppFilesVolumeGroupIdListForLDAPUser Get-AzNetAppFilesVolumeQuotaRule Get-AzNetAppFilesVolumeReplication Get-AzNetAppFilesVolumeRestoreStatus Initialize-AzNetAppFilesReplication New-AzNetAppFilesAccount New-AzNetAppFilesActiveDirectory New-AzNetAppFilesBackup New-AzNetAppFilesBackupPolicy New-AzNetAppFilesExportPolicyObject New-AzNetAppFilesExportPolicyRuleObject New-AzNetAppFilesPool New-AzNetAppFilesSnapshot New-AzNetAppFilesSnapshotPolicy New-AzNetAppFilesSubvolume New-AzNetAppFilesVolume New-AzNetAppFilesVolumeGroup New-AzNetAppFilesVolumeQuotaRule Remove-AzNetAppFilesAccount Remove-AzNetAppFilesActiveDirectory Remove-AzNetAppFilesBackup Remove-AzNetAppFilesBackupPolicy Remove-AzNetAppFilesPool Remove-AzNetAppFilesReplication Remove-AzNetAppFilesSnapshot Remove-AzNetAppFilesSnapshotPolicy Remove-AzNetAppFilesSubvolume Remove-AzNetAppFilesVolume Remove-AzNetAppFilesVolumeGroup Remove-AzNetAppFilesVolumeQuotaRule Reset-AzNetAppFilesVolumeCifsPassword Restore-AzNetAppFilesBackupFile Restore-AzNetAppFilesReplication Restore-AzNetAppFilesSnapshotFile Restore-AzNetAppFilesVolume Resume-AzNetAppFilesReplication Set-AzNetAppFilesAccount Set-AzNetAppFilesBackupPolicy Set-AzNetAppFilesPool Set-AzNetAppFilesSnapshotPolicy Set-AzNetAppFilesVolumePool Suspend-AzNetAppFilesReplication Unlock-AzNetAppFilesVolumeFileLock Update-AzNetAppFilesAccount Update-AzNetAppFilesAccountCredential Update-AzNetAppFilesActiveDirectory Update-AzNetAppFilesBackup Update-AzNetAppFilesBackupPolicy Update-AzNetAppFilesPool Update-AzNetAppFilesSnapshotPolicy Update-AzNetAppFilesSubvolume Update-AzNetAppFilesVolume Update-AzNetAppFilesVolumeQuotaRule Get-AzNetAppFilesNetworkSiblingSet Update-AzNetAppFilesNetworkSiblingSet</S>
+          <S N="GUID">e20e99dc-6df9-479b-8504-2960f0088f00</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.NetAppFiles\0.15.0</S>
+    </MS>
+  </Obj>
+</Objs>

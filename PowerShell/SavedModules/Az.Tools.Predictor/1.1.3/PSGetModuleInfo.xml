@@ -1,0 +1,132 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.Tools.Predictor</S>
+      <S N="Version">1.1.3</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell - Module providing recommendations for cmdlets comprised in the Az module - This module requires PowerShell 7.2 and PSReadLine 2.2.2._x000D__x000A__x000D__x000A_Suggestions must be activated:_x000D__x000A_- Enable-AzPredictor:  Activate the suggestions_x000D__x000A_- Disable-AzPredictor: Disable the suggestions_x000D__x000A__x000D__x000A_For more information on Az Predictor, please visit the following: https://aka.ms/azpredictordocs</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2023-11-14T05:09:56-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>PowerShell</S>
+          <S>Prediction</S>
+          <S>Recommendation</S>
+          <S>Predictor</S>
+          <S>PSModule</S>
+          <S>PSEdition_Core</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Enable-AzPredictor</S>
+                <S>Disable-AzPredictor</S>
+                <S>Open-AzPredictorSurvey</S>
+                <S>Send-AzPredictorRating</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Enable-AzPredictor</S>
+                <S>Disable-AzPredictor</S>
+                <S>Open-AzPredictorSurvey</S>
+                <S>Send-AzPredictorRating</S>
+              </LST>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Data collection mechnanism updated</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="7">
+        <TN RefId="3">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell - Module providing recommendations for cmdlets comprised in the Az module - This module requires PowerShell 7.2 and PSReadLine 2.2.2._x000D__x000A__x000D__x000A_Suggestions must be activated:_x000D__x000A_- Enable-AzPredictor:  Activate the suggestions_x000D__x000A_- Disable-AzPredictor: Disable the suggestions_x000D__x000A__x000D__x000A_For more information on Az Predictor, please visit the following: https://aka.ms/azpredictordocs</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="releaseNotes">* Data collection mechnanism updated</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">9434</S>
+          <S N="downloadCount">42205</S>
+          <S N="packageSize">166879</S>
+          <S N="published">11/14/2023 5:09:56 AM -06:00</S>
+          <S N="created">11/14/2023 5:09:56 AM -06:00</S>
+          <S N="lastUpdated">2/15/2024 11:42:59 PM -06:00</S>
+          <S N="tags">Azure PowerShell Prediction Recommendation Predictor PSModule PSEdition_Core PSCmdlet_Enable-AzPredictor PSCommand_Enable-AzPredictor PSCmdlet_Disable-AzPredictor PSCommand_Disable-AzPredictor PSCmdlet_Open-AzPredictorSurvey PSCommand_Open-AzPredictorSurvey PSCmdlet_Send-AzPredictorRating PSCommand_Send-AzPredictorRating PSIncludes_Cmdlet</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T23:42:59Z</S>
+          <S N="NormalizedVersion">1.1.3</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.Tools.Predictor.nuspec|Microsoft.Azure.PowerShell.Tools.AzPredictor.dll|Az.Tools.Predictor.psd1|Microsoft.Azure.PowerShell.Tools.AzPredictor.dll-Help.xml|Az.Tools.Predictor.psm1|Microsoft.Azure.PowerShell.Tools.AzPredictor.pdb|command_param_to_resource_map.json|Microsoft.Azure.PowerShell.Tools.AzPredictor.xml|Microsoft.Azure.PowerShell.Tools.AzPredictor.deps.json</S>
+          <S N="GUID">599d1760-4ee1-4ed2-806e-f2a1b1a0ba4d</S>
+          <S N="PowerShellVersion">7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.Tools.Predictor\1.1.3</S>
+    </MS>
+  </Obj>
+</Objs>

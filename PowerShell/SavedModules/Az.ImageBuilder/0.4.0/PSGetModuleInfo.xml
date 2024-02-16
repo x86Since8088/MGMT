@@ -1,0 +1,178 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.ImageBuilder</S>
+      <S N="Version">0.4.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: ImageBuilder cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2023-09-05T02:08:55-05:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>ImageBuilder</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzImageBuilderTemplate</S>
+                <S>Get-AzImageBuilderTemplateRunOutput</S>
+                <S>Get-AzImageBuilderTrigger</S>
+                <S>New-AzImageBuilderTemplate</S>
+                <S>New-AzImageBuilderTemplateCustomizerObject</S>
+                <S>New-AzImageBuilderTemplateDistributeVersionerLatestObject</S>
+                <S>New-AzImageBuilderTemplateDistributeVersionerSourceObject</S>
+                <S>New-AzImageBuilderTemplateDistributorObject</S>
+                <S>New-AzImageBuilderTemplateSourceObject</S>
+                <S>New-AzImageBuilderTemplateValidatorObject</S>
+                <S>New-AzImageBuilderTrigger</S>
+                <S>Remove-AzImageBuilderTemplate</S>
+                <S>Remove-AzImageBuilderTrigger</S>
+                <S>Start-AzImageBuilderTemplate</S>
+                <S>Stop-AzImageBuilderTemplate</S>
+                <S>Update-AzImageBuilderTemplate</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzImageBuilderTemplate</S>
+                <S>Get-AzImageBuilderTemplateRunOutput</S>
+                <S>Get-AzImageBuilderTrigger</S>
+                <S>New-AzImageBuilderTemplate</S>
+                <S>New-AzImageBuilderTemplateCustomizerObject</S>
+                <S>New-AzImageBuilderTemplateDistributeVersionerLatestObject</S>
+                <S>New-AzImageBuilderTemplateDistributeVersionerSourceObject</S>
+                <S>New-AzImageBuilderTemplateDistributorObject</S>
+                <S>New-AzImageBuilderTemplateSourceObject</S>
+                <S>New-AzImageBuilderTemplateValidatorObject</S>
+                <S>New-AzImageBuilderTrigger</S>
+                <S>Remove-AzImageBuilderTemplate</S>
+                <S>Remove-AzImageBuilderTrigger</S>
+                <S>Start-AzImageBuilderTemplate</S>
+                <S>Stop-AzImageBuilderTemplate</S>
+                <S>Update-AzImageBuilderTemplate</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">*  Upgraded API verision from 2022-02-14 to 2022-07-01._x000D__x000A_   - Added a cmdlet named 'Get-AzImageBuilderTrigger'._x000D__x000A_   - Added a cmdlet named 'New-AzImageBuilderTemplateDistributeVersionerLatestObject' to create an in-memory object for DistributeVersionerLatest._x000D__x000A_   - Added a cmdlet named 'New-AzImageBuilderTemplateDistributeVersionerSourceObject' to create an in-memory object for DistributeVersionerSource._x000D__x000A_   - Added a cmdlet named 'New-AzImageBuilderTrigger'._x000D__x000A_   - Added a cmdlet named 'Update-AzImageBuilderTemplate'._x000D__x000A_   - Added a cmdlet named 'Remove-AzImageBuilderTrigger'.</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.13.0</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.13.0</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: ImageBuilder cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">*  Upgraded API verision from 2022-02-14 to 2022-07-01._x000D__x000A_   - Added a cmdlet named 'Get-AzImageBuilderTrigger'._x000D__x000A_   - Added a cmdlet named 'New-AzImageBuilderTemplateDistributeVersionerLatestObject' to create an in-memory object for DistributeVersionerLatest._x000D__x000A_   - Added a cmdlet named 'New-AzImageBuilderTemplateDistributeVersionerSourceObject' to create an in-memory object for DistributeVersionerSource._x000D__x000A_   - Added a cmdlet named 'New-AzImageBuilderTrigger'._x000D__x000A_   - Added a cmdlet named 'Update-AzImageBuilderTemplate'._x000D__x000A_   - Added a cmdlet named 'Remove-AzImageBuilderTrigger'.</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">29234</S>
+          <S N="downloadCount">136684</S>
+          <S N="packageSize">650592</S>
+          <S N="published">9/5/2023 2:08:55 AM -05:00</S>
+          <S N="created">9/5/2023 2:08:55 AM -05:00</S>
+          <S N="lastUpdated">2/16/2024 12:12:59 AM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule ImageBuilder PSEdition_Core PSEdition_Desktop PSFunction_Get-AzImageBuilderTemplate PSCommand_Get-AzImageBuilderTemplate PSFunction_Get-AzImageBuilderTemplateRunOutput PSCommand_Get-AzImageBuilderTemplateRunOutput PSFunction_Get-AzImageBuilderTrigger PSCommand_Get-AzImageBuilderTrigger PSFunction_New-AzImageBuilderTemplate PSCommand_New-AzImageBuilderTemplate PSFunction_New-AzImageBuilderTemplateCustomizerObject PSCommand_New-AzImageBuilderTemplateCustomizerObject PSFunction_New-AzImageBuilderTemplateDistributeVersionerLatestObject PSCommand_New-AzImageBuilderTemplateDistributeVersionerLatestObject PSFunction_New-AzImageBuilderTemplateDistributeVersionerSourceObject PSCommand_New-AzImageBuilderTemplateDistributeVersionerSourceObject PSFunction_New-AzImageBuilderTemplateDistributorObject PSCommand_New-AzImageBuilderTemplateDistributorObject PSFunction_New-AzImageBuilderTemplateSourceObject PSCommand_New-AzImageBuilderTemplateSourceObject PSFunction_New-AzImageBuilderTemplateValidatorObject PSCommand_New-AzImageBuilderTemplateValidatorObject PSFunction_New-AzImageBuilderTrigger PSCommand_New-AzImageBuilderTrigger PSFunction_Remove-AzImageBuilderTemplate PSCommand_Remove-AzImageBuilderTemplate PSFunction_Remove-AzImageBuilderTrigger PSCommand_Remove-AzImageBuilderTrigger PSFunction_Start-AzImageBuilderTemplate PSCommand_Start-AzImageBuilderTemplate PSFunction_Stop-AzImageBuilderTemplate PSCommand_Stop-AzImageBuilderTemplate PSFunction_Update-AzImageBuilderTemplate PSCommand_Update-AzImageBuilderTemplate PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-16T00:12:59Z</S>
+          <S N="NormalizedVersion">0.4.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.ImageBuilder.nuspec|Az.ImageBuilder.format.ps1xml|custom\New-AzImageBuilderTemplateDistributorObject\New-AzImageBuilderTemplateDistributorObject_ManagedImageDistributor.ps1|custom\New-AzImageBuilderTemplateDistributorObject\New-AzImageBuilderTemplateDistributorObject_SharedImageDistributor.ps1|Az.ImageBuilder.psd1|custom\New-AzImageBuilderTemplateDistributorObject\New-AzImageBuilderTemplateDistributorObject_VhdDistributor.ps1|Az.ImageBuilder.psm1|custom\New-AzImageBuilderTemplateDistributorVersioningObject\New-AzImageBuilderTemplateDistributeVersionerLatestObject.ps1|bin\Az.ImageBuilder.private.dll|custom\New-AzImageBuilderTemplateDistributorVersioningObject\New-AzImageBuilderTemplateDistributeVersionerSourceObject.ps1|custom\Az.ImageBuilder.custom.psm1|custom\New-AzImageBuilderTemplateSourceObject\New-AzImageBuilderTemplateSourceObject_ManagedImageSource.ps1|custom\New-AzImageBuilderTemplate\ImageBuilder.cs|custom\New-AzImageBuilderTemplateSourceObject\New-AzImageBuilderTemplateSourceObject_PlatformImageSource.ps1|custom\New-AzImageBuilderTemplate\New-AzImageBuilderTemplate_CreateExpanded.ps1|custom\New-AzImageBuilderTemplateSourceObject\New-AzImageBuilderTemplateSourceObject_SharedImageVersionSource.ps1|custom\New-AzImageBuilderTemplate\New-AzImageBuilderTemplate_JsonTemplatePath.ps1|custom\New-AzImageBuilderTemplateValidatorObject\New-AzImageBuilderTemplateValidatorObject_PowerShellValidator.ps1|custom\New-AzImageBuilderTemplate\NewAzImageBuilderTemplate_CreateViaJsonString.cs|custom\New-AzImageBuilderTemplateValidatorObject\New-AzImageBuilderTemplateValidatorObject_ShellValidator.ps1|custom\New-AzImageBuilderTemplateCustomizerObject\New-AzImageBuilderTemplateCustomizerObject_FileCustomizer.ps1|exports\ProxyCmdletDefinitions.ps1|custom\New-AzImageBuilderTemplateCustomizerObject\New-AzImageBuilderTemplateCustomizerObject_PowerShellCustomizer.ps1|internal\Az.ImageBuilder.internal.psm1|custom\New-AzImageBuilderTemplateCustomizerObject\New-AzImageBuilderTemplateCustomizerObject_RestartCustomizer.ps1|internal\ProxyCmdletDefinitions.ps1|custom\New-AzImageBuilderTemplateCustomizerObject\New-AzImageBuilderTemplateCustomizerObject_ShellCustomizer.ps1|utils\Unprotect-SecureString.ps1|custom\New-AzImageBuilderTemplateCustomizerObject\New-AzImageBuilderTemplateCustomizerObject_WindowsUpdateCustomizer.ps1</S>
+          <S N="GUID">bdedc683-d9b6-41ea-b310-d068b8c72305</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.ImageBuilder\0.4.0</S>
+    </MS>
+  </Obj>
+</Objs>

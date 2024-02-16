@@ -1,0 +1,145 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.ApplicationMonitor</S>
+      <S N="Version">2.0.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">This package contains files required for code-less Application Insights injection. For use on Windows Servers with IIS._x000D__x000A_Official Docs: https://docs.microsoft.com/en-us/azure/azure-monitor/app/status-monitor-v2-overview</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">rajrang</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2023-02-10T23:22:30-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">http://go.microsoft.com/fwlink/?LinkId=838442</URI>
+      <URI N="ProjectUri">http://go.microsoft.com/fwlink/?LinkID=510710</URI>
+      <URI N="IconUri">http://appanacdn.blob.core.windows.net/cdn/icons/aic.png</URI>
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Microsoft</S>
+          <S>ApplicationInsights</S>
+          <S>Redfield</S>
+          <S>SDK</S>
+          <S>Azure</S>
+          <S>AzureMonitor</S>
+          <S>VM</S>
+          <S>IIS</S>
+          <S>OnPrem</S>
+          <S>Extension</S>
+          <S>StatusMonitor</S>
+          <S>ApplicationMonitor</S>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Disable-ApplicationInsightsMonitoring</S>
+                <S>Disable-InstrumentationEngine</S>
+                <S>Enable-ApplicationInsightsMonitoring</S>
+                <S>Enable-InstrumentationEngine</S>
+                <S>Get-ApplicationInsightsMonitoringConfig</S>
+                <S>Get-ApplicationInsightsMonitoringStatus</S>
+                <S>Set-ApplicationInsightsMonitoringConfig</S>
+                <S>Start-ApplicationInsightsMonitoringTrace</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Disable-ApplicationInsightsMonitoring</S>
+                <S>Disable-InstrumentationEngine</S>
+                <S>Enable-ApplicationInsightsMonitoring</S>
+                <S>Enable-InstrumentationEngine</S>
+                <S>Get-ApplicationInsightsMonitoringConfig</S>
+                <S>Get-ApplicationInsightsMonitoringStatus</S>
+                <S>Set-ApplicationInsightsMonitoringConfig</S>
+                <S>Start-ApplicationInsightsMonitoringTrace</S>
+              </LST>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+      <Version N="PowerShellGetFormatVersion">2.0</Version>
+      <S N="ReleaseNotes">This version contains support for ASP.NET and ASP.NET Core Auto-Instrumentation with Application Insights 2.20.1 Redfield SDK.</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="7">
+        <TN RefId="3">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">This package contains files required for code-less Application Insights injection. For use on Windows Servers with IIS._x000D__x000A_Official Docs: https://docs.microsoft.com/en-us/azure/azure-monitor/app/status-monitor-v2-overview</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">This version contains support for ASP.NET and ASP.NET Core Auto-Instrumentation with Application Insights 2.20.1 Redfield SDK.</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">34261</S>
+          <S N="downloadCount">171745</S>
+          <S N="packageSize">6975768</S>
+          <S N="published">2/10/2023 11:22:30 PM -06:00</S>
+          <S N="created">2/10/2023 11:22:30 PM -06:00</S>
+          <S N="lastUpdated">2/15/2024 10:07:56 PM -06:00</S>
+          <S N="tags">Microsoft ApplicationInsights Redfield SDK Azure AzureMonitor VM IIS OnPrem Extension StatusMonitor ApplicationMonitor PowerShellGetFormatVersion_2.0 PSModule PSCmdlet_Disable-ApplicationInsightsMonitoring PSCommand_Disable-ApplicationInsightsMonitoring PSCmdlet_Disable-InstrumentationEngine PSCommand_Disable-InstrumentationEngine PSCmdlet_Enable-ApplicationInsightsMonitoring PSCommand_Enable-ApplicationInsightsMonitoring PSCmdlet_Enable-InstrumentationEngine PSCommand_Enable-InstrumentationEngine PSCmdlet_Get-ApplicationInsightsMonitoringConfig PSCommand_Get-ApplicationInsightsMonitoringConfig PSCmdlet_Get-ApplicationInsightsMonitoringStatus PSCommand_Get-ApplicationInsightsMonitoringStatus PSCmdlet_Set-ApplicationInsightsMonitoringConfig PSCommand_Set-ApplicationInsightsMonitoringConfig PSCmdlet_Start-ApplicationInsightsMonitoringTrace PSCommand_Start-ApplicationInsightsMonitoringTrace PSIncludes_Cmdlet</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:07:56Z</S>
+          <S N="NormalizedVersion">2.0.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.ApplicationMonitor.nuspec|Az.ApplicationMonitor.psd1|license.txt|content\DotnetCoreAgent\bin\4.0.4.0\Microsoft.ApplicationInsights.ILRepack.dll|content\DotnetCoreAgent\bin\4.0.4.0\netcoreapp3.1\ApplicationInsights.Identity.dll|content\DotnetCoreAgent\bin\4.0.4.0\netcoreapp3.1\Azure.Identity.ILRepack.dll|content\DotnetCoreAgent\bin\4.0.4.0\netcoreapp3.1\Microsoft.ApplicationInsights.AiHostingStartup.dll|content\DotnetCoreAgent\bin\4.0.4.0\netcoreapp3.1\statusmonitor.dat|content\DotnetCoreAgent\StartupBootstrapper\Microsoft.ApplicationInsights.StartupBootstrapper.dll|content\DotnetCoreAgent\StartupHook\Microsoft.ApplicationInsights.StartupHook.dll|content\Instrumentation32\Microsoft.ApplicationInsights.Extensions.Base_x005F_x86.dll|content\Instrumentation32\Microsoft.ApplicationInsights.ExtensionsHost_x005F_x86.dll|content\Instrumentation32\Microsoft.Diagnostics.Instrumentation.Extensions.Base.dll|content\Instrumentation32\Microsoft.InstrumentationEngine.Extensions.config|content\Instrumentation32\MicrosoftInstrumentationEngine_x005F_x86.dll|content\Instrumentation64\Microsoft.ApplicationInsights.Extensions.Base_x005F_x64.dll|content\Instrumentation64\Microsoft.ApplicationInsights.ExtensionsHost_x005F_x64.dll|content\Instrumentation64\Microsoft.Diagnostics.Instrumentation.Extensions.Base.dll|content\Instrumentation64\Microsoft.InstrumentationEngine.Extensions.config|content\Instrumentation64\MicrosoftInstrumentationEngine_x005F_x64.dll|content\PowerShell\Dia2Lib.dll|content\PowerShell\Microsoft.ApplicationInsights.dll|content\PowerShell\Microsoft.ApplicationInsights.Redfield.Configurator.dll|content\PowerShell\Microsoft.ApplicationInsights.Redfield.Configurator.PowerShell.dll|content\PowerShell\Microsoft.ApplicationInsights.RedfieldIISModule.Contracts.dll|content\PowerShell\Microsoft.Diagnostics.FastSerialization.dll|content\PowerShell\Microsoft.Diagnostics.Tracing.EventSource.dll|content\PowerShell\Microsoft.Diagnostics.Tracing.TraceEvent.dll|content\PowerShell\Microsoft.Management.Infrastructure.dll|content\PowerShell\Microsoft.Web.Administration.dll|content\PowerShell\Microsoft.Web.XmlTransform.dll|content\PowerShell\Newtonsoft.Json.dll|content\PowerShell\OSExtensions.dll|content\PowerShell\System.Diagnostics.DiagnosticSource.dll|content\PowerShell\System.Management.Automation.dll|content\PowerShell\TraceReloggerLib.dll|content\Runtime\ApplicationInsights-default.config|content\Runtime\ApplicationInsights-recommended-sql.config|content\Runtime\ApplicationInsights-recommended.config|content\Runtime\ApplicationInsights.Identity.dll|content\Runtime\Azure.Identity.ILRepack.dll|content\Runtime\Microsoft.AI.Agent.Intercept.dll|content\Runtime\Microsoft.AI.DependencyCollector.dll|content\Runtime\Microsoft.AI.PerfCounterCollector.dll|content\Runtime\Microsoft.AI.ServerTelemetryChannel.dll|content\Runtime\Microsoft.AI.Web.dll|content\Runtime\Microsoft.AI.WindowsServer.dll|content\Runtime\Microsoft.AppInsights.IIS.ManagedHttpModuleHelper.dll|content\Runtime\Microsoft.ApplicationInsights.dll|content\Runtime\Microsoft.ApplicationInsights.Redfield.Lightup.dll|content\Runtime\Microsoft.ApplicationInsights.Redfield.SdkSourceTelemetryInitializer.dll|content\Runtime\Microsoft.ApplicationInsights.RedfieldIISModule.Contracts.dll|content\Runtime\Microsoft.ApplicationInsights.RedfieldIISModule.dll|content\Runtime\Microsoft.AspNet.TelemetryCorrelation.dll|content\Runtime\statusmonitor.dat|content\Runtime\System.Buffers.dll|content\Runtime\System.Diagnostics.DiagnosticSource.dll|content\Runtime\System.Memory.dll|content\Runtime\System.Runtime.CompilerServices.Unsafe.dll</S>
+          <S N="GUID">0ee5e7ef-90e4-4fa6-97ee-7a515907b68f</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.ApplicationMonitor\2.0.0</S>
+    </MS>
+  </Obj>
+</Objs>

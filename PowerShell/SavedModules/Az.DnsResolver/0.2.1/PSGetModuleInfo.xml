@@ -1,0 +1,199 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.DnsResolver</S>
+      <S N="Version">0.2.1</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: DnsResolver cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2022-08-02T03:30:05-05:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>DnsResolver</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzDnsForwardingRuleset</S>
+                <S>Get-AzDnsForwardingRulesetForwardingRule</S>
+                <S>Get-AzDnsForwardingRulesetVirtualNetworkLink</S>
+                <S>Get-AzDnsResolver</S>
+                <S>Get-AzDnsResolverInboundEndpoint</S>
+                <S>Get-AzDnsResolverOutboundEndpoint</S>
+                <S>New-AzDnsForwardingRuleset</S>
+                <S>New-AzDnsForwardingRulesetForwardingRule</S>
+                <S>New-AzDnsForwardingRulesetVirtualNetworkLink</S>
+                <S>New-AzDnsResolver</S>
+                <S>New-AzDnsResolverInboundEndpoint</S>
+                <S>New-AzDnsResolverIPConfigurationObject</S>
+                <S>New-AzDnsResolverOutboundEndpoint</S>
+                <S>New-AzDnsResolverTargetDnsServerObject</S>
+                <S>Remove-AzDnsForwardingRuleset</S>
+                <S>Remove-AzDnsForwardingRulesetForwardingRule</S>
+                <S>Remove-AzDnsForwardingRulesetVirtualNetworkLink</S>
+                <S>Remove-AzDnsResolver</S>
+                <S>Remove-AzDnsResolverInboundEndpoint</S>
+                <S>Remove-AzDnsResolverOutboundEndpoint</S>
+                <S>Update-AzDnsForwardingRuleset</S>
+                <S>Update-AzDnsForwardingRulesetForwardingRule</S>
+                <S>Update-AzDnsForwardingRulesetVirtualNetworkLink</S>
+                <S>Update-AzDnsResolver</S>
+                <S>Update-AzDnsResolverInboundEndpoint</S>
+                <S>Update-AzDnsResolverOutboundEndpoint</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzDnsForwardingRuleset</S>
+                <S>Get-AzDnsForwardingRulesetForwardingRule</S>
+                <S>Get-AzDnsForwardingRulesetVirtualNetworkLink</S>
+                <S>Get-AzDnsResolver</S>
+                <S>Get-AzDnsResolverInboundEndpoint</S>
+                <S>Get-AzDnsResolverOutboundEndpoint</S>
+                <S>New-AzDnsForwardingRuleset</S>
+                <S>New-AzDnsForwardingRulesetForwardingRule</S>
+                <S>New-AzDnsForwardingRulesetVirtualNetworkLink</S>
+                <S>New-AzDnsResolver</S>
+                <S>New-AzDnsResolverInboundEndpoint</S>
+                <S>New-AzDnsResolverIPConfigurationObject</S>
+                <S>New-AzDnsResolverOutboundEndpoint</S>
+                <S>New-AzDnsResolverTargetDnsServerObject</S>
+                <S>Remove-AzDnsForwardingRuleset</S>
+                <S>Remove-AzDnsForwardingRulesetForwardingRule</S>
+                <S>Remove-AzDnsForwardingRulesetVirtualNetworkLink</S>
+                <S>Remove-AzDnsResolver</S>
+                <S>Remove-AzDnsResolverInboundEndpoint</S>
+                <S>Remove-AzDnsResolverOutboundEndpoint</S>
+                <S>Update-AzDnsForwardingRuleset</S>
+                <S>Update-AzDnsForwardingRulesetForwardingRule</S>
+                <S>Update-AzDnsForwardingRulesetVirtualNetworkLink</S>
+                <S>Update-AzDnsResolver</S>
+                <S>Update-AzDnsResolverInboundEndpoint</S>
+                <S>Update-AzDnsResolverOutboundEndpoint</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Reformatted exception message for cmdlets_x000D__x000A_* Upgraded API version to 2022-07-01</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.9.1</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.9.1</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: DnsResolver cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">* Reformatted exception message for cmdlets_x000D__x000A_* Upgraded API version to 2022-07-01</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">7916</S>
+          <S N="downloadCount">9279</S>
+          <S N="packageSize">569106</S>
+          <S N="published">8/2/2022 3:30:05 AM -05:00</S>
+          <S N="created">8/2/2022 3:30:05 AM -05:00</S>
+          <S N="lastEdited">10/14/2022 3:21:37 AM -05:00</S>
+          <S N="lastUpdated">2/16/2024 12:12:59 AM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule DnsResolver PSEdition_Core PSEdition_Desktop PSFunction_Get-AzDnsForwardingRuleset PSCommand_Get-AzDnsForwardingRuleset PSFunction_Get-AzDnsForwardingRulesetForwardingRule PSCommand_Get-AzDnsForwardingRulesetForwardingRule PSFunction_Get-AzDnsForwardingRulesetVirtualNetworkLink PSCommand_Get-AzDnsForwardingRulesetVirtualNetworkLink PSFunction_Get-AzDnsResolver PSCommand_Get-AzDnsResolver PSFunction_Get-AzDnsResolverInboundEndpoint PSCommand_Get-AzDnsResolverInboundEndpoint PSFunction_Get-AzDnsResolverOutboundEndpoint PSCommand_Get-AzDnsResolverOutboundEndpoint PSFunction_New-AzDnsForwardingRuleset PSCommand_New-AzDnsForwardingRuleset PSFunction_New-AzDnsForwardingRulesetForwardingRule PSCommand_New-AzDnsForwardingRulesetForwardingRule PSFunction_New-AzDnsForwardingRulesetVirtualNetworkLink PSCommand_New-AzDnsForwardingRulesetVirtualNetworkLink PSFunction_New-AzDnsResolver PSCommand_New-AzDnsResolver PSFunction_New-AzDnsResolverInboundEndpoint PSCommand_New-AzDnsResolverInboundEndpoint PSFunction_New-AzDnsResolverIPConfigurationObject PSCommand_New-AzDnsResolverIPConfigurationObject PSFunction_New-AzDnsResolverOutboundEndpoint PSCommand_New-AzDnsResolverOutboundEndpoint PSFunction_New-AzDnsResolverTargetDnsServerObject PSCommand_New-AzDnsResolverTargetDnsServerObject PSFunction_Remove-AzDnsForwardingRuleset PSCommand_Remove-AzDnsForwardingRuleset PSFunction_Remove-AzDnsForwardingRulesetForwardingRule PSCommand_Remove-AzDnsForwardingRulesetForwardingRule PSFunction_Remove-AzDnsForwardingRulesetVirtualNetworkLink PSCommand_Remove-AzDnsForwardingRulesetVirtualNetworkLink PSFunction_Remove-AzDnsResolver PSCommand_Remove-AzDnsResolver PSFunction_Remove-AzDnsResolverInboundEndpoint PSCommand_Remove-AzDnsResolverInboundEndpoint PSFunction_Remove-AzDnsResolverOutboundEndpoint PSCommand_Remove-AzDnsResolverOutboundEndpoint PSFunction_Update-AzDnsForwardingRuleset PSCommand_Update-AzDnsForwardingRuleset PSFunction_Update-AzDnsForwardingRulesetForwardingRule PSCommand_Update-AzDnsForwardingRulesetForwardingRule PSFunction_Update-AzDnsForwardingRulesetVirtualNetworkLink PSCommand_Update-AzDnsForwardingRulesetVirtualNetworkLink PSFunction_Update-AzDnsResolver PSCommand_Update-AzDnsResolver PSFunction_Update-AzDnsResolverInboundEndpoint PSCommand_Update-AzDnsResolverInboundEndpoint PSFunction_Update-AzDnsResolverOutboundEndpoint PSCommand_Update-AzDnsResolverOutboundEndpoint PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-16T00:12:59Z</S>
+          <S N="NormalizedVersion">0.2.1</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.DnsResolver.nuspec|Az.DnsResolver.format.ps1xml|Az.DnsResolver.psd1|Az.DnsResolver.psm1|bin\Az.DnsResolver.private.deps.json|bin\Az.DnsResolver.private.dll|custom\Az.DnsResolver.custom.psm1|custom\New-AzDnsResolverIPConfigurationObject.ps1|custom\New-AzDnsResolverTargetDnsServer.ps1|custom\csharp\GetAzDnsForwardingRulesetForwardingRule_Get.cs|custom\csharp\GetAzDnsForwardingRulesetForwardingRule_GetViaIdentity.cs|custom\csharp\GetAzDnsForwardingRulesetForwardingRule_List.cs|custom\csharp\GetAzDnsForwardingRulesetVirtualNetworkLink_Get.cs|custom\csharp\GetAzDnsForwardingRulesetVirtualNetworkLink_GetViaIdentity.cs|custom\csharp\GetAzDnsForwardingRulesetVirtualNetworkLink_List.cs|custom\csharp\GetAzDnsForwardingRuleset_Get.cs|custom\csharp\GetAzDnsForwardingRuleset_GetViaIdentity.cs|custom\csharp\GetAzDnsForwardingRuleset_List.cs|custom\csharp\GetAzDnsForwardingRuleset_List1.cs|custom\csharp\GetAzDnsForwardingRuleset_List2.cs|custom\csharp\GetAzDnsResolverInboundEndpoint_Get.cs|custom\csharp\GetAzDnsResolverInboundEndpoint_GetViaIdentity.cs|custom\csharp\GetAzDnsResolverInboundEndpoint_List.cs|custom\csharp\GetAzDnsResolverOutboundEndpoint_Get.cs|custom\csharp\GetAzDnsResolverOutboundEndpoint_GetViaIdentity.cs|custom\csharp\GetAzDnsResolverOutboundEndpoint_List.cs|custom\csharp\GetAzDnsResolver_Get.cs|custom\csharp\GetAzDnsResolver_GetViaIdentity.cs|custom\csharp\GetAzDnsResolver_List.cs|custom\csharp\GetAzDnsResolver_List1.cs|custom\csharp\GetAzDnsResolver_List2.cs|custom\csharp\NewAzDnsForwardingRulesetForwardingRule_CreateExpanded.cs|custom\csharp\NewAzDnsForwardingRulesetVirtualNetworkLink_CreateExpanded.cs|custom\csharp\NewAzDnsForwardingRuleset_CreateExpanded.cs|custom\csharp\NewAzDnsResolverInboundEndpoint_CreateExpanded.cs|custom\csharp\NewAzDnsResolverOutboundEndpoint_CreateExpanded.cs|custom\csharp\NewAzDnsResolver_CreateExpanded.cs|custom\csharp\RemoveAzDnsForwardingRulesetForwardingRule_Delete.cs|custom\csharp\RemoveAzDnsForwardingRulesetForwardingRule_DeleteViaIdentity.cs|custom\csharp\RemoveAzDnsForwardingRulesetVirtualNetworkLink_Delete.cs|custom\csharp\RemoveAzDnsForwardingRulesetVirtualNetworkLink_DeleteViaIdentity.cs|custom\csharp\RemoveAzDnsForwardingRuleset_Delete.cs|custom\csharp\RemoveAzDnsForwardingRuleset_DeleteViaIdentity.cs|custom\csharp\RemoveAzDnsResolverInboundEndpoint_Delete.cs|custom\csharp\RemoveAzDnsResolverInboundEndpoint_DeleteViaIdentity.cs|custom\csharp\RemoveAzDnsResolverOutboundEndpoint_Delete.cs|custom\csharp\RemoveAzDnsResolverOutboundEndpoint_DeleteViaIdentity.cs|custom\csharp\RemoveAzDnsResolver_Delete.cs|custom\csharp\RemoveAzDnsResolver_DeleteViaIdentity.cs|custom\csharp\RestErrorHandler.cs|custom\csharp\UpdateAzDnsForwardingRulesetForwardingRule_UpdateExpanded.cs|custom\csharp\UpdateAzDnsForwardingRulesetForwardingRule_UpdateViaIdentityExpanded.cs|custom\csharp\UpdateAzDnsForwardingRulesetVirtualNetworkLink_UpdateExpanded.cs|custom\csharp\UpdateAzDnsForwardingRulesetVirtualNetworkLink_UpdateViaIdentityExpanded.cs|custom\csharp\UpdateAzDnsForwardingRuleset_UpdateExpanded.cs|custom\csharp\UpdateAzDnsForwardingRuleset_UpdateViaIdentityExpanded.cs|custom\csharp\UpdateAzDnsResolverInboundEndpoint_UpdateExpanded.cs|custom\csharp\UpdateAzDnsResolverInboundEndpoint_UpdateViaIdentityExpanded.cs|custom\csharp\UpdateAzDnsResolverOutboundEndpoint_UpdateExpanded.cs|custom\csharp\UpdateAzDnsResolverOutboundEndpoint_UpdateViaIdentityExpanded.cs|custom\csharp\UpdateAzDnsResolver_UpdateExpanded.cs|custom\csharp\UpdateAzDnsResolver_UpdateViaIdentityExpanded.cs|exports\ProxyCmdletDefinitions.ps1|internal\Az.DnsResolver.internal.psm1|utils\Unprotect-SecureString.ps1</S>
+          <S N="GUID">88e239b3-f615-4018-adf3-f0952a0f46a8</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.DnsResolver\0.2.1</S>
+    </MS>
+  </Obj>
+</Objs>

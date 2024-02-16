@@ -1,0 +1,166 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.Wvd</S>
+      <S N="Version">1.1.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">For managing and automate Windows Virtual Desktop environments. This module can also be used for housekeeping and manageing all the WVD related Azure resources.</S>
+      <S N="Author">Sander Rozemuller</S>
+      <S N="CompanyName">srozemuller</S>
+      <S N="Copyright">(c) All rights reserved.</S>
+      <DT N="PublishedDate">2021-05-25T13:38:39-05:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://github.com/srozemuller/AzWvd/blob/main/LICENSE</URI>
+      <URI N="ProjectUri">https://github.com/srozemuller/Windows-Virtual-Desktop/tree/master/PowerShell-Modules/WVD-Automation</URI>
+      <URI N="IconUri">https://github.com/srozemuller/AzWvd/blob/main/Private/wvd-logo.png</URI>
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>DesktopVirtualization</S>
+          <S>WindowsVirtualDesktop</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Enable-WvdStartVmOnConnect</S>
+                <S>Export-WvdConfig</S>
+                <S>Get-WvdHostPoolInfo</S>
+                <S>Get-WvdImageVersionStatus</S>
+                <S>Get-WvdNetworkInfo</S>
+                <S>Get-WvdLatestSessionHost</S>
+                <S>Get-WvdSessionHostResources</S>
+                <S>New-WvdRegistrationToken</S>
+                <S>Update-WvdRegistrationToken</S>
+                <S>Update-WvdSessionhostDrainMode</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Enable-WvdStartVmOnConnect</S>
+                <S>Export-WvdConfig</S>
+                <S>Get-WvdHostPoolInfo</S>
+                <S>Get-WvdImageVersionStatus</S>
+                <S>Get-WvdNetworkInfo</S>
+                <S>Get-WvdLatestSessionHost</S>
+                <S>Get-WvdSessionHostResources</S>
+                <S>New-WvdRegistrationToken</S>
+                <S>Update-WvdRegistrationToken</S>
+                <S>Update-WvdSessionhostDrainMode</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.DesktopVirtualization</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.1.1</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.DesktopVirtualization/2.1.1</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) All rights reserved.</S>
+          <S N="description">For managing and automate Windows Virtual Desktop environments. This module can also be used for housekeeping and manageing all the WVD related Azure resources.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">1727</S>
+          <S N="downloadCount">1944</S>
+          <S N="packageSize">66941</S>
+          <S N="published">5/25/2021 1:38:39 PM -05:00</S>
+          <S N="created">5/25/2021 1:38:39 PM -05:00</S>
+          <S N="lastUpdated">2/15/2024 10:12:57 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule DesktopVirtualization WindowsVirtualDesktop PSEdition_Core PSEdition_Desktop PSFunction_Enable-WvdStartVmOnConnect PSCommand_Enable-WvdStartVmOnConnect PSFunction_Export-WvdConfig PSCommand_Export-WvdConfig PSFunction_Get-WvdHostPoolInfo PSCommand_Get-WvdHostPoolInfo PSFunction_Get-WvdImageVersionStatus PSCommand_Get-WvdImageVersionStatus PSFunction_Get-WvdNetworkInfo PSCommand_Get-WvdNetworkInfo PSFunction_Get-WvdLatestSessionHost PSCommand_Get-WvdLatestSessionHost PSFunction_Get-WvdSessionHostResources PSCommand_Get-WvdSessionHostResources PSFunction_New-WvdRegistrationToken PSCommand_New-WvdRegistrationToken PSFunction_Update-WvdRegistrationToken PSCommand_Update-WvdRegistrationToken PSFunction_Update-WvdSessionhostDrainMode PSCommand_Update-WvdSessionhostDrainMode PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:12:57Z</S>
+          <S N="NormalizedVersion">1.1.0</S>
+          <S N="Authors">Sander Rozemuller</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.Wvd.nuspec|Az.Wvd.psd1|Az.Wvd.psm1|Private\exportconfig.css|Private\Generate-Output.ps1|Private\global-functions.ps1|Private\wvd-logo.png|Public\Enable-WvdStartVmOnConnect.ps1|Public\Export-WvdConfig.ps1|Public\Get-WvdHostPoolInfo.ps1|Public\Get-WvdImageVersionStatus.ps1|Public\Get-WvdLatestSessionHost.ps1|Public\Get-WvdNetworkInfo.ps1|Public\Get-WvdSessionHostResources.ps1|Public\Update-WvdRegistrationToken.ps1|Public\Update-WvdSessionhostDrainMode.ps1</S>
+          <S N="GUID">fdf37ff7-689a-46de-82d4-66228b92dae4</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Rozemuller.com</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.Wvd\1.1.0</S>
+    </MS>
+  </Obj>
+</Objs>

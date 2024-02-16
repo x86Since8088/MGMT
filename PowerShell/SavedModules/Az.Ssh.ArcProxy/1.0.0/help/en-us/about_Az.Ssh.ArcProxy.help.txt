@@ -1,0 +1,18 @@
+TOPIC
+    about_Az.Ssh.ArcProxy
+
+SHORT DESCRIPTION
+    Az.Ssh.ArcProxy contains the Azure Ssh Arc Proxy executables required to establish hybrid SSH connections to Azure Arc resources when using the Az.Ssh module. 
+
+LONG DESCRIPTION
+    This module does not contain any cmdlets, and it is not meant to be used by itself. This module contains the Azure Ssh Arc Proxy executables required to establish hybrid SSH connections to Azure Arc resources when using the Az.Ssh module. 
+
+EXAMPLES
+    To use this module, install the Az.Ssh module. The cmdlets in Az.Ssh will use PowerShellGet to look for the Az.Ssh.ArcProxy in the installed modules in the machine to use the proxy executables to connect via SSH to Azure Arc Resources.
+
+KEYWORDS
+    Azure, SSH, Arc
+
+SEE ALSO
+    https://aka.ms/ssh-arc-overview
+    https://aka.ms/AzSsh-module-docs

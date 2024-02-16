@@ -1,0 +1,200 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.ConnectedVMware</S>
+      <S N="Version">0.1.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: {ModuleNamePlaceHolder} cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2023-12-05T02:03:58-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>{ModuleNamePlaceHolder}</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzConnectedVMwareCluster</S>
+                <S>Get-AzConnectedVMwareDatastore</S>
+                <S>Get-AzConnectedVMwareHost</S>
+                <S>Get-AzConnectedVMwareInventoryItem</S>
+                <S>Get-AzConnectedVMwareResourcePool</S>
+                <S>Get-AzConnectedVMwareVCenter</S>
+                <S>Get-AzConnectedVMwareVM</S>
+                <S>Get-AzConnectedVMwareVMGuestAgent</S>
+                <S>Get-AzConnectedVMwareVMTemplate</S>
+                <S>Get-AzConnectedVMwareVNet</S>
+                <S>New-AzConnectedVMwareCluster</S>
+                <S>New-AzConnectedVMwareDatastore</S>
+                <S>New-AzConnectedVMwareHost</S>
+                <S>New-AzConnectedVMwareResourcePool</S>
+                <S>New-AzConnectedVMwareVCenter</S>
+                <S>New-AzConnectedVMwareVM</S>
+                <S>New-AzConnectedVMwareVMGuestAgent</S>
+                <S>New-AzConnectedVMwareVMTemplate</S>
+                <S>New-AzConnectedVMwareVNet</S>
+                <S>Remove-AzConnectedVMwareCluster</S>
+                <S>Remove-AzConnectedVMwareDatastore</S>
+                <S>Remove-AzConnectedVMwareHost</S>
+                <S>Remove-AzConnectedVMwareResourcePool</S>
+                <S>Remove-AzConnectedVMwareVCenter</S>
+                <S>Remove-AzConnectedVMwareVM</S>
+                <S>Remove-AzConnectedVMwareVMTemplate</S>
+                <S>Remove-AzConnectedVMwareVNet</S>
+                <S>Restart-AzConnectedVMwareVM</S>
+                <S>Start-AzConnectedVMwareVM</S>
+                <S>Stop-AzConnectedVMwareVM</S>
+                <S>Update-AzConnectedVMwareCluster</S>
+                <S>Update-AzConnectedVMwareDatastore</S>
+                <S>Update-AzConnectedVMwareHost</S>
+                <S>Update-AzConnectedVMwareResourcePool</S>
+                <S>Update-AzConnectedVMwareVCenter</S>
+                <S>Update-AzConnectedVMwareVM</S>
+                <S>Update-AzConnectedVMwareVMTemplate</S>
+                <S>Update-AzConnectedVMwareVNet</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzConnectedVMwareCluster</S>
+                <S>Get-AzConnectedVMwareDatastore</S>
+                <S>Get-AzConnectedVMwareHost</S>
+                <S>Get-AzConnectedVMwareInventoryItem</S>
+                <S>Get-AzConnectedVMwareResourcePool</S>
+                <S>Get-AzConnectedVMwareVCenter</S>
+                <S>Get-AzConnectedVMwareVM</S>
+                <S>Get-AzConnectedVMwareVMGuestAgent</S>
+                <S>Get-AzConnectedVMwareVMTemplate</S>
+                <S>Get-AzConnectedVMwareVNet</S>
+                <S>New-AzConnectedVMwareCluster</S>
+                <S>New-AzConnectedVMwareDatastore</S>
+                <S>New-AzConnectedVMwareHost</S>
+                <S>New-AzConnectedVMwareResourcePool</S>
+                <S>New-AzConnectedVMwareVCenter</S>
+                <S>New-AzConnectedVMwareVM</S>
+                <S>New-AzConnectedVMwareVMGuestAgent</S>
+                <S>New-AzConnectedVMwareVMTemplate</S>
+                <S>New-AzConnectedVMwareVNet</S>
+                <S>Remove-AzConnectedVMwareCluster</S>
+                <S>Remove-AzConnectedVMwareDatastore</S>
+                <S>Remove-AzConnectedVMwareHost</S>
+                <S>Remove-AzConnectedVMwareResourcePool</S>
+                <S>Remove-AzConnectedVMwareVCenter</S>
+                <S>Remove-AzConnectedVMwareVM</S>
+                <S>Remove-AzConnectedVMwareVMTemplate</S>
+                <S>Remove-AzConnectedVMwareVNet</S>
+                <S>Restart-AzConnectedVMwareVM</S>
+                <S>Start-AzConnectedVMwareVM</S>
+                <S>Stop-AzConnectedVMwareVM</S>
+                <S>Update-AzConnectedVMwareCluster</S>
+                <S>Update-AzConnectedVMwareDatastore</S>
+                <S>Update-AzConnectedVMwareHost</S>
+                <S>Update-AzConnectedVMwareResourcePool</S>
+                <S>Update-AzConnectedVMwareVCenter</S>
+                <S>Update-AzConnectedVMwareVM</S>
+                <S>Update-AzConnectedVMwareVMTemplate</S>
+                <S>Update-AzConnectedVMwareVNet</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="7">
+        <TN RefId="3">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: {ModuleNamePlaceHolder} cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">600</S>
+          <S N="downloadCount">600</S>
+          <S N="packageSize">909872</S>
+          <S N="published">12/5/2023 2:03:58 AM -06:00</S>
+          <S N="created">12/5/2023 2:03:58 AM -06:00</S>
+          <S N="lastUpdated">2/15/2024 10:17:56 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule {ModuleNamePlaceHolder} PSEdition_Core PSEdition_Desktop PSFunction_Get-AzConnectedVMwareCluster PSCommand_Get-AzConnectedVMwareCluster PSFunction_Get-AzConnectedVMwareDatastore PSCommand_Get-AzConnectedVMwareDatastore PSFunction_Get-AzConnectedVMwareHost PSCommand_Get-AzConnectedVMwareHost PSFunction_Get-AzConnectedVMwareInventoryItem PSCommand_Get-AzConnectedVMwareInventoryItem PSFunction_Get-AzConnectedVMwareResourcePool PSCommand_Get-AzConnectedVMwareResourcePool PSFunction_Get-AzConnectedVMwareVCenter PSCommand_Get-AzConnectedVMwareVCenter PSFunction_Get-AzConnectedVMwareVM PSCommand_Get-AzConnectedVMwareVM PSFunction_Get-AzConnectedVMwareVMGuestAgent PSCommand_Get-AzConnectedVMwareVMGuestAgent PSFunction_Get-AzConnectedVMwareVMTemplate PSCommand_Get-AzConnectedVMwareVMTemplate PSFunction_Get-AzConnectedVMwareVNet PSCommand_Get-AzConnectedVMwareVNet PSFunction_New-AzConnectedVMwareCluster PSCommand_New-AzConnectedVMwareCluster PSFunction_New-AzConnectedVMwareDatastore PSCommand_New-AzConnectedVMwareDatastore PSFunction_New-AzConnectedVMwareHost PSCommand_New-AzConnectedVMwareHost PSFunction_New-AzConnectedVMwareResourcePool PSCommand_New-AzConnectedVMwareResourcePool PSFunction_New-AzConnectedVMwareVCenter PSCommand_New-AzConnectedVMwareVCenter PSFunction_New-AzConnectedVMwareVM PSCommand_New-AzConnectedVMwareVM PSFunction_New-AzConnectedVMwareVMGuestAgent PSCommand_New-AzConnectedVMwareVMGuestAgent PSFunction_New-AzConnectedVMwareVMTemplate PSCommand_New-AzConnectedVMwareVMTemplate PSFunction_New-AzConnectedVMwareVNet PSCommand_New-AzConnectedVMwareVNet PSFunction_Remove-AzConnectedVMwareCluster PSCommand_Remove-AzConnectedVMwareCluster PSFunction_Remove-AzConnectedVMwareDatastore PSCommand_Remove-AzConnectedVMwareDatastore PSFunction_Remove-AzConnectedVMwareHost PSCommand_Remove-AzConnectedVMwareHost PSFunction_Remove-AzConnectedVMwareResourcePool PSCommand_Remove-AzConnectedVMwareResourcePool PSFunction_Remove-AzConnectedVMwareVCenter PSCommand_Remove-AzConnectedVMwareVCenter PSFunction_Remove-AzConnectedVMwareVM PSCommand_Remove-AzConnectedVMwareVM PSFunction_Remove-AzConnectedVMwareVMTemplate PSCommand_Remove-AzConnectedVMwareVMTemplate PSFunction_Remove-AzConnectedVMwareVNet PSCommand_Remove-AzConnectedVMwareVNet PSFunction_Restart-AzConnectedVMwareVM PSCommand_Restart-AzConnectedVMwareVM PSFunction_Start-AzConnectedVMwareVM PSCommand_Start-AzConnectedVMwareVM PSFunction_Stop-AzConnectedVMwareVM PSCommand_Stop-AzConnectedVMwareVM PSFunction_Update-AzConnectedVMwareCluster PSCommand_Update-AzConnectedVMwareCluster PSFunction_Update-AzConnectedVMwareDatastore PSCommand_Update-AzConnectedVMwareDatastore PSFunction_Update-AzConnectedVMwareHost PSCommand_Update-AzConnectedVMwareHost PSFunction_Update-AzConnectedVMwareResourcePool PSCommand_Update-AzConnectedVMwareResourcePool PSFunction_Update-AzConnectedVMwareVCenter PSCommand_Update-AzConnectedVMwareVCenter PSFunction_Update-AzConnectedVMwareVM PSCommand_Update-AzConnectedVMwareVM PSFunction_Update-AzConnectedVMwareVMTemplate PSCommand_Update-AzConnectedVMwareVMTemplate PSFunction_Update-AzConnectedVMwareVNet PSCommand_Update-AzConnectedVMwareVNet PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:17:56Z</S>
+          <S N="NormalizedVersion">0.1.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.ConnectedVMware.nuspec|Az.ConnectedVMware.psd1|ConnectedVMware.Autorest\custom\Az.ConnectedVMware.custom.psm1|Az.ConnectedVMware.psm1|ConnectedVMware.Autorest\exports\ProxyCmdletDefinitions.ps1|ConnectedVMware.Autorest\Az.ConnectedVMware.format.ps1xml|ConnectedVMware.Autorest\internal\Az.ConnectedVMware.internal.psm1|ConnectedVMware.Autorest\Az.ConnectedVMware.psm1|ConnectedVMware.Autorest\internal\ProxyCmdletDefinitions.ps1|ConnectedVMware.Autorest\bin\Az.ConnectedVMware.private.dll|ConnectedVMware.Autorest\utils\Unprotect-SecureString.ps1</S>
+          <S N="GUID">accceef6-8113-453a-a31c-4f2ce57893d6</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.ConnectedVMware\0.1.0</S>
+    </MS>
+  </Obj>
+</Objs>

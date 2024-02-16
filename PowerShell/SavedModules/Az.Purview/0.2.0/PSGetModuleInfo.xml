@@ -1,0 +1,375 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.Purview</S>
+      <S N="Version">0.2.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: Purview cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2022-03-02T02:44:34-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>Purview</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Add-AzPurviewAccountRootCollectionAdmin</S>
+                <S>Get-AzPurviewAccount</S>
+                <S>Get-AzPurviewAccountKey</S>
+                <S>Get-AzPurviewDefaultAccount</S>
+                <S>New-AzPurviewAccount</S>
+                <S>Remove-AzPurviewAccount</S>
+                <S>Remove-AzPurviewDefaultAccount</S>
+                <S>Set-AzPurviewDefaultAccount</S>
+                <S>Test-AzPurviewAccountNameAvailability</S>
+                <S>Update-AzPurviewAccount</S>
+                <S>Get-AzPurviewClassificationRule</S>
+                <S>Get-AzPurviewClassificationRuleVersion</S>
+                <S>Get-AzPurviewDataSource</S>
+                <S>Get-AzPurviewFilter</S>
+                <S>Get-AzPurviewKeyVaultConnection</S>
+                <S>Get-AzPurviewScan</S>
+                <S>Get-AzPurviewScanResultScanHistory</S>
+                <S>Get-AzPurviewScanRuleset</S>
+                <S>Get-AzPurviewSystemScanRuleset</S>
+                <S>Get-AzPurviewSystemScanRulesetLatest</S>
+                <S>Get-AzPurviewSystemScanRulesetVersion</S>
+                <S>Get-AzPurviewTrigger</S>
+                <S>Invoke-AzPurviewTagClassificationRuleClassificationVersion</S>
+                <S>New-AzPurviewAdlsGen1CredentialScanObject</S>
+                <S>New-AzPurviewAdlsGen1DataSourceObject</S>
+                <S>New-AzPurviewAdlsGen1MsiScanObject</S>
+                <S>New-AzPurviewAdlsGen1ScanRulesetObject</S>
+                <S>New-AzPurviewAdlsGen2CredentialScanObject</S>
+                <S>New-AzPurviewAdlsGen2DataSourceObject</S>
+                <S>New-AzPurviewAdlsGen2MsiScanObject</S>
+                <S>New-AzPurviewAdlsGen2ScanRulesetObject</S>
+                <S>New-AzPurviewAmazonAccountCredentialScanObject</S>
+                <S>New-AzPurviewAmazonAccountDataSourceObject</S>
+                <S>New-AzPurviewAmazonPostgreSqlCredentialScanObject</S>
+                <S>New-AzPurviewAmazonPostgreSqlDataSourceObject</S>
+                <S>New-AzPurviewAmazonPostgreSqlScanRulesetObject</S>
+                <S>New-AzPurviewAmazonS3CredentialScanObject</S>
+                <S>New-AzPurviewAmazonS3DataSourceObject</S>
+                <S>New-AzPurviewAmazonS3ScanRulesetObject</S>
+                <S>New-AzPurviewAmazonSqlCredentialScanObject</S>
+                <S>New-AzPurviewAmazonSqlDataSourceObject</S>
+                <S>New-AzPurviewAmazonSqlScanRulesetObject</S>
+                <S>New-AzPurviewAzureCosmosDbCredentialScanObject</S>
+                <S>New-AzPurviewAzureCosmosDbDataSourceObject</S>
+                <S>New-AzPurviewAzureCosmosDbScanRulesetObject</S>
+                <S>New-AzPurviewAzureDataExplorerCredentialScanObject</S>
+                <S>New-AzPurviewAzureDataExplorerDataSourceObject</S>
+                <S>New-AzPurviewAzureDataExplorerMsiScanObject</S>
+                <S>New-AzPurviewAzureDataExplorerScanRulesetObject</S>
+                <S>New-AzPurviewAzureFileServiceCredentialScanObject</S>
+                <S>New-AzPurviewAzureFileServiceDataSourceObject</S>
+                <S>New-AzPurviewAzureFileServiceScanRulesetObject</S>
+                <S>New-AzPurviewAzureKeyVaultObject</S>
+                <S>New-AzPurviewAzureMySqlCredentialScanObject</S>
+                <S>New-AzPurviewAzureMySqlDataSourceObject</S>
+                <S>New-AzPurviewAzureMySqlScanRulesetObject</S>
+                <S>New-AzPurviewAzurePostgreSqlCredentialScanObject</S>
+                <S>New-AzPurviewAzurePostgreSqlDataSourceObject</S>
+                <S>New-AzPurviewAzurePostgreSqlScanRulesetObject</S>
+                <S>New-AzPurviewAzureResourceGroupCredentialScanObject</S>
+                <S>New-AzPurviewAzureResourceGroupDataSourceObject</S>
+                <S>New-AzPurviewAzureResourceGroupMsiScanObject</S>
+                <S>New-AzPurviewAzureSqlDatabaseCredentialScanObject</S>
+                <S>New-AzPurviewAzureSqlDatabaseDataSourceObject</S>
+                <S>New-AzPurviewAzureSqlDatabaseManagedInstanceCredentialScanObject</S>
+                <S>New-AzPurviewAzureSqlDatabaseManagedInstanceDataSourceObject</S>
+                <S>New-AzPurviewAzureSqlDatabaseManagedInstanceMsiScanObject</S>
+                <S>New-AzPurviewAzureSqlDatabaseManagedInstanceScanRulesetObject</S>
+                <S>New-AzPurviewAzureSqlDatabaseMsiScanObject</S>
+                <S>New-AzPurviewAzureSqlDatabaseScanRulesetObject</S>
+                <S>New-AzPurviewAzureSqlDataWarehouseCredentialScanObject</S>
+                <S>New-AzPurviewAzureSqlDataWarehouseDataSourceObject</S>
+                <S>New-AzPurviewAzureSqlDataWarehouseMsiScanObject</S>
+                <S>New-AzPurviewAzureSqlDataWarehouseScanRulesetObject</S>
+                <S>New-AzPurviewAzureStorageCredentialScanObject</S>
+                <S>New-AzPurviewAzureStorageDataSourceObject</S>
+                <S>New-AzPurviewAzureStorageMsiScanObject</S>
+                <S>New-AzPurviewAzureStorageScanRulesetObject</S>
+                <S>New-AzPurviewAzureSubscriptionCredentialScanObject</S>
+                <S>New-AzPurviewAzureSubscriptionDataSourceObject</S>
+                <S>New-AzPurviewAzureSubscriptionMsiScanObject</S>
+                <S>New-AzPurviewAzureSynapseWorkspaceCredentialScanObject</S>
+                <S>New-AzPurviewAzureSynapseWorkspaceDataSourceObject</S>
+                <S>New-AzPurviewAzureSynapseWorkspaceMsiScanObject</S>
+                <S>New-AzPurviewAzureSynapseWorkspaceScanRulesetObject</S>
+                <S>New-AzPurviewClassificationRule</S>
+                <S>New-AzPurviewCustomClassificationRuleObject</S>
+                <S>New-AzPurviewDataSource</S>
+                <S>New-AzPurviewFilter</S>
+                <S>New-AzPurviewFilterObject</S>
+                <S>New-AzPurviewKeyVaultConnection</S>
+                <S>New-AzPurviewOracleDataSourceObject</S>
+                <S>New-AzPurviewPowerBIDataSourceObject</S>
+                <S>New-AzPurviewPowerBIDelegatedScanObject</S>
+                <S>New-AzPurviewPowerBIMsiScanObject</S>
+                <S>New-AzPurviewRegexClassificationRulePatternObject</S>
+                <S>New-AzPurviewSapEccDataSourceObject</S>
+                <S>New-AzPurviewSapS4HanaDataSourceObject</S>
+                <S>New-AzPurviewSapS4HanaSapS4HanaCredentialScanObject</S>
+                <S>New-AzPurviewScan</S>
+                <S>New-AzPurviewScanRuleset</S>
+                <S>New-AzPurviewSqlServerDatabaseCredentialScanObject</S>
+                <S>New-AzPurviewSqlServerDatabaseDataSourceObject</S>
+                <S>New-AzPurviewSqlServerDatabaseScanRulesetObject</S>
+                <S>New-AzPurviewTeradataDataSourceObject</S>
+                <S>New-AzPurviewTrigger</S>
+                <S>New-AzPurviewTriggerObject</S>
+                <S>Remove-AzPurviewClassificationRule</S>
+                <S>Remove-AzPurviewDataSource</S>
+                <S>Remove-AzPurviewKeyVaultConnection</S>
+                <S>Remove-AzPurviewScan</S>
+                <S>Remove-AzPurviewScanRuleset</S>
+                <S>Remove-AzPurviewTrigger</S>
+                <S>Start-AzPurviewScanResultScan</S>
+                <S>Stop-AzPurviewScanResultScan</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Add-AzPurviewAccountRootCollectionAdmin</S>
+                <S>Get-AzPurviewAccount</S>
+                <S>Get-AzPurviewAccountKey</S>
+                <S>Get-AzPurviewDefaultAccount</S>
+                <S>New-AzPurviewAccount</S>
+                <S>Remove-AzPurviewAccount</S>
+                <S>Remove-AzPurviewDefaultAccount</S>
+                <S>Set-AzPurviewDefaultAccount</S>
+                <S>Test-AzPurviewAccountNameAvailability</S>
+                <S>Update-AzPurviewAccount</S>
+                <S>Get-AzPurviewClassificationRule</S>
+                <S>Get-AzPurviewClassificationRuleVersion</S>
+                <S>Get-AzPurviewDataSource</S>
+                <S>Get-AzPurviewFilter</S>
+                <S>Get-AzPurviewKeyVaultConnection</S>
+                <S>Get-AzPurviewScan</S>
+                <S>Get-AzPurviewScanResultScanHistory</S>
+                <S>Get-AzPurviewScanRuleset</S>
+                <S>Get-AzPurviewSystemScanRuleset</S>
+                <S>Get-AzPurviewSystemScanRulesetLatest</S>
+                <S>Get-AzPurviewSystemScanRulesetVersion</S>
+                <S>Get-AzPurviewTrigger</S>
+                <S>Invoke-AzPurviewTagClassificationRuleClassificationVersion</S>
+                <S>New-AzPurviewAdlsGen1CredentialScanObject</S>
+                <S>New-AzPurviewAdlsGen1DataSourceObject</S>
+                <S>New-AzPurviewAdlsGen1MsiScanObject</S>
+                <S>New-AzPurviewAdlsGen1ScanRulesetObject</S>
+                <S>New-AzPurviewAdlsGen2CredentialScanObject</S>
+                <S>New-AzPurviewAdlsGen2DataSourceObject</S>
+                <S>New-AzPurviewAdlsGen2MsiScanObject</S>
+                <S>New-AzPurviewAdlsGen2ScanRulesetObject</S>
+                <S>New-AzPurviewAmazonAccountCredentialScanObject</S>
+                <S>New-AzPurviewAmazonAccountDataSourceObject</S>
+                <S>New-AzPurviewAmazonPostgreSqlCredentialScanObject</S>
+                <S>New-AzPurviewAmazonPostgreSqlDataSourceObject</S>
+                <S>New-AzPurviewAmazonPostgreSqlScanRulesetObject</S>
+                <S>New-AzPurviewAmazonS3CredentialScanObject</S>
+                <S>New-AzPurviewAmazonS3DataSourceObject</S>
+                <S>New-AzPurviewAmazonS3ScanRulesetObject</S>
+                <S>New-AzPurviewAmazonSqlCredentialScanObject</S>
+                <S>New-AzPurviewAmazonSqlDataSourceObject</S>
+                <S>New-AzPurviewAmazonSqlScanRulesetObject</S>
+                <S>New-AzPurviewAzureCosmosDbCredentialScanObject</S>
+                <S>New-AzPurviewAzureCosmosDbDataSourceObject</S>
+                <S>New-AzPurviewAzureCosmosDbScanRulesetObject</S>
+                <S>New-AzPurviewAzureDataExplorerCredentialScanObject</S>
+                <S>New-AzPurviewAzureDataExplorerDataSourceObject</S>
+                <S>New-AzPurviewAzureDataExplorerMsiScanObject</S>
+                <S>New-AzPurviewAzureDataExplorerScanRulesetObject</S>
+                <S>New-AzPurviewAzureFileServiceCredentialScanObject</S>
+                <S>New-AzPurviewAzureFileServiceDataSourceObject</S>
+                <S>New-AzPurviewAzureFileServiceScanRulesetObject</S>
+                <S>New-AzPurviewAzureKeyVaultObject</S>
+                <S>New-AzPurviewAzureMySqlCredentialScanObject</S>
+                <S>New-AzPurviewAzureMySqlDataSourceObject</S>
+                <S>New-AzPurviewAzureMySqlScanRulesetObject</S>
+                <S>New-AzPurviewAzurePostgreSqlCredentialScanObject</S>
+                <S>New-AzPurviewAzurePostgreSqlDataSourceObject</S>
+                <S>New-AzPurviewAzurePostgreSqlScanRulesetObject</S>
+                <S>New-AzPurviewAzureResourceGroupCredentialScanObject</S>
+                <S>New-AzPurviewAzureResourceGroupDataSourceObject</S>
+                <S>New-AzPurviewAzureResourceGroupMsiScanObject</S>
+                <S>New-AzPurviewAzureSqlDatabaseCredentialScanObject</S>
+                <S>New-AzPurviewAzureSqlDatabaseDataSourceObject</S>
+                <S>New-AzPurviewAzureSqlDatabaseManagedInstanceCredentialScanObject</S>
+                <S>New-AzPurviewAzureSqlDatabaseManagedInstanceDataSourceObject</S>
+                <S>New-AzPurviewAzureSqlDatabaseManagedInstanceMsiScanObject</S>
+                <S>New-AzPurviewAzureSqlDatabaseManagedInstanceScanRulesetObject</S>
+                <S>New-AzPurviewAzureSqlDatabaseMsiScanObject</S>
+                <S>New-AzPurviewAzureSqlDatabaseScanRulesetObject</S>
+                <S>New-AzPurviewAzureSqlDataWarehouseCredentialScanObject</S>
+                <S>New-AzPurviewAzureSqlDataWarehouseDataSourceObject</S>
+                <S>New-AzPurviewAzureSqlDataWarehouseMsiScanObject</S>
+                <S>New-AzPurviewAzureSqlDataWarehouseScanRulesetObject</S>
+                <S>New-AzPurviewAzureStorageCredentialScanObject</S>
+                <S>New-AzPurviewAzureStorageDataSourceObject</S>
+                <S>New-AzPurviewAzureStorageMsiScanObject</S>
+                <S>New-AzPurviewAzureStorageScanRulesetObject</S>
+                <S>New-AzPurviewAzureSubscriptionCredentialScanObject</S>
+                <S>New-AzPurviewAzureSubscriptionDataSourceObject</S>
+                <S>New-AzPurviewAzureSubscriptionMsiScanObject</S>
+                <S>New-AzPurviewAzureSynapseWorkspaceCredentialScanObject</S>
+                <S>New-AzPurviewAzureSynapseWorkspaceDataSourceObject</S>
+                <S>New-AzPurviewAzureSynapseWorkspaceMsiScanObject</S>
+                <S>New-AzPurviewAzureSynapseWorkspaceScanRulesetObject</S>
+                <S>New-AzPurviewClassificationRule</S>
+                <S>New-AzPurviewCustomClassificationRuleObject</S>
+                <S>New-AzPurviewDataSource</S>
+                <S>New-AzPurviewFilter</S>
+                <S>New-AzPurviewFilterObject</S>
+                <S>New-AzPurviewKeyVaultConnection</S>
+                <S>New-AzPurviewOracleDataSourceObject</S>
+                <S>New-AzPurviewPowerBIDataSourceObject</S>
+                <S>New-AzPurviewPowerBIDelegatedScanObject</S>
+                <S>New-AzPurviewPowerBIMsiScanObject</S>
+                <S>New-AzPurviewRegexClassificationRulePatternObject</S>
+                <S>New-AzPurviewSapEccDataSourceObject</S>
+                <S>New-AzPurviewSapS4HanaDataSourceObject</S>
+                <S>New-AzPurviewSapS4HanaSapS4HanaCredentialScanObject</S>
+                <S>New-AzPurviewScan</S>
+                <S>New-AzPurviewScanRuleset</S>
+                <S>New-AzPurviewSqlServerDatabaseCredentialScanObject</S>
+                <S>New-AzPurviewSqlServerDatabaseDataSourceObject</S>
+                <S>New-AzPurviewSqlServerDatabaseScanRulesetObject</S>
+                <S>New-AzPurviewTeradataDataSourceObject</S>
+                <S>New-AzPurviewTrigger</S>
+                <S>New-AzPurviewTriggerObject</S>
+                <S>Remove-AzPurviewClassificationRule</S>
+                <S>Remove-AzPurviewDataSource</S>
+                <S>Remove-AzPurviewKeyVaultConnection</S>
+                <S>Remove-AzPurviewScan</S>
+                <S>Remove-AzPurviewScanRuleset</S>
+                <S>Remove-AzPurviewTrigger</S>
+                <S>Start-AzPurviewScanResultScan</S>
+                <S>Stop-AzPurviewScanResultScan</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.7.2</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.7.2</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: Purview cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">44231</S>
+          <S N="downloadCount">45688</S>
+          <S N="packageSize">2550017</S>
+          <S N="published">3/2/2022 2:44:34 AM -06:00</S>
+          <S N="created">3/2/2022 2:44:34 AM -06:00</S>
+          <S N="lastUpdated">2/15/2024 10:52:57 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule Purview PSEdition_Core PSEdition_Desktop PSFunction_Add-AzPurviewAccountRootCollectionAdmin PSCommand_Add-AzPurviewAccountRootCollectionAdmin PSFunction_Get-AzPurviewAccount PSCommand_Get-AzPurviewAccount PSFunction_Get-AzPurviewAccountKey PSCommand_Get-AzPurviewAccountKey PSFunction_Get-AzPurviewDefaultAccount PSCommand_Get-AzPurviewDefaultAccount PSFunction_New-AzPurviewAccount PSCommand_New-AzPurviewAccount PSFunction_Remove-AzPurviewAccount PSCommand_Remove-AzPurviewAccount PSFunction_Remove-AzPurviewDefaultAccount PSCommand_Remove-AzPurviewDefaultAccount PSFunction_Set-AzPurviewDefaultAccount PSCommand_Set-AzPurviewDefaultAccount PSFunction_Test-AzPurviewAccountNameAvailability PSCommand_Test-AzPurviewAccountNameAvailability PSFunction_Update-AzPurviewAccount PSCommand_Update-AzPurviewAccount PSFunction_Get-AzPurviewClassificationRule PSCommand_Get-AzPurviewClassificationRule PSFunction_Get-AzPurviewClassificationRuleVersion PSCommand_Get-AzPurviewClassificationRuleVersion PSFunction_Get-AzPurviewDataSource PSCommand_Get-AzPurviewDataSource PSFunction_Get-AzPurviewFilter PSCommand_Get-AzPurviewFilter PSFunction_Get-AzPurviewKeyVaultConnection PSCommand_Get-AzPurviewKeyVaultConnection PSFunction_Get-AzPurviewScan PSCommand_Get-AzPurviewScan PSFunction_Get-AzPurviewScanResultScanHistory PSCommand_Get-AzPurviewScanResultScanHistory PSFunction_Get-AzPurviewScanRuleset PSCommand_Get-AzPurviewScanRuleset PSFunction_Get-AzPurviewSystemScanRuleset PSCommand_Get-AzPurviewSystemScanRuleset PSFunction_Get-AzPurviewSystemScanRulesetLatest PSCommand_Get-AzPurviewSystemScanRulesetLatest PSFunction_Get-AzPurviewSystemScanRulesetVersion PSCommand_Get-AzPurviewSystemScanRulesetVersion PSFunction_Get-AzPurviewTrigger PSCommand_Get-AzPurviewTrigger PSFunction_Invoke-AzPurviewTagClassificationRuleClassificationVersion PSCommand_Invoke-AzPurviewTagClassificationRuleClassificationVersion PSFunction_New-AzPurviewAdlsGen1CredentialScanObject PSCommand_New-AzPurviewAdlsGen1CredentialScanObject PSFunction_New-AzPurviewAdlsGen1DataSourceObject PSCommand_New-AzPurviewAdlsGen1DataSourceObject PSFunction_New-AzPurviewAdlsGen1MsiScanObject PSCommand_New-AzPurviewAdlsGen1MsiScanObject PSFunction_New-AzPurviewAdlsGen1ScanRulesetObject PSCommand_New-AzPurviewAdlsGen1ScanRulesetObject PSFunction_New-AzPurviewAdlsGen2CredentialScanObject PSCommand_New-AzPurviewAdlsGen2CredentialScanObject PSFunction_New-AzPurviewAdlsGen2DataSourceObject PSCommand_New-AzPurviewAdlsGen2DataSourceObject PSFunction_New-AzPurviewAdlsGen2MsiScanObject PSCommand_New-AzPurviewAdlsGen2MsiScanObject PSFunction_New-AzPurviewAdlsGen2ScanRulesetObject PSCommand_New-AzPurviewAdlsGen2ScanRulesetObject PSFunction_New-AzPurviewAmazonAccountCredentialScanObject PSCommand_New-AzPurviewAmazonAccountCredentialScanObject PSFunction_New-AzPurviewAmazonAccountDataSourceObject PSCommand_New-AzPurviewAmazonAccountDataSourceObject PSFunction_New-AzPurviewAmazonPostgreSqlCredentialScanObject PSCommand_New-AzPurviewAmazonPostgreSqlCredentialScanObject PSFunction_New-AzPurviewAmazonPostgreSqlDataSourceObject PSCommand_New-AzPurviewAmazonPostgreSqlDataSourceObject PSFunction_New-AzPurviewAmazonPostgreSqlScanRulesetObject PSCommand_New-AzPurviewAmazonPostgreSqlScanRulesetObject PSFunction_New-AzPurviewAmazonS3CredentialScanObject PSCommand_New-AzPurviewAmazonS3CredentialScanObject PSFunction_New-AzPurviewAmazonS3DataSourceObject PSCommand_New-AzPurviewAmazonS3DataSourceObject PSFunction_New-AzPurviewAmazonS3ScanRulesetObject PSCommand_New-AzPurviewAmazonS3ScanRulesetObject PSFunction_New-AzPurviewAmazonSqlCredentialScanObject PSCommand_New-AzPurviewAmazonSqlCredentialScanObject PSFunction_New-AzPurviewAmazonSqlDataSourceObject PSCommand_New-AzPurviewAmazonSqlDataSourceObject PSFunction_New-AzPurviewAmazonSqlScanRulesetObject PSCommand_New-AzPurviewAmazonSqlScanRulesetObject PSFunction_New-AzPurviewAzureCosmosDbCredentialScanObject PSCommand_New-AzPurviewAzureCosmosDbCredentialScanObject PSFunction_New-AzPurviewAzureCosmosDbDataSourceObject PSCommand_New-AzPurviewAzureCosmosDbDataSourceObject PSFunction_New-AzPurviewAzureCosmosDbScanRulesetObject PSCommand_New-AzPurviewAzureCosmosDbScanRulesetObject PSFunction_New-AzPurviewAzureDataExplorerCredentialScanObject PSCommand_New-AzPurviewAzureDataExplorerCredentialScanObject PSFunction_New-AzPurviewAzureDataExplorerDataSourceObject PSCommand_New-AzPurviewAzureDataExplorerDataSourceObject PSFunction_New-AzPurviewAzureDataExplorerMsiScanObject PSCommand_New-AzPurviewAzureDataExplorerMsiScanObject PSFunction_New-AzPurviewAzureDataExplorerScanRulesetObject PSCommand_New-AzPurviewAzureDataExplorerScanRulesetObject PSFunction_New-AzPurviewAzureFileServiceCredentialScanObject PSCommand_New-AzPurviewAzureFileServiceCredentialScanObject PSFunction_New-AzPurviewAzureFileServiceDataSourceObject PSCommand_New-AzPurviewAzureFileServiceDataSourceObject PSFunction_New-AzPurviewAzureFileServiceScanRulesetObject PSCommand_New-AzPurviewAzureFileServiceScanRulesetObject PSFunction_New-AzPurviewAzureKeyVaultObject PSCommand_New-AzPurviewAzureKeyVaultObject PSFunction_New-AzPurviewAzureMySqlCredentialScanObject PSCommand_New-AzPurviewAzureMySqlCredentialScanObject PSFunction_New-AzPurviewAzureMySqlDataSourceObject PSCommand_New-AzPurviewAzureMySqlDataSourceObject PSFunction_New-AzPurviewAzureMySqlScanRulesetObject PSCommand_New-AzPurviewAzureMySqlScanRulesetObject PSFunction_New-AzPurviewAzurePostgreSqlCredentialScanObject PSCommand_New-AzPurviewAzurePostgreSqlCredentialScanObject PSFunction_New-AzPurviewAzurePostgreSqlDataSourceObject PSCommand_New-AzPurviewAzurePostgreSqlDataSourceObject PSFunction_New-AzPurviewAzurePostgreSqlScanRulesetObject PSCommand_New-AzPurviewAzurePostgreSqlScanRulesetObject PSFunction_New-AzPurviewAzureResourceGroupCredentialScanObject PSCommand_New-AzPurviewAzureResourceGroupCredentialScanObject PSFunction_New-AzPurviewAzureResourceGroupDataSourceObject PSCommand_New-AzPurviewAzureResourceGroupDataSourceObject PSFunction_New-AzPurviewAzureResourceGroupMsiScanObject PSCommand_New-AzPurviewAzureResourceGroupMsiScanObject PSFunction_New-AzPurviewAzureSqlDatabaseCredentialScanObject PSCommand_New-AzPurviewAzureSqlDatabaseCredentialScanObject PSFunction_New-AzPurviewAzureSqlDatabaseDataSourceObject PSCommand_New-AzPurviewAzureSqlDatabaseDataSourceObject PSFunction_New-AzPurviewAzureSqlDatabaseManagedInstanceCredentialScanObject PSCommand_New-AzPurviewAzureSqlDatabaseManagedInstanceCredentialScanObject PSFunction_New-AzPurviewAzureSqlDatabaseManagedInstanceDataSourceObject PSCommand_New-AzPurviewAzureSqlDatabaseManagedInstanceDataSourceObject PSFunction_New-AzPurviewAzureSqlDatabaseManagedInstanceMsiScanObject PSCommand_New-AzPurviewAzureSqlDatabaseManagedInstanceMsiScanObject PSFunction_New-AzPurviewAzureSqlDatabaseManagedInstanceScanRulesetObject PSCommand_New-AzPurviewAzureSqlDatabaseManagedInstanceScanRulesetObject PSFunction_New-AzPurviewAzureSqlDatabaseMsiScanObject PSCommand_New-AzPurviewAzureSqlDatabaseMsiScanObject PSFunction_New-AzPurviewAzureSqlDatabaseScanRulesetObject PSCommand_New-AzPurviewAzureSqlDatabaseScanRulesetObject PSFunction_New-AzPurviewAzureSqlDataWarehouseCredentialScanObject PSCommand_New-AzPurviewAzureSqlDataWarehouseCredentialScanObject PSFunction_New-AzPurviewAzureSqlDataWarehouseDataSourceObject PSCommand_New-AzPurviewAzureSqlDataWarehouseDataSourceObject PSFunction_New-AzPurviewAzureSqlDataWarehouseMsiScanObject PSCommand_New-AzPurviewAzureSqlDataWarehouseMsiScanObject PSFunction_New-AzPurviewAzureSqlDataWarehouseScanRulesetObject PSCommand_New-AzPurviewAzureSqlDataWarehouseScanRulesetObject PSFunction_New-AzPurviewAzureStorageCredentialScanObject PSCommand_New-AzPurviewAzureStorageCredentialScanObject PSFunction_New-AzPurviewAzureStorageDataSourceObject PSCommand_New-AzPurviewAzureStorageDataSourceObject PSFunction_New-AzPurviewAzureStorageMsiScanObject PSCommand_New-AzPurviewAzureStorageMsiScanObject PSFunction_New-AzPurviewAzureStorageScanRulesetObject PSCommand_New-AzPurviewAzureStorageScanRulesetObject PSFunction_New-AzPurviewAzureSubscriptionCredentialScanObject PSCommand_New-AzPurviewAzureSubscriptionCredentialScanObject PSFunction_New-AzPurviewAzureSubscriptionDataSourceObject PSCommand_New-AzPurviewAzureSubscriptionDataSourceObject PSFunction_New-AzPurviewAzureSubscriptionMsiScanObject PSCommand_New-AzPurviewAzureSubscriptionMsiScanObject PSFunction_New-AzPurviewAzureSynapseWorkspaceCredentialScanObject PSCommand_New-AzPurviewAzureSynapseWorkspaceCredentialScanObject PSFunction_New-AzPurviewAzureSynapseWorkspaceDataSourceObject PSCommand_New-AzPurviewAzureSynapseWorkspaceDataSourceObject PSFunction_New-AzPurviewAzureSynapseWorkspaceMsiScanObject PSCommand_New-AzPurviewAzureSynapseWorkspaceMsiScanObject PSFunction_New-AzPurviewAzureSynapseWorkspaceScanRulesetObject PSCommand_New-AzPurviewAzureSynapseWorkspaceScanRulesetObject PSFunction_New-AzPurviewClassificationRule PSCommand_New-AzPurviewClassificationRule PSFunction_New-AzPurviewCustomClassificationRuleObject PSCommand_New-AzPurviewCustomClassificationRuleObject PSFunction_New-AzPurviewDataSource PSCommand_New-AzPurviewDataSource PSFunction_New-AzPurviewFilter PSCommand_New-AzPurviewFilter PSFunction_New-AzPurviewFilterObject PSCommand_New-AzPurviewFilterObject PSFunction_New-AzPurviewKeyVaultConnection PSCommand_New-AzPurviewKeyVaultConnection PSFunction_New-AzPurviewOracleDataSourceObject PSCommand_New-AzPurviewOracleDataSourceObject PSFunction_New-AzPurviewPowerBIDataSourceObject PSCommand_New-AzPurviewPowerBIDataSourceObject PSFunction_New-AzPurviewPowerBIDelegatedScanObject PSCommand_New-AzPurviewPowerBIDelegatedScanObject PSFunction_New-AzPurviewPowerBIMsiScanObject PSCommand_New-AzPurviewPowerBIMsiScanObject PSFunction_New-AzPurviewRegexClassificationRulePatternObject PSCommand_New-AzPurviewRegexClassificationRulePatternObject PSFunction_New-AzPurviewSapEccDataSourceObject PSCommand_New-AzPurviewSapEccDataSourceObject PSFunction_New-AzPurviewSapS4HanaDataSourceObject PSCommand_New-AzPurviewSapS4HanaDataSourceObject PSFunction_New-AzPurviewSapS4HanaSapS4HanaCredentialScanObject PSCommand_New-AzPurviewSapS4HanaSapS4HanaCredentialScanObject PSFunction_New-AzPurviewScan PSCommand_New-AzPurviewScan PSFunction_New-AzPurviewScanRuleset PSCommand_New-AzPurviewScanRuleset PSFunction_New-AzPurviewSqlServerDatabaseCredentialScanObject PSCommand_New-AzPurviewSqlServerDatabaseCredentialScanObject PSFunction_New-AzPurviewSqlServerDatabaseDataSourceObject PSCommand_New-AzPurviewSqlServerDatabaseDataSourceObject PSFunction_New-AzPurviewSqlServerDatabaseScanRulesetObject PSCommand_New-AzPurviewSqlServerDatabaseScanRulesetObject PSFunction_New-AzPurviewTeradataDataSourceObject PSCommand_New-AzPurviewTeradataDataSourceObject PSFunction_New-AzPurviewTrigger PSCommand_New-AzPurviewTrigger PSFunction_New-AzPurviewTriggerObject PSCommand_New-AzPurviewTriggerObject PSFunction_Remove-AzPurviewClassificationRule PSCommand_Remove-AzPurviewClassificationRule PSFunction_Remove-AzPurviewDataSource PSCommand_Remove-AzPurviewDataSource PSFunction_Remove-AzPurviewKeyVaultConnection PSCommand_Remove-AzPurviewKeyVaultConnection PSFunction_Remove-AzPurviewScan PSCommand_Remove-AzPurviewScan PSFunction_Remove-AzPurviewScanRuleset PSCommand_Remove-AzPurviewScanRuleset PSFunction_Remove-AzPurviewTrigger PSCommand_Remove-AzPurviewTrigger PSFunction_Start-AzPurviewScanResultScan PSCommand_Start-AzPurviewScanResultScan PSFunction_Stop-AzPurviewScanResultScan PSCommand_Stop-AzPurviewScanResultScan PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:52:57Z</S>
+          <S N="NormalizedVersion">0.2.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.Purview.nuspec|Az.Purview.psd1|Az.Purview.psm1|Microsoft.Azure.PowerShell.Cmdlets.Purview.deps.json|Purview.Autorest\Az.Purview.format.ps1xml|Purview.Autorest\Az.Purview.psm1|Purview.Autorest\bin\Az.Purview.private.deps.json|Purview.Autorest\bin\Az.Purview.private.dll|Purview.Autorest\custom\Add-AzPurviewAccountRootCollectionAdmin.ps1|Purview.Autorest\custom\Az.Purview.custom.psm1|Purview.Autorest\custom\New-AzPurviewAccount.ps1|Purview.Autorest\custom\Set-AzPurviewDefaultAccount.ps1|Purview.Autorest\custom\Test-AzPurviewAccountNameAvailability.ps1|Purview.Autorest\exports\ProxyCmdletDefinitions.ps1|Purview.Autorest\internal\Az.Purview.internal.psm1|Purview.Autorest\internal\ProxyCmdletDefinitions.ps1|Purview.Autorest\utils\Unprotect-SecureString.ps1|Purviewdata.Autorest\Az.Purviewdata.format.ps1xml|Purviewdata.Autorest\Az.Purviewdata.psm1|Purviewdata.Autorest\bin\Az.Purviewdata.private.deps.json|Purviewdata.Autorest\bin\Az.Purviewdata.private.dll|Purviewdata.Autorest\custom\Az.Purviewdata.custom.psm1|Purviewdata.Autorest\custom\New-AzPurviewAdlsGen1ScanRulesetObject.ps1|Purviewdata.Autorest\custom\New-AzPurviewAdlsGen2ScanRulesetObject.ps1|Purviewdata.Autorest\custom\New-AzPurviewAmazonPostgreSqlScanRulesetObject.ps1|Purviewdata.Autorest\custom\New-AzPurviewAmazonS3ScanRulesetObject.ps1|Purviewdata.Autorest\custom\New-AzPurviewAmazonSqlScanRulesetObject.ps1|Purviewdata.Autorest\custom\New-AzPurviewAzureCosmosDbScanRulesetObject.ps1|Purviewdata.Autorest\custom\New-AzPurviewAzureDataExplorerScanRulesetObject.ps1|Purviewdata.Autorest\custom\New-AzPurviewAzureFileServiceScanRulesetObject.ps1|Purviewdata.Autorest\custom\New-AzPurviewAzureMySqlScanRulesetObject.ps1|Purviewdata.Autorest\custom\New-AzPurviewAzurePostgreSqlScanRulesetObject.ps1|Purviewdata.Autorest\custom\New-AzPurviewAzureSqlDatabaseManagedInstanceScanRulesetObject.ps1|Purviewdata.Autorest\custom\New-AzPurviewAzureSqlDatabaseScanRulesetObject.ps1|Purviewdata.Autorest\custom\New-AzPurviewAzureSqlDataWarehouseScanRulesetObject.ps1|Purviewdata.Autorest\custom\New-AzPurviewAzureStorageScanRulesetObject.ps1|Purviewdata.Autorest\custom\New-AzPurviewAzureSynapseWorkspaceScanRulesetObject.ps1|Purviewdata.Autorest\custom\New-AzPurviewSqlServerDatabaseScanRulesetObject.ps1|Purviewdata.Autorest\custom\New-AzPurviewTriggerObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAdlsGen1CredentialScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAdlsGen1DataSourceObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAdlsGen1MsiScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAdlsGen2CredentialScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAdlsGen2DataSourceObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAdlsGen2MsiScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAmazonAccountCredentialScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAmazonAccountDataSourceObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAmazonPostgreSqlCredentialScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAmazonPostgreSqlDataSourceObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAmazonS3CredentialScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAmazonS3DataSourceObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAmazonSqlCredentialScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAmazonSqlDataSourceObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureCosmosDbCredentialScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureCosmosDbDataSourceObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureDataExplorerCredentialScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureDataExplorerDataSourceObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureDataExplorerMsiScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureFileServiceCredentialScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureFileServiceDataSourceObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureKeyVaultObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureMySqlCredentialScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureMySqlDataSourceObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzurePostgreSqlCredentialScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzurePostgreSqlDataSourceObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureResourceGroupCredentialScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureResourceGroupDataSourceObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureResourceGroupMsiScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureSqlDatabaseCredentialScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureSqlDatabaseDataSourceObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureSqlDatabaseManagedInstanceCredentialScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureSqlDatabaseManagedInstanceDataSourceObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureSqlDatabaseManagedInstanceMsiScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureSqlDatabaseMsiScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureSqlDataWarehouseCredentialScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureSqlDataWarehouseDataSourceObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureSqlDataWarehouseMsiScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureStorageCredentialScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureStorageDataSourceObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureStorageMsiScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureSubscriptionCredentialScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureSubscriptionDataSourceObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureSubscriptionMsiScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureSynapseWorkspaceCredentialScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureSynapseWorkspaceDataSourceObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewAzureSynapseWorkspaceMsiScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewCustomClassificationRuleObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewFilterObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewOracleDataSourceObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewPowerBIDataSourceObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewPowerBIDelegatedScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewPowerBIMsiScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewRegexClassificationRulePatternObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewSapEccDataSourceObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewSapS4HanaDataSourceObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewSapS4HanaSapS4HanaCredentialScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewSqlServerDatabaseCredentialScanObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewSqlServerDatabaseDataSourceObject.ps1|Purviewdata.Autorest\custom\autogen-model-cmdlets\New-AzPurviewTeradataDataSourceObject.ps1|Purviewdata.Autorest\exports\ProxyCmdletDefinitions.ps1|Purviewdata.Autorest\internal\Az.Purviewdata.internal.psm1|Purviewdata.Autorest\utils\Unprotect-SecureString.ps1</S>
+          <S N="GUID">accceef6-8113-453a-a31c-4f2ce57893d6</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.Purview\0.2.0</S>
+    </MS>
+  </Obj>
+</Objs>

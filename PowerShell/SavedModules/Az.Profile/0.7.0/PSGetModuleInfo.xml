@@ -1,0 +1,186 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.Profile</S>
+      <S N="Version">0.7.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell - Profile credential management cmdlets for Azure Resource Manager in PowerShell and PowerShell Core</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2018-12-04T18:35:28-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>Profile</S>
+          <S>Authentication</S>
+          <S>Environment</S>
+          <S>Subscription</S>
+          <S>PSModule</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Disable-AzDataCollection</S>
+                <S>Disable-AzContextAutosave</S>
+                <S>Enable-AzDataCollection</S>
+                <S>Enable-AzContextAutosave</S>
+                <S>Remove-AzEnvironment</S>
+                <S>Get-AzEnvironment</S>
+                <S>Set-AzEnvironment</S>
+                <S>Add-AzEnvironment</S>
+                <S>Get-AzSubscription</S>
+                <S>Connect-AzAccount</S>
+                <S>Get-AzContext</S>
+                <S>Set-AzContext</S>
+                <S>Import-AzContext</S>
+                <S>Save-AzContext</S>
+                <S>Get-AzTenant</S>
+                <S>Send-Feedback</S>
+                <S>Resolve-AzError</S>
+                <S>Select-AzContext</S>
+                <S>Rename-AzContext</S>
+                <S>Remove-AzContext</S>
+                <S>Clear-AzContext</S>
+                <S>Disconnect-AzAccount</S>
+                <S>Get-AzContextAutosaveSetting</S>
+                <S>Set-AzDefault</S>
+                <S>Get-AzDefault</S>
+                <S>Clear-AzDefault</S>
+                <S>Enable-AzureRmAlias</S>
+                <S>Disable-AzureRmAlias</S>
+                <S>Uninstall-AzureRm</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Disable-AzDataCollection</S>
+                <S>Disable-AzContextAutosave</S>
+                <S>Enable-AzDataCollection</S>
+                <S>Enable-AzContextAutosave</S>
+                <S>Remove-AzEnvironment</S>
+                <S>Get-AzEnvironment</S>
+                <S>Set-AzEnvironment</S>
+                <S>Add-AzEnvironment</S>
+                <S>Get-AzSubscription</S>
+                <S>Connect-AzAccount</S>
+                <S>Get-AzContext</S>
+                <S>Set-AzContext</S>
+                <S>Import-AzContext</S>
+                <S>Save-AzContext</S>
+                <S>Get-AzTenant</S>
+                <S>Send-Feedback</S>
+                <S>Resolve-AzError</S>
+                <S>Select-AzContext</S>
+                <S>Rename-AzContext</S>
+                <S>Remove-AzContext</S>
+                <S>Clear-AzContext</S>
+                <S>Disconnect-AzAccount</S>
+                <S>Get-AzContextAutosaveSetting</S>
+                <S>Set-AzDefault</S>
+                <S>Get-AzDefault</S>
+                <S>Clear-AzDefault</S>
+                <S>Enable-AzureRmAlias</S>
+                <S>Disable-AzureRmAlias</S>
+                <S>Uninstall-AzureRm</S>
+              </LST>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">Update release with latest service features and serialization fixes</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="7">
+        <TN RefId="3">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell - Profile credential management cmdlets for Azure Resource Manager in PowerShell and PowerShell Core</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">Update release with latest service features and serialization fixes</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">1185722</S>
+          <S N="downloadCount">1242197</S>
+          <S N="packageSize">3356721</S>
+          <S N="published">12/4/2018 6:35:28 PM -06:00</S>
+          <S N="created">12/4/2018 6:35:28 PM -06:00</S>
+          <S N="lastUpdated">2/16/2024 12:23:00 AM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM Profile Authentication Environment Subscription PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_Disable-AzDataCollection PSCommand_Disable-AzDataCollection PSCmdlet_Disable-AzContextAutosave PSCommand_Disable-AzContextAutosave PSCmdlet_Enable-AzDataCollection PSCommand_Enable-AzDataCollection PSCmdlet_Enable-AzContextAutosave PSCommand_Enable-AzContextAutosave PSCmdlet_Remove-AzEnvironment PSCommand_Remove-AzEnvironment PSCmdlet_Get-AzEnvironment PSCommand_Get-AzEnvironment PSCmdlet_Set-AzEnvironment PSCommand_Set-AzEnvironment PSCmdlet_Add-AzEnvironment PSCommand_Add-AzEnvironment PSCmdlet_Get-AzSubscription PSCommand_Get-AzSubscription PSCmdlet_Connect-AzAccount PSCommand_Connect-AzAccount PSCmdlet_Get-AzContext PSCommand_Get-AzContext PSCmdlet_Set-AzContext PSCommand_Set-AzContext PSCmdlet_Import-AzContext PSCommand_Import-AzContext PSCmdlet_Save-AzContext PSCommand_Save-AzContext PSCmdlet_Get-AzTenant PSCommand_Get-AzTenant PSCmdlet_Send-Feedback PSCommand_Send-Feedback PSCmdlet_Resolve-AzError PSCommand_Resolve-AzError PSCmdlet_Select-AzContext PSCommand_Select-AzContext PSCmdlet_Rename-AzContext PSCommand_Rename-AzContext PSCmdlet_Remove-AzContext PSCommand_Remove-AzContext PSCmdlet_Clear-AzContext PSCommand_Clear-AzContext PSCmdlet_Disconnect-AzAccount PSCommand_Disconnect-AzAccount PSCmdlet_Get-AzContextAutosaveSetting PSCommand_Get-AzContextAutosaveSetting PSCmdlet_Set-AzDefault PSCommand_Set-AzDefault PSCmdlet_Get-AzDefault PSCommand_Get-AzDefault PSCmdlet_Clear-AzDefault PSCommand_Clear-AzDefault PSCmdlet_Enable-AzureRmAlias PSCommand_Enable-AzureRmAlias PSCmdlet_Disable-AzureRmAlias PSCommand_Disable-AzureRmAlias PSCmdlet_Uninstall-AzureRm PSCommand_Uninstall-AzureRm PSIncludes_Cmdlet</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-16T00:23:00Z</S>
+          <S N="NormalizedVersion">0.7.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.Profile.nuspec|Az.Profile.psd1|Az.Profile.psm1|Hyak.Common.dll|Microsoft.ApplicationInsights.dll|Microsoft.Azure.Commands.Profile.deps.json|Microsoft.Azure.Commands.Profile.Desktop.types.ps1xml|Microsoft.Azure.Commands.Profile.dll|Microsoft.Azure.Commands.Profile.dll-Help.xml|Microsoft.Azure.Commands.Profile.format.ps1xml|Microsoft.Azure.Commands.Profile.generated.format.ps1xml|Microsoft.Azure.Commands.Profile.types.ps1xml|Microsoft.Azure.Common.dll|Microsoft.Azure.PowerShell.Aks.dll|Microsoft.Azure.PowerShell.Authentication.Abstractions.dll|Microsoft.Azure.PowerShell.Authentication.dll|Microsoft.Azure.PowerShell.Authentication.ResourceManager.dll|Microsoft.Azure.PowerShell.Authorization.dll|Microsoft.Azure.PowerShell.Common.dll|Microsoft.Azure.PowerShell.Compute.dll|Microsoft.Azure.PowerShell.Graph.Rbac.dll|Microsoft.Azure.PowerShell.KeyVault.dll|Microsoft.Azure.PowerShell.Network.dll|Microsoft.Azure.PowerShell.ResourceManager.dll|Microsoft.Azure.PowerShell.Storage.dll|Microsoft.Azure.PowerShell.Storage.Management.dll|Microsoft.Azure.PowerShell.Strategies.dll|Microsoft.Azure.PowerShell.Websites.dll|Microsoft.Rest.ClientRuntime.Azure.Authentication.dll|Microsoft.Rest.ClientRuntime.Azure.dll|Microsoft.Rest.ClientRuntime.dll|Microsoft.WindowsAzure.Storage.DataMovement.dll|Microsoft.WindowsAzure.Storage.dll|NetCoreAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.dll|NetCoreAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll|PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.dll|PreloadAssemblies\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll|PreloadAssemblies\Newtonsoft.Json.10.dll|StartupScripts\AzError.ps1</S>
+          <S N="GUID">17a2feff-488b-47f9-8729-e2cec094624c</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.Profile\0.7.0</S>
+    </MS>
+  </Obj>
+</Objs>

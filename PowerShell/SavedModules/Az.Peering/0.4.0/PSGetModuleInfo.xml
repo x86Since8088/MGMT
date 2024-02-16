@@ -1,0 +1,224 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.Peering</S>
+      <S N="Version">0.4.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: Peering cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2023-02-07T06:41:27-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>Peering</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzPeering</S>
+                <S>Get-AzPeeringAsn</S>
+                <S>Get-AzPeeringCdnPrefix</S>
+                <S>Get-AzPeeringConnectionMonitorTest</S>
+                <S>Get-AzPeeringLegacy</S>
+                <S>Get-AzPeeringLocation</S>
+                <S>Get-AzPeeringReceivedRoute</S>
+                <S>Get-AzPeeringRegisteredAsn</S>
+                <S>Get-AzPeeringRegisteredPrefix</S>
+                <S>Get-AzPeeringRpUnbilledPrefix</S>
+                <S>Get-AzPeeringService</S>
+                <S>Get-AzPeeringServiceCountry</S>
+                <S>Get-AzPeeringServiceLocation</S>
+                <S>Get-AzPeeringServicePrefix</S>
+                <S>Get-AzPeeringServiceProvider</S>
+                <S>Initialize-AzPeeringServiceConnectionMonitor</S>
+                <S>New-AzPeering</S>
+                <S>New-AzPeeringAsn</S>
+                <S>New-AzPeeringCheckServiceProviderAvailabilityInputObject</S>
+                <S>New-AzPeeringConnectionMonitorTest</S>
+                <S>New-AzPeeringContactDetailObject</S>
+                <S>New-AzPeeringDirectConnectionObject</S>
+                <S>New-AzPeeringExchangeConnectionObject</S>
+                <S>New-AzPeeringRegisteredAsn</S>
+                <S>New-AzPeeringRegisteredPrefix</S>
+                <S>New-AzPeeringService</S>
+                <S>New-AzPeeringServicePrefix</S>
+                <S>Remove-AzPeering</S>
+                <S>Remove-AzPeeringAsn</S>
+                <S>Remove-AzPeeringConnectionMonitorTest</S>
+                <S>Remove-AzPeeringRegisteredAsn</S>
+                <S>Remove-AzPeeringRegisteredPrefix</S>
+                <S>Remove-AzPeeringService</S>
+                <S>Remove-AzPeeringServicePrefix</S>
+                <S>Start-AzPeeringInvokeLookingGlass</S>
+                <S>Test-AzPeeringRegisteredPrefix</S>
+                <S>Test-AzPeeringServiceProviderAvailability</S>
+                <S>Update-AzPeering</S>
+                <S>Update-AzPeeringService</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzPeering</S>
+                <S>Get-AzPeeringAsn</S>
+                <S>Get-AzPeeringCdnPrefix</S>
+                <S>Get-AzPeeringConnectionMonitorTest</S>
+                <S>Get-AzPeeringLegacy</S>
+                <S>Get-AzPeeringLocation</S>
+                <S>Get-AzPeeringReceivedRoute</S>
+                <S>Get-AzPeeringRegisteredAsn</S>
+                <S>Get-AzPeeringRegisteredPrefix</S>
+                <S>Get-AzPeeringRpUnbilledPrefix</S>
+                <S>Get-AzPeeringService</S>
+                <S>Get-AzPeeringServiceCountry</S>
+                <S>Get-AzPeeringServiceLocation</S>
+                <S>Get-AzPeeringServicePrefix</S>
+                <S>Get-AzPeeringServiceProvider</S>
+                <S>Initialize-AzPeeringServiceConnectionMonitor</S>
+                <S>New-AzPeering</S>
+                <S>New-AzPeeringAsn</S>
+                <S>New-AzPeeringCheckServiceProviderAvailabilityInputObject</S>
+                <S>New-AzPeeringConnectionMonitorTest</S>
+                <S>New-AzPeeringContactDetailObject</S>
+                <S>New-AzPeeringDirectConnectionObject</S>
+                <S>New-AzPeeringExchangeConnectionObject</S>
+                <S>New-AzPeeringRegisteredAsn</S>
+                <S>New-AzPeeringRegisteredPrefix</S>
+                <S>New-AzPeeringService</S>
+                <S>New-AzPeeringServicePrefix</S>
+                <S>Remove-AzPeering</S>
+                <S>Remove-AzPeeringAsn</S>
+                <S>Remove-AzPeeringConnectionMonitorTest</S>
+                <S>Remove-AzPeeringRegisteredAsn</S>
+                <S>Remove-AzPeeringRegisteredPrefix</S>
+                <S>Remove-AzPeeringService</S>
+                <S>Remove-AzPeeringServicePrefix</S>
+                <S>Start-AzPeeringInvokeLookingGlass</S>
+                <S>Test-AzPeeringRegisteredPrefix</S>
+                <S>Test-AzPeeringServiceProviderAvailability</S>
+                <S>Update-AzPeering</S>
+                <S>Update-AzPeeringService</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Supports API Version 2022-10-01 stable</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.11.2</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.11.2</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: Peering cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">* Supports API Version 2022-10-01 stable</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">2983</S>
+          <S N="downloadCount">10277</S>
+          <S N="packageSize">664784</S>
+          <S N="published">2/7/2023 6:41:27 AM -06:00</S>
+          <S N="created">2/7/2023 6:41:27 AM -06:00</S>
+          <S N="lastUpdated">2/15/2024 10:17:56 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule Peering PSEdition_Core PSEdition_Desktop PSFunction_Get-AzPeering PSCommand_Get-AzPeering PSFunction_Get-AzPeeringAsn PSCommand_Get-AzPeeringAsn PSFunction_Get-AzPeeringCdnPrefix PSCommand_Get-AzPeeringCdnPrefix PSFunction_Get-AzPeeringConnectionMonitorTest PSCommand_Get-AzPeeringConnectionMonitorTest PSFunction_Get-AzPeeringLegacy PSCommand_Get-AzPeeringLegacy PSFunction_Get-AzPeeringLocation PSCommand_Get-AzPeeringLocation PSFunction_Get-AzPeeringReceivedRoute PSCommand_Get-AzPeeringReceivedRoute PSFunction_Get-AzPeeringRegisteredAsn PSCommand_Get-AzPeeringRegisteredAsn PSFunction_Get-AzPeeringRegisteredPrefix PSCommand_Get-AzPeeringRegisteredPrefix PSFunction_Get-AzPeeringRpUnbilledPrefix PSCommand_Get-AzPeeringRpUnbilledPrefix PSFunction_Get-AzPeeringService PSCommand_Get-AzPeeringService PSFunction_Get-AzPeeringServiceCountry PSCommand_Get-AzPeeringServiceCountry PSFunction_Get-AzPeeringServiceLocation PSCommand_Get-AzPeeringServiceLocation PSFunction_Get-AzPeeringServicePrefix PSCommand_Get-AzPeeringServicePrefix PSFunction_Get-AzPeeringServiceProvider PSCommand_Get-AzPeeringServiceProvider PSFunction_Initialize-AzPeeringServiceConnectionMonitor PSCommand_Initialize-AzPeeringServiceConnectionMonitor PSFunction_New-AzPeering PSCommand_New-AzPeering PSFunction_New-AzPeeringAsn PSCommand_New-AzPeeringAsn PSFunction_New-AzPeeringCheckServiceProviderAvailabilityInputObject PSCommand_New-AzPeeringCheckServiceProviderAvailabilityInputObject PSFunction_New-AzPeeringConnectionMonitorTest PSCommand_New-AzPeeringConnectionMonitorTest PSFunction_New-AzPeeringContactDetailObject PSCommand_New-AzPeeringContactDetailObject PSFunction_New-AzPeeringDirectConnectionObject PSCommand_New-AzPeeringDirectConnectionObject PSFunction_New-AzPeeringExchangeConnectionObject PSCommand_New-AzPeeringExchangeConnectionObject PSFunction_New-AzPeeringRegisteredAsn PSCommand_New-AzPeeringRegisteredAsn PSFunction_New-AzPeeringRegisteredPrefix PSCommand_New-AzPeeringRegisteredPrefix PSFunction_New-AzPeeringService PSCommand_New-AzPeeringService PSFunction_New-AzPeeringServicePrefix PSCommand_New-AzPeeringServicePrefix PSFunction_Remove-AzPeering PSCommand_Remove-AzPeering PSFunction_Remove-AzPeeringAsn PSCommand_Remove-AzPeeringAsn PSFunction_Remove-AzPeeringConnectionMonitorTest PSCommand_Remove-AzPeeringConnectionMonitorTest PSFunction_Remove-AzPeeringRegisteredAsn PSCommand_Remove-AzPeeringRegisteredAsn PSFunction_Remove-AzPeeringRegisteredPrefix PSCommand_Remove-AzPeeringRegisteredPrefix PSFunction_Remove-AzPeeringService PSCommand_Remove-AzPeeringService PSFunction_Remove-AzPeeringServicePrefix PSCommand_Remove-AzPeeringServicePrefix PSFunction_Start-AzPeeringInvokeLookingGlass PSCommand_Start-AzPeeringInvokeLookingGlass PSFunction_Test-AzPeeringRegisteredPrefix PSCommand_Test-AzPeeringRegisteredPrefix PSFunction_Test-AzPeeringServiceProviderAvailability PSCommand_Test-AzPeeringServiceProviderAvailability PSFunction_Update-AzPeering PSCommand_Update-AzPeering PSFunction_Update-AzPeeringService PSCommand_Update-AzPeeringService PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:17:56Z</S>
+          <S N="NormalizedVersion">0.4.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.Peering.nuspec|Az.Peering.format.ps1xml|Az.Peering.psd1|Az.Peering.psm1|bin\Az.Peering.private.deps.json|bin\Az.Peering.private.dll|custom\Az.Peering.custom.psm1|custom\autogen-model-cmdlets\New-AzPeeringCheckServiceProviderAvailabilityInputObject.ps1|custom\autogen-model-cmdlets\New-AzPeeringContactDetailObject.ps1|custom\autogen-model-cmdlets\New-AzPeeringDirectConnectionObject.ps1|custom\autogen-model-cmdlets\New-AzPeeringExchangeConnectionObject.ps1|exports\ProxyCmdletDefinitions.ps1|internal\Az.Peering.internal.psm1|internal\ProxyCmdletDefinitions.ps1|utils\Unprotect-SecureString.ps1</S>
+          <S N="GUID">78c6a853-5ea3-4374-9c5f-5b532d62c892</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.Peering\0.4.0</S>
+    </MS>
+  </Obj>
+</Objs>

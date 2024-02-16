@@ -1,0 +1,186 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.AlertsManagement</S>
+      <S N="Version">0.6.1</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell - AlertsManagement service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on AlertsManagement, please visit the following:  https://learn.microsoft.com/azure/alertsmanagement/</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2023-08-01T02:51:45-05:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>Alerts</S>
+          <S>AlertsManagement</S>
+          <S>Notifications</S>
+          <S>PSModule</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzAlert</S>
+                <S>Get-AzAlertObjectHistory</S>
+                <S>Update-AzAlertState</S>
+                <S>Measure-AzAlertStatistic</S>
+                <S>Get-AzSmartGroup</S>
+                <S>Get-AzSmartGroupHistory</S>
+                <S>Update-AzSmartGroupState</S>
+                <S>Get-AzAlertProcessingRule</S>
+                <S>Set-AzAlertProcessingRule</S>
+                <S>Update-AzAlertProcessingRule</S>
+                <S>Remove-AzAlertProcessingRule</S>
+                <S>Get-AzPrometheusRuleGroup</S>
+                <S>New-AzPrometheusRuleGroup</S>
+                <S>New-AzPrometheusRuleGroupActionObject</S>
+                <S>New-AzPrometheusRuleObject</S>
+                <S>Remove-AzPrometheusRuleGroup</S>
+                <S>Update-AzPrometheusRuleGroup</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzPrometheusRuleGroup</S>
+                <S>New-AzPrometheusRuleGroup</S>
+                <S>New-AzPrometheusRuleGroupActionObject</S>
+                <S>New-AzPrometheusRuleObject</S>
+                <S>Remove-AzPrometheusRuleGroup</S>
+                <S>Update-AzPrometheusRuleGroup</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzAlert</S>
+                <S>Get-AzAlertObjectHistory</S>
+                <S>Update-AzAlertState</S>
+                <S>Measure-AzAlertStatistic</S>
+                <S>Get-AzSmartGroup</S>
+                <S>Get-AzSmartGroupHistory</S>
+                <S>Update-AzSmartGroupState</S>
+                <S>Get-AzAlertProcessingRule</S>
+                <S>Set-AzAlertProcessingRule</S>
+                <S>Update-AzAlertProcessingRule</S>
+                <S>Remove-AzAlertProcessingRule</S>
+              </LST>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Fixed null reference bug when 'ScheduleEndDateTime' was not provided</S>
+      <Obj N="Dependencies" RefId="7">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="8">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.12.5</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.12.5</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="9">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell - AlertsManagement service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on AlertsManagement, please visit the following:  https://learn.microsoft.com/azure/alertsmanagement/</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">* Fixed null reference bug when 'ScheduleEndDateTime' was not provided</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">52792</S>
+          <S N="downloadCount">161302</S>
+          <S N="packageSize">500249</S>
+          <S N="published">8/1/2023 2:51:45 AM -05:00</S>
+          <S N="created">8/1/2023 2:51:45 AM -05:00</S>
+          <S N="lastUpdated">2/16/2024 12:07:59 AM -06:00</S>
+          <S N="tags">Azure Alerts AlertsManagement Notifications PSModule PSEdition_Core PSEdition_Desktop</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-16T00:07:59Z</S>
+          <S N="NormalizedVersion">0.6.1</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.AlertsManagement.nuspec|Az.AlertsManagement.psd1|PrometheusRuleGroups.Autorest\Az.PrometheusRuleGroups.psm1|Az.AlertsManagement.psm1|PrometheusRuleGroups.Autorest\bin\Az.PrometheusRuleGroups.private.deps.json|Microsoft.Azure.PowerShell.AlertsManagement.Management.Sdk.deps.json|PrometheusRuleGroups.Autorest\bin\Az.PrometheusRuleGroups.private.dll|Microsoft.Azure.PowerShell.AlertsManagement.Management.Sdk.dll|PrometheusRuleGroups.Autorest\custom\Az.PrometheusRuleGroups.custom.psm1|Microsoft.Azure.PowerShell.Cmdlets.AlertsManagement.deps.json|PrometheusRuleGroups.Autorest\custom\autogen-model-cmdlets\New-AzPrometheusRuleGroupActionObject.ps1|Microsoft.Azure.PowerShell.Cmdlets.AlertsManagement.dll|PrometheusRuleGroups.Autorest\custom\autogen-model-cmdlets\New-AzPrometheusRuleObject.ps1|Microsoft.Azure.PowerShell.Cmdlets.AlertsManagement.dll-Help.xml|PrometheusRuleGroups.Autorest\exports\ProxyCmdletDefinitions.ps1|Microsoft.Azure.PowerShell.Cmdlets.AlertsManagement.generated.format.ps1xml|PrometheusRuleGroups.Autorest\internal\Az.PrometheusRuleGroups.internal.psm1|PrometheusRuleGroups.Autorest\Az.PrometheusRuleGroups.format.ps1xml|PrometheusRuleGroups.Autorest\internal\ProxyCmdletDefinitions.ps1|PrometheusRuleGroups.Autorest\utils\Unprotect-SecureString.ps1</S>
+          <S N="Cmdlets">Get-AzAlert Get-AzAlertObjectHistory Update-AzAlertState Measure-AzAlertStatistic Get-AzSmartGroup Get-AzSmartGroupHistory Update-AzSmartGroupState Get-AzAlertProcessingRule Set-AzAlertProcessingRule Update-AzAlertProcessingRule Remove-AzAlertProcessingRule</S>
+          <S N="Functions">Get-AzPrometheusRuleGroup New-AzPrometheusRuleGroup New-AzPrometheusRuleGroupActionObject New-AzPrometheusRuleObject Remove-AzPrometheusRuleGroup Update-AzPrometheusRuleGroup</S>
+          <S N="GUID">ab73cb67-5713-4179-b6d7-f76ab3ad148f</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.AlertsManagement\0.6.1</S>
+    </MS>
+  </Obj>
+</Objs>

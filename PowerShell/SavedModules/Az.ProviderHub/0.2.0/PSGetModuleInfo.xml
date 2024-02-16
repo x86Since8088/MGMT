@@ -1,0 +1,186 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.ProviderHub</S>
+      <S N="Version">0.2.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: ProviderHub cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2021-09-07T06:05:05-05:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>ProviderHub</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzProviderHubCustomRollout</S>
+                <S>Get-AzProviderHubDefaultRollout</S>
+                <S>Get-AzProviderHubNotificationRegistration</S>
+                <S>Get-AzProviderHubProviderRegistration</S>
+                <S>Get-AzProviderHubResourceTypeRegistration</S>
+                <S>Get-AzProviderHubSku</S>
+                <S>Invoke-AzProviderHubManifestCheckin</S>
+                <S>New-AzProviderHubCustomRollout</S>
+                <S>New-AzProviderHubDefaultRollout</S>
+                <S>New-AzProviderHubManifest</S>
+                <S>New-AzProviderHubNotificationRegistration</S>
+                <S>New-AzProviderHubProviderRegistration</S>
+                <S>New-AzProviderHubResourceTypeRegistration</S>
+                <S>New-AzProviderHubSku</S>
+                <S>Remove-AzProviderHubDefaultRollout</S>
+                <S>Remove-AzProviderHubNotificationRegistration</S>
+                <S>Remove-AzProviderHubProviderRegistration</S>
+                <S>Remove-AzProviderHubResourceTypeRegistration</S>
+                <S>Remove-AzProviderHubSku</S>
+                <S>Stop-AzProviderHubDefaultRollout</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzProviderHubCustomRollout</S>
+                <S>Get-AzProviderHubDefaultRollout</S>
+                <S>Get-AzProviderHubNotificationRegistration</S>
+                <S>Get-AzProviderHubProviderRegistration</S>
+                <S>Get-AzProviderHubResourceTypeRegistration</S>
+                <S>Get-AzProviderHubSku</S>
+                <S>Invoke-AzProviderHubManifestCheckin</S>
+                <S>New-AzProviderHubCustomRollout</S>
+                <S>New-AzProviderHubDefaultRollout</S>
+                <S>New-AzProviderHubManifest</S>
+                <S>New-AzProviderHubNotificationRegistration</S>
+                <S>New-AzProviderHubProviderRegistration</S>
+                <S>New-AzProviderHubResourceTypeRegistration</S>
+                <S>New-AzProviderHubSku</S>
+                <S>Remove-AzProviderHubDefaultRollout</S>
+                <S>Remove-AzProviderHubNotificationRegistration</S>
+                <S>Remove-AzProviderHubProviderRegistration</S>
+                <S>Remove-AzProviderHubResourceTypeRegistration</S>
+                <S>Remove-AzProviderHubSku</S>
+                <S>Stop-AzProviderHubDefaultRollout</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Supported nested resource types for Resource Type Registration and Sku Resource via customization.</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.5.3</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.5.3</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: ProviderHub cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">* Supported nested resource types for Resource Type Registration and Sku Resource via customization.</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">4999</S>
+          <S N="downloadCount">5456</S>
+          <S N="packageSize">797648</S>
+          <S N="published">9/7/2021 6:05:05 AM -05:00</S>
+          <S N="created">9/7/2021 6:05:05 AM -05:00</S>
+          <S N="lastUpdated">2/15/2024 10:22:57 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule ProviderHub PSEdition_Core PSEdition_Desktop PSFunction_Get-AzProviderHubCustomRollout PSCommand_Get-AzProviderHubCustomRollout PSFunction_Get-AzProviderHubDefaultRollout PSCommand_Get-AzProviderHubDefaultRollout PSFunction_Get-AzProviderHubNotificationRegistration PSCommand_Get-AzProviderHubNotificationRegistration PSFunction_Get-AzProviderHubProviderRegistration PSCommand_Get-AzProviderHubProviderRegistration PSFunction_Get-AzProviderHubResourceTypeRegistration PSCommand_Get-AzProviderHubResourceTypeRegistration PSFunction_Get-AzProviderHubSku PSCommand_Get-AzProviderHubSku PSFunction_Invoke-AzProviderHubManifestCheckin PSCommand_Invoke-AzProviderHubManifestCheckin PSFunction_New-AzProviderHubCustomRollout PSCommand_New-AzProviderHubCustomRollout PSFunction_New-AzProviderHubDefaultRollout PSCommand_New-AzProviderHubDefaultRollout PSFunction_New-AzProviderHubManifest PSCommand_New-AzProviderHubManifest PSFunction_New-AzProviderHubNotificationRegistration PSCommand_New-AzProviderHubNotificationRegistration PSFunction_New-AzProviderHubProviderRegistration PSCommand_New-AzProviderHubProviderRegistration PSFunction_New-AzProviderHubResourceTypeRegistration PSCommand_New-AzProviderHubResourceTypeRegistration PSFunction_New-AzProviderHubSku PSCommand_New-AzProviderHubSku PSFunction_Remove-AzProviderHubDefaultRollout PSCommand_Remove-AzProviderHubDefaultRollout PSFunction_Remove-AzProviderHubNotificationRegistration PSCommand_Remove-AzProviderHubNotificationRegistration PSFunction_Remove-AzProviderHubProviderRegistration PSCommand_Remove-AzProviderHubProviderRegistration PSFunction_Remove-AzProviderHubResourceTypeRegistration PSCommand_Remove-AzProviderHubResourceTypeRegistration PSFunction_Remove-AzProviderHubSku PSCommand_Remove-AzProviderHubSku PSFunction_Stop-AzProviderHubDefaultRollout PSCommand_Stop-AzProviderHubDefaultRollout PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:22:57Z</S>
+          <S N="NormalizedVersion">0.2.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.ProviderHub.nuspec|Az.ProviderHub.format.ps1xml|Az.ProviderHub.psd1|Az.ProviderHub.psm1|bin\Az.ProviderHub.private.deps.json|bin\Az.ProviderHub.private.dll|custom\Az.ProviderHub.custom.psm1|custom\Get-AzProviderHubResourceTypeRegistration.ps1|custom\Get-AzProviderHubSku.ps1|custom\New-AzProviderHubResourceTypeRegistration.ps1|custom\New-AzProviderHubSku.ps1|custom\Remove-AzProviderHubResourceTypeRegistration.ps1|custom\Remove-AzProviderHubSku.ps1|exports\ProxyCmdletDefinitions.ps1|internal\Az.ProviderHub.internal.psm1|internal\ProxyCmdletDefinitions.ps1|utils\Unprotect-SecureString.ps1</S>
+          <S N="GUID">b1f92a18-bc07-49c3-9938-cde7ef64659f</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.ProviderHub\0.2.0</S>
+    </MS>
+  </Obj>
+</Objs>

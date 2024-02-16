@@ -1,0 +1,139 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.Tools.Migration</S>
+      <S N="Version">11.0.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Contains functionality to upgrade PowerShell scripts and modules from AzureRM to Az.</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2023-11-16T06:54:19-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://github.com/Azure/azure-powershell-migration/blob/main/LICENSE</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell-migration</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>AzureRM</S>
+          <S>Az</S>
+          <S>PowerShell</S>
+          <S>PSModule</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Disable-AzUpgradeDataCollection</S>
+                <S>Enable-AzUpgradeDataCollection</S>
+                <S>Find-AzUpgradeCommandReference</S>
+                <S>Get-AzUpgradeAliasSpec</S>
+                <S>Get-AzUpgradeCmdletSpec</S>
+                <S>Invoke-AzUpgradeModulePlan</S>
+                <S>New-AzUpgradeModulePlan</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Disable-AzUpgradeDataCollection</S>
+                <S>Enable-AzUpgradeDataCollection</S>
+                <S>Find-AzUpgradeCommandReference</S>
+                <S>Get-AzUpgradeAliasSpec</S>
+                <S>Get-AzUpgradeCmdletSpec</S>
+                <S>Invoke-AzUpgradeModulePlan</S>
+                <S>New-AzUpgradeModulePlan</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Supported AzureRM to Az 11.0.0 migration. Now the major version of Az.Tools.Migration is aligned with the targeted Az version._x000D__x000A_                            * Fixed bug when using Find-AzUpgradeCommandReference -DirectoryPath #[121]</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="7">
+        <TN RefId="3">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Contains functionality to upgrade PowerShell scripts and modules from AzureRM to Az.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="releaseNotes">* Supported AzureRM to Az 11.0.0 migration. Now the major version of Az.Tools.Migration is aligned with the targeted Az version._x000D__x000A_                            * Fixed bug when using Find-AzUpgradeCommandReference -DirectoryPath #[121]</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">17846</S>
+          <S N="downloadCount">53080</S>
+          <S N="packageSize">1007877</S>
+          <S N="published">11/16/2023 6:54:19 AM -06:00</S>
+          <S N="created">11/16/2023 6:54:19 AM -06:00</S>
+          <S N="lastUpdated">2/16/2024 12:12:59 AM -06:00</S>
+          <S N="tags">Azure AzureRM Az PowerShell PSModule PSEdition_Core PSEdition_Desktop PSFunction_Disable-AzUpgradeDataCollection PSCommand_Disable-AzUpgradeDataCollection PSFunction_Enable-AzUpgradeDataCollection PSCommand_Enable-AzUpgradeDataCollection PSFunction_Find-AzUpgradeCommandReference PSCommand_Find-AzUpgradeCommandReference PSFunction_Get-AzUpgradeAliasSpec PSCommand_Get-AzUpgradeAliasSpec PSFunction_Get-AzUpgradeCmdletSpec PSCommand_Get-AzUpgradeCmdletSpec PSFunction_Invoke-AzUpgradeModulePlan PSCommand_Invoke-AzUpgradeModulePlan PSFunction_New-AzUpgradeModulePlan PSCommand_New-AzUpgradeModulePlan PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-16T00:12:59Z</S>
+          <S N="NormalizedVersion">11.0.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.Tools.Migration.nuspec|Az.Tools.Migration.format.ps1xml|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.PolicyInsights.1.6.4.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.PostgreSql.1.1.0.Cmdlets.json|Az.Tools.Migration.psd1|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.PowerBIEmbedded.2.0.0.Cmdlets.json|Az.Tools.Migration.psm1|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.PrivateDns.1.0.4.Cmdlets.json|Classes\Classes.ps1|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.RecoveryServices.6.6.1.Cmdlets.json|Functions\Private\Confirm-StringBuilderSubstring.ps1|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.RedisCache.1.8.1.Cmdlets.json|Functions\Private\Find-CmdletsInFile.ps1|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.RedisEnterpriseCache.1.2.0.Cmdlets.json|Functions\Private\Get-ModulePreferences.ps1|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Relay.2.0.0.Cmdlets.json|Functions\Private\Invoke-ModuleUpgradeStep.ps1|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.ResourceMover.1.2.0.Cmdlets.json|Functions\Private\New-ModifiedFileName.ps1|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Resources.6.12.0.Cmdlets.json|Functions\Private\Out-FileBatchResult.ps1|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Security.1.5.0.Cmdlets.json|Functions\Private\Send-MetricsIfDataCollectionEnabled.ps1|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.SecurityInsights.3.1.1.Cmdlets.json|Functions\Private\Send-PageViewTelemetry.ps1|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.ServiceBus.3.0.0.Cmdlets.json|Functions\Private\Set-ModulePreference.ps1|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.ServiceFabric.3.3.0.Cmdlets.json|Functions\Public\Disable-AzUpgradeDataCollection.ps1|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.SignalR.2.0.0.Cmdlets.json|Functions\Public\Enable-AzUpgradeDataCollection.ps1|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Sql.4.11.0.Cmdlets.json|Functions\Public\Find-AzUpgradeCommandReference.ps1|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.SqlVirtualMachine.2.1.0.Cmdlets.json|Functions\Public\Get-AzUpgradeAliasSpec.ps1|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.StackHCI.2.2.3.Cmdlets.json|Functions\Public\Get-AzUpgradeCmdletSpec.ps1|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Storage.6.0.0.Cmdlets.json|Functions\Public\Invoke-AzUpgradeModulePlan.ps1|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.StorageMover.1.2.0.Cmdlets.json|Functions\Public\New-AzUpgradeModulePlan.ps1|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.StorageSync.2.1.0.Cmdlets.json|Resources\Assembly\Microsoft.ApplicationInsights.2.12.0\Microsoft.ApplicationInsights.dll|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.StreamAnalytics.2.0.0.Cmdlets.json|Resources\Assembly\Newtonsoft.Json.12.0.3\Newtonsoft.Json.dll|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Support.1.0.0.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Accounts.2.13.2.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Synapse.3.0.4.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Advisor.2.0.0.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.TrafficManager.1.2.2.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Aks.6.0.0.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Websites.3.1.2.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.AnalysisServices.1.1.4.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\CmdletAliases\Aliases.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.ApiManagement.4.0.2.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\Azure.AnalysisServices.0.5.4.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.App.1.0.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\Azure.Storage.4.6.1.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.AppConfiguration.1.3.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.AnalysisServices.0.6.14.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.ApplicationInsights.2.2.2.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.ApiManagement.6.1.7.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.ArcResourceBridge.1.0.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.ApplicationInsights.0.1.8.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Attestation.2.0.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.Automation.6.1.1.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Automanage.1.0.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.Backup.4.0.11.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Automation.1.9.1.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.Batch.4.1.5.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Batch.3.5.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.Billing.0.14.6.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Billing.2.0.3.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.Cdn.5.0.6.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Cdn.3.1.1.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.CognitiveServices.0.9.12.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.CloudService.2.0.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.Compute.5.9.1.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.CognitiveServices.1.14.1.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.Consumption.0.3.7.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Compute.7.0.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.ContainerInstance.0.2.12.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.ConfidentialLedger.1.0.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.ContainerRegistry.1.0.10.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.ContainerInstance.4.0.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.DataFactories.5.0.3.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.ContainerRegistry.4.1.2.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.DataFactoryV2.0.5.11.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.CosmosDB.1.13.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.DataLakeAnalytics.5.1.4.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.DataBoxEdge.1.1.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.DataLakeStore.6.2.1.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Databricks.1.7.1.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.DevTestLabs.4.0.9.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.DataFactory.1.17.1.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.Dns.5.1.0.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.DataLakeAnalytics.1.0.3.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.EventGrid.0.3.7.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.DataLakeStore.1.3.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.EventHub.0.7.0.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.DataProtection.2.1.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.HDInsight.4.1.8.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.DataShare.1.0.1.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.Insights.5.1.5.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.DeploymentManager.1.1.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.IotHub.3.1.8.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.DesktopVirtualization.4.2.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.KeyVault.5.2.1.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.DevCenter.1.0.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.LogicApp.4.1.4.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.DevTestLabs.1.0.2.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.MachineLearning.0.18.5.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Dns.1.2.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.MachineLearningCompute.0.4.8.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.EventGrid.1.6.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.MarketplaceOrdering.0.2.7.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.EventHub.4.2.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.Media.0.10.4.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.FrontDoor.1.10.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.Network.6.11.1.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Functions.4.0.7.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.NotificationHubs.5.0.3.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.HDInsight.6.0.2.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.OperationalInsights.5.0.6.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.HealthcareApis.2.0.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.PolicyInsights.1.1.0.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.IotHub.2.7.5.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.PowerBIEmbedded.4.1.10.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.KeyVault.5.0.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.Profile.5.8.2.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Kusto.2.3.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.RecoveryServices.4.1.9.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.LoadTesting.1.0.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.RecoveryServices.Backup.4.5.2.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.LogicApp.1.5.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.RecoveryServices.SiteRecovery.0.2.12.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.MachineLearning.1.1.3.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.RedisCache.5.1.0.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.MachineLearningServices.1.0.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.Relay.0.3.12.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Maintenance.1.4.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.Resources.6.7.3.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.ManagedServiceIdentity.1.1.1.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.Scheduler.0.16.10.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.ManagedServices.3.0.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.ServiceBus.0.6.13.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.MarketplaceOrdering.2.0.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.ServiceFabric.0.3.15.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Media.1.1.2.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.SignalR.1.0.0.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Migrate.2.2.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.Sql.4.12.1.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Monitor.5.0.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.Storage.5.2.0.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.MySql.1.1.1.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.StreamAnalytics.4.0.10.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.Network.7.0.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.Tags.4.0.5.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.NetworkCloud.1.0.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.TrafficManager.4.1.3.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.NotificationHubs.1.1.2.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.UsageAggregates.4.0.5.Cmdlets.json|Resources\ModuleSpecs\Az\Latest\11.0.0\Az.OperationalInsights.3.2.0.Cmdlets.json|Resources\ModuleSpecs\AzureRM\6.13.1\AzureRM.Websites.5.2.0.Cmdlets.json</S>
+          <S N="GUID">cb471070-37cc-4484-9665-adf1502b4e3a</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.Tools.Migration\11.0.0</S>
+    </MS>
+  </Obj>
+</Objs>

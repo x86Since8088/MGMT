@@ -1,0 +1,198 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.ServiceLinker</S>
+      <S N="Version">0.2.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: ServiceLinker cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2023-03-09T02:46:55-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>ServiceLinker</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzServiceLinkerConfigurationForContainerApp</S>
+                <S>Get-AzServiceLinkerConfigurationForSpringCloud</S>
+                <S>Get-AzServiceLinkerConfigurationForWebApp</S>
+                <S>Get-AzServiceLinkerConfigurationName</S>
+                <S>Get-AzServiceLinkerForContainerApp</S>
+                <S>Get-AzServiceLinkerForSpringCloud</S>
+                <S>Get-AzServiceLinkerForWebApp</S>
+                <S>New-AzServiceLinkerAzureResourceObject</S>
+                <S>New-AzServiceLinkerConfluentBootstrapServerObject</S>
+                <S>New-AzServiceLinkerConfluentSchemaRegistryObject</S>
+                <S>New-AzServiceLinkerForContainerApp</S>
+                <S>New-AzServiceLinkerForSpringCloud</S>
+                <S>New-AzServiceLinkerForWebApp</S>
+                <S>New-AzServiceLinkerSecretAuthInfoObject</S>
+                <S>New-AzServiceLinkerServicePrincipalSecretAuthInfoObject</S>
+                <S>New-AzServiceLinkerSystemAssignedIdentityAuthInfoObject</S>
+                <S>New-AzServiceLinkerUserAssignedIdentityAuthInfoObject</S>
+                <S>Remove-AzServiceLinkerForContainerApp</S>
+                <S>Remove-AzServiceLinkerForSpringCloud</S>
+                <S>Remove-AzServiceLinkerForWebApp</S>
+                <S>Test-AzServiceLinkerForContainerApp</S>
+                <S>Test-AzServiceLinkerForSpringCloud</S>
+                <S>Test-AzServiceLinkerForWebApp</S>
+                <S>Update-AzServiceLinkerForContainerApp</S>
+                <S>Update-AzServiceLinkerForSpringCloud</S>
+                <S>Update-AzServiceLinkerForWebApp</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzServiceLinkerConfigurationForContainerApp</S>
+                <S>Get-AzServiceLinkerConfigurationForSpringCloud</S>
+                <S>Get-AzServiceLinkerConfigurationForWebApp</S>
+                <S>Get-AzServiceLinkerConfigurationName</S>
+                <S>Get-AzServiceLinkerForContainerApp</S>
+                <S>Get-AzServiceLinkerForSpringCloud</S>
+                <S>Get-AzServiceLinkerForWebApp</S>
+                <S>New-AzServiceLinkerAzureResourceObject</S>
+                <S>New-AzServiceLinkerConfluentBootstrapServerObject</S>
+                <S>New-AzServiceLinkerConfluentSchemaRegistryObject</S>
+                <S>New-AzServiceLinkerForContainerApp</S>
+                <S>New-AzServiceLinkerForSpringCloud</S>
+                <S>New-AzServiceLinkerForWebApp</S>
+                <S>New-AzServiceLinkerSecretAuthInfoObject</S>
+                <S>New-AzServiceLinkerServicePrincipalSecretAuthInfoObject</S>
+                <S>New-AzServiceLinkerSystemAssignedIdentityAuthInfoObject</S>
+                <S>New-AzServiceLinkerUserAssignedIdentityAuthInfoObject</S>
+                <S>Remove-AzServiceLinkerForContainerApp</S>
+                <S>Remove-AzServiceLinkerForSpringCloud</S>
+                <S>Remove-AzServiceLinkerForWebApp</S>
+                <S>Test-AzServiceLinkerForContainerApp</S>
+                <S>Test-AzServiceLinkerForSpringCloud</S>
+                <S>Test-AzServiceLinkerForWebApp</S>
+                <S>Update-AzServiceLinkerForContainerApp</S>
+                <S>Update-AzServiceLinkerForSpringCloud</S>
+                <S>Update-AzServiceLinkerForWebApp</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Updated API version to 2022-11-01-preview</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.12.0</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.12.0</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: ServiceLinker cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">* Updated API version to 2022-11-01-preview</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">2091</S>
+          <S N="downloadCount">3243</S>
+          <S N="packageSize">796597</S>
+          <S N="published">3/9/2023 2:46:55 AM -06:00</S>
+          <S N="created">3/9/2023 2:46:55 AM -06:00</S>
+          <S N="lastUpdated">2/15/2024 10:12:57 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule ServiceLinker PSEdition_Core PSEdition_Desktop PSFunction_Get-AzServiceLinkerConfigurationForContainerApp PSCommand_Get-AzServiceLinkerConfigurationForContainerApp PSFunction_Get-AzServiceLinkerConfigurationForSpringCloud PSCommand_Get-AzServiceLinkerConfigurationForSpringCloud PSFunction_Get-AzServiceLinkerConfigurationForWebApp PSCommand_Get-AzServiceLinkerConfigurationForWebApp PSFunction_Get-AzServiceLinkerConfigurationName PSCommand_Get-AzServiceLinkerConfigurationName PSFunction_Get-AzServiceLinkerForContainerApp PSCommand_Get-AzServiceLinkerForContainerApp PSFunction_Get-AzServiceLinkerForSpringCloud PSCommand_Get-AzServiceLinkerForSpringCloud PSFunction_Get-AzServiceLinkerForWebApp PSCommand_Get-AzServiceLinkerForWebApp PSFunction_New-AzServiceLinkerAzureResourceObject PSCommand_New-AzServiceLinkerAzureResourceObject PSFunction_New-AzServiceLinkerConfluentBootstrapServerObject PSCommand_New-AzServiceLinkerConfluentBootstrapServerObject PSFunction_New-AzServiceLinkerConfluentSchemaRegistryObject PSCommand_New-AzServiceLinkerConfluentSchemaRegistryObject PSFunction_New-AzServiceLinkerForContainerApp PSCommand_New-AzServiceLinkerForContainerApp PSFunction_New-AzServiceLinkerForSpringCloud PSCommand_New-AzServiceLinkerForSpringCloud PSFunction_New-AzServiceLinkerForWebApp PSCommand_New-AzServiceLinkerForWebApp PSFunction_New-AzServiceLinkerSecretAuthInfoObject PSCommand_New-AzServiceLinkerSecretAuthInfoObject PSFunction_New-AzServiceLinkerServicePrincipalSecretAuthInfoObject PSCommand_New-AzServiceLinkerServicePrincipalSecretAuthInfoObject PSFunction_New-AzServiceLinkerSystemAssignedIdentityAuthInfoObject PSCommand_New-AzServiceLinkerSystemAssignedIdentityAuthInfoObject PSFunction_New-AzServiceLinkerUserAssignedIdentityAuthInfoObject PSCommand_New-AzServiceLinkerUserAssignedIdentityAuthInfoObject PSFunction_Remove-AzServiceLinkerForContainerApp PSCommand_Remove-AzServiceLinkerForContainerApp PSFunction_Remove-AzServiceLinkerForSpringCloud PSCommand_Remove-AzServiceLinkerForSpringCloud PSFunction_Remove-AzServiceLinkerForWebApp PSCommand_Remove-AzServiceLinkerForWebApp PSFunction_Test-AzServiceLinkerForContainerApp PSCommand_Test-AzServiceLinkerForContainerApp PSFunction_Test-AzServiceLinkerForSpringCloud PSCommand_Test-AzServiceLinkerForSpringCloud PSFunction_Test-AzServiceLinkerForWebApp PSCommand_Test-AzServiceLinkerForWebApp PSFunction_Update-AzServiceLinkerForContainerApp PSCommand_Update-AzServiceLinkerForContainerApp PSFunction_Update-AzServiceLinkerForSpringCloud PSCommand_Update-AzServiceLinkerForSpringCloud PSFunction_Update-AzServiceLinkerForWebApp PSCommand_Update-AzServiceLinkerForWebApp PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:12:57Z</S>
+          <S N="NormalizedVersion">0.2.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.ServiceLinker.nuspec|Az.ServiceLinker.format.ps1xml|Az.ServiceLinker.psd1|Az.ServiceLinker.psm1|bin\Az.ServiceLinker.private.deps.json|bin\Az.ServiceLinker.private.dll|custom\Az.ServiceLinker.custom.psm1|custom\Common.ps1|custom\Get-AzServiceLinkerConfigurationForContainerApp.ps1|custom\Get-AzServiceLinkerConfigurationForSpringCloud.ps1|custom\Get-AzServiceLinkerConfigurationForWebApp.ps1|custom\Get-AzServiceLinkerForContainerApp.ps1|custom\Get-AzServiceLinkerForSpringCloud.ps1|custom\Get-AzServiceLinkerForWebApp.ps1|custom\New-AzServiceLinkerAzureResourceObject.ps1|custom\New-AzServiceLinkerConfluentBootstrapServerObject.ps1|custom\New-AzServiceLinkerConfluentSchemaRegistryObject.ps1|custom\New-AzServiceLinkerForContainerApp.ps1|custom\New-AzServiceLinkerForSpringCloud.ps1|custom\New-AzServiceLinkerForWebApp.ps1|custom\New-AzServiceLinkerKeyVaultSecretReferenceSecretInfoObject.ps1|custom\New-AzServiceLinkerKeyVaultSecretUriSecretInfoObject.ps1|custom\New-AzServiceLinkerSecretAuthInfoObject.ps1|custom\New-AzServiceLinkerServicePrincipalSecretAuthInfoObject.ps1|custom\New-AzServiceLinkerSystemAssignedIdentityAuthInfoObject.ps1|custom\New-AzServiceLinkerUserAssignedIdentityAuthInfoObject.ps1|custom\New-AzServiceLinkerValueSecretInfoObject.ps1|custom\Remove-AzServiceLinkerForContainerApp.ps1|custom\Remove-AzServiceLinkerForSpringCloud.ps1|custom\Remove-AzServiceLinkerForWebApp.ps1|custom\Test-AzServiceLinkerForContainerApp.ps1|custom\Test-AzServiceLinkerForSpringCloud.ps1|custom\Test-AzServiceLinkerForWebApp.ps1|custom\Update-AzServiceLinkerForContainerApp.ps1|custom\Update-AzServiceLinkerForSpringCloud.ps1|custom\Update-AzServiceLinkerForWebApp.ps1|exports\ProxyCmdletDefinitions.ps1|internal\Az.ServiceLinker.internal.psm1|internal\ProxyCmdletDefinitions.ps1|utils\Unprotect-SecureString.ps1</S>
+          <S N="GUID">20a4a5d9-068c-43d8-b45a-7130dd33afe4</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.ServiceLinker\0.2.0</S>
+    </MS>
+  </Obj>
+</Objs>

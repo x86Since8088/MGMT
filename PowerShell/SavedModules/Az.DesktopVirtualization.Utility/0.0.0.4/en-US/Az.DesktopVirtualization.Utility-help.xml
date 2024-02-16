@@ -1,0 +1,667 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<helpItems schema="maml" xmlns="http://msh">
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Get-AzWvdSessionHostRDBrokerHealth</command:name>
+      <command:verb>Get</command:verb>
+      <command:noun>AzWvdSessionHostRDBrokerHealth</command:noun>
+      <maml:description>
+        <maml:para>Gets the RDBroker services health from the session host.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>The `Get-AzWvdSessionHostRDBrokerHealth` cmdlet utilises the Uri value in the registry key to perform the health check request with the RDBroker.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-AzWvdSessionHostRDBrokerHealth</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName, ByValue)" position="named" aliases="C">
+          <maml:name>Check</maml:name>
+          <maml:description>
+            <maml:para>Specifies the type of health check against the RDBroker URI that is configured in your session host registry key `BrokerURI`, `BrokerURIGlobal` and `DiagnosticsURI` value.</maml:para>
+          </maml:description>
+          <command:parameterValueGroup>
+            <command:parameterValue required="false" command:variableLength="false">BrokerURI</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">BrokerURIGlobal</command:parameterValue>
+            <command:parameterValue required="false" command:variableLength="false">DiagnosticsURI</command:parameterValue>
+          </command:parameterValueGroup>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName, ByValue)" position="named" aliases="R, Report">
+          <maml:name>HealthReport</maml:name>
+          <maml:description>
+            <maml:para>The HealthReport parameter returns a Boolean value in a System.Boolean object. Using this parameter will output each health report entry for the RDBroker health.</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName, ByValue)" position="named" aliases="none">
+          <maml:name>Raw</maml:name>
+          <maml:description>
+            <maml:para>The Raw parameter returns a Boolean value in a System.Boolean object. Using this parameter will output raw `JSON` response.</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="cf">
+          <maml:name>Confirm</maml:name>
+          <maml:description>
+            <maml:para>Prompts you for confirmation before running the cmdlet.</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="wi">
+          <maml:name>WhatIf</maml:name>
+          <maml:description>
+            <maml:para>Shows what would happen if the cmdlet runs. The cmdlet is not run.</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName, ByValue)" position="named" aliases="C">
+        <maml:name>Check</maml:name>
+        <maml:description>
+          <maml:para>Specifies the type of health check against the RDBroker URI that is configured in your session host registry key `BrokerURI`, `BrokerURIGlobal` and `DiagnosticsURI` value.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName, ByValue)" position="named" aliases="R, Report">
+        <maml:name>HealthReport</maml:name>
+        <maml:description>
+          <maml:para>The HealthReport parameter returns a Boolean value in a System.Boolean object. Using this parameter will output each health report entry for the RDBroker health.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName, ByValue)" position="named" aliases="none">
+        <maml:name>Raw</maml:name>
+        <maml:description>
+          <maml:para>The Raw parameter returns a Boolean value in a System.Boolean object. Using this parameter will output raw `JSON` response.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="cf">
+        <maml:name>Confirm</maml:name>
+        <maml:description>
+          <maml:para>Prompts you for confirmation before running the cmdlet.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="wi">
+        <maml:name>WhatIf</maml:name>
+        <maml:description>
+          <maml:para>Shows what would happen if the cmdlet runs. The cmdlet is not run.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para>Author: Ryen Kia Zhi Tang</maml:para>
+        <maml:para>Modified date: 2022-08-01</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>----- Example 1: Get all RDBroker health from session host -----</maml:title>
+        <dev:code>PS C:\&gt; Get-AzWvdSessionHostRDBrokerHealth
+
+Health            : RDBroker is Healthy
+HealthCheckStatus : @{HealthReport=; SnapshotTimeUtc=2022-07-28T08:23:15.10346Z; CurrentCapacityLoad=0}
+TimeStamp         : 2022-07-28T08:23:38.1069754+00:00
+TimeStampUtc      : 2022-07-28T08:23:38.1069765Z
+UpTime            : 4.01:14:02.3854535
+Version           : 1.0.5388.700
+GlobalUrl         : https://rdbroker.wvd.microsoft.com/
+RingUrl           : https://rdbroker-r0.wvd.microsoft.com/
+RegionUrl         : https://rdbroker-cus-r0.wvd.microsoft.com/
+ClusterUrl        : https://rdbroker-c101-cus-r0.wvd.microsoft.com/
+
+Health            : RDBroker is Healthy
+HealthCheckStatus : @{HealthReport=; SnapshotTimeUtc=2022-07-28T08:23:08.5394076Z; CurrentCapacityLoad=0}
+TimeStamp         : 2022-07-28T08:23:38.6078491+00:00
+TimeStampUtc      : 2022-07-28T08:23:38.6078497Z
+UpTime            : 1.09:03:04.3297695
+Version           : 1.0.5100.1100
+GlobalUrl         : https://rdbroker.wvd.microsoft.com/
+RingUrl           : https://rdbroker-r1.wvd.microsoft.com/
+RegionUrl         : https://rdbroker-jpw-r1.wvd.microsoft.com/
+ClusterUrl        : https://rdbroker-c102-jpw-r1.wvd.microsoft.com/
+
+Health            : RDDiagnostics is Healthy
+HealthCheckStatus : @{HealthReport=; SnapshotTimeUtc=2022-07-28T08:23:12.5380209Z; CurrentCapacityLoad=0}
+TimeStamp         : 2022-07-28T08:23:39.475994+00:00
+TimeStampUtc      : 2022-07-28T08:23:39.4759948Z
+UpTime            : 4.01:57:32.5184926
+Version           : 1.0.5388.700
+GlobalUrl         : https://rddiagnostics.wvd.microsoft.com/
+RingUrl           : https://rddiagnostics-r0.wvd.microsoft.com/
+RegionUrl         : https://rddiagnostics-cus-r0.wvd.microsoft.com/
+ClusterUrl        : https://rddiagnostics-c100-cus-r0.wvd.microsoft.com/</dev:code>
+        <dev:remarks>
+          <maml:para>This command gets all of the RDBroker health on the session host. The default display shows the `Health`, `HealthCheckStatus`, and other information of the service.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>- Example 2: Get primary RDBroker health from the session host -</maml:title>
+        <dev:code>PS C:\&gt; Get-AzWvdSessionHostRDBrokerHealth -Check BrokerURI
+
+Health            : RDBroker is Healthy
+HealthCheckStatus : @{HealthReport=; SnapshotTimeUtc=2022-07-28T08:35:46.123737Z; CurrentCapacityLoad=0}
+TimeStamp         : 2022-07-28T08:35:49.4943477+00:00
+TimeStampUtc      : 2022-07-28T08:35:49.4943484Z
+UpTime            : 4.01:26:30.8577469
+Version           : 1.0.5388.700
+GlobalUrl         : https://rdbroker.wvd.microsoft.com/
+RingUrl           : https://rdbroker-r0.wvd.microsoft.com/
+RegionUrl         : https://rdbroker-cus-r0.wvd.microsoft.com/
+ClusterUrl        : https://rdbroker-c101-cus-r0.wvd.microsoft.com/</dev:code>
+        <dev:remarks>
+          <maml:para>`Get-AzWvdSessionHostRDBrokerHealth` uses `-Check` parameter with the `BrokerURI` option to request the health from the specific URI configured on the session host registry.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>- Example 3: Get global RDBroker health from the session host -</maml:title>
+        <dev:code>PS C:\&gt; Get-AzWvdSessionHostRDBrokerHealth -Check BrokerURIGlobal
+
+Health            : RDBroker is Healthy
+HealthCheckStatus : @{HealthReport=; SnapshotTimeUtc=2022-07-28T08:42:04.1191563Z; CurrentCapacityLoad=0}
+TimeStamp         : 2022-07-28T08:42:05.9463273+00:00
+TimeStampUtc      : 2022-07-28T08:42:05.9463284Z
+UpTime            : 1.09:21:36.3561819
+Version           : 1.0.5100.1100
+GlobalUrl         : https://rdbroker.wvd.microsoft.com/
+RingUrl           : https://rdbroker-r1.wvd.microsoft.com/
+RegionUrl         : https://rdbroker-jpw-r1.wvd.microsoft.com/     
+ClusterUrl        : https://rdbroker-c102-jpw-r1.wvd.microsoft.com/</dev:code>
+        <dev:remarks>
+          <maml:para>`Get-AzWvdSessionHostRDBrokerHealth` uses `-Check` parameter with the `BrokerURIGlobal` option to request the health from the specific URI configured on the session host registry.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>Example 4: Get RDBroker diagnostics health from the session host</maml:title>
+        <dev:code>PS C:\&gt; Get-AzWvdSessionHostRDBrokerHealth -Check DiagnosticsURI
+
+Health            : RDDiagnostics is Healthy
+HealthCheckStatus : @{HealthReport=; SnapshotTimeUtc=2022-07-28T08:44:58.0502562Z; CurrentCapacityLoad=0}
+TimeStamp         : 2022-07-28T08:45:01.4663518+00:00
+TimeStampUtc      : 2022-07-28T08:45:01.4663529Z
+UpTime            : 4.01:36:06.1519937
+Version           : 1.0.5388.700
+GlobalUrl         : https://rddiagnostics.wvd.microsoft.com/
+RingUrl           : https://rddiagnostics-r0.wvd.microsoft.com/
+RegionUrl         : https://rddiagnostics-cus-r0.wvd.microsoft.com/
+ClusterUrl        : https://rddiagnostics-c101-cus-r0.wvd.microsoft.com/</dev:code>
+        <dev:remarks>
+          <maml:para>`Get-AzWvdSessionHostRDBrokerHealth` uses `-Check` parameter with the `DiagnosticsURI` option to request the health from the specific URI configured on the session host registry.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>Example 5: Get RDBroker individual health report entries from session host</maml:title>
+        <dev:code>PS C:\&gt; Get-AzWvdSessionHostRDBrokerHealth -Check DiagnosticsURI -HealthReport
+
+HealthReport : DiagnosticsURI - rdAADContext
+Data         : @{x-ms-correlation-id=ea60495f-6602-42bb-9ffd-c131089abf4a; RDHealthCheck:Operation=CheckAADHealth}
+Description  :
+Duration     : 00:00:00.0005946
+Exception    :
+Status       : 2
+Tags         : {}
+
+HealthReport : DiagnosticsURI - rdDbContext
+Data         :
+Description  :
+Duration     : 00:00:00.0298734
+Exception    : 
+Status       : 2
+Tags         : {}
+
+HealthReport : DiagnosticsURI - rdRedisCacheContext
+Data         : @{x-ms-correlation-id=ea60495f-6602-42bb-9ffd-c131089abf4a; RDHealthCheck:Operation=CheckRedisCacheHealth}
+Description  :
+Duration     : 00:00:00.0026510
+Exception    :
+Status       : 2
+Tags         : {}
+...            ...</dev:code>
+        <dev:remarks>
+          <maml:para>`Get-AzWvdSessionHostRDBrokerHealth` uses `-HealthReport` parameter to return all the health report entries from the RDBroker service response.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>Example 6: Get RDBroker health raw JSON response from session host</maml:title>
+        <dev:code>PS C:\&gt; Get-AzWvdSessionHostRDBrokerHealth -Check BrokerURI -Raw
+
+{
+  "Health": "RDBroker is Healthy",
+  "HealthCheckStatus": {
+    "HealthReport": {
+      "Entries": {
+        "rdDbContext": {
+          "Data": {},
+          "Description": null,
+          "Duration": "00:00:00.0350346",
+          "Exception": null,
+          "Status": 2,
+          "Tags": []
+        },
+        "rdAADContext": {
+          "Data": {
+            "x-ms-correlation-id": "af615fbd-c8be-414b-b85d-f81a5a1ca031",
+            "RDHealthCheck:Operation": "CheckAADHealth"
+          },
+          "Description": null,
+          "Duration": "00:00:00.0006769",
+          "Exception": null,
+          "Status": 2,
+          "Tags": []
+        },
+...
+      }
+    }
+  }
+}</dev:code>
+        <dev:remarks>
+          <maml:para>`Get-AzWvdSessionHostRDBrokerHealth` uses `-Raw` parameter to output the raw `JSON` response from RDBroker service.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Topic on "Error: Agent cannot connect to broker with INVALID_FORM"</maml:linkText>
+        <maml:uri>https://docs.microsoft.com/en-us/azure/virtual-desktop/troubleshoot-agent#error-agent-cannot-connect-to-broker-with-invalid_form</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Test-AzWvdRDBrokerLatency</command:name>
+      <command:verb>Test</command:verb>
+      <command:noun>AzWvdRDBrokerLatency</command:noun>
+      <maml:description>
+        <maml:para>Sends TCP echo request packets to RDBroker service uri to test connectivity and measure latency.</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>The `Test-AzWvdRDBrokerLatency` cmdlet sends TCP echo request packets to RDBroker service uri and returns the echo response replies. You can use this cmdlet to determine whether a particular computer can contact the RDBroker service uri on a specific port across an IP network.</maml:para>
+      <maml:para>You can use the parameters of `Test-AzWvdRDBrokerLatency` to specify the `-Port` port number to test if Port 443 is open and the `-NumberOfPing` to send a number of echo requests to the destination to measure the latency between the local computer to the destination.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Test-AzWvdRDBrokerLatency</maml:name>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName, ByValue)" position="0" aliases="none">
+          <maml:name>Uri</maml:name>
+          <maml:description>
+            <maml:para>Specifies the Uri of the destination.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Uri</command:parameterValue>
+          <dev:type>
+            <maml:name>Uri</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName, ByValue)" position="1" aliases="none">
+          <maml:name>Port</maml:name>
+          <maml:description>
+            <maml:para>Specifies the port number for the destination.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Int16</command:parameterValue>
+          <dev:type>
+            <maml:name>Int16</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName, ByValue)" position="2" aliases="none">
+          <maml:name>NumberOfWarmUpPing</maml:name>
+          <maml:description>
+            <maml:para>Specifies the number of warm up echo requests to send. The default value is 1.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Int16</command:parameterValue>
+          <dev:type>
+            <maml:name>Int16</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName, ByValue)" position="3" aliases="none">
+          <maml:name>NumberOfPing</maml:name>
+          <maml:description>
+            <maml:para>Specifies the number of echo requests to send. The default value is 4.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">Int16</command:parameterValue>
+          <dev:type>
+            <maml:name>Int16</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="cf">
+          <maml:name>Confirm</maml:name>
+          <maml:description>
+            <maml:para>Prompts you for confirmation before running the cmdlet.</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="wi">
+          <maml:name>WhatIf</maml:name>
+          <maml:description>
+            <maml:para>Shows what would happen if the cmdlet runs. The cmdlet is not run.</maml:para>
+          </maml:description>
+          <dev:type>
+            <maml:name>SwitchParameter</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>False</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName, ByValue)" position="3" aliases="none">
+        <maml:name>NumberOfPing</maml:name>
+        <maml:description>
+          <maml:para>Specifies the number of echo requests to send. The default value is 4.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Int16</command:parameterValue>
+        <dev:type>
+          <maml:name>Int16</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName, ByValue)" position="2" aliases="none">
+        <maml:name>NumberOfWarmUpPing</maml:name>
+        <maml:description>
+          <maml:para>Specifies the number of warm up echo requests to send. The default value is 1.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Int16</command:parameterValue>
+        <dev:type>
+          <maml:name>Int16</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName, ByValue)" position="1" aliases="none">
+        <maml:name>Port</maml:name>
+        <maml:description>
+          <maml:para>Specifies the port number for the destination.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Int16</command:parameterValue>
+        <dev:type>
+          <maml:name>Int16</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="True (ByPropertyName, ByValue)" position="0" aliases="none">
+        <maml:name>Uri</maml:name>
+        <maml:description>
+          <maml:para>Specifies the Uri of the destination.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">Uri</command:parameterValue>
+        <dev:type>
+          <maml:name>Uri</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="cf">
+        <maml:name>Confirm</maml:name>
+        <maml:description>
+          <maml:para>Prompts you for confirmation before running the cmdlet.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="wi">
+        <maml:name>WhatIf</maml:name>
+        <maml:description>
+          <maml:para>Shows what would happen if the cmdlet runs. The cmdlet is not run.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
+        <dev:type>
+          <maml:name>SwitchParameter</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.Uri</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.Int16</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para></maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para>Author: Ryen Kia Zhi Tang</maml:para>
+        <maml:para>Modified date: 2022-08-01</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>------ Example 1: Send echo requests to RDBroker service ------</maml:title>
+        <dev:code>PS C:\&gt; Test-AzWvdRDBrokerLatency -Uri rdbroker.wvdselfhost.microsoft.com -Port 80
+
+DestinationUri         : rdbroker.wvdselfhost.microsoft.com
+DestinationDnsHostName : rdbroker.wvdselfhost.microsoft.com
+DestinationIPAddress   : 138.91.29.183
+DestinationPort        : 80
+Entries                : {@{Index=0; DestinationUri=rdbroker.wvdselfhost.microsoft.com; DestinationDnsHostName=rdbroker.wvdselfhost.microsoft.com; DestinationIPAddress=138.91.29.183; DestinationPort=80; 
+                         SourceIPAddress=::ffff:10.10.0.138; SourcePort=51106; Status=Reachable; Latency(ms)=90.717}, @{Index=1; DestinationUri=rdbroker.wvdselfhost.microsoft.com; 
+                         DestinationDnsHostName=rdbroker.wvdselfhost.microsoft.com; DestinationIPAddress=138.91.29.183; DestinationPort=80; SourceIPAddress=::ffff:10.10.0.138; SourcePort=51110; Status=Reachable; Latency(ms)=85.864}, 
+                         @{Index=2; DestinationUri=rdbroker.wvdselfhost.microsoft.com; DestinationDnsHostName=rdbroker.wvdselfhost.microsoft.com; DestinationIPAddress=138.91.29.183; DestinationPort=80; 
+                         SourceIPAddress=::ffff:10.10.0.138; SourcePort=51112; Status=Reachable; Latency(ms)=85.982}, @{Index=3; DestinationUri=rdbroker.wvdselfhost.microsoft.com; 
+                         DestinationDnsHostName=rdbroker.wvdselfhost.microsoft.com; DestinationIPAddress=138.91.29.183; DestinationPort=80; SourceIPAddress=::ffff:10.10.0.138; SourcePort=51115; Status=Reachable; Latency(ms)=87.819}}
+Sent                   : 4
+Received               : 4
+Lost                   : 0
+LossPercentage%        : 0.000%
+MinimumLatency(ms)     : 85.864
+MaximumLatency(ms)     : 90.717
+AverageLatency(ms)     : 87.5955
+SumLatency(ms)         : 350.382</dev:code>
+        <dev:remarks>
+          <maml:para>`Test-AzWvdRDBrokerLatency` uses the `-Uri` parameter to specify the RDBroker URL destination and the `-Port` parameter to specify the RDBroker listening port number.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>Example 2: Send echo requests to RDBroker service with verbose outputs</maml:title>
+        <dev:code>PS C:\&gt; Test-AzWvdRDBrokerLatency -Uri https://rdbroker.wvdselfhost.microsoft.com/ -Port 443 -Verbose
+
+VERBOSE: TCP connect to 23.100.108.163 (rdbroker.wvdselfhost.microsoft.com):443:
+VERBOSE: 5 iterations (warmup 1) ping test:
+VERBOSE: Connecting to (rdbroker.wvdselfhost.microsoft.com) 23.100.108.163:443 (warmup): from ::ffff:10.10.0.138:64661: 90.489ms
+VERBOSE: Connecting to (rdbroker.wvdselfhost.microsoft.com) 23.100.108.163:443: from ::ffff:10.10.0.138:64665: 88.542ms
+VERBOSE: Connecting to (rdbroker.wvdselfhost.microsoft.com) 23.100.108.163:443: from ::ffff:10.10.0.138:64668: 87.386ms
+VERBOSE: Connecting to (rdbroker.wvdselfhost.microsoft.com) 23.100.108.163:443: from ::ffff:10.10.0.138:64670: 88.799ms
+VERBOSE: Connecting to (rdbroker.wvdselfhost.microsoft.com) 23.100.108.163:443: from ::ffff:10.10.0.138:64673: 90.159ms
+VERBOSE: TCP connect statistics for (https://rdbroker.wvdselfhost.microsoft.com/) 23.100.108.163:443:
+VERBOSE: Sent = 4, Received = 4, Lost = 0 (0.000%% loss),
+VERBOSE: Minimum = 87.386ms, Maximum = 90.159ms, Average = 88.72149999999999ms, Sum = 354.88599999999997ms
+
+DestinationUri         : https://rdbroker.wvdselfhost.microsoft.com/
+DestinationDnsHostName : rdbroker.wvdselfhost.microsoft.com
+DestinationIPAddress   : 23.100.108.163
+DestinationPort        : 443
+Entries                : {@{Index=0; DestinationUri=https://rdbroker.wvdselfhost.microsoft.com/; DestinationDnsHostName=rdbroker.wvdselfhost.microsoft.com; DestinationIPAddress=23.100.108.163; DestinationPort=443; 
+                         SourceIPAddress=::ffff:10.10.0.138; SourcePort=64665; Status=Reachable; Latency(ms)=88.542}, @{Index=1; DestinationUri=https://rdbroker.wvdselfhost.microsoft.com/; 
+                         DestinationDnsHostName=rdbroker.wvdselfhost.microsoft.com; DestinationIPAddress=23.100.108.163; DestinationPort=443; SourceIPAddress=::ffff:10.10.0.138; SourcePort=64668; Status=Reachable; 
+                         Latency(ms)=87.386}, @{Index=2; DestinationUri=https://rdbroker.wvdselfhost.microsoft.com/; DestinationDnsHostName=rdbroker.wvdselfhost.microsoft.com; DestinationIPAddress=23.100.108.163; 
+                         DestinationPort=443; SourceIPAddress=::ffff:10.10.0.138; SourcePort=64670; Status=Reachable; Latency(ms)=88.799}, @{Index=3; DestinationUri=https://rdbroker.wvdselfhost.microsoft.com/; 
+                         DestinationDnsHostName=rdbroker.wvdselfhost.microsoft.com; DestinationIPAddress=23.100.108.163; DestinationPort=443; SourceIPAddress=::ffff:10.10.0.138; SourcePort=64673; Status=Reachable; 
+                         Latency(ms)=90.159}}
+Sent                   : 4
+Received               : 4
+Lost                   : 0
+LossPercentage%        : 0.000%
+MinimumLatency(ms)     : 87.386
+MaximumLatency(ms)     : 90.159
+AverageLatency(ms)     : 88.7215
+SumLatency(ms)         : 354.886</dev:code>
+        <dev:remarks>
+          <maml:para>`Test-AzWvdRDBrokerLatency` uses `-Verbose` parameter to provide verbose output of the activities similar to `psping`.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>Example 3: Send 5 warm up echo requests prior sending 10 echo requests to RDBroker service to measure the latency</maml:title>
+        <dev:code>PS C:\&gt; Test-AzWvdRDBrokerLatency -Uri rdbroker.wvdselfhost.microsoft.com -Port 443 -NumberOfWarmUpPing 0 -NumberOfPing 10
+
+DestinationUri         : rdbroker.wvdselfhost.microsoft.com
+DestinationDnsHostName : rdbroker.wvdselfhost.microsoft.com
+DestinationIPAddress   : 23.100.108.163
+DestinationPort        : 443
+Entries                : {@{Index=0; DestinationUri=rdbroker.wvdselfhost.microsoft.com; DestinationDnsHostName=rdbroker.wvdselfhost.microsoft.com; DestinationIPAddress=23.100.108.163; DestinationPort=443; 
+                         SourceIPAddress=::ffff:10.10.0.138; SourcePort=58314; Status=Reachable; Latency(ms)=87.87}, @{Index=1; DestinationUri=rdbroker.wvdselfhost.microsoft.com; 
+                         DestinationDnsHostName=rdbroker.wvdselfhost.microsoft.com; DestinationIPAddress=23.100.108.163; DestinationPort=443; SourceIPAddress=::ffff:10.10.0.138; SourcePort=58317; Status=Reachable; 
+                         Latency(ms)=93.478}, @{Index=2; DestinationUri=rdbroker.wvdselfhost.microsoft.com; DestinationDnsHostName=rdbroker.wvdselfhost.microsoft.com; DestinationIPAddress=23.100.108.163; DestinationPort=443; 
+                         SourceIPAddress=::ffff:10.10.0.138; SourcePort=58321; Status=Reachable; Latency(ms)=87.915}, @{Index=3; DestinationUri=rdbroker.wvdselfhost.microsoft.com; 
+                         DestinationDnsHostName=rdbroker.wvdselfhost.microsoft.com; DestinationIPAddress=23.100.108.163; DestinationPort=443; SourceIPAddress=::ffff:10.10.0.138; SourcePort=58323; Status=Reachable; 
+                         Latency(ms)=88.33}…}
+Sent                   : 10
+Received               : 10
+Lost                   : 0
+LossPercentage%        : 0.000%
+MinimumLatency(ms)     : 86.446
+MaximumLatency(ms)     : 93.478
+AverageLatency(ms)     : 89.0097
+SumLatency(ms)         : 890.097</dev:code>
+        <dev:remarks>
+          <maml:para>`Test-AzWvdRDBrokerLatency` uses `-NumberOfWarmUpPing` parameter to specify a range from 0 to 5 warm up echo requests before sending 10 echo requests to the RDBroker service.</maml:para>
+          <maml:para>To skip warm up echo request, user can specify a value of 0 `-NumberOfWarmUpPing 0` to skip warm up echo request.</maml:para>
+          <maml:para>To increase the number of echo requests (Default: 4) to 10 echo requests, user can specify a value of 10 `-NumberOfPing 10` to increase the number of echo requests during the test.</maml:para>
+        </dev:remarks>
+      </command:example>
+      <command:example>
+        <maml:title>Example 4: Send 10 echo requests to RDBroker service and view details of each echo request</maml:title>
+        <dev:code>PS C:\&gt; Test-AzWvdRDBrokerLatency -Uri rdbroker.wvdselfhost.microsoft.com -Port 443 -NumberOfPing 10 | Select-Object -ExpandProperty Entries | Format-Table
+
+Index DestinationUri                              DestinationDnsHostName             DestinationIPAddress DestinationPort SourceIPAddress    SourcePort Status      Latency(ms)
+----- --------------                              ----------------------             -------------------- --------------- ---------------    ---------- ------      -----------
+    0 https://rdbroker.wvdselfhost.microsoft.com/ rdbroker.wvdselfhost.microsoft.com 23.100.108.163                   443 ::ffff:10.10.0.138      56948 Reachable        85.903
+    1 https://rdbroker.wvdselfhost.microsoft.com/ rdbroker.wvdselfhost.microsoft.com 23.100.108.163                   443 ::ffff:10.10.0.138      56951 UnReachable            
+    2 https://rdbroker.wvdselfhost.microsoft.com/ rdbroker.wvdselfhost.microsoft.com 23.100.108.163                   443 ::ffff:10.10.0.138      56953 Reachable        87.151
+    3 https://rdbroker.wvdselfhost.microsoft.com/ rdbroker.wvdselfhost.microsoft.com 23.100.108.163                   443 ::ffff:10.10.0.138      56956 Reachable        87.399
+    4 https://rdbroker.wvdselfhost.microsoft.com/ rdbroker.wvdselfhost.microsoft.com 23.100.108.163                   443 ::ffff:10.10.0.138      56959 Reachable        87.709
+    5 https://rdbroker.wvdselfhost.microsoft.com/ rdbroker.wvdselfhost.microsoft.com 23.100.108.163                   443 ::ffff:10.10.0.138      56961 UnReachable            
+    6 https://rdbroker.wvdselfhost.microsoft.com/ rdbroker.wvdselfhost.microsoft.com 23.100.108.163                   443 ::ffff:10.10.0.138      56965 Reachable        90.804
+    7 https://rdbroker.wvdselfhost.microsoft.com/ rdbroker.wvdselfhost.microsoft.com 23.100.108.163                   443 ::ffff:10.10.0.138      56966 Reachable        86.924
+    8 https://rdbroker.wvdselfhost.microsoft.com/ rdbroker.wvdselfhost.microsoft.com 23.100.108.163                   443 ::ffff:10.10.0.138      56971 Reachable         87.67
+    9 https://rdbroker.wvdselfhost.microsoft.com/ rdbroker.wvdselfhost.microsoft.com 23.100.108.163                   443 ::ffff:10.10.0.138      56974 Reachable        86.583</dev:code>
+        <dev:remarks>
+          <maml:para>`Test-AzWvdRDBrokerLatency` supports pipeline output of the `PSObject`. User can expand the `Entries` property and view each echo request activity information.</maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Topic on "Error: Azure Virtual Desktop agent isn't reporting a heartbeat when running Get-AzWvdSessionHost"</maml:linkText>
+        <maml:uri>https://docs.microsoft.com/en-us/azure/virtual-desktop/troubleshoot-vm-configuration#error-azure-virtual-desktop-agent-isnt-reporting-a-heartbeat-when-running-get-azwvdsessionhost</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+</helpItems>

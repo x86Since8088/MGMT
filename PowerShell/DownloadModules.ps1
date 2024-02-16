@@ -37,7 +37,8 @@ foreach ($EntryData in $Global:SavedModules)
         }
     }
     else {
-        $FoundPackages = Find-Package -Name $EntryData.name -Verbose -AllVersions
+        $FoundPackages = Find-Package -Name $EntryData.name -Verbose -AllVersions | 
+            Select-Object @{Name='Version';Expression={[version]$_.Version}},* -ErrorAction Ignore
         $FoundPackageArr+=$FoundPackages
         if ('Latest' -eq $Version) {
             $SelectedPackages = $FoundPackages|
@@ -51,10 +52,14 @@ foreach ($EntryData in $Global:SavedModules)
         }
         foreach($SelectedPackageItem in $SelectedPackages) {
             $SelectedPackagePath = $PackageFolder + '\' + $SelectedPackageItem.Name + '\' + $SelectedPackageItem.Version.ToString()
-            if (!(test-path $SelectedPackagePath)) {
-                Save-Package -Name $SelectedPackageItem.name -Path $PackageFolder -Force -Confirm:$False
+            Start-ThreadJob -ThrottleLimit 5 -Name "Save_Module_$($SelectedPackageItem.Name)" -ScriptBlock {
+                $SelectedPackageItem = $using:SelectedPackageItem
+                $SelectedPackagePath = $using:SelectedPackagePath
+                $PackageFolder = $using:PackageFolder
+                if (!(test-path $SelectedPackagePath)) {
+                    Save-Package -Name $SelectedPackageItem.name -Path $PackageFolder -Force -Confirm:$False -ProviderName $SelectedPackageItem.ProviderName -RequiredVersion $SelectedPackageItem.Version -Verbose 
+                }
             }
         }
     }
-
 }

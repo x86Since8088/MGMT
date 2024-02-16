@@ -1,0 +1,181 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.Datadog</S>
+      <S N="Version">0.1.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: Datadog cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2021-07-06T03:03:53-05:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>Datadog</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzDatadogMarketplaceAgreement</S>
+                <S>Get-AzDatadogMonitor</S>
+                <S>Get-AzDatadogMonitorApiKey</S>
+                <S>Get-AzDatadogMonitorDefaultKey</S>
+                <S>Get-AzDatadogMonitorHost</S>
+                <S>Get-AzDatadogMonitorLinkedResource</S>
+                <S>Get-AzDatadogMonitorMonitoredResource</S>
+                <S>Get-AzDatadogSingleSignOnConfiguration</S>
+                <S>Get-AzDatadogTagRule</S>
+                <S>New-AzDatadogFilteringTagObject</S>
+                <S>New-AzDatadogMarketplaceAgreement</S>
+                <S>New-AzDatadogMonitor</S>
+                <S>New-AzDatadogSingleSignOnConfiguration</S>
+                <S>New-AzDatadogTagRule</S>
+                <S>Remove-AzDatadogMonitor</S>
+                <S>Set-AzDatadogMonitorDefaultKey</S>
+                <S>Update-AzDatadogMonitor</S>
+                <S>Update-AzDatadogMonitorSetPasswordLink</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzDatadogMarketplaceAgreement</S>
+                <S>Get-AzDatadogMonitor</S>
+                <S>Get-AzDatadogMonitorApiKey</S>
+                <S>Get-AzDatadogMonitorDefaultKey</S>
+                <S>Get-AzDatadogMonitorHost</S>
+                <S>Get-AzDatadogMonitorLinkedResource</S>
+                <S>Get-AzDatadogMonitorMonitoredResource</S>
+                <S>Get-AzDatadogSingleSignOnConfiguration</S>
+                <S>Get-AzDatadogTagRule</S>
+                <S>New-AzDatadogFilteringTagObject</S>
+                <S>New-AzDatadogMarketplaceAgreement</S>
+                <S>New-AzDatadogMonitor</S>
+                <S>New-AzDatadogSingleSignOnConfiguration</S>
+                <S>New-AzDatadogTagRule</S>
+                <S>Remove-AzDatadogMonitor</S>
+                <S>Set-AzDatadogMonitorDefaultKey</S>
+                <S>Update-AzDatadogMonitor</S>
+                <S>Update-AzDatadogMonitorSetPasswordLink</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.5.0</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.5.0</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: Datadog cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">4473</S>
+          <S N="downloadCount">4473</S>
+          <S N="packageSize">411730</S>
+          <S N="published">7/6/2021 3:03:53 AM -05:00</S>
+          <S N="created">7/6/2021 3:03:53 AM -05:00</S>
+          <S N="lastUpdated">2/15/2024 10:22:57 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule Datadog PSEdition_Core PSEdition_Desktop PSFunction_Get-AzDatadogMarketplaceAgreement PSCommand_Get-AzDatadogMarketplaceAgreement PSFunction_Get-AzDatadogMonitor PSCommand_Get-AzDatadogMonitor PSFunction_Get-AzDatadogMonitorApiKey PSCommand_Get-AzDatadogMonitorApiKey PSFunction_Get-AzDatadogMonitorDefaultKey PSCommand_Get-AzDatadogMonitorDefaultKey PSFunction_Get-AzDatadogMonitorHost PSCommand_Get-AzDatadogMonitorHost PSFunction_Get-AzDatadogMonitorLinkedResource PSCommand_Get-AzDatadogMonitorLinkedResource PSFunction_Get-AzDatadogMonitorMonitoredResource PSCommand_Get-AzDatadogMonitorMonitoredResource PSFunction_Get-AzDatadogSingleSignOnConfiguration PSCommand_Get-AzDatadogSingleSignOnConfiguration PSFunction_Get-AzDatadogTagRule PSCommand_Get-AzDatadogTagRule PSFunction_New-AzDatadogFilteringTagObject PSCommand_New-AzDatadogFilteringTagObject PSFunction_New-AzDatadogMarketplaceAgreement PSCommand_New-AzDatadogMarketplaceAgreement PSFunction_New-AzDatadogMonitor PSCommand_New-AzDatadogMonitor PSFunction_New-AzDatadogSingleSignOnConfiguration PSCommand_New-AzDatadogSingleSignOnConfiguration PSFunction_New-AzDatadogTagRule PSCommand_New-AzDatadogTagRule PSFunction_Remove-AzDatadogMonitor PSCommand_Remove-AzDatadogMonitor PSFunction_Set-AzDatadogMonitorDefaultKey PSCommand_Set-AzDatadogMonitorDefaultKey PSFunction_Update-AzDatadogMonitor PSCommand_Update-AzDatadogMonitor PSFunction_Update-AzDatadogMonitorSetPasswordLink PSCommand_Update-AzDatadogMonitorSetPasswordLink PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:22:57Z</S>
+          <S N="NormalizedVersion">0.1.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.Datadog.nuspec|Az.Datadog.format.ps1xml|Az.Datadog.psd1|Az.Datadog.psm1|bin\Az.Datadog.private.deps.json|bin\Az.Datadog.private.dll|custom\Az.Datadog.custom.psm1|custom\autogen-model-cmdlets\New-AzDatadogFilteringTagObject.ps1|exports\ProxyCmdletDefinitions.ps1|internal\Az.Datadog.internal.psm1|internal\ProxyCmdletDefinitions.ps1|utils\Unprotect-SecureString.ps1</S>
+          <S N="GUID">1a549fcc-2674-4e11-9865-ea4f934ae6ff</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.Datadog\0.1.0</S>
+    </MS>
+  </Obj>
+</Objs>

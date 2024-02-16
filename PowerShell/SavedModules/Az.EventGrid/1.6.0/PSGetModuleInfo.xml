@@ -1,0 +1,264 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.EventGrid</S>
+      <S N="Version">1.6.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell - Event Grid service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on Event Grid, please visit the following: https://learn.microsoft.com/azure/event-grid/</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2023-04-04T04:08:07-05:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>EventGrid</S>
+          <S>PSModule</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>New-AzEventGridTopic</S>
+                <S>Get-AzEventGridTopic</S>
+                <S>Set-AzEventGridTopic</S>
+                <S>New-AzEventGridTopicKey</S>
+                <S>Get-AzEventGridTopicKey</S>
+                <S>Remove-AzEventGridTopic</S>
+                <S>New-AzEventGridSubscription</S>
+                <S>Update-AzEventGridSubscription</S>
+                <S>Remove-AzEventGridSubscription</S>
+                <S>Get-AzEventGridSubscription</S>
+                <S>Get-AzEventGridTopicType</S>
+                <S>New-AzEventGridDomain</S>
+                <S>Get-AzEventGridDomain</S>
+                <S>Get-AzEventGridDomainTopic</S>
+                <S>Get-AzEventGridDomainKey</S>
+                <S>New-AzEventGridDomainKey</S>
+                <S>Remove-AzEventGridDomain</S>
+                <S>New-AzEventGridDomainTopic</S>
+                <S>Remove-AzEventGridDomainTopic</S>
+                <S>Get-AzEventGridSystemTopic</S>
+                <S>New-AzEventGridSystemTopic</S>
+                <S>Update-AzEventGridSystemTopic</S>
+                <S>Remove-AzEventGridSystemTopic</S>
+                <S>New-AzEventGridSystemTopicEventSubscription</S>
+                <S>Update-AzEventGridSystemTopicEventSubscription</S>
+                <S>Get-AzEventGridSystemTopicEventSubscription</S>
+                <S>Remove-AzEventGridSystemTopicEventSubscription</S>
+                <S>Get-AzEventGridSystemTopicEventSubscriptionDeliveryAttribute</S>
+                <S>Get-AzEventGridPartnerTopicEventSubscriptionDeliveryAttribute</S>
+                <S>Get-AzEventGridFullUrlForSystemTopicEventSubscription</S>
+                <S>Get-AzEventGridFullUrlForPartnerTopicEventSubscription</S>
+                <S>Get-AzEventGridPartnerNamespace</S>
+                <S>Get-AzEventGridPartnerRegistration</S>
+                <S>Get-AzEventGridPartnerConfiguration</S>
+                <S>Get-AzEventGridVerifiedPartner</S>
+                <S>Get-AzEventGridChannel</S>
+                <S>Get-AzEventGridPartnerNamespaceKey</S>
+                <S>Get-AzEventGridPartnerTopic</S>
+                <S>Get-AzEventGridPartnerTopicEventSubscription</S>
+                <S>New-AzEventGridPartnerRegistration</S>
+                <S>New-AzEventGridPartnerConfiguration</S>
+                <S>New-AzEventGridPartnerNamespace</S>
+                <S>New-AzEventGridPartnerTopic</S>
+                <S>New-AzEventGridChannel</S>
+                <S>New-AzEventGridPartnerTopicEventSubscription</S>
+                <S>Update-AzEventGridPartnerConfiguration</S>
+                <S>Update-AzEventGridChannel</S>
+                <S>Update-AzEventGridPartnerTopic</S>
+                <S>Update-AzEventGridPartnerTopicEventSubscription</S>
+                <S>Remove-AzEventGridPartnerRegistration</S>
+                <S>Remove-AzEventGridPartnerConfiguration</S>
+                <S>Remove-AzEventGridPartnerNamespace</S>
+                <S>Remove-AzEventGridChannel</S>
+                <S>Remove-AzEventGridPartnerTopic</S>
+                <S>Remove-AzEventGridPartnerTopicEventSubscription</S>
+                <S>Grant-AzEventGridPartnerConfiguration</S>
+                <S>Enable-AzEventGridPartnerTopic</S>
+                <S>Revoke-AzEventGridPartnerConfiguration</S>
+                <S>New-AzEventGridPartnerNamespaceKey</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>New-AzEventGridTopic</S>
+                <S>Get-AzEventGridTopic</S>
+                <S>Set-AzEventGridTopic</S>
+                <S>New-AzEventGridTopicKey</S>
+                <S>Get-AzEventGridTopicKey</S>
+                <S>Remove-AzEventGridTopic</S>
+                <S>New-AzEventGridSubscription</S>
+                <S>Update-AzEventGridSubscription</S>
+                <S>Remove-AzEventGridSubscription</S>
+                <S>Get-AzEventGridSubscription</S>
+                <S>Get-AzEventGridTopicType</S>
+                <S>New-AzEventGridDomain</S>
+                <S>Get-AzEventGridDomain</S>
+                <S>Get-AzEventGridDomainTopic</S>
+                <S>Get-AzEventGridDomainKey</S>
+                <S>New-AzEventGridDomainKey</S>
+                <S>Remove-AzEventGridDomain</S>
+                <S>New-AzEventGridDomainTopic</S>
+                <S>Remove-AzEventGridDomainTopic</S>
+                <S>Get-AzEventGridSystemTopic</S>
+                <S>New-AzEventGridSystemTopic</S>
+                <S>Update-AzEventGridSystemTopic</S>
+                <S>Remove-AzEventGridSystemTopic</S>
+                <S>New-AzEventGridSystemTopicEventSubscription</S>
+                <S>Update-AzEventGridSystemTopicEventSubscription</S>
+                <S>Get-AzEventGridSystemTopicEventSubscription</S>
+                <S>Remove-AzEventGridSystemTopicEventSubscription</S>
+                <S>Get-AzEventGridSystemTopicEventSubscriptionDeliveryAttribute</S>
+                <S>Get-AzEventGridPartnerTopicEventSubscriptionDeliveryAttribute</S>
+                <S>Get-AzEventGridFullUrlForSystemTopicEventSubscription</S>
+                <S>Get-AzEventGridFullUrlForPartnerTopicEventSubscription</S>
+                <S>Get-AzEventGridPartnerNamespace</S>
+                <S>Get-AzEventGridPartnerRegistration</S>
+                <S>Get-AzEventGridPartnerConfiguration</S>
+                <S>Get-AzEventGridVerifiedPartner</S>
+                <S>Get-AzEventGridChannel</S>
+                <S>Get-AzEventGridPartnerNamespaceKey</S>
+                <S>Get-AzEventGridPartnerTopic</S>
+                <S>Get-AzEventGridPartnerTopicEventSubscription</S>
+                <S>New-AzEventGridPartnerRegistration</S>
+                <S>New-AzEventGridPartnerConfiguration</S>
+                <S>New-AzEventGridPartnerNamespace</S>
+                <S>New-AzEventGridPartnerTopic</S>
+                <S>New-AzEventGridChannel</S>
+                <S>New-AzEventGridPartnerTopicEventSubscription</S>
+                <S>Update-AzEventGridPartnerConfiguration</S>
+                <S>Update-AzEventGridChannel</S>
+                <S>Update-AzEventGridPartnerTopic</S>
+                <S>Update-AzEventGridPartnerTopicEventSubscription</S>
+                <S>Remove-AzEventGridPartnerRegistration</S>
+                <S>Remove-AzEventGridPartnerConfiguration</S>
+                <S>Remove-AzEventGridPartnerNamespace</S>
+                <S>Remove-AzEventGridChannel</S>
+                <S>Remove-AzEventGridPartnerTopic</S>
+                <S>Remove-AzEventGridPartnerTopicEventSubscription</S>
+                <S>Grant-AzEventGridPartnerConfiguration</S>
+                <S>Enable-AzEventGridPartnerTopic</S>
+                <S>Revoke-AzEventGridPartnerConfiguration</S>
+                <S>New-AzEventGridPartnerNamespaceKey</S>
+              </LST>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Added fix for DeliveryAttributeMapping_x000D__x000A_* Added validation for StorageQueueTtl</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.12.1</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.12.1</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell - Event Grid service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on Event Grid, please visit the following: https://learn.microsoft.com/azure/event-grid/</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">* Added fix for DeliveryAttributeMapping_x000D__x000A_* Added validation for StorageQueueTtl</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">14646979</S>
+          <S N="downloadCount">67684583</S>
+          <S N="packageSize">401151</S>
+          <S N="published">4/4/2023 4:08:07 AM -05:00</S>
+          <S N="created">4/4/2023 4:08:07 AM -05:00</S>
+          <S N="lastUpdated">2/15/2024 11:47:58 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM EventGrid PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_New-AzEventGridTopic PSCommand_New-AzEventGridTopic PSCmdlet_Get-AzEventGridTopic PSCommand_Get-AzEventGridTopic PSCmdlet_Set-AzEventGridTopic PSCommand_Set-AzEventGridTopic PSCmdlet_New-AzEventGridTopicKey PSCommand_New-AzEventGridTopicKey PSCmdlet_Get-AzEventGridTopicKey PSCommand_Get-AzEventGridTopicKey PSCmdlet_Remove-AzEventGridTopic PSCommand_Remove-AzEventGridTopic PSCmdlet_New-AzEventGridSubscription PSCommand_New-AzEventGridSubscription PSCmdlet_Update-AzEventGridSubscription PSCommand_Update-AzEventGridSubscription PSCmdlet_Remove-AzEventGridSubscription PSCommand_Remove-AzEventGridSubscription PSCmdlet_Get-AzEventGridSubscription PSCommand_Get-AzEventGridSubscription PSCmdlet_Get-AzEventGridTopicType PSCommand_Get-AzEventGridTopicType PSCmdlet_New-AzEventGridDomain PSCommand_New-AzEventGridDomain PSCmdlet_Get-AzEventGridDomain PSCommand_Get-AzEventGridDomain PSCmdlet_Get-AzEventGridDomainTopic PSCommand_Get-AzEventGridDomainTopic PSCmdlet_Get-AzEventGridDomainKey PSCommand_Get-AzEventGridDomainKey PSCmdlet_New-AzEventGridDomainKey PSCommand_New-AzEventGridDomainKey PSCmdlet_Remove-AzEventGridDomain PSCommand_Remove-AzEventGridDomain PSCmdlet_New-AzEventGridDomainTopic PSCommand_New-AzEventGridDomainTopic PSCmdlet_Remove-AzEventGridDomainTopic PSCommand_Remove-AzEventGridDomainTopic PSCmdlet_Get-AzEventGridSystemTopic PSCommand_Get-AzEventGridSystemTopic PSCmdlet_New-AzEventGridSystemTopic PSCommand_New-AzEventGridSystemTopic PSCmdlet_Update-AzEventGridSystemTopic PSCommand_Update-AzEventGridSystemTopic PSCmdlet_Remove-AzEventGridSystemTopic PSCommand_Remove-AzEventGridSystemTopic PSCmdlet_New-AzEventGridSystemTopicEventSubscription PSCommand_New-AzEventGridSystemTopicEventSubscription PSCmdlet_Update-AzEventGridSystemTopicEventSubscription PSCommand_Update-AzEventGridSystemTopicEventSubscription PSCmdlet_Get-AzEventGridSystemTopicEventSubscription PSCommand_Get-AzEventGridSystemTopicEventSubscription PSCmdlet_Remove-AzEventGridSystemTopicEventSubscription PSCommand_Remove-AzEventGridSystemTopicEventSubscription PSCmdlet_Get-AzEventGridSystemTopicEventSubscriptionDeliveryAttribute PSCommand_Get-AzEventGridSystemTopicEventSubscriptionDeliveryAttribute PSCmdlet_Get-AzEventGridPartnerTopicEventSubscriptionDeliveryAttribute PSCommand_Get-AzEventGridPartnerTopicEventSubscriptionDeliveryAttribute PSCmdlet_Get-AzEventGridFullUrlForSystemTopicEventSubscription PSCommand_Get-AzEventGridFullUrlForSystemTopicEventSubscription PSCmdlet_Get-AzEventGridFullUrlForPartnerTopicEventSubscription PSCommand_Get-AzEventGridFullUrlForPartnerTopicEventSubscription PSCmdlet_Get-AzEventGridPartnerNamespace PSCommand_Get-AzEventGridPartnerNamespace PSCmdlet_Get-AzEventGridPartnerRegistration PSCommand_Get-AzEventGridPartnerRegistration PSCmdlet_Get-AzEventGridPartnerConfiguration PSCommand_Get-AzEventGridPartnerConfiguration PSCmdlet_Get-AzEventGridVerifiedPartner PSCommand_Get-AzEventGridVerifiedPartner PSCmdlet_Get-AzEventGridChannel PSCommand_Get-AzEventGridChannel PSCmdlet_Get-AzEventGridPartnerNamespaceKey PSCommand_Get-AzEventGridPartnerNamespaceKey PSCmdlet_Get-AzEventGridPartnerTopic PSCommand_Get-AzEventGridPartnerTopic PSCmdlet_Get-AzEventGridPartnerTopicEventSubscription PSCommand_Get-AzEventGridPartnerTopicEventSubscription PSCmdlet_New-AzEventGridPartnerRegistration PSCommand_New-AzEventGridPartnerRegistration PSCmdlet_New-AzEventGridPartnerConfiguration PSCommand_New-AzEventGridPartnerConfiguration PSCmdlet_New-AzEventGridPartnerNamespace PSCommand_New-AzEventGridPartnerNamespace PSCmdlet_New-AzEventGridPartnerTopic PSCommand_New-AzEventGridPartnerTopic PSCmdlet_New-AzEventGridChannel PSCommand_New-AzEventGridChannel PSCmdlet_New-AzEventGridPartnerTopicEventSubscription PSCommand_New-AzEventGridPartnerTopicEventSubscription PSCmdlet_Update-AzEventGridPartnerConfiguration PSCommand_Update-AzEventGridPartnerConfiguration PSCmdlet_Update-AzEventGridChannel PSCommand_Update-AzEventGridChannel PSCmdlet_Update-AzEventGridPartnerTopic PSCommand_Update-AzEventGridPartnerTopic PSCmdlet_Update-AzEventGridPartnerTopicEventSubscription PSCommand_Update-AzEventGridPartnerTopicEventSubscription PSCmdlet_Remove-AzEventGridPartnerRegistration PSCommand_Remove-AzEventGridPartnerRegistration PSCmdlet_Remove-AzEventGridPartnerConfiguration PSCommand_Remove-AzEventGridPartnerConfiguration PSCmdlet_Remove-AzEventGridPartnerNamespace PSCommand_Remove-AzEventGridPartnerNamespace PSCmdlet_Remove-AzEventGridChannel PSCommand_Remove-AzEventGridChannel PSCmdlet_Remove-AzEventGridPartnerTopic PSCommand_Remove-AzEventGridPartnerTopic PSCmdlet_Remove-AzEventGridPartnerTopicEventSubscription PSCommand_Remove-AzEventGridPartnerTopicEventSubscription PSCmdlet_Grant-AzEventGridPartnerConfiguration PSCommand_Grant-AzEventGridPartnerConfiguration PSCmdlet_Enable-AzEventGridPartnerTopic PSCommand_Enable-AzEventGridPartnerTopic PSCmdlet_Revoke-AzEventGridPartnerConfiguration PSCommand_Revoke-AzEventGridPartnerConfiguration PSCmdlet_New-AzEventGridPartnerNamespaceKey PSCommand_New-AzEventGridPartnerNamespaceKey PSIncludes_Cmdlet</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T23:47:58Z</S>
+          <S N="NormalizedVersion">1.6.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.EventGrid.nuspec|Az.EventGrid.psd1|Az.EventGrid.psm1|Microsoft.Azure.Management.EventGrid.dll|Microsoft.Azure.PowerShell.Cmdlets.EventGrid.deps.json|Microsoft.Azure.PowerShell.Cmdlets.EventGrid.dll|Microsoft.Azure.PowerShell.Cmdlets.EventGrid.dll-Help.xml</S>
+          <S N="GUID">d2167b29-9406-4ec7-b089-500460b3ebbd</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.EventGrid\1.6.0</S>
+    </MS>
+  </Obj>
+</Objs>

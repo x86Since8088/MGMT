@@ -1,0 +1,136 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.StorageTable</S>
+      <S N="Version">1.0.7</S>
+      <S N="Type">Module</S>
+      <S N="Description">Sample functions to add/retrieve/update entities on Azure Storage Tables from PowerShell. It requires latest Azure PowerShell module installed, which can be downloaded follow https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-1.3.0.</S>
+      <S N="Author">Minghao Li (MSFT)</S>
+      <S N="CompanyName">MinghaoLi</S>
+      <S N="Copyright">© Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2019-07-12T09:18:11-05:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <Nil N="LicenseUri" />
+      <URI N="ProjectUri">https://github.com/Liminghao0922/AzStorageTable</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Add-AzStorageTableRow</S>
+                <S>Get-AzStorageTableRowAll</S>
+                <S>Get-AzStorageTableRowByPartitionKey</S>
+                <S>Get-AzStorageTableRowByPartitionKeyRowKey</S>
+                <S>Get-AzStorageTableRowByColumnName</S>
+                <S>Get-AzStorageTableRowByCustomFilter</S>
+                <S>Update-AzStorageTableRow</S>
+                <S>Remove-AzStorageTableRow</S>
+                <S>Get-AzStorageTableTable</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Add-AzStorageTableRow</S>
+                <S>Get-AzStorageTableRowAll</S>
+                <S>Get-AzStorageTableRowByPartitionKey</S>
+                <S>Get-AzStorageTableRowByPartitionKeyRowKey</S>
+                <S>Get-AzStorageTableRowByColumnName</S>
+                <S>Get-AzStorageTableRowByCustomFilter</S>
+                <S>Update-AzStorageTableRow</S>
+                <S>Remove-AzStorageTableRow</S>
+                <S>Get-AzStorageTableTable</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="7">
+        <TN RefId="3">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">© Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Sample functions to add/retrieve/update entities on Azure Storage Tables from PowerShell. It requires latest Azure PowerShell module installed, which can be downloaded follow https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-1.3.0.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">50146</S>
+          <S N="downloadCount">50694</S>
+          <S N="packageSize">13669</S>
+          <S N="published">7/12/2019 9:18:11 AM -05:00</S>
+          <S N="created">7/12/2019 9:18:11 AM -05:00</S>
+          <S N="lastUpdated">2/16/2024 12:12:59 AM -06:00</S>
+          <S N="tags">PSModule PSFunction_Add-AzStorageTableRow PSCommand_Add-AzStorageTableRow PSFunction_Get-AzStorageTableRowAll PSCommand_Get-AzStorageTableRowAll PSFunction_Get-AzStorageTableRowByPartitionKey PSCommand_Get-AzStorageTableRowByPartitionKey PSFunction_Get-AzStorageTableRowByPartitionKeyRowKey PSCommand_Get-AzStorageTableRowByPartitionKeyRowKey PSFunction_Get-AzStorageTableRowByColumnName PSCommand_Get-AzStorageTableRowByColumnName PSFunction_Get-AzStorageTableRowByCustomFilter PSCommand_Get-AzStorageTableRowByCustomFilter PSFunction_Update-AzStorageTableRow PSCommand_Update-AzStorageTableRow PSFunction_Remove-AzStorageTableRow PSCommand_Remove-AzStorageTableRow PSFunction_Get-AzStorageTableTable PSCommand_Get-AzStorageTableTable PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-16T00:12:59Z</S>
+          <S N="NormalizedVersion">1.0.7</S>
+          <S N="Authors">Minghao Li (MSFT)</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.StorageTable.nuspec|Az.StorageTable.psd1|AzStorageTableCoreHelper.psm1|LICENSE|README.md|ReleaseNotes.md</S>
+          <S N="GUID">93daa983-1ec8-45e3-b457-fa9f61a8c703</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.StorageTable\1.0.7</S>
+    </MS>
+  </Obj>
+</Objs>

@@ -1,0 +1,238 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.VMware</S>
+      <S N="Version">0.6.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: VMware cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2024-02-06T01:49:33-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>VMware</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzVMwareAddon</S>
+                <S>Get-AzVMwareAuthorization</S>
+                <S>Get-AzVMwareCloudLink</S>
+                <S>Get-AzVMwareCluster</S>
+                <S>Get-AzVMwareClusterZone</S>
+                <S>Get-AzVMwareDatastore</S>
+                <S>Get-AzVMwareGlobalReachConnection</S>
+                <S>Get-AzVMwarePlacementPolicy</S>
+                <S>Get-AzVMwarePrivateCloud</S>
+                <S>Get-AzVMwarePrivateCloudAdminCredential</S>
+                <S>Get-AzVMwareVirtualMachine</S>
+                <S>New-AzVMwareAddon</S>
+                <S>New-AzVMwareAddonSrmPropertiesObject</S>
+                <S>New-AzVMwareAddonVrPropertiesObject</S>
+                <S>New-AzVMwareAuthorization</S>
+                <S>New-AzVMwareCloudLink</S>
+                <S>New-AzVMwareCluster</S>
+                <S>New-AzVMwareDatastore</S>
+                <S>New-AzVMwareGlobalReachConnection</S>
+                <S>New-AzVMwareIdentitySourceObject</S>
+                <S>New-AzVMwarePlacementPolicy</S>
+                <S>New-AzVMwarePrivateCloud</S>
+                <S>New-AzVMwarePrivateCloudNsxtPassword</S>
+                <S>New-AzVMwarePrivateCloudVcenterPassword</S>
+                <S>New-AzVMwarePSCredentialExecutionParameterObject</S>
+                <S>New-AzVMwareScriptSecureStringExecutionParameterObject</S>
+                <S>New-AzVMwareScriptStringExecutionParameterObject</S>
+                <S>New-AzVMwareVmHostPlacementPolicyPropertiesObject</S>
+                <S>New-AzVMwareVMPlacementPolicyPropertiesObject</S>
+                <S>Remove-AzVMwareAddon</S>
+                <S>Remove-AzVMwareAuthorization</S>
+                <S>Remove-AzVMwareCloudLink</S>
+                <S>Remove-AzVMwareCluster</S>
+                <S>Remove-AzVMwareDatastore</S>
+                <S>Remove-AzVMwareGlobalReachConnection</S>
+                <S>Remove-AzVMwarePlacementPolicy</S>
+                <S>Remove-AzVMwarePrivateCloud</S>
+                <S>Test-AzVMwareLocationQuotaAvailability</S>
+                <S>Test-AzVMwareLocationTrialAvailability</S>
+                <S>Update-AzVMwareAuthorization</S>
+                <S>Update-AzVMwareCloudLink</S>
+                <S>Update-AzVMwareCluster</S>
+                <S>Update-AzVMwareDatastore</S>
+                <S>Update-AzVMwareGlobalReachConnection</S>
+                <S>Update-AzVMwarePlacementPolicy</S>
+                <S>Update-AzVMwarePrivateCloud</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzVMwareAddon</S>
+                <S>Get-AzVMwareAuthorization</S>
+                <S>Get-AzVMwareCloudLink</S>
+                <S>Get-AzVMwareCluster</S>
+                <S>Get-AzVMwareClusterZone</S>
+                <S>Get-AzVMwareDatastore</S>
+                <S>Get-AzVMwareGlobalReachConnection</S>
+                <S>Get-AzVMwarePlacementPolicy</S>
+                <S>Get-AzVMwarePrivateCloud</S>
+                <S>Get-AzVMwarePrivateCloudAdminCredential</S>
+                <S>Get-AzVMwareVirtualMachine</S>
+                <S>New-AzVMwareAddon</S>
+                <S>New-AzVMwareAddonSrmPropertiesObject</S>
+                <S>New-AzVMwareAddonVrPropertiesObject</S>
+                <S>New-AzVMwareAuthorization</S>
+                <S>New-AzVMwareCloudLink</S>
+                <S>New-AzVMwareCluster</S>
+                <S>New-AzVMwareDatastore</S>
+                <S>New-AzVMwareGlobalReachConnection</S>
+                <S>New-AzVMwareIdentitySourceObject</S>
+                <S>New-AzVMwarePlacementPolicy</S>
+                <S>New-AzVMwarePrivateCloud</S>
+                <S>New-AzVMwarePrivateCloudNsxtPassword</S>
+                <S>New-AzVMwarePrivateCloudVcenterPassword</S>
+                <S>New-AzVMwarePSCredentialExecutionParameterObject</S>
+                <S>New-AzVMwareScriptSecureStringExecutionParameterObject</S>
+                <S>New-AzVMwareScriptStringExecutionParameterObject</S>
+                <S>New-AzVMwareVmHostPlacementPolicyPropertiesObject</S>
+                <S>New-AzVMwareVMPlacementPolicyPropertiesObject</S>
+                <S>Remove-AzVMwareAddon</S>
+                <S>Remove-AzVMwareAuthorization</S>
+                <S>Remove-AzVMwareCloudLink</S>
+                <S>Remove-AzVMwareCluster</S>
+                <S>Remove-AzVMwareDatastore</S>
+                <S>Remove-AzVMwareGlobalReachConnection</S>
+                <S>Remove-AzVMwarePlacementPolicy</S>
+                <S>Remove-AzVMwarePrivateCloud</S>
+                <S>Test-AzVMwareLocationQuotaAvailability</S>
+                <S>Test-AzVMwareLocationTrialAvailability</S>
+                <S>Update-AzVMwareAuthorization</S>
+                <S>Update-AzVMwareCloudLink</S>
+                <S>Update-AzVMwareCluster</S>
+                <S>Update-AzVMwareDatastore</S>
+                <S>Update-AzVMwareGlobalReachConnection</S>
+                <S>Update-AzVMwarePlacementPolicy</S>
+                <S>Update-AzVMwarePrivateCloud</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Updated api version to '2023-03-01'</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.15.1</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.15.1</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: VMware cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">* Updated api version to '2023-03-01'</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">371</S>
+          <S N="downloadCount">9825</S>
+          <S N="packageSize">1485413</S>
+          <S N="published">2/6/2024 1:49:33 AM -06:00</S>
+          <S N="created">2/6/2024 1:49:33 AM -06:00</S>
+          <S N="lastUpdated">2/16/2024 12:07:59 AM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule VMware PSEdition_Core PSEdition_Desktop PSFunction_Get-AzVMwareAddon PSCommand_Get-AzVMwareAddon PSFunction_Get-AzVMwareAuthorization PSCommand_Get-AzVMwareAuthorization PSFunction_Get-AzVMwareCloudLink PSCommand_Get-AzVMwareCloudLink PSFunction_Get-AzVMwareCluster PSCommand_Get-AzVMwareCluster PSFunction_Get-AzVMwareClusterZone PSCommand_Get-AzVMwareClusterZone PSFunction_Get-AzVMwareDatastore PSCommand_Get-AzVMwareDatastore PSFunction_Get-AzVMwareGlobalReachConnection PSCommand_Get-AzVMwareGlobalReachConnection PSFunction_Get-AzVMwarePlacementPolicy PSCommand_Get-AzVMwarePlacementPolicy PSFunction_Get-AzVMwarePrivateCloud PSCommand_Get-AzVMwarePrivateCloud PSFunction_Get-AzVMwarePrivateCloudAdminCredential PSCommand_Get-AzVMwarePrivateCloudAdminCredential PSFunction_Get-AzVMwareVirtualMachine PSCommand_Get-AzVMwareVirtualMachine PSFunction_New-AzVMwareAddon PSCommand_New-AzVMwareAddon PSFunction_New-AzVMwareAddonSrmPropertiesObject PSCommand_New-AzVMwareAddonSrmPropertiesObject PSFunction_New-AzVMwareAddonVrPropertiesObject PSCommand_New-AzVMwareAddonVrPropertiesObject PSFunction_New-AzVMwareAuthorization PSCommand_New-AzVMwareAuthorization PSFunction_New-AzVMwareCloudLink PSCommand_New-AzVMwareCloudLink PSFunction_New-AzVMwareCluster PSCommand_New-AzVMwareCluster PSFunction_New-AzVMwareDatastore PSCommand_New-AzVMwareDatastore PSFunction_New-AzVMwareGlobalReachConnection PSCommand_New-AzVMwareGlobalReachConnection PSFunction_New-AzVMwareIdentitySourceObject PSCommand_New-AzVMwareIdentitySourceObject PSFunction_New-AzVMwarePlacementPolicy PSCommand_New-AzVMwarePlacementPolicy PSFunction_New-AzVMwarePrivateCloud PSCommand_New-AzVMwarePrivateCloud PSFunction_New-AzVMwarePrivateCloudNsxtPassword PSCommand_New-AzVMwarePrivateCloudNsxtPassword PSFunction_New-AzVMwarePrivateCloudVcenterPassword PSCommand_New-AzVMwarePrivateCloudVcenterPassword PSFunction_New-AzVMwarePSCredentialExecutionParameterObject PSCommand_New-AzVMwarePSCredentialExecutionParameterObject PSFunction_New-AzVMwareScriptSecureStringExecutionParameterObject PSCommand_New-AzVMwareScriptSecureStringExecutionParameterObject PSFunction_New-AzVMwareScriptStringExecutionParameterObject PSCommand_New-AzVMwareScriptStringExecutionParameterObject PSFunction_New-AzVMwareVmHostPlacementPolicyPropertiesObject PSCommand_New-AzVMwareVmHostPlacementPolicyPropertiesObject PSFunction_New-AzVMwareVMPlacementPolicyPropertiesObject PSCommand_New-AzVMwareVMPlacementPolicyPropertiesObject PSFunction_Remove-AzVMwareAddon PSCommand_Remove-AzVMwareAddon PSFunction_Remove-AzVMwareAuthorization PSCommand_Remove-AzVMwareAuthorization PSFunction_Remove-AzVMwareCloudLink PSCommand_Remove-AzVMwareCloudLink PSFunction_Remove-AzVMwareCluster PSCommand_Remove-AzVMwareCluster PSFunction_Remove-AzVMwareDatastore PSCommand_Remove-AzVMwareDatastore PSFunction_Remove-AzVMwareGlobalReachConnection PSCommand_Remove-AzVMwareGlobalReachConnection PSFunction_Remove-AzVMwarePlacementPolicy PSCommand_Remove-AzVMwarePlacementPolicy PSFunction_Remove-AzVMwarePrivateCloud PSCommand_Remove-AzVMwarePrivateCloud PSFunction_Test-AzVMwareLocationQuotaAvailability PSCommand_Test-AzVMwareLocationQuotaAvailability PSFunction_Test-AzVMwareLocationTrialAvailability PSCommand_Test-AzVMwareLocationTrialAvailability PSFunction_Update-AzVMwareAuthorization PSCommand_Update-AzVMwareAuthorization PSFunction_Update-AzVMwareCloudLink PSCommand_Update-AzVMwareCloudLink PSFunction_Update-AzVMwareCluster PSCommand_Update-AzVMwareCluster PSFunction_Update-AzVMwareDatastore PSCommand_Update-AzVMwareDatastore PSFunction_Update-AzVMwareGlobalReachConnection PSCommand_Update-AzVMwareGlobalReachConnection PSFunction_Update-AzVMwarePlacementPolicy PSCommand_Update-AzVMwarePlacementPolicy PSFunction_Update-AzVMwarePrivateCloud PSCommand_Update-AzVMwarePrivateCloud PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-16T00:07:59Z</S>
+          <S N="NormalizedVersion">0.6.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.VMware.nuspec|Az.VMware.psd1|VMware.Autorest\custom\New-AzVMwarePSCredentialExecutionParameterObject.ps1|Az.VMware.psm1|VMware.Autorest\custom\New-AzVMwareScriptSecureStringExecutionParameterObject.ps1|VMware.Autorest\Az.VMware.format.ps1xml|VMware.Autorest\custom\New-AzVMwareScriptStringExecutionParameterObject.ps1|VMware.Autorest\Az.VMware.psm1|VMware.Autorest\custom\New-AzVMwareVmHostPlacementPolicyPropertiesObject.ps1|VMware.Autorest\bin\Az.VMware.private.dll|VMware.Autorest\custom\New-AzVMwareVMPlacementPolicyPropertiesObject.ps1|VMware.Autorest\custom\Az.VMware.custom.psm1|VMware.Autorest\custom\Remove-AzVMwareAddon.ps1|VMware.Autorest\custom\Get-AzVMwareAddon.ps1|VMware.Autorest\custom\Remove-AzVMwarePrivateCloud.ps1|VMware.Autorest\custom\LegalTerm.txt|VMware.Autorest\custom\autogen-model-cmdlets\New-AzVMwareIdentitySourceObject.ps1|VMware.Autorest\custom\New-AzVMwareAddon.ps1|VMware.Autorest\exports\ProxyCmdletDefinitions.ps1|VMware.Autorest\custom\New-AzVMwareAddonSrmPropertiesObject.ps1|VMware.Autorest\internal\Az.VMware.internal.psm1|VMware.Autorest\custom\New-AzVMwareAddonVrPropertiesObject.ps1|VMware.Autorest\internal\ProxyCmdletDefinitions.ps1|VMware.Autorest\custom\New-AzVMwarePrivateCloud.ps1|VMware.Autorest\utils\Unprotect-SecureString.ps1</S>
+          <S N="GUID">78d2fac8-ec90-47ad-b8aa-a27106b158f5</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.VMware\0.6.0</S>
+    </MS>
+  </Obj>
+</Objs>

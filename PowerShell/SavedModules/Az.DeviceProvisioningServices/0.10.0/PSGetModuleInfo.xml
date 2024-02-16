@@ -1,0 +1,202 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.DeviceProvisioningServices</S>
+      <S N="Version">0.10.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell - IoT Device Provisioning Service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on IoT Device Provisioning Service, please visit the following: https://docs.microsoft.com/azure/iot-dps/</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2021-03-02T08:50:38-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>DPS</S>
+          <S>IoTHub</S>
+          <S>DeviceProvisioningService</S>
+          <S>PSModule</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>New-AzIoTDeviceProvisioningService</S>
+                <S>Get-AzIoTDeviceProvisioningService</S>
+                <S>Remove-AzIoTDeviceProvisioningService</S>
+                <S>Update-AzIoTDeviceProvisioningService</S>
+                <S>Get-AzIoTDeviceProvisioningServiceAccessPolicy</S>
+                <S>Add-AzIoTDeviceProvisioningServiceAccessPolicy</S>
+                <S>Remove-AzIoTDeviceProvisioningServiceAccessPolicy</S>
+                <S>Update-AzIoTDeviceProvisioningServiceAccessPolicy</S>
+                <S>Get-AzIoTDeviceProvisioningServiceLinkedHub</S>
+                <S>Add-AzIoTDeviceProvisioningServiceLinkedHub</S>
+                <S>Remove-AzIoTDeviceProvisioningServiceLinkedHub</S>
+                <S>Update-AzIoTDeviceProvisioningServiceLinkedHub</S>
+                <S>Get-AzIoTDeviceProvisioningServiceCertificate</S>
+                <S>Add-AzIoTDeviceProvisioningServiceCertificate</S>
+                <S>Remove-AzIoTDeviceProvisioningServiceCertificate</S>
+                <S>Set-AzIoTDeviceProvisioningServiceCertificate</S>
+                <S>New-AzIoTDeviceProvisioningServiceCertificateVerificationCode</S>
+                <S>Add-AzIoTDeviceProvisioningServiceEnrollment</S>
+                <S>Get-AzIoTDeviceProvisioningServiceEnrollment</S>
+                <S>Remove-AzIoTDeviceProvisioningServiceEnrollment</S>
+                <S>Set-AzIoTDeviceProvisioningServiceEnrollment</S>
+                <S>Add-AzIoTDeviceProvisioningServiceEnrollmentGroup</S>
+                <S>Get-AzIoTDeviceProvisioningServiceEnrollmentGroup</S>
+                <S>Remove-AzIoTDeviceProvisioningServiceEnrollmentGroup</S>
+                <S>Set-AzIoTDeviceProvisioningServiceEnrollmentGroup</S>
+                <S>Get-AzIoTDeviceProvisioningServiceRegistration</S>
+                <S>Remove-AzIoTDeviceProvisioningServiceRegistration</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>New-AzIoTDeviceProvisioningService</S>
+                <S>Get-AzIoTDeviceProvisioningService</S>
+                <S>Remove-AzIoTDeviceProvisioningService</S>
+                <S>Update-AzIoTDeviceProvisioningService</S>
+                <S>Get-AzIoTDeviceProvisioningServiceAccessPolicy</S>
+                <S>Add-AzIoTDeviceProvisioningServiceAccessPolicy</S>
+                <S>Remove-AzIoTDeviceProvisioningServiceAccessPolicy</S>
+                <S>Update-AzIoTDeviceProvisioningServiceAccessPolicy</S>
+                <S>Get-AzIoTDeviceProvisioningServiceLinkedHub</S>
+                <S>Add-AzIoTDeviceProvisioningServiceLinkedHub</S>
+                <S>Remove-AzIoTDeviceProvisioningServiceLinkedHub</S>
+                <S>Update-AzIoTDeviceProvisioningServiceLinkedHub</S>
+                <S>Get-AzIoTDeviceProvisioningServiceCertificate</S>
+                <S>Add-AzIoTDeviceProvisioningServiceCertificate</S>
+                <S>Remove-AzIoTDeviceProvisioningServiceCertificate</S>
+                <S>Set-AzIoTDeviceProvisioningServiceCertificate</S>
+                <S>New-AzIoTDeviceProvisioningServiceCertificateVerificationCode</S>
+                <S>Add-AzIoTDeviceProvisioningServiceEnrollment</S>
+                <S>Get-AzIoTDeviceProvisioningServiceEnrollment</S>
+                <S>Remove-AzIoTDeviceProvisioningServiceEnrollment</S>
+                <S>Set-AzIoTDeviceProvisioningServiceEnrollment</S>
+                <S>Add-AzIoTDeviceProvisioningServiceEnrollmentGroup</S>
+                <S>Get-AzIoTDeviceProvisioningServiceEnrollmentGroup</S>
+                <S>Remove-AzIoTDeviceProvisioningServiceEnrollmentGroup</S>
+                <S>Set-AzIoTDeviceProvisioningServiceEnrollmentGroup</S>
+                <S>Get-AzIoTDeviceProvisioningServiceRegistration</S>
+                <S>Remove-AzIoTDeviceProvisioningServiceRegistration</S>
+              </LST>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Allowed update of attestation information (e.g. keys, certificates) for exsting device enrollments and enrollment groups</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.2.6</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.2.6</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell - IoT Device Provisioning Service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on IoT Device Provisioning Service, please visit the following: https://docs.microsoft.com/azure/iot-dps/</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">* Allowed update of attestation information (e.g. keys, certificates) for exsting device enrollments and enrollment groups</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">21855</S>
+          <S N="downloadCount">33856</S>
+          <S N="packageSize">229630</S>
+          <S N="published">3/2/2021 8:50:38 AM -06:00</S>
+          <S N="created">3/2/2021 8:50:38 AM -06:00</S>
+          <S N="lastUpdated">2/15/2024 10:12:57 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM DPS IoTHub DeviceProvisioningService PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_New-AzIoTDeviceProvisioningService PSCommand_New-AzIoTDeviceProvisioningService PSCmdlet_Get-AzIoTDeviceProvisioningService PSCommand_Get-AzIoTDeviceProvisioningService PSCmdlet_Remove-AzIoTDeviceProvisioningService PSCommand_Remove-AzIoTDeviceProvisioningService PSCmdlet_Update-AzIoTDeviceProvisioningService PSCommand_Update-AzIoTDeviceProvisioningService PSCmdlet_Get-AzIoTDeviceProvisioningServiceAccessPolicy PSCommand_Get-AzIoTDeviceProvisioningServiceAccessPolicy PSCmdlet_Add-AzIoTDeviceProvisioningServiceAccessPolicy PSCommand_Add-AzIoTDeviceProvisioningServiceAccessPolicy PSCmdlet_Remove-AzIoTDeviceProvisioningServiceAccessPolicy PSCommand_Remove-AzIoTDeviceProvisioningServiceAccessPolicy PSCmdlet_Update-AzIoTDeviceProvisioningServiceAccessPolicy PSCommand_Update-AzIoTDeviceProvisioningServiceAccessPolicy PSCmdlet_Get-AzIoTDeviceProvisioningServiceLinkedHub PSCommand_Get-AzIoTDeviceProvisioningServiceLinkedHub PSCmdlet_Add-AzIoTDeviceProvisioningServiceLinkedHub PSCommand_Add-AzIoTDeviceProvisioningServiceLinkedHub PSCmdlet_Remove-AzIoTDeviceProvisioningServiceLinkedHub PSCommand_Remove-AzIoTDeviceProvisioningServiceLinkedHub PSCmdlet_Update-AzIoTDeviceProvisioningServiceLinkedHub PSCommand_Update-AzIoTDeviceProvisioningServiceLinkedHub PSCmdlet_Get-AzIoTDeviceProvisioningServiceCertificate PSCommand_Get-AzIoTDeviceProvisioningServiceCertificate PSCmdlet_Add-AzIoTDeviceProvisioningServiceCertificate PSCommand_Add-AzIoTDeviceProvisioningServiceCertificate PSCmdlet_Remove-AzIoTDeviceProvisioningServiceCertificate PSCommand_Remove-AzIoTDeviceProvisioningServiceCertificate PSCmdlet_Set-AzIoTDeviceProvisioningServiceCertificate PSCommand_Set-AzIoTDeviceProvisioningServiceCertificate PSCmdlet_New-AzIoTDeviceProvisioningServiceCertificateVerificationCode PSCommand_New-AzIoTDeviceProvisioningServiceCertificateVerificationCode PSCmdlet_Add-AzIoTDeviceProvisioningServiceEnrollment PSCommand_Add-AzIoTDeviceProvisioningServiceEnrollment PSCmdlet_Get-AzIoTDeviceProvisioningServiceEnrollment PSCommand_Get-AzIoTDeviceProvisioningServiceEnrollment PSCmdlet_Remove-AzIoTDeviceProvisioningServiceEnrollment PSCommand_Remove-AzIoTDeviceProvisioningServiceEnrollment PSCmdlet_Set-AzIoTDeviceProvisioningServiceEnrollment PSCommand_Set-AzIoTDeviceProvisioningServiceEnrollment PSCmdlet_Add-AzIoTDeviceProvisioningServiceEnrollmentGroup PSCommand_Add-AzIoTDeviceProvisioningServiceEnrollmentGroup PSCmdlet_Get-AzIoTDeviceProvisioningServiceEnrollmentGroup PSCommand_Get-AzIoTDeviceProvisioningServiceEnrollmentGroup PSCmdlet_Remove-AzIoTDeviceProvisioningServiceEnrollmentGroup PSCommand_Remove-AzIoTDeviceProvisioningServiceEnrollmentGroup PSCmdlet_Set-AzIoTDeviceProvisioningServiceEnrollmentGroup PSCommand_Set-AzIoTDeviceProvisioningServiceEnrollmentGroup PSCmdlet_Get-AzIoTDeviceProvisioningServiceRegistration PSCommand_Get-AzIoTDeviceProvisioningServiceRegistration PSCmdlet_Remove-AzIoTDeviceProvisioningServiceRegistration PSCommand_Remove-AzIoTDeviceProvisioningServiceRegistration PSIncludes_Cmdlet</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:12:57Z</S>
+          <S N="NormalizedVersion">0.10.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.DeviceProvisioningServices.nuspec|Az.DeviceProvisioningServices.psd1|Az.DeviceProvisioningServices.psm1|DeviceProvisioningServices.format.ps1xml|Microsoft.Azure.Devices.Provisioning.Service.dll|Microsoft.Azure.Devices.Shared.dll|Microsoft.Azure.Management.DeviceProvisioningServices.dll|Microsoft.Azure.PowerShell.Cmdlets.DeviceProvisioningServices.deps.json|Microsoft.Azure.PowerShell.Cmdlets.DeviceProvisioningServices.dll|Microsoft.Azure.PowerShell.Cmdlets.DeviceProvisioningServices.dll-Help.xml</S>
+          <S N="GUID">b3e49e79-7210-4f76-b02c-4376749fa7a5</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.DeviceProvisioningServices\0.10.0</S>
+    </MS>
+  </Obj>
+</Objs>

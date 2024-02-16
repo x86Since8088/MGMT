@@ -16,3 +16,6 @@
 -
   Name: WAPTenantPublicAPI
   Version: Latest
+-
+  Name: Microsoft.PowerShell.SecretsManagement
+  Version: Latest

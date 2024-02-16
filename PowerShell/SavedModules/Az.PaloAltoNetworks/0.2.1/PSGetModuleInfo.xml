@@ -1,0 +1,216 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.PaloAltoNetworks</S>
+      <S N="Version">0.2.1</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: PaloAltoNetworks cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2024-01-09T01:46:09-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>PaloAltoNetworks</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzPaloAltoNetworksCertificateObjectLocalRulestack</S>
+                <S>Get-AzPaloAltoNetworksFirewall</S>
+                <S>Get-AzPaloAltoNetworksFirewallLogProfile</S>
+                <S>Get-AzPaloAltoNetworksFirewallStatus</S>
+                <S>Get-AzPaloAltoNetworksFqdnListLocalRulestack</S>
+                <S>Get-AzPaloAltoNetworksLocalRule</S>
+                <S>Get-AzPaloAltoNetworksLocalRulestack</S>
+                <S>Get-AzPaloAltoNetworksLocalRulestackAppId</S>
+                <S>Get-AzPaloAltoNetworksLocalRulestackChangeLog</S>
+                <S>Get-AzPaloAltoNetworksLocalRulestackFirewall</S>
+                <S>Get-AzPaloAltoNetworksLocalRulestackSupportInfo</S>
+                <S>Get-AzPaloAltoNetworksPrefixListLocalRulestack</S>
+                <S>Invoke-AzPaloAltoNetworksCommitLocalRulestack</S>
+                <S>Invoke-AzPaloAltoNetworksRevertLocalRulestack</S>
+                <S>New-AzPaloAltoNetworksCertificateObjectLocalRulestack</S>
+                <S>New-AzPaloAltoNetworksFirewall</S>
+                <S>New-AzPaloAltoNetworksFqdnListLocalRulestack</S>
+                <S>New-AzPaloAltoNetworksFrontendSettingObject</S>
+                <S>New-AzPaloAltoNetworksIPAddressObject</S>
+                <S>New-AzPaloAltoNetworksLocalRule</S>
+                <S>New-AzPaloAltoNetworksLocalRulestack</S>
+                <S>New-AzPaloAltoNetworksPrefixListLocalRulestack</S>
+                <S>New-AzPaloAltoNetworksProfileObject</S>
+                <S>New-AzPaloAltoNetworksTagInfoObject</S>
+                <S>Remove-AzPaloAltoNetworksCertificateObjectLocalRulestack</S>
+                <S>Remove-AzPaloAltoNetworksFirewall</S>
+                <S>Remove-AzPaloAltoNetworksFqdnListLocalRulestack</S>
+                <S>Remove-AzPaloAltoNetworksLocalRule</S>
+                <S>Remove-AzPaloAltoNetworksLocalRulestack</S>
+                <S>Remove-AzPaloAltoNetworksPrefixListLocalRulestack</S>
+                <S>Reset-AzPaloAltoNetworksLocalRuleCounter</S>
+                <S>Save-AzPaloAltoNetworksFirewallLogProfile</S>
+                <S>Update-AzPaloAltoNetworksFirewall</S>
+                <S>Update-AzPaloAltoNetworksLocalRuleCounter</S>
+                <S>Update-AzPaloAltoNetworksLocalRulestack</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzPaloAltoNetworksCertificateObjectLocalRulestack</S>
+                <S>Get-AzPaloAltoNetworksFirewall</S>
+                <S>Get-AzPaloAltoNetworksFirewallLogProfile</S>
+                <S>Get-AzPaloAltoNetworksFirewallStatus</S>
+                <S>Get-AzPaloAltoNetworksFqdnListLocalRulestack</S>
+                <S>Get-AzPaloAltoNetworksLocalRule</S>
+                <S>Get-AzPaloAltoNetworksLocalRulestack</S>
+                <S>Get-AzPaloAltoNetworksLocalRulestackAppId</S>
+                <S>Get-AzPaloAltoNetworksLocalRulestackChangeLog</S>
+                <S>Get-AzPaloAltoNetworksLocalRulestackFirewall</S>
+                <S>Get-AzPaloAltoNetworksLocalRulestackSupportInfo</S>
+                <S>Get-AzPaloAltoNetworksPrefixListLocalRulestack</S>
+                <S>Invoke-AzPaloAltoNetworksCommitLocalRulestack</S>
+                <S>Invoke-AzPaloAltoNetworksRevertLocalRulestack</S>
+                <S>New-AzPaloAltoNetworksCertificateObjectLocalRulestack</S>
+                <S>New-AzPaloAltoNetworksFirewall</S>
+                <S>New-AzPaloAltoNetworksFqdnListLocalRulestack</S>
+                <S>New-AzPaloAltoNetworksFrontendSettingObject</S>
+                <S>New-AzPaloAltoNetworksIPAddressObject</S>
+                <S>New-AzPaloAltoNetworksLocalRule</S>
+                <S>New-AzPaloAltoNetworksLocalRulestack</S>
+                <S>New-AzPaloAltoNetworksPrefixListLocalRulestack</S>
+                <S>New-AzPaloAltoNetworksProfileObject</S>
+                <S>New-AzPaloAltoNetworksTagInfoObject</S>
+                <S>Remove-AzPaloAltoNetworksCertificateObjectLocalRulestack</S>
+                <S>Remove-AzPaloAltoNetworksFirewall</S>
+                <S>Remove-AzPaloAltoNetworksFqdnListLocalRulestack</S>
+                <S>Remove-AzPaloAltoNetworksLocalRule</S>
+                <S>Remove-AzPaloAltoNetworksLocalRulestack</S>
+                <S>Remove-AzPaloAltoNetworksPrefixListLocalRulestack</S>
+                <S>Reset-AzPaloAltoNetworksLocalRuleCounter</S>
+                <S>Save-AzPaloAltoNetworksFirewallLogProfile</S>
+                <S>Update-AzPaloAltoNetworksFirewall</S>
+                <S>Update-AzPaloAltoNetworksLocalRuleCounter</S>
+                <S>Update-AzPaloAltoNetworksLocalRulestack</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Upgraded API version to 2023-09-01</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.15.0</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.15.0</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: PaloAltoNetworks cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">* Upgraded API version to 2023-09-01</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">350</S>
+          <S N="downloadCount">1354</S>
+          <S N="packageSize">979595</S>
+          <S N="published">1/9/2024 1:46:09 AM -06:00</S>
+          <S N="created">1/9/2024 1:46:09 AM -06:00</S>
+          <S N="lastUpdated">2/15/2024 10:17:56 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule PaloAltoNetworks PSEdition_Core PSEdition_Desktop PSFunction_Get-AzPaloAltoNetworksCertificateObjectLocalRulestack PSCommand_Get-AzPaloAltoNetworksCertificateObjectLocalRulestack PSFunction_Get-AzPaloAltoNetworksFirewall PSCommand_Get-AzPaloAltoNetworksFirewall PSFunction_Get-AzPaloAltoNetworksFirewallLogProfile PSCommand_Get-AzPaloAltoNetworksFirewallLogProfile PSFunction_Get-AzPaloAltoNetworksFirewallStatus PSCommand_Get-AzPaloAltoNetworksFirewallStatus PSFunction_Get-AzPaloAltoNetworksFqdnListLocalRulestack PSCommand_Get-AzPaloAltoNetworksFqdnListLocalRulestack PSFunction_Get-AzPaloAltoNetworksLocalRule PSCommand_Get-AzPaloAltoNetworksLocalRule PSFunction_Get-AzPaloAltoNetworksLocalRulestack PSCommand_Get-AzPaloAltoNetworksLocalRulestack PSFunction_Get-AzPaloAltoNetworksLocalRulestackAppId PSCommand_Get-AzPaloAltoNetworksLocalRulestackAppId PSFunction_Get-AzPaloAltoNetworksLocalRulestackChangeLog PSCommand_Get-AzPaloAltoNetworksLocalRulestackChangeLog PSFunction_Get-AzPaloAltoNetworksLocalRulestackFirewall PSCommand_Get-AzPaloAltoNetworksLocalRulestackFirewall PSFunction_Get-AzPaloAltoNetworksLocalRulestackSupportInfo PSCommand_Get-AzPaloAltoNetworksLocalRulestackSupportInfo PSFunction_Get-AzPaloAltoNetworksPrefixListLocalRulestack PSCommand_Get-AzPaloAltoNetworksPrefixListLocalRulestack PSFunction_Invoke-AzPaloAltoNetworksCommitLocalRulestack PSCommand_Invoke-AzPaloAltoNetworksCommitLocalRulestack PSFunction_Invoke-AzPaloAltoNetworksRevertLocalRulestack PSCommand_Invoke-AzPaloAltoNetworksRevertLocalRulestack PSFunction_New-AzPaloAltoNetworksCertificateObjectLocalRulestack PSCommand_New-AzPaloAltoNetworksCertificateObjectLocalRulestack PSFunction_New-AzPaloAltoNetworksFirewall PSCommand_New-AzPaloAltoNetworksFirewall PSFunction_New-AzPaloAltoNetworksFqdnListLocalRulestack PSCommand_New-AzPaloAltoNetworksFqdnListLocalRulestack PSFunction_New-AzPaloAltoNetworksFrontendSettingObject PSCommand_New-AzPaloAltoNetworksFrontendSettingObject PSFunction_New-AzPaloAltoNetworksIPAddressObject PSCommand_New-AzPaloAltoNetworksIPAddressObject PSFunction_New-AzPaloAltoNetworksLocalRule PSCommand_New-AzPaloAltoNetworksLocalRule PSFunction_New-AzPaloAltoNetworksLocalRulestack PSCommand_New-AzPaloAltoNetworksLocalRulestack PSFunction_New-AzPaloAltoNetworksPrefixListLocalRulestack PSCommand_New-AzPaloAltoNetworksPrefixListLocalRulestack PSFunction_New-AzPaloAltoNetworksProfileObject PSCommand_New-AzPaloAltoNetworksProfileObject PSFunction_New-AzPaloAltoNetworksTagInfoObject PSCommand_New-AzPaloAltoNetworksTagInfoObject PSFunction_Remove-AzPaloAltoNetworksCertificateObjectLocalRulestack PSCommand_Remove-AzPaloAltoNetworksCertificateObjectLocalRulestack PSFunction_Remove-AzPaloAltoNetworksFirewall PSCommand_Remove-AzPaloAltoNetworksFirewall PSFunction_Remove-AzPaloAltoNetworksFqdnListLocalRulestack PSCommand_Remove-AzPaloAltoNetworksFqdnListLocalRulestack PSFunction_Remove-AzPaloAltoNetworksLocalRule PSCommand_Remove-AzPaloAltoNetworksLocalRule PSFunction_Remove-AzPaloAltoNetworksLocalRulestack PSCommand_Remove-AzPaloAltoNetworksLocalRulestack PSFunction_Remove-AzPaloAltoNetworksPrefixListLocalRulestack PSCommand_Remove-AzPaloAltoNetworksPrefixListLocalRulestack PSFunction_Reset-AzPaloAltoNetworksLocalRuleCounter PSCommand_Reset-AzPaloAltoNetworksLocalRuleCounter PSFunction_Save-AzPaloAltoNetworksFirewallLogProfile PSCommand_Save-AzPaloAltoNetworksFirewallLogProfile PSFunction_Update-AzPaloAltoNetworksFirewall PSCommand_Update-AzPaloAltoNetworksFirewall PSFunction_Update-AzPaloAltoNetworksLocalRuleCounter PSCommand_Update-AzPaloAltoNetworksLocalRuleCounter PSFunction_Update-AzPaloAltoNetworksLocalRulestack PSCommand_Update-AzPaloAltoNetworksLocalRulestack PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:17:56Z</S>
+          <S N="NormalizedVersion">0.2.1</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.PaloAltoNetworks.nuspec|Az.PaloAltoNetworks.psd1|PaloAltoNetworks.Autorest\custom\New-AzPaloAltoNetworksIPAddressObject.ps1|Az.PaloAltoNetworks.psm1|PaloAltoNetworks.Autorest\custom\New-AzPaloAltoNetworksProfileObject.ps1|PaloAltoNetworks.Autorest\Az.PaloAltoNetworks.format.ps1xml|PaloAltoNetworks.Autorest\custom\New-AzPaloAltoNetworksTagInfoObject.ps1|PaloAltoNetworks.Autorest\Az.PaloAltoNetworks.psm1|PaloAltoNetworks.Autorest\exports\ProxyCmdletDefinitions.ps1|PaloAltoNetworks.Autorest\bin\Az.PaloAltoNetworks.private.dll|PaloAltoNetworks.Autorest\internal\Az.PaloAltoNetworks.internal.psm1|PaloAltoNetworks.Autorest\custom\Az.PaloAltoNetworks.custom.psm1|PaloAltoNetworks.Autorest\internal\ProxyCmdletDefinitions.ps1|PaloAltoNetworks.Autorest\custom\New-AzPaloAltoNetworksFrontendSettingObject.ps1|PaloAltoNetworks.Autorest\utils\Unprotect-SecureString.ps1</S>
+          <S N="GUID">787ef00f-9345-469d-9156-0654cdc69286</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.PaloAltoNetworks\0.2.1</S>
+    </MS>
+  </Obj>
+</Objs>

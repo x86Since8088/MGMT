@@ -1,0 +1,254 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.MobileNetwork</S>
+      <S N="Version">0.3.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: MobileNetwork cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2023-07-04T09:58:28-05:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>MobileNetwork</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Deploy-AzMobileNetworkReinstallPacketCoreControlPlane</S>
+                <S>Deploy-AzMobileNetworkRollbackPacketCoreControlPlane</S>
+                <S>Get-AzMobileNetwork</S>
+                <S>Get-AzMobileNetworkAttachedDataNetwork</S>
+                <S>Get-AzMobileNetworkDataNetwork</S>
+                <S>Get-AzMobileNetworkPacketCoreControlPlane</S>
+                <S>Get-AzMobileNetworkPacketCoreControlPlaneVersion</S>
+                <S>Get-AzMobileNetworkPacketCoreDataPlane</S>
+                <S>Get-AzMobileNetworkService</S>
+                <S>Get-AzMobileNetworkSim</S>
+                <S>Get-AzMobileNetworkSimGroup</S>
+                <S>Get-AzMobileNetworkSimPolicy</S>
+                <S>Get-AzMobileNetworkSite</S>
+                <S>Get-AzMobileNetworkSlice</S>
+                <S>New-AzMobileNetwork</S>
+                <S>New-AzMobileNetworkAttachedDataNetwork</S>
+                <S>New-AzMobileNetworkDataNetwork</S>
+                <S>New-AzMobileNetworkDataNetworkConfigurationObject</S>
+                <S>New-AzMobileNetworkPacketCoreControlPlane</S>
+                <S>New-AzMobileNetworkPacketCoreDataPlane</S>
+                <S>New-AzMobileNetworkPccRuleConfigurationObject</S>
+                <S>New-AzMobileNetworkService</S>
+                <S>New-AzMobileNetworkServiceDataFlowTemplateObject</S>
+                <S>New-AzMobileNetworkServiceResourceIdObject</S>
+                <S>New-AzMobileNetworkSim</S>
+                <S>New-AzMobileNetworkSimGroup</S>
+                <S>New-AzMobileNetworkSimPolicy</S>
+                <S>New-AzMobileNetworkSimStaticIPPropertiesObject</S>
+                <S>New-AzMobileNetworkSite</S>
+                <S>New-AzMobileNetworkSiteResourceIdObject</S>
+                <S>New-AzMobileNetworkSlice</S>
+                <S>New-AzMobileNetworkSliceConfigurationObject</S>
+                <S>Remove-AzMobileNetwork</S>
+                <S>Remove-AzMobileNetworkAttachedDataNetwork</S>
+                <S>Remove-AzMobileNetworkDataNetwork</S>
+                <S>Remove-AzMobileNetworkPacketCoreControlPlane</S>
+                <S>Remove-AzMobileNetworkPacketCoreDataPlane</S>
+                <S>Remove-AzMobileNetworkService</S>
+                <S>Remove-AzMobileNetworkSim</S>
+                <S>Remove-AzMobileNetworkSimGroup</S>
+                <S>Remove-AzMobileNetworkSimPolicy</S>
+                <S>Remove-AzMobileNetworkSite</S>
+                <S>Remove-AzMobileNetworkSlice</S>
+                <S>Trace-AzMobileNetworkCollectPacketCoreControlPlaneDiagnosticPackage</S>
+                <S>Update-AzMobileNetwork</S>
+                <S>Update-AzMobileNetworkAttachedDataNetwork</S>
+                <S>Update-AzMobileNetworkDataNetwork</S>
+                <S>Update-AzMobileNetworkPacketCoreControlPlane</S>
+                <S>Update-AzMobileNetworkPacketCoreDataPlane</S>
+                <S>Update-AzMobileNetworkService</S>
+                <S>Update-AzMobileNetworkSimGroup</S>
+                <S>Update-AzMobileNetworkSimPolicy</S>
+                <S>Update-AzMobileNetworkSite</S>
+                <S>Update-AzMobileNetworkSlice</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Deploy-AzMobileNetworkReinstallPacketCoreControlPlane</S>
+                <S>Deploy-AzMobileNetworkRollbackPacketCoreControlPlane</S>
+                <S>Get-AzMobileNetwork</S>
+                <S>Get-AzMobileNetworkAttachedDataNetwork</S>
+                <S>Get-AzMobileNetworkDataNetwork</S>
+                <S>Get-AzMobileNetworkPacketCoreControlPlane</S>
+                <S>Get-AzMobileNetworkPacketCoreControlPlaneVersion</S>
+                <S>Get-AzMobileNetworkPacketCoreDataPlane</S>
+                <S>Get-AzMobileNetworkService</S>
+                <S>Get-AzMobileNetworkSim</S>
+                <S>Get-AzMobileNetworkSimGroup</S>
+                <S>Get-AzMobileNetworkSimPolicy</S>
+                <S>Get-AzMobileNetworkSite</S>
+                <S>Get-AzMobileNetworkSlice</S>
+                <S>New-AzMobileNetwork</S>
+                <S>New-AzMobileNetworkAttachedDataNetwork</S>
+                <S>New-AzMobileNetworkDataNetwork</S>
+                <S>New-AzMobileNetworkDataNetworkConfigurationObject</S>
+                <S>New-AzMobileNetworkPacketCoreControlPlane</S>
+                <S>New-AzMobileNetworkPacketCoreDataPlane</S>
+                <S>New-AzMobileNetworkPccRuleConfigurationObject</S>
+                <S>New-AzMobileNetworkService</S>
+                <S>New-AzMobileNetworkServiceDataFlowTemplateObject</S>
+                <S>New-AzMobileNetworkServiceResourceIdObject</S>
+                <S>New-AzMobileNetworkSim</S>
+                <S>New-AzMobileNetworkSimGroup</S>
+                <S>New-AzMobileNetworkSimPolicy</S>
+                <S>New-AzMobileNetworkSimStaticIPPropertiesObject</S>
+                <S>New-AzMobileNetworkSite</S>
+                <S>New-AzMobileNetworkSiteResourceIdObject</S>
+                <S>New-AzMobileNetworkSlice</S>
+                <S>New-AzMobileNetworkSliceConfigurationObject</S>
+                <S>Remove-AzMobileNetwork</S>
+                <S>Remove-AzMobileNetworkAttachedDataNetwork</S>
+                <S>Remove-AzMobileNetworkDataNetwork</S>
+                <S>Remove-AzMobileNetworkPacketCoreControlPlane</S>
+                <S>Remove-AzMobileNetworkPacketCoreDataPlane</S>
+                <S>Remove-AzMobileNetworkService</S>
+                <S>Remove-AzMobileNetworkSim</S>
+                <S>Remove-AzMobileNetworkSimGroup</S>
+                <S>Remove-AzMobileNetworkSimPolicy</S>
+                <S>Remove-AzMobileNetworkSite</S>
+                <S>Remove-AzMobileNetworkSlice</S>
+                <S>Trace-AzMobileNetworkCollectPacketCoreControlPlaneDiagnosticPackage</S>
+                <S>Update-AzMobileNetwork</S>
+                <S>Update-AzMobileNetworkAttachedDataNetwork</S>
+                <S>Update-AzMobileNetworkDataNetwork</S>
+                <S>Update-AzMobileNetworkPacketCoreControlPlane</S>
+                <S>Update-AzMobileNetworkPacketCoreDataPlane</S>
+                <S>Update-AzMobileNetworkService</S>
+                <S>Update-AzMobileNetworkSimGroup</S>
+                <S>Update-AzMobileNetworkSimPolicy</S>
+                <S>Update-AzMobileNetworkSite</S>
+                <S>Update-AzMobileNetworkSlice</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Three cmdlets were added: 'Deploy-AzMobileNetworkReinstallPacketCoreControlPlane', 'Deploy-AzMobileNetworkRollbackPacketCoreControlPlane', 'Trace-AzMobileNetworkCollectPacketCoreControlPlaneDiagnosticPackage'._x000D__x000A_* Improved message shown to user when deleting site, to indicate this will affect dependent resources._x000D__x000A_* Made further parameters optional for New-AzMobileNetworkSite when creating on an ASE.</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.12.4</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.12.4</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: MobileNetwork cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">* Three cmdlets were added: 'Deploy-AzMobileNetworkReinstallPacketCoreControlPlane', 'Deploy-AzMobileNetworkRollbackPacketCoreControlPlane', 'Trace-AzMobileNetworkCollectPacketCoreControlPlaneDiagnosticPackage'._x000D__x000A_* Improved message shown to user when deleting site, to indicate this will affect dependent resources._x000D__x000A_* Made further parameters optional for New-AzMobileNetworkSite when creating on an ASE.</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">1543</S>
+          <S N="downloadCount">2309</S>
+          <S N="packageSize">987784</S>
+          <S N="published">7/4/2023 9:58:28 AM -05:00</S>
+          <S N="created">7/4/2023 9:58:28 AM -05:00</S>
+          <S N="lastUpdated">2/15/2024 10:12:57 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule MobileNetwork PSEdition_Core PSEdition_Desktop PSFunction_Deploy-AzMobileNetworkReinstallPacketCoreControlPlane PSCommand_Deploy-AzMobileNetworkReinstallPacketCoreControlPlane PSFunction_Deploy-AzMobileNetworkRollbackPacketCoreControlPlane PSCommand_Deploy-AzMobileNetworkRollbackPacketCoreControlPlane PSFunction_Get-AzMobileNetwork PSCommand_Get-AzMobileNetwork PSFunction_Get-AzMobileNetworkAttachedDataNetwork PSCommand_Get-AzMobileNetworkAttachedDataNetwork PSFunction_Get-AzMobileNetworkDataNetwork PSCommand_Get-AzMobileNetworkDataNetwork PSFunction_Get-AzMobileNetworkPacketCoreControlPlane PSCommand_Get-AzMobileNetworkPacketCoreControlPlane PSFunction_Get-AzMobileNetworkPacketCoreControlPlaneVersion PSCommand_Get-AzMobileNetworkPacketCoreControlPlaneVersion PSFunction_Get-AzMobileNetworkPacketCoreDataPlane PSCommand_Get-AzMobileNetworkPacketCoreDataPlane PSFunction_Get-AzMobileNetworkService PSCommand_Get-AzMobileNetworkService PSFunction_Get-AzMobileNetworkSim PSCommand_Get-AzMobileNetworkSim PSFunction_Get-AzMobileNetworkSimGroup PSCommand_Get-AzMobileNetworkSimGroup PSFunction_Get-AzMobileNetworkSimPolicy PSCommand_Get-AzMobileNetworkSimPolicy PSFunction_Get-AzMobileNetworkSite PSCommand_Get-AzMobileNetworkSite PSFunction_Get-AzMobileNetworkSlice PSCommand_Get-AzMobileNetworkSlice PSFunction_New-AzMobileNetwork PSCommand_New-AzMobileNetwork PSFunction_New-AzMobileNetworkAttachedDataNetwork PSCommand_New-AzMobileNetworkAttachedDataNetwork PSFunction_New-AzMobileNetworkDataNetwork PSCommand_New-AzMobileNetworkDataNetwork PSFunction_New-AzMobileNetworkDataNetworkConfigurationObject PSCommand_New-AzMobileNetworkDataNetworkConfigurationObject PSFunction_New-AzMobileNetworkPacketCoreControlPlane PSCommand_New-AzMobileNetworkPacketCoreControlPlane PSFunction_New-AzMobileNetworkPacketCoreDataPlane PSCommand_New-AzMobileNetworkPacketCoreDataPlane PSFunction_New-AzMobileNetworkPccRuleConfigurationObject PSCommand_New-AzMobileNetworkPccRuleConfigurationObject PSFunction_New-AzMobileNetworkService PSCommand_New-AzMobileNetworkService PSFunction_New-AzMobileNetworkServiceDataFlowTemplateObject PSCommand_New-AzMobileNetworkServiceDataFlowTemplateObject PSFunction_New-AzMobileNetworkServiceResourceIdObject PSCommand_New-AzMobileNetworkServiceResourceIdObject PSFunction_New-AzMobileNetworkSim PSCommand_New-AzMobileNetworkSim PSFunction_New-AzMobileNetworkSimGroup PSCommand_New-AzMobileNetworkSimGroup PSFunction_New-AzMobileNetworkSimPolicy PSCommand_New-AzMobileNetworkSimPolicy PSFunction_New-AzMobileNetworkSimStaticIPPropertiesObject PSCommand_New-AzMobileNetworkSimStaticIPPropertiesObject PSFunction_New-AzMobileNetworkSite PSCommand_New-AzMobileNetworkSite PSFunction_New-AzMobileNetworkSiteResourceIdObject PSCommand_New-AzMobileNetworkSiteResourceIdObject PSFunction_New-AzMobileNetworkSlice PSCommand_New-AzMobileNetworkSlice PSFunction_New-AzMobileNetworkSliceConfigurationObject PSCommand_New-AzMobileNetworkSliceConfigurationObject PSFunction_Remove-AzMobileNetwork PSCommand_Remove-AzMobileNetwork PSFunction_Remove-AzMobileNetworkAttachedDataNetwork PSCommand_Remove-AzMobileNetworkAttachedDataNetwork PSFunction_Remove-AzMobileNetworkDataNetwork PSCommand_Remove-AzMobileNetworkDataNetwork PSFunction_Remove-AzMobileNetworkPacketCoreControlPlane PSCommand_Remove-AzMobileNetworkPacketCoreControlPlane PSFunction_Remove-AzMobileNetworkPacketCoreDataPlane PSCommand_Remove-AzMobileNetworkPacketCoreDataPlane PSFunction_Remove-AzMobileNetworkService PSCommand_Remove-AzMobileNetworkService PSFunction_Remove-AzMobileNetworkSim PSCommand_Remove-AzMobileNetworkSim PSFunction_Remove-AzMobileNetworkSimGroup PSCommand_Remove-AzMobileNetworkSimGroup PSFunction_Remove-AzMobileNetworkSimPolicy PSCommand_Remove-AzMobileNetworkSimPolicy PSFunction_Remove-AzMobileNetworkSite PSCommand_Remove-AzMobileNetworkSite PSFunction_Remove-AzMobileNetworkSlice PSCommand_Remove-AzMobileNetworkSlice PSFunction_Trace-AzMobileNetworkCollectPacketCoreControlPlaneDiagnosticPackage PSCommand_Trace-AzMobileNetworkCollectPacketCoreControlPlaneDiagnosticPackage PSFunction_Update-AzMobileNetwork PSCommand_Update-AzMobileNetwork PSFunction_Update-AzMobileNetworkAttachedDataNetwork PSCommand_Update-AzMobileNetworkAttachedDataNetwork PSFunction_Update-AzMobileNetworkDataNetwork PSCommand_Update-AzMobileNetworkDataNetwork PSFunction_Update-AzMobileNetworkPacketCoreControlPlane PSCommand_Update-AzMobileNetworkPacketCoreControlPlane PSFunction_Update-AzMobileNetworkPacketCoreDataPlane PSCommand_Update-AzMobileNetworkPacketCoreDataPlane PSFunction_Update-AzMobileNetworkService PSCommand_Update-AzMobileNetworkService PSFunction_Update-AzMobileNetworkSimGroup PSCommand_Update-AzMobileNetworkSimGroup PSFunction_Update-AzMobileNetworkSimPolicy PSCommand_Update-AzMobileNetworkSimPolicy PSFunction_Update-AzMobileNetworkSite PSCommand_Update-AzMobileNetworkSite PSFunction_Update-AzMobileNetworkSlice PSCommand_Update-AzMobileNetworkSlice PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:12:57Z</S>
+          <S N="NormalizedVersion">0.3.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.MobileNetwork.nuspec|Az.MobileNetwork.format.ps1xml|Az.MobileNetwork.psd1|Az.MobileNetwork.psm1|bin\Az.MobileNetwork.private.deps.json|bin\Az.MobileNetwork.private.dll|custom\Az.MobileNetwork.custom.psm1|custom\New-AzMobileNetworkDataNetworkConfigurationObject.ps1|custom\New-AzMobileNetworkPccRuleConfigurationObject.ps1|custom\New-AzMobileNetworkServiceDataFlowTemplateObject.ps1|custom\New-AzMobileNetworkServiceResourceIdObject.ps1|custom\New-AzMobileNetworkSimStaticIPPropertiesObject.ps1|custom\New-AzMobileNetworkSite.ps1|custom\New-AzMobileNetworkSiteResourceIdObject.ps1|custom\New-AzMobileNetworkSliceConfigurationObject.ps1|custom\Update-AzMobileNetworkAttachedDataNetwork.ps1|custom\Update-AzMobileNetworkDataNetwork.ps1|custom\Update-AzMobileNetworkPacketCoreControlPlane.ps1|custom\Update-AzMobileNetworkPacketCoreDataPlane.ps1|custom\Update-AzMobileNetworkService.ps1|custom\Update-AzMobileNetworkSimGroup.ps1|custom\Update-AzMobileNetworkSimPolicy.ps1|custom\Update-AzMobileNetworkSlice.ps1|exports\ProxyCmdletDefinitions.ps1|internal\Az.MobileNetwork.internal.psm1|internal\ProxyCmdletDefinitions.ps1|utils\Unprotect-SecureString.ps1</S>
+          <S N="GUID">11f61d2d-3318-4e19-8917-0f0bd2cc78c7</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.MobileNetwork\0.3.0</S>
+    </MS>
+  </Obj>
+</Objs>

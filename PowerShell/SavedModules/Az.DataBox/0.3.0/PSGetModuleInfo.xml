@@ -1,0 +1,178 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.DataBox</S>
+      <S N="Version">0.3.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: DataBox cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2023-05-23T04:39:36-05:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>DataBox</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzDataBoxJob</S>
+                <S>Get-AzDataBoxJobCredential</S>
+                <S>New-AzDataBoxContactDetailsObject</S>
+                <S>New-AzDataBoxCustomerDiskJobDetailsObject</S>
+                <S>New-AzDataBoxDiskJobDetailsObject</S>
+                <S>New-AzDataBoxHeavyJobDetailsObject</S>
+                <S>New-AzDataBoxJob</S>
+                <S>New-AzDataBoxJobDetailsObject</S>
+                <S>New-AzDataBoxKeyEncryptionKeyObject</S>
+                <S>New-AzDataBoxManagedDiskDetailsObject</S>
+                <S>New-AzDataBoxShippingAddressObject</S>
+                <S>New-AzDataBoxStorageAccountDetailsObject</S>
+                <S>New-AzDataBoxTransferConfigurationObject</S>
+                <S>Remove-AzDataBoxJob</S>
+                <S>Stop-AzDataBoxJob</S>
+                <S>Update-AzDataBoxJob</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzDataBoxJob</S>
+                <S>Get-AzDataBoxJobCredential</S>
+                <S>New-AzDataBoxContactDetailsObject</S>
+                <S>New-AzDataBoxCustomerDiskJobDetailsObject</S>
+                <S>New-AzDataBoxDiskJobDetailsObject</S>
+                <S>New-AzDataBoxHeavyJobDetailsObject</S>
+                <S>New-AzDataBoxJob</S>
+                <S>New-AzDataBoxJobDetailsObject</S>
+                <S>New-AzDataBoxKeyEncryptionKeyObject</S>
+                <S>New-AzDataBoxManagedDiskDetailsObject</S>
+                <S>New-AzDataBoxShippingAddressObject</S>
+                <S>New-AzDataBoxStorageAccountDetailsObject</S>
+                <S>New-AzDataBoxTransferConfigurationObject</S>
+                <S>Remove-AzDataBoxJob</S>
+                <S>Stop-AzDataBoxJob</S>
+                <S>Update-AzDataBoxJob</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Generated powershell cmdlets from latest swagger_x000D__x000A_* Added support for customer disk job creation</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.12.3</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.12.3</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: DataBox cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">* Generated powershell cmdlets from latest swagger_x000D__x000A_* Added support for customer disk job creation</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">2250</S>
+          <S N="downloadCount">8020</S>
+          <S N="packageSize">733041</S>
+          <S N="published">5/23/2023 4:39:36 AM -05:00</S>
+          <S N="created">5/23/2023 4:39:36 AM -05:00</S>
+          <S N="lastUpdated">2/15/2024 10:17:56 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule DataBox PSEdition_Core PSEdition_Desktop PSFunction_Get-AzDataBoxJob PSCommand_Get-AzDataBoxJob PSFunction_Get-AzDataBoxJobCredential PSCommand_Get-AzDataBoxJobCredential PSFunction_New-AzDataBoxContactDetailsObject PSCommand_New-AzDataBoxContactDetailsObject PSFunction_New-AzDataBoxCustomerDiskJobDetailsObject PSCommand_New-AzDataBoxCustomerDiskJobDetailsObject PSFunction_New-AzDataBoxDiskJobDetailsObject PSCommand_New-AzDataBoxDiskJobDetailsObject PSFunction_New-AzDataBoxHeavyJobDetailsObject PSCommand_New-AzDataBoxHeavyJobDetailsObject PSFunction_New-AzDataBoxJob PSCommand_New-AzDataBoxJob PSFunction_New-AzDataBoxJobDetailsObject PSCommand_New-AzDataBoxJobDetailsObject PSFunction_New-AzDataBoxKeyEncryptionKeyObject PSCommand_New-AzDataBoxKeyEncryptionKeyObject PSFunction_New-AzDataBoxManagedDiskDetailsObject PSCommand_New-AzDataBoxManagedDiskDetailsObject PSFunction_New-AzDataBoxShippingAddressObject PSCommand_New-AzDataBoxShippingAddressObject PSFunction_New-AzDataBoxStorageAccountDetailsObject PSCommand_New-AzDataBoxStorageAccountDetailsObject PSFunction_New-AzDataBoxTransferConfigurationObject PSCommand_New-AzDataBoxTransferConfigurationObject PSFunction_Remove-AzDataBoxJob PSCommand_Remove-AzDataBoxJob PSFunction_Stop-AzDataBoxJob PSCommand_Stop-AzDataBoxJob PSFunction_Update-AzDataBoxJob PSCommand_Update-AzDataBoxJob PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:17:56Z</S>
+          <S N="NormalizedVersion">0.3.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.DataBox.nuspec|Az.DataBox.format.ps1xml|Az.DataBox.psd1|Az.DataBox.psm1|bin\Az.DataBox.private.deps.json|bin\Az.DataBox.private.dll|custom\Az.DataBox.custom.psm1|custom\AzDataBoxCustomerDiskJobDetailsObject.ps1|custom\autogen-model-cmdlets\New-AzDataBoxContactDetailsObject.ps1|custom\autogen-model-cmdlets\New-AzDataBoxDiskJobDetailsObject.ps1|custom\autogen-model-cmdlets\New-AzDataBoxHeavyJobDetailsObject.ps1|custom\autogen-model-cmdlets\New-AzDataBoxJobDetailsObject.ps1|custom\autogen-model-cmdlets\New-AzDataBoxKeyEncryptionKeyObject.ps1|custom\autogen-model-cmdlets\New-AzDataBoxManagedDiskDetailsObject.ps1|custom\autogen-model-cmdlets\New-AzDataBoxShippingAddressObject.ps1|custom\autogen-model-cmdlets\New-AzDataBoxStorageAccountDetailsObject.ps1|custom\autogen-model-cmdlets\New-AzDataBoxTransferConfigurationObject.ps1|exports\ProxyCmdletDefinitions.ps1|internal\Az.DataBox.internal.psm1|internal\ProxyCmdletDefinitions.ps1|utils\Unprotect-SecureString.ps1</S>
+          <S N="GUID">9602a6b3-8b77-4f08-a6ed-edefff13e149</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.DataBox\0.3.0</S>
+    </MS>
+  </Obj>
+</Objs>

@@ -1,0 +1,118 @@
+{
+  "Setup": [
+    ".\\scenarios\\PrerequisiteScript.ps1",
+    ".\\scenarios\\ResettingNic\\Watch-ResettingNic.ps1",
+    ".\\scenarios\\PCIE\\PCIE.ps1",
+    ".\\scenarios\\DriverValidation\\DriverValidation.ps1",
+    ".\\scenarios\\InfrastructureValidation\\InfrastructureValidation.ps1"
+  ],
+
+  "Scenarios": {
+    "WatchLinkState": {
+      "PSScriptPath": ".\\scenarios\\FlappingNic\\Watch-LinkState.ps1",
+      "Priority": 2,
+      "RunsOnClusterState": 3,
+      "EventConfiguration": {
+        "EventListenerProviderAssemblyPath": ".\\Microsoft.NetworkHud.Module.dll",
+        "EventListenerProviderType": "Microsoft.NetworkHud.Module.WMIEventListenerProvider",
+        "EventListenerPropertyName": "ManagementEventWatcher",
+        "EventName": "EventArrived",
+        "Config": {
+          "Scope": "ROOT\\WMI",
+          "WQL": "SELECT * FROM MSNdis_StatusMediaDisconnect"
+        }
+      }
+    },
+    
+    "MeasureLinkState": {
+      "PSScriptPath": ".\\scenarios\\FlappingNic\\Measure-LinkState.ps1",
+      "Priority": 2,
+      "RunsOnClusterState": 3,
+      "EventConfiguration": {
+        "EventListenerProviderAssemblyPath": ".\\Microsoft.NetworkHud.Module.dll",
+        "EventListenerProviderType": "Microsoft.NetworkHud.Module.TimerEventListenerProvider",
+        "EventListenerPropertyName": "Timer",
+        "EventName": "Elapsed",
+        "Config": {
+          "Interval": 900000.0
+        }
+      }
+    },
+
+    "WatchResettingNic": {
+      "PSScriptPath": ".\\scenarios\\ResettingNic\\Watch-ResettingNic.ps1",
+      "Priority": 2,
+      "RunsOnClusterState": 3,
+      "EventConfiguration": {
+        "EventListenerProviderAssemblyPath": ".\\Microsoft.NetworkHud.Module.dll",
+        "EventListenerProviderType": "Microsoft.NetworkHud.Module.WMIEventListenerProvider",
+        "EventListenerPropertyName": "ManagementEventWatcher",
+        "EventName": "EventArrived",
+        "Config": {
+          "Scope": "ROOT\\WMI",
+          "WQL": "SELECT * FROM MSNdis_StatusResetStart"
+        }
+      }
+    },
+
+    "MeasureResettingNic": {
+      "PSScriptPath": ".\\scenarios\\ResettingNic\\Measure-ResettingNic.ps1",
+      "Priority": 2,
+      "RunsOnClusterState": 3,
+      "EventConfiguration": {
+        "EventListenerProviderAssemblyPath": ".\\Microsoft.NetworkHud.Module.dll",
+        "EventListenerProviderType": "Microsoft.NetworkHud.Module.TimerEventListenerProvider",
+        "EventListenerPropertyName": "Timer",
+        "EventName": "Elapsed",
+        "Config": {
+          "Interval": 900000.0
+        }
+      }
+    },
+
+    "PCIE": {
+      "PSScriptPath": ".\\scenarios\\PCIE\\PCIE.ps1",
+      "Priority": 2,
+      "RunsOnClusterState": 3,
+      "EventConfiguration": {
+        "EventListenerProviderAssemblyPath": ".\\Microsoft.NetworkHud.Module.dll",
+        "EventListenerProviderType": "Microsoft.NetworkHud.Module.TimerEventListenerProvider",
+        "EventListenerPropertyName": "Timer",
+        "EventName": "Elapsed",
+        "Config": {
+          "Interval": 14400000.0
+        }
+      }
+    },
+
+    "InfrastructureValidation": {
+      "PSScriptPath": ".\\scenarios\\InfrastructureValidation\\InfrastructureValidation.ps1",
+      "Priority": 2,
+      "RunsOnClusterState": 3,
+      "EventConfiguration": {
+        "EventListenerProviderAssemblyPath": ".\\Microsoft.NetworkHud.Module.dll",
+        "EventListenerProviderType": "Microsoft.NetworkHud.Module.TimerEventListenerProvider",
+        "EventListenerPropertyName": "Timer",
+        "EventName": "Elapsed",
+        "Config": {
+          "Interval": 14400000.0
+        }
+      }
+    },
+
+    "DriverValidation": {
+      "PSScriptPath": ".\\scenarios\\DriverValidation\\DriverValidation.ps1",
+      "Priority": 2,
+      "RunsOnClusterState": 3,
+      "EventConfiguration": {
+        "EventListenerProviderAssemblyPath": ".\\Microsoft.NetworkHud.Module.dll",
+        "EventListenerProviderType": "Microsoft.NetworkHud.Module.TimerEventListenerProvider",
+        "EventListenerPropertyName": "Timer",
+        "EventName": "Elapsed",
+        "Config": {
+          "Interval": 14400000.0
+        }
+      }
+    }
+  }
+}

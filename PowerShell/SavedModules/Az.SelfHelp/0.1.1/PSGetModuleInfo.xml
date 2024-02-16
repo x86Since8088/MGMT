@@ -1,0 +1,170 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.SelfHelp</S>
+      <S N="Version">0.1.1</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: SelfHelp cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2023-11-14T05:09:13-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>SelfHelp</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzSelfHelpDiagnostic</S>
+                <S>Get-AzSelfHelpDiscoverySolution</S>
+                <S>Get-AzSelfHelpSolution</S>
+                <S>Get-AzSelfHelpTroubleshooter</S>
+                <S>Invoke-AzSelfHelpCheckNameAvailability</S>
+                <S>Invoke-AzSelfHelpContinueTroubleshooter</S>
+                <S>New-AzSelfHelpDiagnostic</S>
+                <S>New-AzSelfHelpSolution</S>
+                <S>New-AzSelfHelpTroubleshooter</S>
+                <S>Restart-AzSelfHelpTroubleshooter</S>
+                <S>Stop-AzSelfHelpTroubleshooter</S>
+                <S>Update-AzSelfHelpSolution</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzSelfHelpDiagnostic</S>
+                <S>Get-AzSelfHelpDiscoverySolution</S>
+                <S>Get-AzSelfHelpSolution</S>
+                <S>Get-AzSelfHelpTroubleshooter</S>
+                <S>Invoke-AzSelfHelpCheckNameAvailability</S>
+                <S>Invoke-AzSelfHelpContinueTroubleshooter</S>
+                <S>New-AzSelfHelpDiagnostic</S>
+                <S>New-AzSelfHelpSolution</S>
+                <S>New-AzSelfHelpTroubleshooter</S>
+                <S>Restart-AzSelfHelpTroubleshooter</S>
+                <S>Stop-AzSelfHelpTroubleshooter</S>
+                <S>Update-AzSelfHelpSolution</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Added support for discovery API as the first point of entry in Help RP._x000D__x000A_* Added support for new solution types (Diagnostics, Azure Solutions, Troubleshooters) in preview_x000D__x000A_* Enabled customers to access Azure curated, relevant self-help solutions including diagnostics and Azure solutions at the resource and subscription scopes._x000D__x000A_* Implemented filter parameters such as solutionType, problemClassificationId/problemId, resourceId, and resourceType to enable customers to get more granular results through discovery API._x000D__x000A_* Enabled customers to trigger one or more applicable solutions such as diagnostics, components within Azure solutions, and Troubleshooters</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.13.2</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.13.2</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: SelfHelp cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">* Added support for discovery API as the first point of entry in Help RP._x000D__x000A_* Added support for new solution types (Diagnostics, Azure Solutions, Troubleshooters) in preview_x000D__x000A_* Enabled customers to access Azure curated, relevant self-help solutions including diagnostics and Azure solutions at the resource and subscription scopes._x000D__x000A_* Implemented filter parameters such as solutionType, problemClassificationId/problemId, resourceId, and resourceType to enable customers to get more granular results through discovery API._x000D__x000A_* Enabled customers to trigger one or more applicable solutions such as diagnostics, components within Azure solutions, and Troubleshooters</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">734</S>
+          <S N="downloadCount">1476</S>
+          <S N="packageSize">458021</S>
+          <S N="published">11/14/2023 5:09:13 AM -06:00</S>
+          <S N="created">11/14/2023 5:09:13 AM -06:00</S>
+          <S N="lastUpdated">2/15/2024 10:12:57 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule SelfHelp PSEdition_Core PSEdition_Desktop PSFunction_Get-AzSelfHelpDiagnostic PSCommand_Get-AzSelfHelpDiagnostic PSFunction_Get-AzSelfHelpDiscoverySolution PSCommand_Get-AzSelfHelpDiscoverySolution PSFunction_Get-AzSelfHelpSolution PSCommand_Get-AzSelfHelpSolution PSFunction_Get-AzSelfHelpTroubleshooter PSCommand_Get-AzSelfHelpTroubleshooter PSFunction_Invoke-AzSelfHelpCheckNameAvailability PSCommand_Invoke-AzSelfHelpCheckNameAvailability PSFunction_Invoke-AzSelfHelpContinueTroubleshooter PSCommand_Invoke-AzSelfHelpContinueTroubleshooter PSFunction_New-AzSelfHelpDiagnostic PSCommand_New-AzSelfHelpDiagnostic PSFunction_New-AzSelfHelpSolution PSCommand_New-AzSelfHelpSolution PSFunction_New-AzSelfHelpTroubleshooter PSCommand_New-AzSelfHelpTroubleshooter PSFunction_Restart-AzSelfHelpTroubleshooter PSCommand_Restart-AzSelfHelpTroubleshooter PSFunction_Stop-AzSelfHelpTroubleshooter PSCommand_Stop-AzSelfHelpTroubleshooter PSFunction_Update-AzSelfHelpSolution PSCommand_Update-AzSelfHelpSolution PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:12:57Z</S>
+          <S N="NormalizedVersion">0.1.1</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.SelfHelp.nuspec|Az.SelfHelp.format.ps1xml|custom\Az.SelfHelp.custom.psm1|Az.SelfHelp.psd1|exports\ProxyCmdletDefinitions.ps1|Az.SelfHelp.psm1|internal\Az.SelfHelp.internal.psm1|bin\Az.SelfHelp.private.dll|internal\ProxyCmdletDefinitions.ps1|utils\Unprotect-SecureString.ps1</S>
+          <S N="GUID">2705ffd2-39d8-491f-b0c6-14fca2dc3727</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.SelfHelp\0.1.1</S>
+    </MS>
+  </Obj>
+</Objs>

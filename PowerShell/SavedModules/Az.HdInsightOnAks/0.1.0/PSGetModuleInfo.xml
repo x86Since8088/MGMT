@@ -1,0 +1,193 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.HdInsightOnAks</S>
+      <S N="Version">0.1.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: HdInsightOnAks cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2023-09-26T01:23:19-05:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>HdInsightOnAks</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzHdInsightOnAksAvailableClusterPoolVersion</S>
+                <S>Get-AzHdInsightOnAksAvailableClusterVersion</S>
+                <S>Get-AzHdInsightOnAksCluster</S>
+                <S>Get-AzHdInsightOnAksClusterInstanceView</S>
+                <S>Get-AzHdInsightOnAksClusterJob</S>
+                <S>Get-AzHdInsightOnAksClusterPool</S>
+                <S>Get-AzHdInsightOnAksClusterServiceConfig</S>
+                <S>New-AzHdInsightOnAksCluster</S>
+                <S>New-AzHdInsightOnAksClusterConfigFileObject</S>
+                <S>New-AzHdInsightOnAksClusterPool</S>
+                <S>New-AzHdInsightOnAksClusterServiceConfigObject</S>
+                <S>New-AzHdInsightOnAksClusterServiceConfigsProfileObject</S>
+                <S>New-AzHdInsightOnAksFlinkJobObject</S>
+                <S>New-AzHdInsightOnAksNodeProfileObject</S>
+                <S>New-AzHdInsightOnAksSecretReferenceObject</S>
+                <S>New-AzHdInsightOnAksTrinoHiveCatalogObject</S>
+                <S>Remove-AzHdInsightOnAksCluster</S>
+                <S>Remove-AzHdInsightOnAksClusterPool</S>
+                <S>Resize-AzHdInsightOnAksCluster</S>
+                <S>Set-AzHdInsightOnAksClusterPool</S>
+                <S>Start-AzHdInsightOnAksClusterJob</S>
+                <S>Test-AzHdInsightOnAksLocationNameAvailability</S>
+                <S>Update-AzHdInsightOnAksCluster</S>
+                <S>Update-AzHdInsightOnAksClusterPoolTag</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzHdInsightOnAksAvailableClusterPoolVersion</S>
+                <S>Get-AzHdInsightOnAksAvailableClusterVersion</S>
+                <S>Get-AzHdInsightOnAksCluster</S>
+                <S>Get-AzHdInsightOnAksClusterInstanceView</S>
+                <S>Get-AzHdInsightOnAksClusterJob</S>
+                <S>Get-AzHdInsightOnAksClusterPool</S>
+                <S>Get-AzHdInsightOnAksClusterServiceConfig</S>
+                <S>New-AzHdInsightOnAksCluster</S>
+                <S>New-AzHdInsightOnAksClusterConfigFileObject</S>
+                <S>New-AzHdInsightOnAksClusterPool</S>
+                <S>New-AzHdInsightOnAksClusterServiceConfigObject</S>
+                <S>New-AzHdInsightOnAksClusterServiceConfigsProfileObject</S>
+                <S>New-AzHdInsightOnAksFlinkJobObject</S>
+                <S>New-AzHdInsightOnAksNodeProfileObject</S>
+                <S>New-AzHdInsightOnAksSecretReferenceObject</S>
+                <S>New-AzHdInsightOnAksTrinoHiveCatalogObject</S>
+                <S>Remove-AzHdInsightOnAksCluster</S>
+                <S>Remove-AzHdInsightOnAksClusterPool</S>
+                <S>Resize-AzHdInsightOnAksCluster</S>
+                <S>Set-AzHdInsightOnAksClusterPool</S>
+                <S>Start-AzHdInsightOnAksClusterJob</S>
+                <S>Test-AzHdInsightOnAksLocationNameAvailability</S>
+                <S>Update-AzHdInsightOnAksCluster</S>
+                <S>Update-AzHdInsightOnAksClusterPoolTag</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.13.0</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.13.0</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: HdInsightOnAks cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">1087</S>
+          <S N="downloadCount">1087</S>
+          <S N="packageSize">846366</S>
+          <S N="published">9/26/2023 1:23:19 AM -05:00</S>
+          <S N="created">9/26/2023 1:23:19 AM -05:00</S>
+          <S N="lastUpdated">2/15/2024 10:17:56 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule HdInsightOnAks PSEdition_Core PSEdition_Desktop PSFunction_Get-AzHdInsightOnAksAvailableClusterPoolVersion PSCommand_Get-AzHdInsightOnAksAvailableClusterPoolVersion PSFunction_Get-AzHdInsightOnAksAvailableClusterVersion PSCommand_Get-AzHdInsightOnAksAvailableClusterVersion PSFunction_Get-AzHdInsightOnAksCluster PSCommand_Get-AzHdInsightOnAksCluster PSFunction_Get-AzHdInsightOnAksClusterInstanceView PSCommand_Get-AzHdInsightOnAksClusterInstanceView PSFunction_Get-AzHdInsightOnAksClusterJob PSCommand_Get-AzHdInsightOnAksClusterJob PSFunction_Get-AzHdInsightOnAksClusterPool PSCommand_Get-AzHdInsightOnAksClusterPool PSFunction_Get-AzHdInsightOnAksClusterServiceConfig PSCommand_Get-AzHdInsightOnAksClusterServiceConfig PSFunction_New-AzHdInsightOnAksCluster PSCommand_New-AzHdInsightOnAksCluster PSFunction_New-AzHdInsightOnAksClusterConfigFileObject PSCommand_New-AzHdInsightOnAksClusterConfigFileObject PSFunction_New-AzHdInsightOnAksClusterPool PSCommand_New-AzHdInsightOnAksClusterPool PSFunction_New-AzHdInsightOnAksClusterServiceConfigObject PSCommand_New-AzHdInsightOnAksClusterServiceConfigObject PSFunction_New-AzHdInsightOnAksClusterServiceConfigsProfileObject PSCommand_New-AzHdInsightOnAksClusterServiceConfigsProfileObject PSFunction_New-AzHdInsightOnAksFlinkJobObject PSCommand_New-AzHdInsightOnAksFlinkJobObject PSFunction_New-AzHdInsightOnAksNodeProfileObject PSCommand_New-AzHdInsightOnAksNodeProfileObject PSFunction_New-AzHdInsightOnAksSecretReferenceObject PSCommand_New-AzHdInsightOnAksSecretReferenceObject PSFunction_New-AzHdInsightOnAksTrinoHiveCatalogObject PSCommand_New-AzHdInsightOnAksTrinoHiveCatalogObject PSFunction_Remove-AzHdInsightOnAksCluster PSCommand_Remove-AzHdInsightOnAksCluster PSFunction_Remove-AzHdInsightOnAksClusterPool PSCommand_Remove-AzHdInsightOnAksClusterPool PSFunction_Resize-AzHdInsightOnAksCluster PSCommand_Resize-AzHdInsightOnAksCluster PSFunction_Set-AzHdInsightOnAksClusterPool PSCommand_Set-AzHdInsightOnAksClusterPool PSFunction_Start-AzHdInsightOnAksClusterJob PSCommand_Start-AzHdInsightOnAksClusterJob PSFunction_Test-AzHdInsightOnAksLocationNameAvailability PSCommand_Test-AzHdInsightOnAksLocationNameAvailability PSFunction_Update-AzHdInsightOnAksCluster PSCommand_Update-AzHdInsightOnAksCluster PSFunction_Update-AzHdInsightOnAksClusterPoolTag PSCommand_Update-AzHdInsightOnAksClusterPoolTag PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:17:56Z</S>
+          <S N="NormalizedVersion">0.1.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.HdInsightOnAks.nuspec|Az.HdInsightOnAks.format.ps1xml|custom\New-AzHdInsightOnAksFlinkJobObject.ps1|custom\New-AzHdInsightOnAksNodeProfileObject.ps1|Az.HdInsightOnAks.psd1|custom\New-AzHdInsightOnAksSecretReferenceObject.ps1|Az.HdInsightOnAks.psm1|custom\New-AzHdInsightOnAksTrinoHiveCatalogObject.ps1|bin\Az.HdInsightOnAks.private.dll|exports\ProxyCmdletDefinitions.ps1|custom\Az.HdInsightOnAks.custom.psm1|internal\Az.HdInsightOnAks.internal.psm1|custom\New-AzHdInsightOnAksClusterConfigFileObject.ps1|internal\ProxyCmdletDefinitions.ps1|custom\New-AzHdInsightOnAksClusterServiceConfigObject.ps1|utils\Unprotect-SecureString.ps1|custom\New-AzHdInsightOnAksClusterServiceConfigsProfileObject.ps1</S>
+          <S N="GUID">5d9ea51e-3614-409d-b09a-9188a642e11c</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.HdInsightOnAks\0.1.0</S>
+    </MS>
+  </Obj>
+</Objs>

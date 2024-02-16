@@ -1,0 +1,190 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.ConnectedMachine</S>
+      <S N="Version">0.6.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: ConnectedMachine cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2023-12-11T02:21:45-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>ConnectedMachine</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Connect-AzConnectedMachine</S>
+                <S>Get-AzConnectedExtensionMetadata</S>
+                <S>Get-AzConnectedMachine</S>
+                <S>Get-AzConnectedMachineExtension</S>
+                <S>Get-AzConnectedMachineRunCommand</S>
+                <S>Get-AzConnectedPrivateLinkScope</S>
+                <S>Install-AzConnectedMachinePatch</S>
+                <S>Invoke-AzConnectedAssessMachinePatch</S>
+                <S>New-AzConnectedMachineExtension</S>
+                <S>New-AzConnectedMachineRunCommand</S>
+                <S>New-AzConnectedPrivateLinkScope</S>
+                <S>Remove-AzConnectedMachine</S>
+                <S>Remove-AzConnectedMachineExtension</S>
+                <S>Remove-AzConnectedMachineRunCommand</S>
+                <S>Remove-AzConnectedPrivateLinkScope</S>
+                <S>Set-AzConnectedMachineExtension</S>
+                <S>Set-AzConnectedPrivateLinkScope</S>
+                <S>Update-AzConnectedExtension</S>
+                <S>Update-AzConnectedMachine</S>
+                <S>Update-AzConnectedMachineExtension</S>
+                <S>Update-AzConnectedMachineRunCommand</S>
+                <S>Update-AzConnectedPrivateLinkScopeTag</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Connect-AzConnectedMachine</S>
+                <S>Get-AzConnectedExtensionMetadata</S>
+                <S>Get-AzConnectedMachine</S>
+                <S>Get-AzConnectedMachineExtension</S>
+                <S>Get-AzConnectedMachineRunCommand</S>
+                <S>Get-AzConnectedPrivateLinkScope</S>
+                <S>Install-AzConnectedMachinePatch</S>
+                <S>Invoke-AzConnectedAssessMachinePatch</S>
+                <S>New-AzConnectedMachineExtension</S>
+                <S>New-AzConnectedMachineRunCommand</S>
+                <S>New-AzConnectedPrivateLinkScope</S>
+                <S>Remove-AzConnectedMachine</S>
+                <S>Remove-AzConnectedMachineExtension</S>
+                <S>Remove-AzConnectedMachineRunCommand</S>
+                <S>Remove-AzConnectedPrivateLinkScope</S>
+                <S>Set-AzConnectedMachineExtension</S>
+                <S>Set-AzConnectedPrivateLinkScope</S>
+                <S>Update-AzConnectedExtension</S>
+                <S>Update-AzConnectedMachine</S>
+                <S>Update-AzConnectedMachineExtension</S>
+                <S>Update-AzConnectedMachineRunCommand</S>
+                <S>Update-AzConnectedPrivateLinkScopeTag</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* This release, aimed at version 2023-10-03-preview of ConnectedMachine, introduces new commands alongside the existing ones_x000D__x000A_    - Get-AzConnectedMachineRunCommand: Retrieve run commands for an Azure Arc-Enabled Server_x000D__x000A_    - New-AzConnectedMachineRunCommand: Create a run command for an Azure Arc-Enabled Server_x000D__x000A_    - Remove-AzConnectedMachineRunCommand: Delete a run command for an Azure Arc-Enabled Server_x000D__x000A_    - Update-AzConnectedMachineRunCommand: Modify a run command for an Azure Arc-Enabled Server</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.13.2</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.13.2</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: ConnectedMachine cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">* This release, aimed at version 2023-10-03-preview of ConnectedMachine, introduces new commands alongside the existing ones_x000D__x000A_    - Get-AzConnectedMachineRunCommand: Retrieve run commands for an Azure Arc-Enabled Server_x000D__x000A_    - New-AzConnectedMachineRunCommand: Create a run command for an Azure Arc-Enabled Server_x000D__x000A_    - Remove-AzConnectedMachineRunCommand: Delete a run command for an Azure Arc-Enabled Server_x000D__x000A_    - Update-AzConnectedMachineRunCommand: Modify a run command for an Azure Arc-Enabled Server</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">49631</S>
+          <S N="downloadCount">710894</S>
+          <S N="packageSize">985708</S>
+          <S N="published">12/11/2023 2:21:45 AM -06:00</S>
+          <S N="created">12/11/2023 2:21:45 AM -06:00</S>
+          <S N="lastUpdated">2/16/2024 12:07:59 AM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule ConnectedMachine PSEdition_Core PSEdition_Desktop PSFunction_Connect-AzConnectedMachine PSCommand_Connect-AzConnectedMachine PSFunction_Get-AzConnectedExtensionMetadata PSCommand_Get-AzConnectedExtensionMetadata PSFunction_Get-AzConnectedMachine PSCommand_Get-AzConnectedMachine PSFunction_Get-AzConnectedMachineExtension PSCommand_Get-AzConnectedMachineExtension PSFunction_Get-AzConnectedMachineRunCommand PSCommand_Get-AzConnectedMachineRunCommand PSFunction_Get-AzConnectedPrivateLinkScope PSCommand_Get-AzConnectedPrivateLinkScope PSFunction_Install-AzConnectedMachinePatch PSCommand_Install-AzConnectedMachinePatch PSFunction_Invoke-AzConnectedAssessMachinePatch PSCommand_Invoke-AzConnectedAssessMachinePatch PSFunction_New-AzConnectedMachineExtension PSCommand_New-AzConnectedMachineExtension PSFunction_New-AzConnectedMachineRunCommand PSCommand_New-AzConnectedMachineRunCommand PSFunction_New-AzConnectedPrivateLinkScope PSCommand_New-AzConnectedPrivateLinkScope PSFunction_Remove-AzConnectedMachine PSCommand_Remove-AzConnectedMachine PSFunction_Remove-AzConnectedMachineExtension PSCommand_Remove-AzConnectedMachineExtension PSFunction_Remove-AzConnectedMachineRunCommand PSCommand_Remove-AzConnectedMachineRunCommand PSFunction_Remove-AzConnectedPrivateLinkScope PSCommand_Remove-AzConnectedPrivateLinkScope PSFunction_Set-AzConnectedMachineExtension PSCommand_Set-AzConnectedMachineExtension PSFunction_Set-AzConnectedPrivateLinkScope PSCommand_Set-AzConnectedPrivateLinkScope PSFunction_Update-AzConnectedExtension PSCommand_Update-AzConnectedExtension PSFunction_Update-AzConnectedMachine PSCommand_Update-AzConnectedMachine PSFunction_Update-AzConnectedMachineExtension PSCommand_Update-AzConnectedMachineExtension PSFunction_Update-AzConnectedMachineRunCommand PSCommand_Update-AzConnectedMachineRunCommand PSFunction_Update-AzConnectedPrivateLinkScopeTag PSCommand_Update-AzConnectedPrivateLinkScopeTag PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-16T00:07:59Z</S>
+          <S N="NormalizedVersion">0.6.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.ConnectedMachine.nuspec|Az.ConnectedMachine.psd1|ConnectedMachine.Autorest\custom\MachineExtensionProperties.json.cs|Az.ConnectedMachine.psm1|ConnectedMachine.Autorest\custom\MachineExtensionUpdate.cs|ConnectedMachine.Autorest\Az.ConnectedMachine.format.ps1xml|ConnectedMachine.Autorest\custom\MachineExtensionUpgrade.cs|ConnectedMachine.Autorest\Az.ConnectedMachine.psm1|ConnectedMachine.Autorest\exports\ProxyCmdletDefinitions.ps1|ConnectedMachine.Autorest\bin\Az.ConnectedMachine.private.dll|ConnectedMachine.Autorest\internal\Az.ConnectedMachine.internal.psm1|ConnectedMachine.Autorest\custom\Az.ConnectedMachine.custom.psm1|ConnectedMachine.Autorest\internal\ProxyCmdletDefinitions.ps1|ConnectedMachine.Autorest\custom\Connect-AzConnectedMachine.ps1|ConnectedMachine.Autorest\utils\Unprotect-SecureString.ps1</S>
+          <S N="GUID">259a0542-8329-4b9e-8f72-dab0efc583e9</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.ConnectedMachine\0.6.0</S>
+    </MS>
+  </Obj>
+</Objs>

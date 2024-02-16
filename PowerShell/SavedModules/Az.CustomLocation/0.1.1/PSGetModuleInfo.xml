@@ -1,0 +1,168 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.CustomLocation</S>
+      <S N="Version">0.1.1</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: CustomLocation cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2024-01-09T01:43:24-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>CustomLocation</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Find-AzCustomLocationTargetResourceGroup</S>
+                <S>Get-AzCustomLocation</S>
+                <S>Get-AzCustomLocationEnabledResourceType</S>
+                <S>Get-AzCustomLocationResourceSyncRule</S>
+                <S>New-AzCustomLocation</S>
+                <S>New-AzCustomLocationMatchExpressionsObject</S>
+                <S>New-AzCustomLocationResourceSyncRule</S>
+                <S>Remove-AzCustomLocation</S>
+                <S>Remove-AzCustomLocationResourceSyncRule</S>
+                <S>Update-AzCustomLocation</S>
+                <S>Update-AzCustomLocationResourceSyncRule</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Find-AzCustomLocationTargetResourceGroup</S>
+                <S>Get-AzCustomLocation</S>
+                <S>Get-AzCustomLocationEnabledResourceType</S>
+                <S>Get-AzCustomLocationResourceSyncRule</S>
+                <S>New-AzCustomLocation</S>
+                <S>New-AzCustomLocationMatchExpressionsObject</S>
+                <S>New-AzCustomLocationResourceSyncRule</S>
+                <S>Remove-AzCustomLocation</S>
+                <S>Remove-AzCustomLocationResourceSyncRule</S>
+                <S>Update-AzCustomLocation</S>
+                <S>Update-AzCustomLocationResourceSyncRule</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Upgraded api version to 2021-08-31-preview.</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.15.0</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.15.0</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: CustomLocation cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">* Upgraded api version to 2021-08-31-preview.</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">385</S>
+          <S N="downloadCount">3988</S>
+          <S N="packageSize">507954</S>
+          <S N="published">1/9/2024 1:43:24 AM -06:00</S>
+          <S N="created">1/9/2024 1:43:24 AM -06:00</S>
+          <S N="lastUpdated">2/15/2024 10:22:57 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule CustomLocation PSEdition_Core PSEdition_Desktop PSFunction_Find-AzCustomLocationTargetResourceGroup PSCommand_Find-AzCustomLocationTargetResourceGroup PSFunction_Get-AzCustomLocation PSCommand_Get-AzCustomLocation PSFunction_Get-AzCustomLocationEnabledResourceType PSCommand_Get-AzCustomLocationEnabledResourceType PSFunction_Get-AzCustomLocationResourceSyncRule PSCommand_Get-AzCustomLocationResourceSyncRule PSFunction_New-AzCustomLocation PSCommand_New-AzCustomLocation PSFunction_New-AzCustomLocationMatchExpressionsObject PSCommand_New-AzCustomLocationMatchExpressionsObject PSFunction_New-AzCustomLocationResourceSyncRule PSCommand_New-AzCustomLocationResourceSyncRule PSFunction_Remove-AzCustomLocation PSCommand_Remove-AzCustomLocation PSFunction_Remove-AzCustomLocationResourceSyncRule PSCommand_Remove-AzCustomLocationResourceSyncRule PSFunction_Update-AzCustomLocation PSCommand_Update-AzCustomLocation PSFunction_Update-AzCustomLocationResourceSyncRule PSCommand_Update-AzCustomLocationResourceSyncRule PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:22:57Z</S>
+          <S N="NormalizedVersion">0.1.1</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.CustomLocation.nuspec|CustomLocation.Autorest\custom\New-AzCustomLocation.ps1|Az.CustomLocation.psd1|CustomLocation.Autorest\custom\Update-AzCustomLocation.ps1|Az.CustomLocation.psm1|CustomLocation.Autorest\custom\autogen-model-cmdlets\New-AzCustomLocationMatchExpressionsObject.ps1|CustomLocation.Autorest\Az.CustomLocation.format.ps1xml|CustomLocation.Autorest\exports\ProxyCmdletDefinitions.ps1|CustomLocation.Autorest\Az.CustomLocation.psm1|CustomLocation.Autorest\internal\Az.CustomLocation.internal.psm1|CustomLocation.Autorest\bin\Az.CustomLocation.private.dll|CustomLocation.Autorest\internal\ProxyCmdletDefinitions.ps1|CustomLocation.Autorest\custom\Az.CustomLocation.custom.psm1|CustomLocation.Autorest\utils\Unprotect-SecureString.ps1</S>
+          <S N="GUID">b5a68592-6b36-4d8f-b582-a157eb4dfacf</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.CustomLocation\0.1.1</S>
+    </MS>
+  </Obj>
+</Objs>

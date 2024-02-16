@@ -1,0 +1,216 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.Marketplace</S>
+      <S N="Version">0.4.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell - Marketplace service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on marketplace, please visit the following: https://learn.microsoft.com/azure/marketplace/</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2024-02-08T01:27:21-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>Marketplace</S>
+          <S>PSModule</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzMarketplacePrivateStore</S>
+                <S>Get-AzMarketplacePrivateStoreOffer</S>
+                <S>Remove-AzMarketplacePrivateStoreOffer</S>
+                <S>Set-AzMarketplacePrivateStoreOffer</S>
+                <S>Copy-AzMarketplacePrivateStoreCollectionOffer</S>
+                <S>Disable-AzMarketplacePrivateStoreCollectionAllItem</S>
+                <S>Enable-AzMarketplacePrivateStoreCollectionAllItem</S>
+                <S>Get-AzMarketplaceBillingPrivateStoreAccount</S>
+                <S>Get-AzMarketplaceCollectionToSubscriptionMapping</S>
+                <S>Get-AzMarketplacePrivateStoreAllSubscriptionInTenant</S>
+                <S>Get-AzMarketplacePrivateStoreCollection</S>
+                <S>Get-AzMarketplacePrivateStoreCollectionMapOffersToContext</S>
+                <S>Get-AzMarketplacePrivateStoreCollectionOffer</S>
+                <S>Get-AzMarketplacePrivateStoreCollectionRule</S>
+                <S>Get-AzMarketplacePrivateStoreNewPlanNotification</S>
+                <S>Get-AzMarketplacePrivateStoreSubscription</S>
+                <S>Get-AzMarketplacePrivateStoreUserOffer</S>
+                <S>Get-AzMarketplacePrivateStoreUserRule</S>
+                <S>Get-AzMarketplacePrivateStoreV1</S>
+                <S>Get-AzMarketplaceQueryPrivateStoreOffer</S>
+                <S>New-AzMarketplacePrivateStore</S>
+                <S>New-AzMarketplacePrivateStoreCollection</S>
+                <S>New-AzMarketplacePrivateStoreCollectionOffer</S>
+                <S>New-AzMarketplacePrivateStoreCollectionOfferMultiContext</S>
+                <S>Remove-AzMarketplacePrivateStoreCollection</S>
+                <S>Remove-AzMarketplacePrivateStoreCollectionOffer</S>
+                <S>Set-AzMarketplaceBulkPrivateStoreCollectionAction</S>
+                <S>Set-AzMarketplacePrivateStore</S>
+                <S>Set-AzMarketplacePrivateStoreCollection</S>
+                <S>Set-AzMarketplacePrivateStoreCollectionOffer</S>
+                <S>Test-AzMarketplacePrivateStoreAnyExistingOffer</S>
+                <S>Update-AzMarketplacePrivateStoreCollection</S>
+                <S>Update-AzMarketplacePrivateStoreCollectionOffer</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Copy-AzMarketplacePrivateStoreCollectionOffer</S>
+                <S>Disable-AzMarketplacePrivateStoreCollectionAllItem</S>
+                <S>Enable-AzMarketplacePrivateStoreCollectionAllItem</S>
+                <S>Get-AzMarketplaceBillingPrivateStoreAccount</S>
+                <S>Get-AzMarketplaceCollectionToSubscriptionMapping</S>
+                <S>Get-AzMarketplacePrivateStoreAllSubscriptionInTenant</S>
+                <S>Get-AzMarketplacePrivateStoreCollection</S>
+                <S>Get-AzMarketplacePrivateStoreCollectionMapOffersToContext</S>
+                <S>Get-AzMarketplacePrivateStoreCollectionOffer</S>
+                <S>Get-AzMarketplacePrivateStoreCollectionRule</S>
+                <S>Get-AzMarketplacePrivateStoreNewPlanNotification</S>
+                <S>Get-AzMarketplacePrivateStoreSubscription</S>
+                <S>Get-AzMarketplacePrivateStoreUserOffer</S>
+                <S>Get-AzMarketplacePrivateStoreUserRule</S>
+                <S>Get-AzMarketplacePrivateStoreV1</S>
+                <S>Get-AzMarketplaceQueryPrivateStoreOffer</S>
+                <S>New-AzMarketplacePrivateStore</S>
+                <S>New-AzMarketplacePrivateStoreCollection</S>
+                <S>New-AzMarketplacePrivateStoreCollectionOffer</S>
+                <S>New-AzMarketplacePrivateStoreCollectionOfferMultiContext</S>
+                <S>Remove-AzMarketplacePrivateStoreCollection</S>
+                <S>Remove-AzMarketplacePrivateStoreCollectionOffer</S>
+                <S>Set-AzMarketplaceBulkPrivateStoreCollectionAction</S>
+                <S>Set-AzMarketplacePrivateStore</S>
+                <S>Set-AzMarketplacePrivateStoreCollection</S>
+                <S>Set-AzMarketplacePrivateStoreCollectionOffer</S>
+                <S>Test-AzMarketplacePrivateStoreAnyExistingOffer</S>
+                <S>Update-AzMarketplacePrivateStoreCollection</S>
+                <S>Update-AzMarketplacePrivateStoreCollectionOffer</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzMarketplacePrivateStore</S>
+                <S>Get-AzMarketplacePrivateStoreOffer</S>
+                <S>Remove-AzMarketplacePrivateStoreOffer</S>
+                <S>Set-AzMarketplacePrivateStoreOffer</S>
+              </LST>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Added new features and capabilities to user and marketplace-admins:_x000D__x000A_    - Approve offer and plans with subscription granularity._x000D__x000A_    - Enable\Disable Approve-All-Products on a collection._x000D__x000A_    - Fetch all subscriptions in a tenant._x000D__x000A_    - Get new plans notifications for the offers in the privatestore._x000D__x000A_    - Get all approved offers and plans for a user.</S>
+      <Obj N="Dependencies" RefId="7">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="8">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.15.1</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.15.1</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="9">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell - Marketplace service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on marketplace, please visit the following: https://learn.microsoft.com/azure/marketplace/</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">* Added new features and capabilities to user and marketplace-admins:_x000D__x000A_    - Approve offer and plans with subscription granularity._x000D__x000A_    - Enable\Disable Approve-All-Products on a collection._x000D__x000A_    - Fetch all subscriptions in a tenant._x000D__x000A_    - Get new plans notifications for the offers in the privatestore._x000D__x000A_    - Get all approved offers and plans for a user.</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">84</S>
+          <S N="downloadCount">9114</S>
+          <S N="packageSize">807228</S>
+          <S N="published">2/8/2024 1:27:21 AM -06:00</S>
+          <S N="created">2/8/2024 1:27:21 AM -06:00</S>
+          <S N="lastUpdated">2/15/2024 10:17:56 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM Marketplace PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_Get-AzMarketplacePrivateStore PSCommand_Get-AzMarketplacePrivateStore PSCmdlet_Get-AzMarketplacePrivateStoreOffer PSCommand_Get-AzMarketplacePrivateStoreOffer PSCmdlet_Remove-AzMarketplacePrivateStoreOffer PSCommand_Remove-AzMarketplacePrivateStoreOffer PSCmdlet_Set-AzMarketplacePrivateStoreOffer PSCommand_Set-AzMarketplacePrivateStoreOffer PSIncludes_Cmdlet PSFunction_Copy-AzMarketplacePrivateStoreCollectionOffer PSCommand_Copy-AzMarketplacePrivateStoreCollectionOffer PSFunction_Disable-AzMarketplacePrivateStoreCollectionAllItem PSCommand_Disable-AzMarketplacePrivateStoreCollectionAllItem PSFunction_Enable-AzMarketplacePrivateStoreCollectionAllItem PSCommand_Enable-AzMarketplacePrivateStoreCollectionAllItem PSFunction_Get-AzMarketplaceBillingPrivateStoreAccount PSCommand_Get-AzMarketplaceBillingPrivateStoreAccount PSFunction_Get-AzMarketplaceCollectionToSubscriptionMapping PSCommand_Get-AzMarketplaceCollectionToSubscriptionMapping PSFunction_Get-AzMarketplacePrivateStoreAllSubscriptionInTenant PSCommand_Get-AzMarketplacePrivateStoreAllSubscriptionInTenant PSFunction_Get-AzMarketplacePrivateStoreCollection PSCommand_Get-AzMarketplacePrivateStoreCollection PSFunction_Get-AzMarketplacePrivateStoreCollectionMapOffersToContext PSCommand_Get-AzMarketplacePrivateStoreCollectionMapOffersToContext PSFunction_Get-AzMarketplacePrivateStoreCollectionOffer PSCommand_Get-AzMarketplacePrivateStoreCollectionOffer PSFunction_Get-AzMarketplacePrivateStoreCollectionRule PSCommand_Get-AzMarketplacePrivateStoreCollectionRule PSFunction_Get-AzMarketplacePrivateStoreNewPlanNotification PSCommand_Get-AzMarketplacePrivateStoreNewPlanNotification PSFunction_Get-AzMarketplacePrivateStoreSubscription PSCommand_Get-AzMarketplacePrivateStoreSubscription PSFunction_Get-AzMarketplacePrivateStoreUserOffer PSCommand_Get-AzMarketplacePrivateStoreUserOffer PSFunction_Get-AzMarketplacePrivateStoreUserRule PSCommand_Get-AzMarketplacePrivateStoreUserRule PSFunction_Get-AzMarketplacePrivateStoreV1 PSCommand_Get-AzMarketplacePrivateStoreV1 PSFunction_Get-AzMarketplaceQueryPrivateStoreOffer PSCommand_Get-AzMarketplaceQueryPrivateStoreOffer PSFunction_New-AzMarketplacePrivateStore PSCommand_New-AzMarketplacePrivateStore PSFunction_New-AzMarketplacePrivateStoreCollection PSCommand_New-AzMarketplacePrivateStoreCollection PSFunction_New-AzMarketplacePrivateStoreCollectionOffer PSCommand_New-AzMarketplacePrivateStoreCollectionOffer PSFunction_New-AzMarketplacePrivateStoreCollectionOfferMultiContext PSCommand_New-AzMarketplacePrivateStoreCollectionOfferMultiContext PSFunction_Remove-AzMarketplacePrivateStoreCollection PSCommand_Remove-AzMarketplacePrivateStoreCollection PSFunction_Remove-AzMarketplacePrivateStoreCollectionOffer PSCommand_Remove-AzMarketplacePrivateStoreCollectionOffer PSFunction_Set-AzMarketplaceBulkPrivateStoreCollectionAction PSCommand_Set-AzMarketplaceBulkPrivateStoreCollectionAction PSFunction_Set-AzMarketplacePrivateStore PSCommand_Set-AzMarketplacePrivateStore PSFunction_Set-AzMarketplacePrivateStoreCollection PSCommand_Set-AzMarketplacePrivateStoreCollection PSFunction_Set-AzMarketplacePrivateStoreCollectionOffer PSCommand_Set-AzMarketplacePrivateStoreCollectionOffer PSFunction_Test-AzMarketplacePrivateStoreAnyExistingOffer PSCommand_Test-AzMarketplacePrivateStoreAnyExistingOffer PSFunction_Update-AzMarketplacePrivateStoreCollection PSCommand_Update-AzMarketplacePrivateStoreCollection PSFunction_Update-AzMarketplacePrivateStoreCollectionOffer PSCommand_Update-AzMarketplacePrivateStoreCollectionOffer PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:17:56Z</S>
+          <S N="NormalizedVersion">0.4.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.Marketplace.nuspec|Az.Marketplace.psd1|Marketplace.Autorest\Az.Marketplace.psm1|Az.Marketplace.psm1|Marketplace.Autorest\bin\Az.Marketplace.private.dll|Microsoft.Azure.Management.Marketplace.dll|Marketplace.Autorest\custom\Az.Marketplace.custom.psm1|Microsoft.Azure.PowerShell.Cmdlets.Marketplace.dll|Marketplace.Autorest\exports\ProxyCmdletDefinitions.ps1|Microsoft.Azure.PowerShell.Cmdlets.Marketplace.dll-Help.xml|Marketplace.Autorest\internal\Az.Marketplace.internal.psm1|Marketplace.Autorest\Az.Marketplace.format.ps1xml|Marketplace.Autorest\internal\ProxyCmdletDefinitions.ps1|Marketplace.Autorest\utils\Unprotect-SecureString.ps1</S>
+          <S N="GUID">91832aaa-dc11-4583-8239-bce5fd531604</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.Marketplace\0.4.0</S>
+    </MS>
+  </Obj>
+</Objs>

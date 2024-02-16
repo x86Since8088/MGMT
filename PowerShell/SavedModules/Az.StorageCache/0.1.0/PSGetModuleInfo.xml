@@ -1,0 +1,225 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.StorageCache</S>
+      <S N="Version">0.1.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: StorageCache cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2023-07-06T08:00:07-05:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>StorageCache</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Clear-AzStorageCache</S>
+                <S>Clear-AzStorageCacheTarget</S>
+                <S>Debug-AzStorageCache</S>
+                <S>Get-AzStorageCache</S>
+                <S>Get-AzStorageCacheAmlFileSystem</S>
+                <S>Get-AzStorageCacheAmlFileSystemSubnetRequiredSize</S>
+                <S>Get-AzStorageCacheAscUsage</S>
+                <S>Get-AzStorageCacheSku</S>
+                <S>Get-AzStorageCacheTarget</S>
+                <S>Get-AzStorageCacheUsageModel</S>
+                <S>Invoke-AzStorageCacheAmlFileSystemArchive</S>
+                <S>Invoke-AzStorageCacheInvalidateTarget</S>
+                <S>New-AzStorageCache</S>
+                <S>New-AzStorageCacheAmlFileSystem</S>
+                <S>New-AzStorageCacheDirectorySettingObject</S>
+                <S>New-AzStorageCacheNamespaceJunctionObject</S>
+                <S>New-AzStorageCacheNfsAccessPolicyObject</S>
+                <S>New-AzStorageCacheNfsAccessRuleObject</S>
+                <S>New-AzStorageCachePrimingJobObject</S>
+                <S>New-AzStorageCacheTarget</S>
+                <S>New-AzStorageCacheTargetSpaceAllocationObject</S>
+                <S>Remove-AzStorageCache</S>
+                <S>Remove-AzStorageCacheAmlFileSystem</S>
+                <S>Remove-AzStorageCacheTarget</S>
+                <S>Restore-AzStorageCacheTargetSetting</S>
+                <S>Resume-AzStorageCachePrimingJob</S>
+                <S>Resume-AzStorageCacheTarget</S>
+                <S>Start-AzStorageCache</S>
+                <S>Start-AzStorageCachePrimingJob</S>
+                <S>Stop-AzStorageCache</S>
+                <S>Stop-AzStorageCacheAmlFilesystemArchive</S>
+                <S>Stop-AzStorageCachePrimingJob</S>
+                <S>Suspend-AzStorageCachePrimingJob</S>
+                <S>Suspend-AzStorageCacheTarget</S>
+                <S>Test-AzStorageCacheAmlFileSystemSubnet</S>
+                <S>Update-AzStorageCache</S>
+                <S>Update-AzStorageCacheAmlFileSystem</S>
+                <S>Update-AzStorageCacheFirmware</S>
+                <S>Update-AzStorageCacheSpaceAllocation</S>
+                <S>Update-AzStorageCacheTargetDns</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Clear-AzStorageCache</S>
+                <S>Clear-AzStorageCacheTarget</S>
+                <S>Debug-AzStorageCache</S>
+                <S>Get-AzStorageCache</S>
+                <S>Get-AzStorageCacheAmlFileSystem</S>
+                <S>Get-AzStorageCacheAmlFileSystemSubnetRequiredSize</S>
+                <S>Get-AzStorageCacheAscUsage</S>
+                <S>Get-AzStorageCacheSku</S>
+                <S>Get-AzStorageCacheTarget</S>
+                <S>Get-AzStorageCacheUsageModel</S>
+                <S>Invoke-AzStorageCacheAmlFileSystemArchive</S>
+                <S>Invoke-AzStorageCacheInvalidateTarget</S>
+                <S>New-AzStorageCache</S>
+                <S>New-AzStorageCacheAmlFileSystem</S>
+                <S>New-AzStorageCacheDirectorySettingObject</S>
+                <S>New-AzStorageCacheNamespaceJunctionObject</S>
+                <S>New-AzStorageCacheNfsAccessPolicyObject</S>
+                <S>New-AzStorageCacheNfsAccessRuleObject</S>
+                <S>New-AzStorageCachePrimingJobObject</S>
+                <S>New-AzStorageCacheTarget</S>
+                <S>New-AzStorageCacheTargetSpaceAllocationObject</S>
+                <S>Remove-AzStorageCache</S>
+                <S>Remove-AzStorageCacheAmlFileSystem</S>
+                <S>Remove-AzStorageCacheTarget</S>
+                <S>Restore-AzStorageCacheTargetSetting</S>
+                <S>Resume-AzStorageCachePrimingJob</S>
+                <S>Resume-AzStorageCacheTarget</S>
+                <S>Start-AzStorageCache</S>
+                <S>Start-AzStorageCachePrimingJob</S>
+                <S>Stop-AzStorageCache</S>
+                <S>Stop-AzStorageCacheAmlFilesystemArchive</S>
+                <S>Stop-AzStorageCachePrimingJob</S>
+                <S>Suspend-AzStorageCachePrimingJob</S>
+                <S>Suspend-AzStorageCacheTarget</S>
+                <S>Test-AzStorageCacheAmlFileSystemSubnet</S>
+                <S>Update-AzStorageCache</S>
+                <S>Update-AzStorageCacheAmlFileSystem</S>
+                <S>Update-AzStorageCacheFirmware</S>
+                <S>Update-AzStorageCacheSpaceAllocation</S>
+                <S>Update-AzStorageCacheTargetDns</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.12.4</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.12.4</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: StorageCache cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">1440</S>
+          <S N="downloadCount">1440</S>
+          <S N="packageSize">767905</S>
+          <S N="published">7/6/2023 8:00:07 AM -05:00</S>
+          <S N="created">7/6/2023 8:00:07 AM -05:00</S>
+          <S N="lastUpdated">2/15/2024 10:17:56 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule StorageCache PSEdition_Core PSEdition_Desktop PSFunction_Clear-AzStorageCache PSCommand_Clear-AzStorageCache PSFunction_Clear-AzStorageCacheTarget PSCommand_Clear-AzStorageCacheTarget PSFunction_Debug-AzStorageCache PSCommand_Debug-AzStorageCache PSFunction_Get-AzStorageCache PSCommand_Get-AzStorageCache PSFunction_Get-AzStorageCacheAmlFileSystem PSCommand_Get-AzStorageCacheAmlFileSystem PSFunction_Get-AzStorageCacheAmlFileSystemSubnetRequiredSize PSCommand_Get-AzStorageCacheAmlFileSystemSubnetRequiredSize PSFunction_Get-AzStorageCacheAscUsage PSCommand_Get-AzStorageCacheAscUsage PSFunction_Get-AzStorageCacheSku PSCommand_Get-AzStorageCacheSku PSFunction_Get-AzStorageCacheTarget PSCommand_Get-AzStorageCacheTarget PSFunction_Get-AzStorageCacheUsageModel PSCommand_Get-AzStorageCacheUsageModel PSFunction_Invoke-AzStorageCacheAmlFileSystemArchive PSCommand_Invoke-AzStorageCacheAmlFileSystemArchive PSFunction_Invoke-AzStorageCacheInvalidateTarget PSCommand_Invoke-AzStorageCacheInvalidateTarget PSFunction_New-AzStorageCache PSCommand_New-AzStorageCache PSFunction_New-AzStorageCacheAmlFileSystem PSCommand_New-AzStorageCacheAmlFileSystem PSFunction_New-AzStorageCacheDirectorySettingObject PSCommand_New-AzStorageCacheDirectorySettingObject PSFunction_New-AzStorageCacheNamespaceJunctionObject PSCommand_New-AzStorageCacheNamespaceJunctionObject PSFunction_New-AzStorageCacheNfsAccessPolicyObject PSCommand_New-AzStorageCacheNfsAccessPolicyObject PSFunction_New-AzStorageCacheNfsAccessRuleObject PSCommand_New-AzStorageCacheNfsAccessRuleObject PSFunction_New-AzStorageCachePrimingJobObject PSCommand_New-AzStorageCachePrimingJobObject PSFunction_New-AzStorageCacheTarget PSCommand_New-AzStorageCacheTarget PSFunction_New-AzStorageCacheTargetSpaceAllocationObject PSCommand_New-AzStorageCacheTargetSpaceAllocationObject PSFunction_Remove-AzStorageCache PSCommand_Remove-AzStorageCache PSFunction_Remove-AzStorageCacheAmlFileSystem PSCommand_Remove-AzStorageCacheAmlFileSystem PSFunction_Remove-AzStorageCacheTarget PSCommand_Remove-AzStorageCacheTarget PSFunction_Restore-AzStorageCacheTargetSetting PSCommand_Restore-AzStorageCacheTargetSetting PSFunction_Resume-AzStorageCachePrimingJob PSCommand_Resume-AzStorageCachePrimingJob PSFunction_Resume-AzStorageCacheTarget PSCommand_Resume-AzStorageCacheTarget PSFunction_Start-AzStorageCache PSCommand_Start-AzStorageCache PSFunction_Start-AzStorageCachePrimingJob PSCommand_Start-AzStorageCachePrimingJob PSFunction_Stop-AzStorageCache PSCommand_Stop-AzStorageCache PSFunction_Stop-AzStorageCacheAmlFilesystemArchive PSCommand_Stop-AzStorageCacheAmlFilesystemArchive PSFunction_Stop-AzStorageCachePrimingJob PSCommand_Stop-AzStorageCachePrimingJob PSFunction_Suspend-AzStorageCachePrimingJob PSCommand_Suspend-AzStorageCachePrimingJob PSFunction_Suspend-AzStorageCacheTarget PSCommand_Suspend-AzStorageCacheTarget PSFunction_Test-AzStorageCacheAmlFileSystemSubnet PSCommand_Test-AzStorageCacheAmlFileSystemSubnet PSFunction_Update-AzStorageCache PSCommand_Update-AzStorageCache PSFunction_Update-AzStorageCacheAmlFileSystem PSCommand_Update-AzStorageCacheAmlFileSystem PSFunction_Update-AzStorageCacheFirmware PSCommand_Update-AzStorageCacheFirmware PSFunction_Update-AzStorageCacheSpaceAllocation PSCommand_Update-AzStorageCacheSpaceAllocation PSFunction_Update-AzStorageCacheTargetDns PSCommand_Update-AzStorageCacheTargetDns PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:17:56Z</S>
+          <S N="NormalizedVersion">0.1.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.StorageCache.nuspec|Az.StorageCache.format.ps1xml|Az.StorageCache.psd1|Az.StorageCache.psm1|bin\Az.StorageCache.private.deps.json|bin\Az.StorageCache.private.dll|custom\Az.StorageCache.custom.psm1|custom\New-AzStorageCacheDirectorySettingObject.ps1|custom\New-AzStorageCacheNamespaceJunctionObject.ps1|custom\New-AzStorageCacheNfsAccessPolicyObject.ps1|custom\New-AzStorageCacheNfsAccessRuleObject.ps1|custom\New-AzStorageCachePrimingJobObject.ps1|custom\New-AzStorageCacheTargetSpaceAllocationObject.ps1|exports\ProxyCmdletDefinitions.ps1|internal\Az.StorageCache.internal.psm1|internal\ProxyCmdletDefinitions.ps1|utils\Unprotect-SecureString.ps1</S>
+          <S N="GUID">113964d9-7d75-4a3d-ac1c-0014ed44358b</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.StorageCache\0.1.0</S>
+    </MS>
+  </Obj>
+</Objs>

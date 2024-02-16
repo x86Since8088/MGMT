@@ -1,0 +1,176 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.DigitalTwins</S>
+      <S N="Version">0.2.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: DigitalTwins cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2023-01-10T11:37:41-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>DigitalTwins</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzDigitalTwinsEndpoint</S>
+                <S>Get-AzDigitalTwinsInstance</S>
+                <S>Get-AzDigitalTwinsPrivateEndpointConnection</S>
+                <S>Get-AzDigitalTwinsPrivateLinkResource</S>
+                <S>Get-AzDigitalTwinsTimeSeriesDatabaseConnection</S>
+                <S>New-AzDigitalTwinsEndpoint</S>
+                <S>New-AzDigitalTwinsInstance</S>
+                <S>New-AzDigitalTwinsPrivateEndpointConnection</S>
+                <S>New-AzDigitalTwinsTimeSeriesDatabaseConnection</S>
+                <S>Remove-AzDigitalTwinsEndpoint</S>
+                <S>Remove-AzDigitalTwinsInstance</S>
+                <S>Remove-AzDigitalTwinsPrivateEndpointConnection</S>
+                <S>Remove-AzDigitalTwinsTimeSeriesDatabaseConnection</S>
+                <S>Test-AzDigitalTwinsInstanceNameAvailability</S>
+                <S>Update-AzDigitalTwinsInstance</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzDigitalTwinsEndpoint</S>
+                <S>Get-AzDigitalTwinsInstance</S>
+                <S>Get-AzDigitalTwinsPrivateEndpointConnection</S>
+                <S>Get-AzDigitalTwinsPrivateLinkResource</S>
+                <S>Get-AzDigitalTwinsTimeSeriesDatabaseConnection</S>
+                <S>New-AzDigitalTwinsEndpoint</S>
+                <S>New-AzDigitalTwinsInstance</S>
+                <S>New-AzDigitalTwinsPrivateEndpointConnection</S>
+                <S>New-AzDigitalTwinsTimeSeriesDatabaseConnection</S>
+                <S>Remove-AzDigitalTwinsEndpoint</S>
+                <S>Remove-AzDigitalTwinsInstance</S>
+                <S>Remove-AzDigitalTwinsPrivateEndpointConnection</S>
+                <S>Remove-AzDigitalTwinsTimeSeriesDatabaseConnection</S>
+                <S>Test-AzDigitalTwinsInstanceNameAvailability</S>
+                <S>Update-AzDigitalTwinsInstance</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Upgraded api version to 2022-05-31</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.11.0</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.11.0</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: DigitalTwins cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">* Upgraded api version to 2022-05-31</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">11388</S>
+          <S N="downloadCount">19844</S>
+          <S N="packageSize">516070</S>
+          <S N="published">1/10/2023 11:37:41 AM -06:00</S>
+          <S N="created">1/10/2023 11:37:41 AM -06:00</S>
+          <S N="lastUpdated">2/15/2024 10:17:56 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule DigitalTwins PSEdition_Core PSEdition_Desktop PSFunction_Get-AzDigitalTwinsEndpoint PSCommand_Get-AzDigitalTwinsEndpoint PSFunction_Get-AzDigitalTwinsInstance PSCommand_Get-AzDigitalTwinsInstance PSFunction_Get-AzDigitalTwinsPrivateEndpointConnection PSCommand_Get-AzDigitalTwinsPrivateEndpointConnection PSFunction_Get-AzDigitalTwinsPrivateLinkResource PSCommand_Get-AzDigitalTwinsPrivateLinkResource PSFunction_Get-AzDigitalTwinsTimeSeriesDatabaseConnection PSCommand_Get-AzDigitalTwinsTimeSeriesDatabaseConnection PSFunction_New-AzDigitalTwinsEndpoint PSCommand_New-AzDigitalTwinsEndpoint PSFunction_New-AzDigitalTwinsInstance PSCommand_New-AzDigitalTwinsInstance PSFunction_New-AzDigitalTwinsPrivateEndpointConnection PSCommand_New-AzDigitalTwinsPrivateEndpointConnection PSFunction_New-AzDigitalTwinsTimeSeriesDatabaseConnection PSCommand_New-AzDigitalTwinsTimeSeriesDatabaseConnection PSFunction_Remove-AzDigitalTwinsEndpoint PSCommand_Remove-AzDigitalTwinsEndpoint PSFunction_Remove-AzDigitalTwinsInstance PSCommand_Remove-AzDigitalTwinsInstance PSFunction_Remove-AzDigitalTwinsPrivateEndpointConnection PSCommand_Remove-AzDigitalTwinsPrivateEndpointConnection PSFunction_Remove-AzDigitalTwinsTimeSeriesDatabaseConnection PSCommand_Remove-AzDigitalTwinsTimeSeriesDatabaseConnection PSFunction_Test-AzDigitalTwinsInstanceNameAvailability PSCommand_Test-AzDigitalTwinsInstanceNameAvailability PSFunction_Update-AzDigitalTwinsInstance PSCommand_Update-AzDigitalTwinsInstance PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:17:56Z</S>
+          <S N="NormalizedVersion">0.2.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.DigitalTwins.nuspec|Az.DigitalTwins.format.ps1xml|Az.DigitalTwins.psd1|Az.DigitalTwins.psm1|bin\Az.DigitalTwins.private.deps.json|bin\Az.DigitalTwins.private.dll|custom\Az.DigitalTwins.custom.psm1|custom\New-AzDigitalTwinsEndpoint.ps1|custom\New-AzDigitalTwinsTimeSeriesDatabaseConnection.ps1|exports\ProxyCmdletDefinitions.ps1|internal\Az.DigitalTwins.internal.psm1|internal\ProxyCmdletDefinitions.ps1|utils\Unprotect-SecureString.ps1</S>
+          <S N="GUID">938cd822-353e-462c-a393-a2871ae2f354</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.DigitalTwins\0.2.0</S>
+    </MS>
+  </Obj>
+</Objs>

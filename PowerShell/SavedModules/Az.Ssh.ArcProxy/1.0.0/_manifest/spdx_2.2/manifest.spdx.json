@@ -1,0 +1,228 @@
+{
+  "files": [
+    {
+      "fileName": "./Az.Ssh.ArcProxy.psd1",
+      "SPDXID": "SPDXRef-File--Az.Ssh.ArcProxy.psd1-25068180C5D16094E33036CDF7A52CAA453589A6",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5b551662e40de2a5ba4f4dff4ce75b9d4cab265392e9fa9c186b70233c101aa1"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "25068180c5d16094e33036cdf7a52caa453589a6"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./ThirdPartyNotice.txt",
+      "SPDXID": "SPDXRef-File--ThirdPartyNotice.txt-D272BACE20619B84C4AE7D7C396EDEDB7302FE9A",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cc822f153aff7161d5ab1088daecc9a04626fb7c65bebc77198a4e77031ab5e1"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "d272bace20619b84c4ae7d7c396ededb7302fe9a"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./LICENSE.txt",
+      "SPDXID": "SPDXRef-File--LICENSE.txt-7CE9057D3E31288641148F9EC8A3C4D855D9E724",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8af05aaa06bf5c6172a418b946c22bf4d9f302103f211159f676575e31cd01c0"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "7ce9057d3e31288641148f9ec8a3c4d855d9e724"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./help/en-us/about_Az.Ssh.ArcProxy.help.txt",
+      "SPDXID": "SPDXRef-File--help-en-us-about-Az.Ssh.ArcProxy.help.txt-5159DA6CF40BEFFF1E956996584F73E6C7BBC184",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e58b7d782f8bc38a03fdfa2ca25ec08380f784aeb830e8e78ed406efbcdd3a2f"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "5159da6cf40befff1e956996584f73e6c7bbc184"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./sshProxy_linux_386_1.3.022941",
+      "SPDXID": "SPDXRef-File--sshProxy-linux-386-1.3.022941-92C46F212A00B8A7F4288134EE683A74C0250054",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1d046b867850a687e5333718fd306f494ebd7975dfd90b0aa32457e510357c3d"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "92c46f212a00b8a7f4288134ee683a74c0250054"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./sshProxy_windows_386_1.3.022941.exe",
+      "SPDXID": "SPDXRef-File--sshProxy-windows-386-1.3.022941.exe-4255FE451E8DCE5A508CC8F45F2605F3474321F0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "17a41b1ed50de25b5583801a093d00f85ef21abab167b39ad4b80cc91d5ca70c"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "4255fe451e8dce5a508cc8f45f2605f3474321f0"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./sshProxy_linux_amd64_1.3.022941",
+      "SPDXID": "SPDXRef-File--sshProxy-linux-amd64-1.3.022941-9824342EE5296AE662BFA376FE65C52ECD9302D3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "891a548a746507d4bfdfae6b2de7a10efc692d699fe3cad3cf7064d995782889"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "9824342ee5296ae662bfa376fe65c52ecd9302d3"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./sshProxy_darwin_amd64_1.3.022941",
+      "SPDXID": "SPDXRef-File--sshProxy-darwin-amd64-1.3.022941-0AAE29D0F2ADD5E11F2AEE02F01734A1E62A8A05",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "0f4ff7bd5872f68176fa9013101a9b907cc262c0d45ec6aceef6b0d88163143d"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "0aae29d0f2add5e11f2aee02f01734a1e62a8a05"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./sshProxy_windows_amd64_1.3.022941.exe",
+      "SPDXID": "SPDXRef-File--sshProxy-windows-amd64-1.3.022941.exe-8BD55BE9E5B18564D721E27765A6F512FCA88E17",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d241ca8eae27e1c5f45e677ede7bbb08b4eaf802ca2179d8ac5816dcc2677392"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "8bd55be9e5b18564d721e27765a6f512fca88e17"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    }
+  ],
+  "packages": [
+    {
+      "name": "Az.Ssh.ArcProxy-Official",
+      "SPDXID": "SPDXRef-RootPackage",
+      "downloadLocation": "NOASSERTION",
+      "packageVerificationCode": {
+        "packageVerificationCodeValue": "c7cbb109808867fb4a2b4c510d3cabfad7cd7bcd"
+      },
+      "filesAnalyzed": true,
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoFromFiles": [
+        "NOASSERTION"
+      ],
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "versionInfo": "367654",
+      "supplier": "Organization: Microsoft",
+      "hasFiles": [
+        "SPDXRef-File--sshProxy-windows-amd64-1.3.022941.exe-8BD55BE9E5B18564D721E27765A6F512FCA88E17",
+        "SPDXRef-File--sshProxy-darwin-amd64-1.3.022941-0AAE29D0F2ADD5E11F2AEE02F01734A1E62A8A05",
+        "SPDXRef-File--sshProxy-windows-386-1.3.022941.exe-4255FE451E8DCE5A508CC8F45F2605F3474321F0",
+        "SPDXRef-File--sshProxy-linux-386-1.3.022941-92C46F212A00B8A7F4288134EE683A74C0250054",
+        "SPDXRef-File--ThirdPartyNotice.txt-D272BACE20619B84C4AE7D7C396EDEDB7302FE9A",
+        "SPDXRef-File--sshProxy-linux-amd64-1.3.022941-9824342EE5296AE662BFA376FE65C52ECD9302D3",
+        "SPDXRef-File--help-en-us-about-Az.Ssh.ArcProxy.help.txt-5159DA6CF40BEFFF1E956996584F73E6C7BBC184",
+        "SPDXRef-File--Az.Ssh.ArcProxy.psd1-25068180C5D16094E33036CDF7A52CAA453589A6",
+        "SPDXRef-File--LICENSE.txt-7CE9057D3E31288641148F9EC8A3C4D855D9E724"
+      ]
+    }
+  ],
+  "externalDocumentRefs": [],
+  "relationships": [
+    {
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-RootPackage",
+      "spdxElementId": "SPDXRef-DOCUMENT"
+    }
+  ],
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "Az.Ssh.ArcProxy-Official 367654",
+  "documentNamespace": "https://sbom.microsoft/1:2QSF7qZlbE-F7QrUJlEo7g:Ifmy0CRpKEe0S33n1Rdb-w/2311:367654/trnLajZYz0e79OkUoSWJow",
+  "creationInfo": {
+    "created": "2023-05-11T21:00:05Z",
+    "creators": [
+      "Organization: Microsoft",
+      "Tool: Microsoft.SBOMTool-1.1.0"
+    ]
+  },
+  "documentDescribes": [
+    "SPDXRef-RootPackage"
+  ]
+}

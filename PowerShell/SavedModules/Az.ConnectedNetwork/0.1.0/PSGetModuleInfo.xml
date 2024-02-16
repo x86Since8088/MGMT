@@ -1,0 +1,207 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.ConnectedNetwork</S>
+      <S N="Version">0.1.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: ConnectedNetwork cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2022-03-01T08:11:11-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>ConnectedNetwork</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzConnectedNetworkDevice</S>
+                <S>Get-AzConnectedNetworkDeviceRegistrationKey</S>
+                <S>Get-AzConnectedNetworkFunction</S>
+                <S>Get-AzConnectedNetworkFunctionVendor</S>
+                <S>Get-AzConnectedNetworkVendor</S>
+                <S>Get-AzConnectedNetworkVendorFunction</S>
+                <S>Get-AzConnectedNetworkVendorFunctionRoleInstance</S>
+                <S>Get-AzConnectedNetworkVendorSku</S>
+                <S>Get-AzConnectedNetworkVendorSkuPreview</S>
+                <S>New-AzConnectedNetworkAzureStackEdgeObject</S>
+                <S>New-AzConnectedNetworkDevice</S>
+                <S>New-AzConnectedNetworkFunction</S>
+                <S>New-AzConnectedNetworkFunctionRoleConfigurationObject</S>
+                <S>New-AzConnectedNetworkFunctionUserConfigurationObject</S>
+                <S>New-AzConnectedNetworkFunctionVendorConfigurationObject</S>
+                <S>New-AzConnectedNetworkInterfaceIPConfigurationObject</S>
+                <S>New-AzConnectedNetworkInterfaceObject</S>
+                <S>New-AzConnectedNetworkVendor</S>
+                <S>New-AzConnectedNetworkVendorFunction</S>
+                <S>New-AzConnectedNetworkVendorSku</S>
+                <S>New-AzConnectedNetworkVendorSkuPreview</S>
+                <S>Remove-AzConnectedNetworkDevice</S>
+                <S>Remove-AzConnectedNetworkFunction</S>
+                <S>Remove-AzConnectedNetworkVendor</S>
+                <S>Remove-AzConnectedNetworkVendorSku</S>
+                <S>Remove-AzConnectedNetworkVendorSkuPreview</S>
+                <S>Restart-AzConnectedNetworkVendorFunctionRoleInstance</S>
+                <S>Start-AzConnectedNetworkVendorFunctionRoleInstance</S>
+                <S>Stop-AzConnectedNetworkVendorFunctionRoleInstance</S>
+                <S>Update-AzConnectedNetworkDeviceTag</S>
+                <S>Update-AzConnectedNetworkFunctionTag</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzConnectedNetworkDevice</S>
+                <S>Get-AzConnectedNetworkDeviceRegistrationKey</S>
+                <S>Get-AzConnectedNetworkFunction</S>
+                <S>Get-AzConnectedNetworkFunctionVendor</S>
+                <S>Get-AzConnectedNetworkVendor</S>
+                <S>Get-AzConnectedNetworkVendorFunction</S>
+                <S>Get-AzConnectedNetworkVendorFunctionRoleInstance</S>
+                <S>Get-AzConnectedNetworkVendorSku</S>
+                <S>Get-AzConnectedNetworkVendorSkuPreview</S>
+                <S>New-AzConnectedNetworkAzureStackEdgeObject</S>
+                <S>New-AzConnectedNetworkDevice</S>
+                <S>New-AzConnectedNetworkFunction</S>
+                <S>New-AzConnectedNetworkFunctionRoleConfigurationObject</S>
+                <S>New-AzConnectedNetworkFunctionUserConfigurationObject</S>
+                <S>New-AzConnectedNetworkFunctionVendorConfigurationObject</S>
+                <S>New-AzConnectedNetworkInterfaceIPConfigurationObject</S>
+                <S>New-AzConnectedNetworkInterfaceObject</S>
+                <S>New-AzConnectedNetworkVendor</S>
+                <S>New-AzConnectedNetworkVendorFunction</S>
+                <S>New-AzConnectedNetworkVendorSku</S>
+                <S>New-AzConnectedNetworkVendorSkuPreview</S>
+                <S>Remove-AzConnectedNetworkDevice</S>
+                <S>Remove-AzConnectedNetworkFunction</S>
+                <S>Remove-AzConnectedNetworkVendor</S>
+                <S>Remove-AzConnectedNetworkVendorSku</S>
+                <S>Remove-AzConnectedNetworkVendorSkuPreview</S>
+                <S>Restart-AzConnectedNetworkVendorFunctionRoleInstance</S>
+                <S>Start-AzConnectedNetworkVendorFunctionRoleInstance</S>
+                <S>Stop-AzConnectedNetworkVendorFunctionRoleInstance</S>
+                <S>Update-AzConnectedNetworkDeviceTag</S>
+                <S>Update-AzConnectedNetworkFunctionTag</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.7.3</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.7.3</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: ConnectedNetwork cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">3586</S>
+          <S N="downloadCount">3586</S>
+          <S N="packageSize">636053</S>
+          <S N="published">3/1/2022 8:11:11 AM -06:00</S>
+          <S N="created">3/1/2022 8:11:11 AM -06:00</S>
+          <S N="lastUpdated">2/15/2024 10:12:57 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule ConnectedNetwork PSEdition_Core PSEdition_Desktop PSFunction_Get-AzConnectedNetworkDevice PSCommand_Get-AzConnectedNetworkDevice PSFunction_Get-AzConnectedNetworkDeviceRegistrationKey PSCommand_Get-AzConnectedNetworkDeviceRegistrationKey PSFunction_Get-AzConnectedNetworkFunction PSCommand_Get-AzConnectedNetworkFunction PSFunction_Get-AzConnectedNetworkFunctionVendor PSCommand_Get-AzConnectedNetworkFunctionVendor PSFunction_Get-AzConnectedNetworkVendor PSCommand_Get-AzConnectedNetworkVendor PSFunction_Get-AzConnectedNetworkVendorFunction PSCommand_Get-AzConnectedNetworkVendorFunction PSFunction_Get-AzConnectedNetworkVendorFunctionRoleInstance PSCommand_Get-AzConnectedNetworkVendorFunctionRoleInstance PSFunction_Get-AzConnectedNetworkVendorSku PSCommand_Get-AzConnectedNetworkVendorSku PSFunction_Get-AzConnectedNetworkVendorSkuPreview PSCommand_Get-AzConnectedNetworkVendorSkuPreview PSFunction_New-AzConnectedNetworkAzureStackEdgeObject PSCommand_New-AzConnectedNetworkAzureStackEdgeObject PSFunction_New-AzConnectedNetworkDevice PSCommand_New-AzConnectedNetworkDevice PSFunction_New-AzConnectedNetworkFunction PSCommand_New-AzConnectedNetworkFunction PSFunction_New-AzConnectedNetworkFunctionRoleConfigurationObject PSCommand_New-AzConnectedNetworkFunctionRoleConfigurationObject PSFunction_New-AzConnectedNetworkFunctionUserConfigurationObject PSCommand_New-AzConnectedNetworkFunctionUserConfigurationObject PSFunction_New-AzConnectedNetworkFunctionVendorConfigurationObject PSCommand_New-AzConnectedNetworkFunctionVendorConfigurationObject PSFunction_New-AzConnectedNetworkInterfaceIPConfigurationObject PSCommand_New-AzConnectedNetworkInterfaceIPConfigurationObject PSFunction_New-AzConnectedNetworkInterfaceObject PSCommand_New-AzConnectedNetworkInterfaceObject PSFunction_New-AzConnectedNetworkVendor PSCommand_New-AzConnectedNetworkVendor PSFunction_New-AzConnectedNetworkVendorFunction PSCommand_New-AzConnectedNetworkVendorFunction PSFunction_New-AzConnectedNetworkVendorSku PSCommand_New-AzConnectedNetworkVendorSku PSFunction_New-AzConnectedNetworkVendorSkuPreview PSCommand_New-AzConnectedNetworkVendorSkuPreview PSFunction_Remove-AzConnectedNetworkDevice PSCommand_Remove-AzConnectedNetworkDevice PSFunction_Remove-AzConnectedNetworkFunction PSCommand_Remove-AzConnectedNetworkFunction PSFunction_Remove-AzConnectedNetworkVendor PSCommand_Remove-AzConnectedNetworkVendor PSFunction_Remove-AzConnectedNetworkVendorSku PSCommand_Remove-AzConnectedNetworkVendorSku PSFunction_Remove-AzConnectedNetworkVendorSkuPreview PSCommand_Remove-AzConnectedNetworkVendorSkuPreview PSFunction_Restart-AzConnectedNetworkVendorFunctionRoleInstance PSCommand_Restart-AzConnectedNetworkVendorFunctionRoleInstance PSFunction_Start-AzConnectedNetworkVendorFunctionRoleInstance PSCommand_Start-AzConnectedNetworkVendorFunctionRoleInstance PSFunction_Stop-AzConnectedNetworkVendorFunctionRoleInstance PSCommand_Stop-AzConnectedNetworkVendorFunctionRoleInstance PSFunction_Update-AzConnectedNetworkDeviceTag PSCommand_Update-AzConnectedNetworkDeviceTag PSFunction_Update-AzConnectedNetworkFunctionTag PSCommand_Update-AzConnectedNetworkFunctionTag PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:12:57Z</S>
+          <S N="NormalizedVersion">0.1.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.ConnectedNetwork.nuspec|Az.ConnectedNetwork.format.ps1xml|Az.ConnectedNetwork.psd1|Az.ConnectedNetwork.psm1|bin\Az.ConnectedNetwork.private.deps.json|bin\Az.ConnectedNetwork.private.dll|custom\Az.ConnectedNetwork.custom.psm1|custom\New-AzConnectedNetworkAzureStackEdgeObject.ps1|custom\New-AzConnectedNetworkFunctionRoleConfigurationObject.ps1|custom\New-AzConnectedNetworkFunctionUserConfigurationObject.ps1|custom\New-AzConnectedNetworkFunctionVendorConfigurationObject.ps1|custom\New-AzConnectedNetworkInterfaceIPConfigurationObject.ps1|custom\New-AzConnectedNetworkInterfaceObject.ps1|exports\ProxyCmdletDefinitions.ps1|internal\Az.ConnectedNetwork.internal.psm1|internal\ProxyCmdletDefinitions.ps1|utils\Unprotect-SecureString.ps1</S>
+          <S N="GUID">86910398-1fa6-447a-8b10-54e0ac5a2a6a</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.ConnectedNetwork\0.1.0</S>
+    </MS>
+  </Obj>
+</Objs>

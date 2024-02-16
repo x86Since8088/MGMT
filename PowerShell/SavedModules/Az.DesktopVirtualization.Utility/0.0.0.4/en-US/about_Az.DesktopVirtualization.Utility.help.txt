@@ -1,0 +1,48 @@
+﻿TOPIC
+    about_az.desktopvirtualization.utility
+
+SHORT DESCRIPTION
+    An `Az.DesktopVirtualization.Utility` module comprises utility cmdlets for
+    administrators to  configure or troubleshoot Azure Virtual Desktop
+    environment.
+
+LONG DESCRIPTION
+    `Az.DesktopVirtualization.Utility` provides additional cmdlets for
+    administrators to:   - Perform troubleshooting in command line   - Simplify
+    configuration validation   - Incorporate with other PowerShell modules
+
+EXAMPLES
+    The following statement will install the module.
+
+    Install-Module -Name Az.DesktopVirtualization.Utility
+
+    The following statement will list all the available cmdlet for this module.
+
+    Get-Command -Module Az.DesktopVirtualization.Utility
+
+    The following statement will render all the cmdlets full helps including
+    examples.
+
+    Get-Command -Module Az.DesktopVirtualization.Utility | Get-Help -Full
+
+NOTE
+    Author: Ryen Kia Zhi Tang
+    Modified date: 2022-08-01
+
+SEE ALSO
+    -
+    Error: Azure Virtual Desktop agent isn't reporting a heartbeat when running
+    Get-AzWvdSessionHost
+    -
+    Error: Agent cannot connect to broker with INVALID_FORM
+
+KEYWORDS
+    - Azure
+    - AzureVirtualDesktop
+    - AVD
+    - WindowsVirtualDesktop
+    - WVD
+    - DesktopVirtualization
+    - Utility
+    - AzurePowerShell
+

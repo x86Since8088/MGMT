@@ -1,0 +1,123 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.ImageBuilder.Tools</S>
+      <S N="Version">1.0.0.1</S>
+      <S N="Type">Module</S>
+      <S N="Description">Tools to assist with the creation of Azure Image Builder &amp; Shared Image Galleries.</S>
+      <S N="Author">Ben Reader (@powers_hell)</S>
+      <S N="CompanyName">powers-hell</S>
+      <S N="Copyright">(c) 2020 Ben Reader (@powers_hell). All rights reserved.</S>
+      <DT N="PublishedDate">2020-09-06T04:34:58-05:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <Nil N="LicenseUri" />
+      <Nil N="ProjectUri" />
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AIBBuildStatus</S>
+                <S>Initialize-AzureImageBuilder</S>
+                <S>Invoke-AIBProviderCheck</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AIBBuildStatus</S>
+                <S>Initialize-AzureImageBuilder</S>
+                <S>Invoke-AIBProviderCheck</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">1.0.0.1_x000D__x000A_- Initial release</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="7">
+        <TN RefId="3">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) 2020 Ben Reader (@powers_hell). All rights reserved.</S>
+          <S N="description">Tools to assist with the creation of Azure Image Builder &amp; Shared Image Galleries.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="releaseNotes">1.0.0.1_x000D__x000A_- Initial release</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">2472</S>
+          <S N="downloadCount">2472</S>
+          <S N="packageSize">11749</S>
+          <S N="published">9/6/2020 4:34:58 AM -05:00</S>
+          <S N="created">9/6/2020 4:34:58 AM -05:00</S>
+          <S N="lastUpdated">2/15/2024 10:12:57 PM -06:00</S>
+          <S N="tags">PSModule PSFunction_Get-AIBBuildStatus PSCommand_Get-AIBBuildStatus PSFunction_Initialize-AzureImageBuilder PSCommand_Initialize-AzureImageBuilder PSFunction_Invoke-AIBProviderCheck PSCommand_Invoke-AIBProviderCheck PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:12:57Z</S>
+          <S N="NormalizedVersion">1.0.0.1</S>
+          <S N="Authors">Ben Reader (@powers_hell)</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.ImageBuilder.Tools.nuspec|Az.ImageBuilder.Tools.psd1|Az.ImageBuilder.Tools.psm1|en-US\Az.ImageBuilder.Tools-help.xml|Private\aibRoleImageCreation.json|Private\Get-AzCachedAccessToken.ps1|Private\New-AIBManagedIdentity.ps1|Private\New-AIBResourceGroup.ps1|Private\New-AIBRole.ps1|Public\Get-AIBBuildStatus.ps1|Public\Initialize-AzureImageBuilder.ps1|Public\Invoke-AIBProviderCheck.ps1</S>
+          <S N="GUID">589fa7ad-ba4e-4110-97a0-f082f28fedc2</S>
+          <S N="CompanyName">Powers Hell</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.ImageBuilder.Tools\1.0.0.1</S>
+    </MS>
+  </Obj>
+</Objs>

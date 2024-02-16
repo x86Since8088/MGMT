@@ -1,0 +1,179 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.DynatraceObservability</S>
+      <S N="Version">0.1.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: DynatraceObservability cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2022-09-06T05:55:19-05:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>DynatraceObservability</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzDynatraceMonitor</S>
+                <S>Get-AzDynatraceMonitorAppService</S>
+                <S>Get-AzDynatraceMonitoredResource</S>
+                <S>Get-AzDynatraceMonitorHost</S>
+                <S>Get-AzDynatraceMonitorLinkableEnv</S>
+                <S>Get-AzDynatraceMonitorSSOConfig</S>
+                <S>Get-AzDynatraceMonitorSSODetail</S>
+                <S>Get-AzDynatraceMonitorTagRule</S>
+                <S>Get-AzDynatraceMonitorVMHostPayload</S>
+                <S>New-AzDynatraceMonitor</S>
+                <S>New-AzDynatraceMonitorFilteringTagObject</S>
+                <S>New-AzDynatraceMonitorSSOConfig</S>
+                <S>New-AzDynatraceMonitorTagRule</S>
+                <S>Remove-AzDynatraceMonitor</S>
+                <S>Remove-AzDynatraceMonitorTagRule</S>
+                <S>Update-AzDynatraceMonitor</S>
+                <S>Update-AzDynatraceMonitorTagRule</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzDynatraceMonitor</S>
+                <S>Get-AzDynatraceMonitorAppService</S>
+                <S>Get-AzDynatraceMonitoredResource</S>
+                <S>Get-AzDynatraceMonitorHost</S>
+                <S>Get-AzDynatraceMonitorLinkableEnv</S>
+                <S>Get-AzDynatraceMonitorSSOConfig</S>
+                <S>Get-AzDynatraceMonitorSSODetail</S>
+                <S>Get-AzDynatraceMonitorTagRule</S>
+                <S>Get-AzDynatraceMonitorVMHostPayload</S>
+                <S>New-AzDynatraceMonitor</S>
+                <S>New-AzDynatraceMonitorFilteringTagObject</S>
+                <S>New-AzDynatraceMonitorSSOConfig</S>
+                <S>New-AzDynatraceMonitorTagRule</S>
+                <S>Remove-AzDynatraceMonitor</S>
+                <S>Remove-AzDynatraceMonitorTagRule</S>
+                <S>Update-AzDynatraceMonitor</S>
+                <S>Update-AzDynatraceMonitorTagRule</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.9.1</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.9.1</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: DynatraceObservability cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">2947</S>
+          <S N="downloadCount">2947</S>
+          <S N="packageSize">491063</S>
+          <S N="published">9/6/2022 5:55:19 AM -05:00</S>
+          <S N="created">9/6/2022 5:55:19 AM -05:00</S>
+          <S N="lastUpdated">2/15/2024 10:12:57 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule DynatraceObservability PSEdition_Core PSEdition_Desktop PSFunction_Get-AzDynatraceMonitor PSCommand_Get-AzDynatraceMonitor PSFunction_Get-AzDynatraceMonitorAppService PSCommand_Get-AzDynatraceMonitorAppService PSFunction_Get-AzDynatraceMonitoredResource PSCommand_Get-AzDynatraceMonitoredResource PSFunction_Get-AzDynatraceMonitorHost PSCommand_Get-AzDynatraceMonitorHost PSFunction_Get-AzDynatraceMonitorLinkableEnv PSCommand_Get-AzDynatraceMonitorLinkableEnv PSFunction_Get-AzDynatraceMonitorSSOConfig PSCommand_Get-AzDynatraceMonitorSSOConfig PSFunction_Get-AzDynatraceMonitorSSODetail PSCommand_Get-AzDynatraceMonitorSSODetail PSFunction_Get-AzDynatraceMonitorTagRule PSCommand_Get-AzDynatraceMonitorTagRule PSFunction_Get-AzDynatraceMonitorVMHostPayload PSCommand_Get-AzDynatraceMonitorVMHostPayload PSFunction_New-AzDynatraceMonitor PSCommand_New-AzDynatraceMonitor PSFunction_New-AzDynatraceMonitorFilteringTagObject PSCommand_New-AzDynatraceMonitorFilteringTagObject PSFunction_New-AzDynatraceMonitorSSOConfig PSCommand_New-AzDynatraceMonitorSSOConfig PSFunction_New-AzDynatraceMonitorTagRule PSCommand_New-AzDynatraceMonitorTagRule PSFunction_Remove-AzDynatraceMonitor PSCommand_Remove-AzDynatraceMonitor PSFunction_Remove-AzDynatraceMonitorTagRule PSCommand_Remove-AzDynatraceMonitorTagRule PSFunction_Update-AzDynatraceMonitor PSCommand_Update-AzDynatraceMonitor PSFunction_Update-AzDynatraceMonitorTagRule PSCommand_Update-AzDynatraceMonitorTagRule PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:12:57Z</S>
+          <S N="NormalizedVersion">0.1.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.DynatraceObservability.nuspec|Az.DynatraceObservability.format.ps1xml|Az.DynatraceObservability.psd1|Az.DynatraceObservability.psm1|bin\Az.DynatraceObservability.private.deps.json|bin\Az.DynatraceObservability.private.dll|custom\Az.DynatraceObservability.custom.psm1|custom\New-AzDynatraceMonitorFilteringTagObject.ps1|exports\ProxyCmdletDefinitions.ps1|internal\Az.DynatraceObservability.internal.psm1|internal\ProxyCmdletDefinitions.ps1|utils\Unprotect-SecureString.ps1</S>
+          <S N="GUID">f889aadf-56ba-485c-8077-283219e39439</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.DynatraceObservability\0.1.0</S>
+    </MS>
+  </Obj>
+</Objs>

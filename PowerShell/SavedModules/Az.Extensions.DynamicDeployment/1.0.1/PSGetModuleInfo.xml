@@ -1,0 +1,147 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.Extensions.DynamicDeployment</S>
+      <S N="Version">1.0.1</S>
+      <S N="Type">Module</S>
+      <S N="Description">This AZ Extensions allow you to use custom functions (executing in the Powershell scope) and inject variables into your ARM deployment</S>
+      <S N="Author">Harald S. Fianbakken &lt;harald.fianbakken@gmail.com&gt;</S>
+      <S N="CompanyName">haraldfianbakken</S>
+      <S N="Copyright">(c) Harald S. Fianbakken. All rights reserved.</S>
+      <DT N="PublishedDate">2020-04-20T07:52:08-05:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <Nil N="LicenseUri" />
+      <URI N="ProjectUri">https://github.com/haraldfianbakken/AZ.Extensions.DynamicDeployment</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Az</S>
+          <S>Azure</S>
+          <S>DevOps</S>
+          <S>Deployment</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Expand-AzParameters</S>
+                <S>Expand-AzTemplate</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Expand-AzParameters</S>
+                <S>Expand-AzTemplate</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Resources</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">1.13.0</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Resources/1.13.0</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) Harald S. Fianbakken. All rights reserved.</S>
+          <S N="description">This AZ Extensions allow you to use custom functions (executing in the Powershell scope) and inject variables into your ARM deployment</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">3252</S>
+          <S N="downloadCount">3525</S>
+          <S N="packageSize">12354</S>
+          <S N="published">4/20/2020 7:52:08 AM -05:00</S>
+          <S N="created">4/20/2020 7:52:08 AM -05:00</S>
+          <S N="lastUpdated">2/15/2024 10:12:57 PM -06:00</S>
+          <S N="tags">Az Azure DevOps Deployment ARM PSModule PSFunction_Expand-AzParameters PSCommand_Expand-AzParameters PSFunction_Expand-AzTemplate PSCommand_Expand-AzTemplate PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:12:57Z</S>
+          <S N="NormalizedVersion">1.0.1</S>
+          <S N="Authors">Harald S. Fianbakken &lt;harald.fianbakken@gmail.com&gt;</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.Extensions.DynamicDeployment.nuspec|Az.Extensions.DynamicDeployment.psd1|Az.Extensions.DynamicDeployment.psm1|LICENSE|README.md|Templates\ExpressionDeploy.json|Templates\ExpressionDeploy.Params.json|Templates\ExpressionDeployClean.json|Templates\StorageAccount.json|Templates\StorageAccount.params.json|Tests\Test-DynamicDeployment.ps1|.github\workflows\Release-To-Gallery.yml</S>
+          <S N="GUID">2c09b9cd-775b-4474-bcf9-ab98c3f261ae</S>
+          <S N="PowerShellVersion">7.0</S>
+          <S N="CompanyName">Fianbakken.com</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.Extensions.DynamicDeployment\1.0.1</S>
+    </MS>
+  </Obj>
+</Objs>

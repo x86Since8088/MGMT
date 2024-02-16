@@ -1,0 +1,248 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.ManagedNetworkFabric</S>
+      <S N="Version">0.1.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: {ModuleNamePlaceHolder} cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2024-02-06T01:44:36-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>{ModuleNamePlaceHolder}</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzNetworkFabric</S>
+                <S>Get-AzNetworkFabricAcl</S>
+                <S>Get-AzNetworkFabricController</S>
+                <S>Get-AzNetworkFabricDevice</S>
+                <S>Get-AzNetworkFabricExternalNetwork</S>
+                <S>Get-AzNetworkFabricInterface</S>
+                <S>Get-AzNetworkFabricInternalNetwork</S>
+                <S>Get-AzNetworkFabricInternetGateway</S>
+                <S>Get-AzNetworkFabricInternetGatewayRule</S>
+                <S>Get-AzNetworkFabricIPCommunity</S>
+                <S>Get-AzNetworkFabricIPExtendedCommunity</S>
+                <S>Get-AzNetworkFabricIPPrefix</S>
+                <S>Get-AzNetworkFabricL2Domain</S>
+                <S>Get-AzNetworkFabricL3Domain</S>
+                <S>Get-AzNetworkFabricNeighborGroup</S>
+                <S>Get-AzNetworkFabricNni</S>
+                <S>Get-AzNetworkFabricNpb</S>
+                <S>Get-AzNetworkFabricRack</S>
+                <S>Get-AzNetworkFabricRoutePolicy</S>
+                <S>Get-AzNetworkFabricTap</S>
+                <S>Get-AzNetworkFabricTapRule</S>
+                <S>Invoke-AzNetworkFabricDeprovision</S>
+                <S>Invoke-AzNetworkFabricInterfaceUpdateAdminState</S>
+                <S>Invoke-AzNetworkFabricL2DomainUpdateAdminState</S>
+                <S>Invoke-AzNetworkFabricL3DomainUpdateAdminState</S>
+                <S>Invoke-AzNetworkFabricProvision</S>
+                <S>Invoke-AzNetworkFabricTapUpdateAdminState</S>
+                <S>New-AzNetworkFabric</S>
+                <S>New-AzNetworkFabricAcl</S>
+                <S>New-AzNetworkFabricController</S>
+                <S>New-AzNetworkFabricExternalNetwork</S>
+                <S>New-AzNetworkFabricInternalNetwork</S>
+                <S>New-AzNetworkFabricInternetGatewayRule</S>
+                <S>New-AzNetworkFabricIPCommunity</S>
+                <S>New-AzNetworkFabricIPExtendedCommunity</S>
+                <S>New-AzNetworkFabricIPPrefix</S>
+                <S>New-AzNetworkFabricL2Domain</S>
+                <S>New-AzNetworkFabricL3Domain</S>
+                <S>New-AzNetworkFabricNeighborGroup</S>
+                <S>New-AzNetworkFabricNni</S>
+                <S>New-AzNetworkFabricRoutePolicy</S>
+                <S>New-AzNetworkFabricTap</S>
+                <S>New-AzNetworkFabricTapRule</S>
+                <S>Remove-AzNetworkFabric</S>
+                <S>Remove-AzNetworkFabricAcl</S>
+                <S>Remove-AzNetworkFabricController</S>
+                <S>Remove-AzNetworkFabricExternalNetwork</S>
+                <S>Remove-AzNetworkFabricInternalNetwork</S>
+                <S>Remove-AzNetworkFabricInternetGatewayRule</S>
+                <S>Remove-AzNetworkFabricIPCommunity</S>
+                <S>Remove-AzNetworkFabricIPExtendedCommunity</S>
+                <S>Remove-AzNetworkFabricIPPrefix</S>
+                <S>Remove-AzNetworkFabricL2Domain</S>
+                <S>Remove-AzNetworkFabricL3Domain</S>
+                <S>Remove-AzNetworkFabricNeighborGroup</S>
+                <S>Remove-AzNetworkFabricNni</S>
+                <S>Remove-AzNetworkFabricRoutePolicy</S>
+                <S>Remove-AzNetworkFabricTap</S>
+                <S>Remove-AzNetworkFabricTapRule</S>
+                <S>Update-AzNetworkFabricDevice</S>
+                <S>Update-AzNetworkFabricInternetGateway</S>
+                <S>Update-AzNetworkFabricNeighborGroup</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzNetworkFabric</S>
+                <S>Get-AzNetworkFabricAcl</S>
+                <S>Get-AzNetworkFabricController</S>
+                <S>Get-AzNetworkFabricDevice</S>
+                <S>Get-AzNetworkFabricExternalNetwork</S>
+                <S>Get-AzNetworkFabricInterface</S>
+                <S>Get-AzNetworkFabricInternalNetwork</S>
+                <S>Get-AzNetworkFabricInternetGateway</S>
+                <S>Get-AzNetworkFabricInternetGatewayRule</S>
+                <S>Get-AzNetworkFabricIPCommunity</S>
+                <S>Get-AzNetworkFabricIPExtendedCommunity</S>
+                <S>Get-AzNetworkFabricIPPrefix</S>
+                <S>Get-AzNetworkFabricL2Domain</S>
+                <S>Get-AzNetworkFabricL3Domain</S>
+                <S>Get-AzNetworkFabricNeighborGroup</S>
+                <S>Get-AzNetworkFabricNni</S>
+                <S>Get-AzNetworkFabricNpb</S>
+                <S>Get-AzNetworkFabricRack</S>
+                <S>Get-AzNetworkFabricRoutePolicy</S>
+                <S>Get-AzNetworkFabricTap</S>
+                <S>Get-AzNetworkFabricTapRule</S>
+                <S>Invoke-AzNetworkFabricDeprovision</S>
+                <S>Invoke-AzNetworkFabricInterfaceUpdateAdminState</S>
+                <S>Invoke-AzNetworkFabricL2DomainUpdateAdminState</S>
+                <S>Invoke-AzNetworkFabricL3DomainUpdateAdminState</S>
+                <S>Invoke-AzNetworkFabricProvision</S>
+                <S>Invoke-AzNetworkFabricTapUpdateAdminState</S>
+                <S>New-AzNetworkFabric</S>
+                <S>New-AzNetworkFabricAcl</S>
+                <S>New-AzNetworkFabricController</S>
+                <S>New-AzNetworkFabricExternalNetwork</S>
+                <S>New-AzNetworkFabricInternalNetwork</S>
+                <S>New-AzNetworkFabricInternetGatewayRule</S>
+                <S>New-AzNetworkFabricIPCommunity</S>
+                <S>New-AzNetworkFabricIPExtendedCommunity</S>
+                <S>New-AzNetworkFabricIPPrefix</S>
+                <S>New-AzNetworkFabricL2Domain</S>
+                <S>New-AzNetworkFabricL3Domain</S>
+                <S>New-AzNetworkFabricNeighborGroup</S>
+                <S>New-AzNetworkFabricNni</S>
+                <S>New-AzNetworkFabricRoutePolicy</S>
+                <S>New-AzNetworkFabricTap</S>
+                <S>New-AzNetworkFabricTapRule</S>
+                <S>Remove-AzNetworkFabric</S>
+                <S>Remove-AzNetworkFabricAcl</S>
+                <S>Remove-AzNetworkFabricController</S>
+                <S>Remove-AzNetworkFabricExternalNetwork</S>
+                <S>Remove-AzNetworkFabricInternalNetwork</S>
+                <S>Remove-AzNetworkFabricInternetGatewayRule</S>
+                <S>Remove-AzNetworkFabricIPCommunity</S>
+                <S>Remove-AzNetworkFabricIPExtendedCommunity</S>
+                <S>Remove-AzNetworkFabricIPPrefix</S>
+                <S>Remove-AzNetworkFabricL2Domain</S>
+                <S>Remove-AzNetworkFabricL3Domain</S>
+                <S>Remove-AzNetworkFabricNeighborGroup</S>
+                <S>Remove-AzNetworkFabricNni</S>
+                <S>Remove-AzNetworkFabricRoutePolicy</S>
+                <S>Remove-AzNetworkFabricTap</S>
+                <S>Remove-AzNetworkFabricTapRule</S>
+                <S>Update-AzNetworkFabricDevice</S>
+                <S>Update-AzNetworkFabricInternetGateway</S>
+                <S>Update-AzNetworkFabricNeighborGroup</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="7">
+        <TN RefId="3">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: {ModuleNamePlaceHolder} cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">99</S>
+          <S N="downloadCount">99</S>
+          <S N="packageSize">1734108</S>
+          <S N="published">2/6/2024 1:44:36 AM -06:00</S>
+          <S N="created">2/6/2024 1:44:36 AM -06:00</S>
+          <S N="lastUpdated">2/15/2024 10:17:56 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule {ModuleNamePlaceHolder} PSEdition_Core PSEdition_Desktop PSFunction_Get-AzNetworkFabric PSCommand_Get-AzNetworkFabric PSFunction_Get-AzNetworkFabricAcl PSCommand_Get-AzNetworkFabricAcl PSFunction_Get-AzNetworkFabricController PSCommand_Get-AzNetworkFabricController PSFunction_Get-AzNetworkFabricDevice PSCommand_Get-AzNetworkFabricDevice PSFunction_Get-AzNetworkFabricExternalNetwork PSCommand_Get-AzNetworkFabricExternalNetwork PSFunction_Get-AzNetworkFabricInterface PSCommand_Get-AzNetworkFabricInterface PSFunction_Get-AzNetworkFabricInternalNetwork PSCommand_Get-AzNetworkFabricInternalNetwork PSFunction_Get-AzNetworkFabricInternetGateway PSCommand_Get-AzNetworkFabricInternetGateway PSFunction_Get-AzNetworkFabricInternetGatewayRule PSCommand_Get-AzNetworkFabricInternetGatewayRule PSFunction_Get-AzNetworkFabricIPCommunity PSCommand_Get-AzNetworkFabricIPCommunity PSFunction_Get-AzNetworkFabricIPExtendedCommunity PSCommand_Get-AzNetworkFabricIPExtendedCommunity PSFunction_Get-AzNetworkFabricIPPrefix PSCommand_Get-AzNetworkFabricIPPrefix PSFunction_Get-AzNetworkFabricL2Domain PSCommand_Get-AzNetworkFabricL2Domain PSFunction_Get-AzNetworkFabricL3Domain PSCommand_Get-AzNetworkFabricL3Domain PSFunction_Get-AzNetworkFabricNeighborGroup PSCommand_Get-AzNetworkFabricNeighborGroup PSFunction_Get-AzNetworkFabricNni PSCommand_Get-AzNetworkFabricNni PSFunction_Get-AzNetworkFabricNpb PSCommand_Get-AzNetworkFabricNpb PSFunction_Get-AzNetworkFabricRack PSCommand_Get-AzNetworkFabricRack PSFunction_Get-AzNetworkFabricRoutePolicy PSCommand_Get-AzNetworkFabricRoutePolicy PSFunction_Get-AzNetworkFabricTap PSCommand_Get-AzNetworkFabricTap PSFunction_Get-AzNetworkFabricTapRule PSCommand_Get-AzNetworkFabricTapRule PSFunction_Invoke-AzNetworkFabricDeprovision PSCommand_Invoke-AzNetworkFabricDeprovision PSFunction_Invoke-AzNetworkFabricInterfaceUpdateAdminState PSCommand_Invoke-AzNetworkFabricInterfaceUpdateAdminState PSFunction_Invoke-AzNetworkFabricL2DomainUpdateAdminState PSCommand_Invoke-AzNetworkFabricL2DomainUpdateAdminState PSFunction_Invoke-AzNetworkFabricL3DomainUpdateAdminState PSCommand_Invoke-AzNetworkFabricL3DomainUpdateAdminState PSFunction_Invoke-AzNetworkFabricProvision PSCommand_Invoke-AzNetworkFabricProvision PSFunction_Invoke-AzNetworkFabricTapUpdateAdminState PSCommand_Invoke-AzNetworkFabricTapUpdateAdminState PSFunction_New-AzNetworkFabric PSCommand_New-AzNetworkFabric PSFunction_New-AzNetworkFabricAcl PSCommand_New-AzNetworkFabricAcl PSFunction_New-AzNetworkFabricController PSCommand_New-AzNetworkFabricController PSFunction_New-AzNetworkFabricExternalNetwork PSCommand_New-AzNetworkFabricExternalNetwork PSFunction_New-AzNetworkFabricInternalNetwork PSCommand_New-AzNetworkFabricInternalNetwork PSFunction_New-AzNetworkFabricInternetGatewayRule PSCommand_New-AzNetworkFabricInternetGatewayRule PSFunction_New-AzNetworkFabricIPCommunity PSCommand_New-AzNetworkFabricIPCommunity PSFunction_New-AzNetworkFabricIPExtendedCommunity PSCommand_New-AzNetworkFabricIPExtendedCommunity PSFunction_New-AzNetworkFabricIPPrefix PSCommand_New-AzNetworkFabricIPPrefix PSFunction_New-AzNetworkFabricL2Domain PSCommand_New-AzNetworkFabricL2Domain PSFunction_New-AzNetworkFabricL3Domain PSCommand_New-AzNetworkFabricL3Domain PSFunction_New-AzNetworkFabricNeighborGroup PSCommand_New-AzNetworkFabricNeighborGroup PSFunction_New-AzNetworkFabricNni PSCommand_New-AzNetworkFabricNni PSFunction_New-AzNetworkFabricRoutePolicy PSCommand_New-AzNetworkFabricRoutePolicy PSFunction_New-AzNetworkFabricTap PSCommand_New-AzNetworkFabricTap PSFunction_New-AzNetworkFabricTapRule PSCommand_New-AzNetworkFabricTapRule PSFunction_Remove-AzNetworkFabric PSCommand_Remove-AzNetworkFabric PSFunction_Remove-AzNetworkFabricAcl PSCommand_Remove-AzNetworkFabricAcl PSFunction_Remove-AzNetworkFabricController PSCommand_Remove-AzNetworkFabricController PSFunction_Remove-AzNetworkFabricExternalNetwork PSCommand_Remove-AzNetworkFabricExternalNetwork PSFunction_Remove-AzNetworkFabricInternalNetwork PSCommand_Remove-AzNetworkFabricInternalNetwork PSFunction_Remove-AzNetworkFabricInternetGatewayRule PSCommand_Remove-AzNetworkFabricInternetGatewayRule PSFunction_Remove-AzNetworkFabricIPCommunity PSCommand_Remove-AzNetworkFabricIPCommunity PSFunction_Remove-AzNetworkFabricIPExtendedCommunity PSCommand_Remove-AzNetworkFabricIPExtendedCommunity PSFunction_Remove-AzNetworkFabricIPPrefix PSCommand_Remove-AzNetworkFabricIPPrefix PSFunction_Remove-AzNetworkFabricL2Domain PSCommand_Remove-AzNetworkFabricL2Domain PSFunction_Remove-AzNetworkFabricL3Domain PSCommand_Remove-AzNetworkFabricL3Domain PSFunction_Remove-AzNetworkFabricNeighborGroup PSCommand_Remove-AzNetworkFabricNeighborGroup PSFunction_Remove-AzNetworkFabricNni PSCommand_Remove-AzNetworkFabricNni PSFunction_Remove-AzNetworkFabricRoutePolicy PSCommand_Remove-AzNetworkFabricRoutePolicy PSFunction_Remove-AzNetworkFabricTap PSCommand_Remove-AzNetworkFabricTap PSFunction_Remove-AzNetworkFabricTapRule PSCommand_Remove-AzNetworkFabricTapRule PSFunction_Update-AzNetworkFabricDevice PSCommand_Update-AzNetworkFabricDevice PSFunction_Update-AzNetworkFabricInternetGateway PSCommand_Update-AzNetworkFabricInternetGateway PSFunction_Update-AzNetworkFabricNeighborGroup PSCommand_Update-AzNetworkFabricNeighborGroup PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:17:56Z</S>
+          <S N="NormalizedVersion">0.1.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.ManagedNetworkFabric.nuspec|Az.ManagedNetworkFabric.psd1|ManagedNetworkFabric.Autorest\custom\Az.ManagedNetworkFabric.custom.psm1|Az.ManagedNetworkFabric.psm1|ManagedNetworkFabric.Autorest\exports\ProxyCmdletDefinitions.ps1|ManagedNetworkFabric.Autorest\Az.ManagedNetworkFabric.format.ps1xml|ManagedNetworkFabric.Autorest\internal\Az.ManagedNetworkFabric.internal.psm1|ManagedNetworkFabric.Autorest\Az.ManagedNetworkFabric.psm1|ManagedNetworkFabric.Autorest\internal\ProxyCmdletDefinitions.ps1|ManagedNetworkFabric.Autorest\bin\Az.ManagedNetworkFabric.private.dll|ManagedNetworkFabric.Autorest\utils\Unprotect-SecureString.ps1</S>
+          <S N="GUID">accceef6-8113-453a-a31c-4f2ce57893d6</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.ManagedNetworkFabric\0.1.0</S>
+    </MS>
+  </Obj>
+</Objs>

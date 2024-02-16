@@ -1,0 +1,166 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.Fleet</S>
+      <S N="Version">0.1.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: {ModuleNamePlaceHolder} cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2024-01-09T01:44:25-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>{ModuleNamePlaceHolder}</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzFleet</S>
+                <S>Get-AzFleetCredentials</S>
+                <S>Get-AzFleetMember</S>
+                <S>Get-AzFleetUpdateRun</S>
+                <S>Get-AzFleetUpdateStrategy</S>
+                <S>New-AzFleet</S>
+                <S>New-AzFleetMember</S>
+                <S>New-AzFleetUpdateGroupObject</S>
+                <S>New-AzFleetUpdateRun</S>
+                <S>New-AzFleetUpdateStageObject</S>
+                <S>New-AzFleetUpdateStrategy</S>
+                <S>Remove-AzFleet</S>
+                <S>Remove-AzFleetMember</S>
+                <S>Remove-AzFleetUpdateRun</S>
+                <S>Remove-AzFleetUpdateStrategy</S>
+                <S>Start-AzFleetUpdateRun</S>
+                <S>Stop-AzFleetUpdateRun</S>
+                <S>Update-AzFleet</S>
+                <S>Update-AzFleetMember</S>
+                <S>Update-AzFleetUpdateRun</S>
+                <S>Update-AzFleetUpdateStrategy</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzFleet</S>
+                <S>Get-AzFleetCredentials</S>
+                <S>Get-AzFleetMember</S>
+                <S>Get-AzFleetUpdateRun</S>
+                <S>Get-AzFleetUpdateStrategy</S>
+                <S>New-AzFleet</S>
+                <S>New-AzFleetMember</S>
+                <S>New-AzFleetUpdateGroupObject</S>
+                <S>New-AzFleetUpdateRun</S>
+                <S>New-AzFleetUpdateStageObject</S>
+                <S>New-AzFleetUpdateStrategy</S>
+                <S>Remove-AzFleet</S>
+                <S>Remove-AzFleetMember</S>
+                <S>Remove-AzFleetUpdateRun</S>
+                <S>Remove-AzFleetUpdateStrategy</S>
+                <S>Start-AzFleetUpdateRun</S>
+                <S>Stop-AzFleetUpdateRun</S>
+                <S>Update-AzFleet</S>
+                <S>Update-AzFleetMember</S>
+                <S>Update-AzFleetUpdateRun</S>
+                <S>Update-AzFleetUpdateStrategy</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="7">
+        <TN RefId="3">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: {ModuleNamePlaceHolder} cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">347</S>
+          <S N="downloadCount">347</S>
+          <S N="packageSize">637581</S>
+          <S N="published">1/9/2024 1:44:25 AM -06:00</S>
+          <S N="created">1/9/2024 1:44:25 AM -06:00</S>
+          <S N="lastUpdated">2/15/2024 10:17:56 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule {ModuleNamePlaceHolder} PSEdition_Core PSEdition_Desktop PSFunction_Get-AzFleet PSCommand_Get-AzFleet PSFunction_Get-AzFleetCredentials PSCommand_Get-AzFleetCredentials PSFunction_Get-AzFleetMember PSCommand_Get-AzFleetMember PSFunction_Get-AzFleetUpdateRun PSCommand_Get-AzFleetUpdateRun PSFunction_Get-AzFleetUpdateStrategy PSCommand_Get-AzFleetUpdateStrategy PSFunction_New-AzFleet PSCommand_New-AzFleet PSFunction_New-AzFleetMember PSCommand_New-AzFleetMember PSFunction_New-AzFleetUpdateGroupObject PSCommand_New-AzFleetUpdateGroupObject PSFunction_New-AzFleetUpdateRun PSCommand_New-AzFleetUpdateRun PSFunction_New-AzFleetUpdateStageObject PSCommand_New-AzFleetUpdateStageObject PSFunction_New-AzFleetUpdateStrategy PSCommand_New-AzFleetUpdateStrategy PSFunction_Remove-AzFleet PSCommand_Remove-AzFleet PSFunction_Remove-AzFleetMember PSCommand_Remove-AzFleetMember PSFunction_Remove-AzFleetUpdateRun PSCommand_Remove-AzFleetUpdateRun PSFunction_Remove-AzFleetUpdateStrategy PSCommand_Remove-AzFleetUpdateStrategy PSFunction_Start-AzFleetUpdateRun PSCommand_Start-AzFleetUpdateRun PSFunction_Stop-AzFleetUpdateRun PSCommand_Stop-AzFleetUpdateRun PSFunction_Update-AzFleet PSCommand_Update-AzFleet PSFunction_Update-AzFleetMember PSCommand_Update-AzFleetMember PSFunction_Update-AzFleetUpdateRun PSCommand_Update-AzFleetUpdateRun PSFunction_Update-AzFleetUpdateStrategy PSCommand_Update-AzFleetUpdateStrategy PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:17:56Z</S>
+          <S N="NormalizedVersion">0.1.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.Fleet.nuspec|Az.Fleet.psd1|Fleet.Autorest\custom\autogen-model-cmdlets\New-AzFleetUpdateGroupObject.ps1|Az.Fleet.psm1|Fleet.Autorest\custom\autogen-model-cmdlets\New-AzFleetUpdateStageObject.ps1|Fleet.Autorest\Az.Fleet.format.ps1xml|Fleet.Autorest\exports\ProxyCmdletDefinitions.ps1|Fleet.Autorest\Az.Fleet.psm1|Fleet.Autorest\internal\Az.Fleet.internal.psm1|Fleet.Autorest\bin\Az.Fleet.private.dll|Fleet.Autorest\internal\ProxyCmdletDefinitions.ps1|Fleet.Autorest\custom\Az.Fleet.custom.psm1|Fleet.Autorest\utils\Unprotect-SecureString.ps1</S>
+          <S N="GUID">accceef6-8113-453a-a31c-4f2ce57893d6</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.Fleet\0.1.0</S>
+    </MS>
+  </Obj>
+</Objs>

@@ -1,0 +1,215 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.LabServices</S>
+      <S N="Version">0.1.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: LabServices cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2022-02-07T06:45:54-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>LabServices</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Add-AzLabServicesUserQuota</S>
+                <S>Get-AzLabServicesLab</S>
+                <S>Get-AzLabServicesLabForVM</S>
+                <S>Get-AzLabServicesLabPlan</S>
+                <S>Get-AzLabServicesPlanImage</S>
+                <S>Get-AzLabServicesSchedule</S>
+                <S>Get-AzLabServicesTemplateVM</S>
+                <S>Get-AzLabServicesUser</S>
+                <S>Get-AzLabServicesUserVM</S>
+                <S>Get-AzLabServicesVM</S>
+                <S>New-AzLabServicesLab</S>
+                <S>New-AzLabServicesLabPlan</S>
+                <S>New-AzLabServicesSchedule</S>
+                <S>New-AzLabServicesUser</S>
+                <S>Publish-AzLabServicesLab</S>
+                <S>Remove-AzLabServicesLab</S>
+                <S>Remove-AzLabServicesLabPlan</S>
+                <S>Remove-AzLabServicesSchedule</S>
+                <S>Remove-AzLabServicesUser</S>
+                <S>Reset-AzLabServicesVMPassword</S>
+                <S>Save-AzLabServicesLabPlanImage</S>
+                <S>Send-AzLabServicesUserInvite</S>
+                <S>Start-AzLabServicesUserVM</S>
+                <S>Start-AzLabServicesVM</S>
+                <S>Start-AzLabServicesVMRedeployment</S>
+                <S>Stop-AzLabServicesUserVM</S>
+                <S>Stop-AzLabServicesVM</S>
+                <S>Sync-AzLabServicesLabUser</S>
+                <S>Update-AzLabServicesLab</S>
+                <S>Update-AzLabServicesLabPlan</S>
+                <S>Update-AzLabServicesPlanImage</S>
+                <S>Update-AzLabServicesQuota</S>
+                <S>Update-AzLabServicesSchedule</S>
+                <S>Update-AzLabServicesUser</S>
+                <S>Update-AzLabServicesVMReimage</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Add-AzLabServicesUserQuota</S>
+                <S>Get-AzLabServicesLab</S>
+                <S>Get-AzLabServicesLabForVM</S>
+                <S>Get-AzLabServicesLabPlan</S>
+                <S>Get-AzLabServicesPlanImage</S>
+                <S>Get-AzLabServicesSchedule</S>
+                <S>Get-AzLabServicesTemplateVM</S>
+                <S>Get-AzLabServicesUser</S>
+                <S>Get-AzLabServicesUserVM</S>
+                <S>Get-AzLabServicesVM</S>
+                <S>New-AzLabServicesLab</S>
+                <S>New-AzLabServicesLabPlan</S>
+                <S>New-AzLabServicesSchedule</S>
+                <S>New-AzLabServicesUser</S>
+                <S>Publish-AzLabServicesLab</S>
+                <S>Remove-AzLabServicesLab</S>
+                <S>Remove-AzLabServicesLabPlan</S>
+                <S>Remove-AzLabServicesSchedule</S>
+                <S>Remove-AzLabServicesUser</S>
+                <S>Reset-AzLabServicesVMPassword</S>
+                <S>Save-AzLabServicesLabPlanImage</S>
+                <S>Send-AzLabServicesUserInvite</S>
+                <S>Start-AzLabServicesUserVM</S>
+                <S>Start-AzLabServicesVM</S>
+                <S>Start-AzLabServicesVMRedeployment</S>
+                <S>Stop-AzLabServicesUserVM</S>
+                <S>Stop-AzLabServicesVM</S>
+                <S>Sync-AzLabServicesLabUser</S>
+                <S>Update-AzLabServicesLab</S>
+                <S>Update-AzLabServicesLabPlan</S>
+                <S>Update-AzLabServicesPlanImage</S>
+                <S>Update-AzLabServicesQuota</S>
+                <S>Update-AzLabServicesSchedule</S>
+                <S>Update-AzLabServicesUser</S>
+                <S>Update-AzLabServicesVMReimage</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.7.2</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.7.2</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: LabServices cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">22975</S>
+          <S N="downloadCount">22975</S>
+          <S N="packageSize">1320104</S>
+          <S N="published">2/7/2022 6:45:54 AM -06:00</S>
+          <S N="created">2/7/2022 6:45:54 AM -06:00</S>
+          <S N="lastUpdated">2/16/2024 12:02:58 AM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule LabServices PSEdition_Core PSEdition_Desktop PSFunction_Add-AzLabServicesUserQuota PSCommand_Add-AzLabServicesUserQuota PSFunction_Get-AzLabServicesLab PSCommand_Get-AzLabServicesLab PSFunction_Get-AzLabServicesLabForVM PSCommand_Get-AzLabServicesLabForVM PSFunction_Get-AzLabServicesLabPlan PSCommand_Get-AzLabServicesLabPlan PSFunction_Get-AzLabServicesPlanImage PSCommand_Get-AzLabServicesPlanImage PSFunction_Get-AzLabServicesSchedule PSCommand_Get-AzLabServicesSchedule PSFunction_Get-AzLabServicesTemplateVM PSCommand_Get-AzLabServicesTemplateVM PSFunction_Get-AzLabServicesUser PSCommand_Get-AzLabServicesUser PSFunction_Get-AzLabServicesUserVM PSCommand_Get-AzLabServicesUserVM PSFunction_Get-AzLabServicesVM PSCommand_Get-AzLabServicesVM PSFunction_New-AzLabServicesLab PSCommand_New-AzLabServicesLab PSFunction_New-AzLabServicesLabPlan PSCommand_New-AzLabServicesLabPlan PSFunction_New-AzLabServicesSchedule PSCommand_New-AzLabServicesSchedule PSFunction_New-AzLabServicesUser PSCommand_New-AzLabServicesUser PSFunction_Publish-AzLabServicesLab PSCommand_Publish-AzLabServicesLab PSFunction_Remove-AzLabServicesLab PSCommand_Remove-AzLabServicesLab PSFunction_Remove-AzLabServicesLabPlan PSCommand_Remove-AzLabServicesLabPlan PSFunction_Remove-AzLabServicesSchedule PSCommand_Remove-AzLabServicesSchedule PSFunction_Remove-AzLabServicesUser PSCommand_Remove-AzLabServicesUser PSFunction_Reset-AzLabServicesVMPassword PSCommand_Reset-AzLabServicesVMPassword PSFunction_Save-AzLabServicesLabPlanImage PSCommand_Save-AzLabServicesLabPlanImage PSFunction_Send-AzLabServicesUserInvite PSCommand_Send-AzLabServicesUserInvite PSFunction_Start-AzLabServicesUserVM PSCommand_Start-AzLabServicesUserVM PSFunction_Start-AzLabServicesVM PSCommand_Start-AzLabServicesVM PSFunction_Start-AzLabServicesVMRedeployment PSCommand_Start-AzLabServicesVMRedeployment PSFunction_Stop-AzLabServicesUserVM PSCommand_Stop-AzLabServicesUserVM PSFunction_Stop-AzLabServicesVM PSCommand_Stop-AzLabServicesVM PSFunction_Sync-AzLabServicesLabUser PSCommand_Sync-AzLabServicesLabUser PSFunction_Update-AzLabServicesLab PSCommand_Update-AzLabServicesLab PSFunction_Update-AzLabServicesLabPlan PSCommand_Update-AzLabServicesLabPlan PSFunction_Update-AzLabServicesPlanImage PSCommand_Update-AzLabServicesPlanImage PSFunction_Update-AzLabServicesQuota PSCommand_Update-AzLabServicesQuota PSFunction_Update-AzLabServicesSchedule PSCommand_Update-AzLabServicesSchedule PSFunction_Update-AzLabServicesUser PSCommand_Update-AzLabServicesUser PSFunction_Update-AzLabServicesVMReimage PSCommand_Update-AzLabServicesVMReimage PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-16T00:02:58Z</S>
+          <S N="NormalizedVersion">0.1.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.LabServices.nuspec|Az.LabServices.format.ps1xml|Az.LabServices.psd1|Az.LabServices.psm1|bin\Az.LabServices.private.deps.json|bin\Az.LabServices.private.dll|custom\Add-AzLabServicesUserQuota_Email.ps1|custom\Add-AzLabServicesUserQuota_User.ps1|custom\Az.LabServices.custom.psm1|custom\Get-AzLabServicesLabforVM.ps1|custom\Get-AzLabServicesLabPlan_ListByLabPlanName.ps1|custom\Get-AzLabServicesLabPlan_ResourceId.ps1|custom\Get-AzLabServicesLab_LabPlan.ps1|custom\Get-AzLabServicesLab_ListByLabName.ps1|custom\Get-AzLabServicesLab_ListByResourceGroup.ps1|custom\Get-AzLabServicesLab_ListBySubscription.ps1|custom\Get-AzLabServicesLab_ResourceId.ps1|custom\Get-AzLabServicesPlanImage_LabPlan.ps1|custom\Get-AzLabServicesPlanImage_ListByDisplayName.ps1|custom\Get-AzLabServicesPlanImage_ResourceId.ps1|custom\Get-AzLabServicesSchedule_Lab.ps1|custom\Get-AzLabServicesSchedule_ResourceId.ps1|custom\Get-AzLabServicesTemplateVM_Get.ps1|custom\Get-AzLabServicesTemplateVM_Lab.ps1|custom\Get-AzLabServicesUserVM_Get.ps1|custom\Get-AzLabServicesUserVM_Lab.ps1|custom\Get-AzLabServicesUserVM_ResourceId.ps1|custom\Get-AzLabServicesUserVM_User.ps1|custom\Get-AzLabServicesUser_Lab.ps1|custom\Get-AzLabServicesUser_ResourceId.ps1|custom\Get-AzLabServicesVM_Lab.ps1|custom\Models.cs|custom\New-AzLabServicesLab_New.ps1|custom\New-AzLabServicesSchedule_Lab.ps1|custom\New-AzLabServicesUser_Lab.ps1|custom\Publish-AzLabServicesLab_Lab.ps1|custom\Publish-AzLabServicesLab_ResourceId.ps1|custom\Remove-AzLabServicesLabPlan_LabPlan.ps1|custom\Remove-AzLabServicesLab_Lab.ps1|custom\Remove-AzLabServicesLab_LabPlan.ps1|custom\Remove-AzLabServicesLab_ResourceId.ps1|custom\Remove-AzLabServicesSchedule_ResourceId.ps1|custom\Remove-AzLabServicesSchedule_Schedule.ps1|custom\Remove-AzLabServicesUser_Lab.ps1|custom\Remove-AzLabServicesUser_ResourceId.ps1|custom\Remove-AzLabServicesUser_User.ps1|custom\Reset-AzLabServicesVMPassword_Reset.ps1|custom\Reset-AzLabServicesVMPassword_ResourceId.ps1|custom\Reset-AzLabServicesVMPassword_VM.ps1|custom\Send-AzLabServicesUserInvite_ResourceId.ps1|custom\Send-AzLabServicesUserInvite_User.ps1|custom\Start-AzLabServicesUserVM_Start.ps1|custom\Start-AzLabServicesUserVM_User.ps1|custom\Start-AzLabServicesVMRedeployment_ResourceId.ps1|custom\Start-AzLabServicesVM_ResourceId.ps1|custom\Start-AzLabServicesVM_VM.ps1|custom\Stop-AzLabServicesUserVM_Stop.ps1|custom\Stop-AzLabServicesUserVM_User.ps1|custom\Stop-AzLabServicesVM_ResourceId.ps1|custom\Stop-AzLabServicesVM_VM.ps1|custom\Sync-AzLabServicesLabUser_Lab.ps1|custom\Update-AzLabServicesLabPlan_LabPlan.ps1|custom\Update-AzLabServicesLab_Update.ps1|custom\Update-AzLabServicesPlanImage_LabPlan.ps1|custom\Update-AzLabServicesPlanImage_ResourceId.ps1|custom\Update-AzLabServicesQuota_Lab.ps1|custom\Update-AzLabServicesQuota_Set.ps1|custom\Update-AzLabServicesSchedule_Lab.ps1|custom\Update-AzLabServicesSchedule_ResourceId.ps1|custom\Update-AzLabServicesUser_Lab.ps1|custom\Update-AzLabServicesUser_ResourceId.ps1|custom\Update-AzLabServicesVMReimage_ResourceId.ps1|custom\Update-AzLabServicesVMReimage_VM.ps1|custom\Utilities\CheckForWildcards.ps1|custom\Utilities\HandleImageResourceId.ps1|custom\Utilities\HandleLabPlanResourceId.ps1|custom\Utilities\HandleLabResourceId.ps1|custom\Utilities\HandleScheduleResourceId.ps1|custom\Utilities\HandleUserResourceId.ps1|custom\Utilities\HandleVMResourceId.ps1|custom\Utilities\VerificationRegex.ps1|exports\ProxyCmdletDefinitions.ps1|internal\Az.LabServices.internal.psm1|internal\ProxyCmdletDefinitions.ps1|utils\Unprotect-SecureString.ps1</S>
+          <S N="GUID">f4604f08-6749-40ce-bd25-81074c1119e7</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.LabServices\0.1.0</S>
+    </MS>
+  </Obj>
+</Objs>

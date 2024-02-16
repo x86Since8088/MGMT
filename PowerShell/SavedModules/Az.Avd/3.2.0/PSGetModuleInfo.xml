@@ -1,0 +1,274 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.Avd</S>
+      <S N="Version">3.2.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">For managing and automate Azure Virtual Desktop environments. This module can also be used for housekeeping and manageing all the AVD related Azure resources.</S>
+      <S N="Author">Sander Rozemuller</S>
+      <S N="CompanyName">srozemuller</S>
+      <S N="Copyright">(c) All rights reserved.</S>
+      <DT N="PublishedDate">2024-02-06T10:08:41-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://github.com/srozemuller/AzAvd/blob/main/LICENSE</URI>
+      <URI N="ProjectUri">https://github.com/srozemuller/AzAvd</URI>
+      <URI N="IconUri">https://github.com/srozemuller/AzAvd/blob/main/Private/avd-logo.png</URI>
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>AzureVirtualDesktop</S>
+          <S>WindowsVirtualDesktop</S>
+          <S>DesktopVirtualization</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Add-AvdApplicationGroupPermissions</S>
+                <S>Add-AvdInsightsSessionHost</S>
+                <S>Add-AvdSessionHostTags</S>
+                <S>Connect-Avd</S>
+                <S>Copy-AvdApplicationGroupPermissions</S>
+                <S>Disable-AvdScalingPlan</S>
+                <S>Disable-AvdSessionHost</S>
+                <S>Disconnect-Avd</S>
+                <S>Disconnect-AvdUserSessions</S>
+                <S>Enable-AvdDiagnostics</S>
+                <S>Enable-AvdInsightsApplicationGroup</S>
+                <S>Enable-AvdInsightsCounters</S>
+                <S>Enable-AvdInsightsHostpool</S>
+                <S>Enable-AvdInsightsWorkspace</S>
+                <S>Enable-AvdScalingPlan</S>
+                <S>Enable-AvdSessionHost</S>
+                <S>Enable-AvdStartVmOnConnect</S>
+                <S>Export-AvdConfig</S>
+                <S>Export-AvdWorkbook</S>
+                <S>Get-AvdApplicationGroup</S>
+                <S>Get-AvdContext</S>
+                <S>Get-AvdDiagnosticSettings</S>
+                <S>Get-AvdHostPool</S>
+                <S>Get-AvdImageVersionStatus</S>
+                <S>Get-AvdInsightsSessionHost</S>
+                <S>Get-AvdLatestSessionHost</S>
+                <S>Get-AvdNetworkInfo</S>
+                <S>Get-AvdScalingPlan</S>
+                <S>Get-AvdScalingPlanSchedule</S>
+                <S>Get-AvdSessionHost</S>
+                <S>Get-AvdSessionHostPowerState</S>
+                <S>Get-AvdSessionHostResources</S>
+                <S>Get-AvdUserAssignments</S>
+                <S>Get-AvdUserSessions</S>
+                <S>Get-AvdVmTemplate</S>
+                <S>Get-AvdWorkbook</S>
+                <S>Get-AvdWorkspace</S>
+                <S>Grant-AvdSessionHost</S>
+                <S>Move-AvdSessionHost</S>
+                <S>New-AvdAadSessionHost</S>
+                <S>New-AvdAutoScaleRole</S>
+                <S>New-AvdApplicationGroup</S>
+                <S>New-AvdHostpool</S>
+                <S>New-AvdPersonalScalingPlan</S>
+                <S>New-AvdScalingPlan</S>
+                <S>New-AvdScalingPlanSchedule</S>
+                <S>New-AvdSessionHost</S>
+                <S>New-AvdVmTemplate</S>
+                <S>New-AvdWorkbook</S>
+                <S>New-AvdWorkspace</S>
+                <S>Publish-AvdScalingPlan</S>
+                <S>Remove-AvdApplicationGroup</S>
+                <S>Remove-AvdHostpool</S>
+                <S>Remove-AvdInsightsSessionHost</S>
+                <S>Remove-AvdScalingPlan</S>
+                <S>Remove-AvdScalingPlanSchedule</S>
+                <S>Remove-AvdSessionHost</S>
+                <S>Remove-AvdSessionHostTags</S>
+                <S>Remove-AvdWorkbook</S>
+                <S>Remove-AvdWorkspace</S>
+                <S>Repair-AvdSessionHost</S>
+                <S>Restart-AvdSessionHost</S>
+                <S>Set-AvdContext</S>
+                <S>Start-AvdSessionHost</S>
+                <S>Stop-AvdSessionHost</S>
+                <S>Unpublish-AvdScalingPlan</S>
+                <S>Update-AvdDesktopApplication</S>
+                <S>Update-AvdDiagnostics</S>
+                <S>Update-AvdHostpool</S>
+                <S>Update-AvdRegistrationToken</S>
+                <S>Update-AvdScheduledAgentsUpdate</S>
+                <S>Update-AvdSessionHost</S>
+                <S>Update-AvdSessionhostDrainMode</S>
+                <S>Update-AvdWorkspace</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Add-AvdApplicationGroupPermissions</S>
+                <S>Add-AvdInsightsSessionHost</S>
+                <S>Add-AvdSessionHostTags</S>
+                <S>Connect-Avd</S>
+                <S>Copy-AvdApplicationGroupPermissions</S>
+                <S>Disable-AvdScalingPlan</S>
+                <S>Disable-AvdSessionHost</S>
+                <S>Disconnect-Avd</S>
+                <S>Disconnect-AvdUserSessions</S>
+                <S>Enable-AvdDiagnostics</S>
+                <S>Enable-AvdInsightsApplicationGroup</S>
+                <S>Enable-AvdInsightsCounters</S>
+                <S>Enable-AvdInsightsHostpool</S>
+                <S>Enable-AvdInsightsWorkspace</S>
+                <S>Enable-AvdScalingPlan</S>
+                <S>Enable-AvdSessionHost</S>
+                <S>Enable-AvdStartVmOnConnect</S>
+                <S>Export-AvdConfig</S>
+                <S>Export-AvdWorkbook</S>
+                <S>Get-AvdApplicationGroup</S>
+                <S>Get-AvdContext</S>
+                <S>Get-AvdDiagnosticSettings</S>
+                <S>Get-AvdHostPool</S>
+                <S>Get-AvdImageVersionStatus</S>
+                <S>Get-AvdInsightsSessionHost</S>
+                <S>Get-AvdLatestSessionHost</S>
+                <S>Get-AvdNetworkInfo</S>
+                <S>Get-AvdScalingPlan</S>
+                <S>Get-AvdScalingPlanSchedule</S>
+                <S>Get-AvdSessionHost</S>
+                <S>Get-AvdSessionHostPowerState</S>
+                <S>Get-AvdSessionHostResources</S>
+                <S>Get-AvdUserAssignments</S>
+                <S>Get-AvdUserSessions</S>
+                <S>Get-AvdVmTemplate</S>
+                <S>Get-AvdWorkbook</S>
+                <S>Get-AvdWorkspace</S>
+                <S>Grant-AvdSessionHost</S>
+                <S>Move-AvdSessionHost</S>
+                <S>New-AvdAadSessionHost</S>
+                <S>New-AvdAutoScaleRole</S>
+                <S>New-AvdApplicationGroup</S>
+                <S>New-AvdHostpool</S>
+                <S>New-AvdPersonalScalingPlan</S>
+                <S>New-AvdScalingPlan</S>
+                <S>New-AvdScalingPlanSchedule</S>
+                <S>New-AvdSessionHost</S>
+                <S>New-AvdVmTemplate</S>
+                <S>New-AvdWorkbook</S>
+                <S>New-AvdWorkspace</S>
+                <S>Publish-AvdScalingPlan</S>
+                <S>Remove-AvdApplicationGroup</S>
+                <S>Remove-AvdHostpool</S>
+                <S>Remove-AvdInsightsSessionHost</S>
+                <S>Remove-AvdScalingPlan</S>
+                <S>Remove-AvdScalingPlanSchedule</S>
+                <S>Remove-AvdSessionHost</S>
+                <S>Remove-AvdSessionHostTags</S>
+                <S>Remove-AvdWorkbook</S>
+                <S>Remove-AvdWorkspace</S>
+                <S>Repair-AvdSessionHost</S>
+                <S>Restart-AvdSessionHost</S>
+                <S>Set-AvdContext</S>
+                <S>Start-AvdSessionHost</S>
+                <S>Stop-AvdSessionHost</S>
+                <S>Unpublish-AvdScalingPlan</S>
+                <S>Update-AvdDesktopApplication</S>
+                <S>Update-AvdDiagnostics</S>
+                <S>Update-AvdHostpool</S>
+                <S>Update-AvdRegistrationToken</S>
+                <S>Update-AvdScheduledAgentsUpdate</S>
+                <S>Update-AvdSessionHost</S>
+                <S>Update-AvdSessionhostDrainMode</S>
+                <S>Update-AvdWorkspace</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="7">
+        <TN RefId="3">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">(c) All rights reserved.</S>
+          <S N="description">For managing and automate Azure Virtual Desktop environments. This module can also be used for housekeeping and manageing all the AVD related Azure resources.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">255</S>
+          <S N="downloadCount">11122</S>
+          <S N="packageSize">197646</S>
+          <S N="published">2/6/2024 10:08:41 AM -06:00</S>
+          <S N="created">2/6/2024 10:08:41 AM -06:00</S>
+          <S N="lastUpdated">2/15/2024 11:57:58 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule AzureVirtualDesktop WindowsVirtualDesktop DesktopVirtualization PSEdition_Core PSEdition_Desktop PSFunction_Add-AvdApplicationGroupPermissions PSCommand_Add-AvdApplicationGroupPermissions PSFunction_Add-AvdInsightsSessionHost PSCommand_Add-AvdInsightsSessionHost PSFunction_Add-AvdSessionHostTags PSCommand_Add-AvdSessionHostTags PSFunction_Connect-Avd PSCommand_Connect-Avd PSFunction_Copy-AvdApplicationGroupPermissions PSCommand_Copy-AvdApplicationGroupPermissions PSFunction_Disable-AvdScalingPlan PSCommand_Disable-AvdScalingPlan PSFunction_Disable-AvdSessionHost PSCommand_Disable-AvdSessionHost PSFunction_Disconnect-Avd PSCommand_Disconnect-Avd PSFunction_Disconnect-AvdUserSessions PSCommand_Disconnect-AvdUserSessions PSFunction_Enable-AvdDiagnostics PSCommand_Enable-AvdDiagnostics PSFunction_Enable-AvdInsightsApplicationGroup PSCommand_Enable-AvdInsightsApplicationGroup PSFunction_Enable-AvdInsightsCounters PSCommand_Enable-AvdInsightsCounters PSFunction_Enable-AvdInsightsHostpool PSCommand_Enable-AvdInsightsHostpool PSFunction_Enable-AvdInsightsWorkspace PSCommand_Enable-AvdInsightsWorkspace PSFunction_Enable-AvdScalingPlan PSCommand_Enable-AvdScalingPlan PSFunction_Enable-AvdSessionHost PSCommand_Enable-AvdSessionHost PSFunction_Enable-AvdStartVmOnConnect PSCommand_Enable-AvdStartVmOnConnect PSFunction_Export-AvdConfig PSCommand_Export-AvdConfig PSFunction_Export-AvdWorkbook PSCommand_Export-AvdWorkbook PSFunction_Get-AvdApplicationGroup PSCommand_Get-AvdApplicationGroup PSFunction_Get-AvdContext PSCommand_Get-AvdContext PSFunction_Get-AvdDiagnosticSettings PSCommand_Get-AvdDiagnosticSettings PSFunction_Get-AvdHostPool PSCommand_Get-AvdHostPool PSFunction_Get-AvdImageVersionStatus PSCommand_Get-AvdImageVersionStatus PSFunction_Get-AvdInsightsSessionHost PSCommand_Get-AvdInsightsSessionHost PSFunction_Get-AvdLatestSessionHost PSCommand_Get-AvdLatestSessionHost PSFunction_Get-AvdNetworkInfo PSCommand_Get-AvdNetworkInfo PSFunction_Get-AvdScalingPlan PSCommand_Get-AvdScalingPlan PSFunction_Get-AvdScalingPlanSchedule PSCommand_Get-AvdScalingPlanSchedule PSFunction_Get-AvdSessionHost PSCommand_Get-AvdSessionHost PSFunction_Get-AvdSessionHostPowerState PSCommand_Get-AvdSessionHostPowerState PSFunction_Get-AvdSessionHostResources PSCommand_Get-AvdSessionHostResources PSFunction_Get-AvdUserAssignments PSCommand_Get-AvdUserAssignments PSFunction_Get-AvdUserSessions PSCommand_Get-AvdUserSessions PSFunction_Get-AvdVmTemplate PSCommand_Get-AvdVmTemplate PSFunction_Get-AvdWorkbook PSCommand_Get-AvdWorkbook PSFunction_Get-AvdWorkspace PSCommand_Get-AvdWorkspace PSFunction_Grant-AvdSessionHost PSCommand_Grant-AvdSessionHost PSFunction_Move-AvdSessionHost PSCommand_Move-AvdSessionHost PSFunction_New-AvdAadSessionHost PSCommand_New-AvdAadSessionHost PSFunction_New-AvdAutoScaleRole PSCommand_New-AvdAutoScaleRole PSFunction_New-AvdApplicationGroup PSCommand_New-AvdApplicationGroup PSFunction_New-AvdHostpool PSCommand_New-AvdHostpool PSFunction_New-AvdPersonalScalingPlan PSCommand_New-AvdPersonalScalingPlan PSFunction_New-AvdScalingPlan PSCommand_New-AvdScalingPlan PSFunction_New-AvdScalingPlanSchedule PSCommand_New-AvdScalingPlanSchedule PSFunction_New-AvdSessionHost PSCommand_New-AvdSessionHost PSFunction_New-AvdVmTemplate PSCommand_New-AvdVmTemplate PSFunction_New-AvdWorkbook PSCommand_New-AvdWorkbook PSFunction_New-AvdWorkspace PSCommand_New-AvdWorkspace PSFunction_Publish-AvdScalingPlan PSCommand_Publish-AvdScalingPlan PSFunction_Remove-AvdApplicationGroup PSCommand_Remove-AvdApplicationGroup PSFunction_Remove-AvdHostpool PSCommand_Remove-AvdHostpool PSFunction_Remove-AvdInsightsSessionHost PSCommand_Remove-AvdInsightsSessionHost PSFunction_Remove-AvdScalingPlan PSCommand_Remove-AvdScalingPlan PSFunction_Remove-AvdScalingPlanSchedule PSCommand_Remove-AvdScalingPlanSchedule PSFunction_Remove-AvdSessionHost PSCommand_Remove-AvdSessionHost PSFunction_Remove-AvdSessionHostTags PSCommand_Remove-AvdSessionHostTags PSFunction_Remove-AvdWorkbook PSCommand_Remove-AvdWorkbook PSFunction_Remove-AvdWorkspace PSCommand_Remove-AvdWorkspace PSFunction_Repair-AvdSessionHost PSCommand_Repair-AvdSessionHost PSFunction_Restart-AvdSessionHost PSCommand_Restart-AvdSessionHost PSFunction_Set-AvdContext PSCommand_Set-AvdContext PSFunction_Start-AvdSessionHost PSCommand_Start-AvdSessionHost PSFunction_Stop-AvdSessionHost PSCommand_Stop-AvdSessionHost PSFunction_Unpublish-AvdScalingPlan PSCommand_Unpublish-AvdScalingPlan PSFunction_Update-AvdDesktopApplication PSCommand_Update-AvdDesktopApplication PSFunction_Update-AvdDiagnostics PSCommand_Update-AvdDiagnostics PSFunction_Update-AvdHostpool PSCommand_Update-AvdHostpool PSFunction_Update-AvdRegistrationToken PSCommand_Update-AvdRegistrationToken PSFunction_Update-AvdScheduledAgentsUpdate PSCommand_Update-AvdScheduledAgentsUpdate PSFunction_Update-AvdSessionHost PSCommand_Update-AvdSessionHost PSFunction_Update-AvdSessionhostDrainMode PSCommand_Update-AvdSessionhostDrainMode PSFunction_Update-AvdWorkspace PSCommand_Update-AvdWorkspace PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T23:57:58Z</S>
+          <S N="NormalizedVersion">3.2.0</S>
+          <S N="Authors">Sander Rozemuller</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.Avd.nuspec|Public\Stop-AvdSessionHost.ps1|Public\Get-AvdApplicationGroup.ps1|Public\New-AvdHostpool.ps1|Az.Avd.psm1|Public\Get-AvdContext.ps1|Public\Get-AvdSessionHost.ps1|Public\Set-AvdContext.ps1|Az.Avd.psd1|Public\Update-AvdDiagnostics.ps1|Public\Remove-AvdSessionHostTags.ps1|Public\Repair-AvdSessionHost.ps1|Aliasses\Assign-AvdScalingPlan.ps1|Public\Get-AvdSessionHostPowerState.ps1|Public\New-AvdSessionHost.ps1|Public\Update-AvdSessionHost.ps1|Aliasses\Assign-AvdUser.ps1|Public\Unpublish-AvdScalingPlan.ps1|Public\Disconnect-Avd.ps1|Public\New-AvdWorkbook.ps1|Aliasses\Unassign-AvdScalingPlan.ps1|Public\Enable-AvdInsightsWorkspace.ps1|Public\Enable-AvdInsightsCounters.ps1|Public\Publish-AvdScalingPlan.ps1|Aliasses\UnAssign-AvdUser.ps1|Public\Enable-AvdInsightsHostpool.ps1|Public\Enable-AvdDiagnostics.ps1|Public\Disable-AvdScalingPlan.ps1|Public\Get-AvdWorkbook.ps1|Public\Enable-AvdInsightsApplicationGroup.ps1|Public\New-AvdScalingPlan.ps1|Public\Get-AvdLatestSessionHost.ps1|Public\Start-AvdSessionHost.ps1|Public\Update-AvdDesktopApplication.ps1|Public\Connect-Avd.ps1|Public\Update-AvdRegistrationToken.ps1|Public\Remove-AvdScalingPlan.ps1|Public\Remove-AvdHostPool.ps1|Public\Get-AvdInsightsSessionHost.ps1|Public\Get-AvdScalingPlanSchedule.ps1|Public\Get-AvdSessionHostResources.ps1|Public\Remove-AvdWorkspace.ps1|Public\Update-AvdWorkspace.ps1|Public\Get-AvdUserSessions.ps1|Public\Restart-AvdSessionHost.ps1|Public\Get-AvdUserAssignments.ps1|Public\New-AvdApplicationGroup.ps1|Public\Add-AvdApplicationGroupPermissions.ps1|Public\Update-AvdScheduledAgentsUpdate.ps1|Public\Remove-AvdSessionHost.ps1|Public\Disable-AvdSessionHost.ps1|Private\global-parameters.ps1|Public\New-AvdAutoScaleRole.ps1|Public\Get-AvdScalingPlan.ps1|Public\Remove-AvdScalingPlanSchedule.ps1|Private\New-Workspace.ps1|Public\Export-AvdConfig.ps1|Public\Add-AvdInsightsSessionHost.ps1|Public\Copy-AvdApplicationGroupPermissions.ps1|Private\Generate-Output.ps1|Public\Remove-AvdWorkbook.ps1|Public\Get-AvdWorkspace.ps1|Public\Get-AvdHostPool.ps1|Private\avdinsights-sources.json|Public\Update-AvdSessionhostDrainMode.ps1|Public\Grant-AvdSessionHost.ps1|Public\Get-AvdNetworkInfo.ps1|Private\exportconfig.css|Public\Disconnect-AvdUserSessions.ps1|Public\Remove-AvdInsightsSessionHost.ps1|Public\Enable-AvdScalingPlan.ps1|Private\Deallocate-AvdSessionHost.ps1|Public\New-AvdWorkspace.ps1|Public\Get-AvdDiagnosticSettings.ps1|Public\New-AvdScalingPlanSchedule.ps1|Private\avd-logo.png|Public\Enable-AvdSessionHost.ps1|Public\Remove-AvdApplicationGroup.ps1|Public\New-AvdAadSessionHost.ps1|Private\Request-Api.ps1|Public\Get-AvdVmTemplate.ps1|Public\Update-AvdHostpool.ps1|Public\Add-AvdSessionHostTags.ps1|Private\parse-jwt.ps1|Public\Enable-AvdStartVmOnConnect.ps1|Public\Move-AvdSessionHost.ps1|Public\New-AvdPersonalScalingPlan.ps1|Private\global-functions.ps1|Public\Export-AvdWorkbook.ps1|Public\New-AvdVmTemplate.ps1|Public\Get-AvdImageVersionStatus.ps1|en-US\Az.Avd-help.xml</S>
+          <S N="GUID">fdf37ff7-689a-46de-82d4-66228b92dae4</S>
+          <S N="PowerShellVersion">7.2</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Rozemuller.com</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.Avd\3.2.0</S>
+    </MS>
+  </Obj>
+</Objs>

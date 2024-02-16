@@ -1,0 +1,225 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.StackEdge</S>
+      <S N="Version">0.1.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell - StackEdge service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on StackEdge, please visit the following: https://docs.microsoft.com/en-us/azure/databox-online/</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2020-05-19T10:38:26-05:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>DataBoxEdge</S>
+          <S>StackEdge</S>
+          <S>PSModule</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzStackEdgeJob</S>
+                <S>Get-AzStackEdgeDevice</S>
+                <S>Invoke-AzStackEdgeDevice</S>
+                <S>New-AzStackEdgeDevice</S>
+                <S>Remove-AzStackEdgeDevice</S>
+                <S>Get-AzStackEdgeUser</S>
+                <S>New-AzStackEdgeUser</S>
+                <S>Set-AzStackEdgeUser</S>
+                <S>Remove-AzStackEdgeUser</S>
+                <S>Get-AzStackEdgeStorageAccountCredential</S>
+                <S>New-AzStackEdgeStorageAccountCredential</S>
+                <S>Set-AzStackEdgeStorageAccountCredential</S>
+                <S>Remove-AzStackEdgeStorageAccountCredential</S>
+                <S>Get-AzStackEdgeShare</S>
+                <S>New-AzStackEdgeShare</S>
+                <S>Set-AzStackEdgeShare</S>
+                <S>Remove-AzStackEdgeShare</S>
+                <S>Invoke-AzStackEdgeShare</S>
+                <S>Get-AzStackEdgeBandwidthSchedule</S>
+                <S>Set-AzStackEdgeBandwidthSchedule</S>
+                <S>New-AzStackEdgeBandwidthSchedule</S>
+                <S>Remove-AzStackEdgeBandwidthSchedule</S>
+                <S>Get-AzStackEdgeRole</S>
+                <S>Set-AzStackEdgeRole</S>
+                <S>New-AzStackEdgeRole</S>
+                <S>Remove-AzStackEdgeRole</S>
+                <S>Get-AzStackEdgeTrigger</S>
+                <S>New-AzStackEdgeTrigger</S>
+                <S>Remove-AzStackEdgeTrigger</S>
+                <S>Get-AzStackEdgeOrder</S>
+                <S>New-AzStackEdgeOrder</S>
+                <S>Remove-AzStackEdgeOrder</S>
+                <S>Get-AzStackEdgeStorageAccount</S>
+                <S>New-AzStackEdgeStorageAccount</S>
+                <S>Remove-AzStackEdgeStorageAccount</S>
+                <S>Get-AzStackEdgeStorageContainer</S>
+                <S>New-AzStackEdgeStorageContainer</S>
+                <S>Remove-AzStackEdgeStorageContainer</S>
+                <S>Invoke-AzStackEdgeStorageContainer</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzStackEdgeJob</S>
+                <S>Get-AzStackEdgeDevice</S>
+                <S>Invoke-AzStackEdgeDevice</S>
+                <S>New-AzStackEdgeDevice</S>
+                <S>Remove-AzStackEdgeDevice</S>
+                <S>Get-AzStackEdgeUser</S>
+                <S>New-AzStackEdgeUser</S>
+                <S>Set-AzStackEdgeUser</S>
+                <S>Remove-AzStackEdgeUser</S>
+                <S>Get-AzStackEdgeStorageAccountCredential</S>
+                <S>New-AzStackEdgeStorageAccountCredential</S>
+                <S>Set-AzStackEdgeStorageAccountCredential</S>
+                <S>Remove-AzStackEdgeStorageAccountCredential</S>
+                <S>Get-AzStackEdgeShare</S>
+                <S>New-AzStackEdgeShare</S>
+                <S>Set-AzStackEdgeShare</S>
+                <S>Remove-AzStackEdgeShare</S>
+                <S>Invoke-AzStackEdgeShare</S>
+                <S>Get-AzStackEdgeBandwidthSchedule</S>
+                <S>Set-AzStackEdgeBandwidthSchedule</S>
+                <S>New-AzStackEdgeBandwidthSchedule</S>
+                <S>Remove-AzStackEdgeBandwidthSchedule</S>
+                <S>Get-AzStackEdgeRole</S>
+                <S>Set-AzStackEdgeRole</S>
+                <S>New-AzStackEdgeRole</S>
+                <S>Remove-AzStackEdgeRole</S>
+                <S>Get-AzStackEdgeTrigger</S>
+                <S>New-AzStackEdgeTrigger</S>
+                <S>Remove-AzStackEdgeTrigger</S>
+                <S>Get-AzStackEdgeOrder</S>
+                <S>New-AzStackEdgeOrder</S>
+                <S>Remove-AzStackEdgeOrder</S>
+                <S>Get-AzStackEdgeStorageAccount</S>
+                <S>New-AzStackEdgeStorageAccount</S>
+                <S>Remove-AzStackEdgeStorageAccount</S>
+                <S>Get-AzStackEdgeStorageContainer</S>
+                <S>New-AzStackEdgeStorageContainer</S>
+                <S>Remove-AzStackEdgeStorageContainer</S>
+                <S>Invoke-AzStackEdgeStorageContainer</S>
+              </LST>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Rebranding 'Az.DataboxEdge' to 'Az.StackEdge'_x000D__x000A_* Combined output of 'Get-AzStackEdgeDevice' to single output variable_x000D__x000A_* Bandwidth Schedule by default sets unlimited bandwidth schedule_x000D__x000A_* 'New-AzStackEdgeRole' will accept the Enabled state by default, and switch parameter is not a mandatory field_x000D__x000A_* 'Get-AzStackEdgeOrder' will not through 404 if order is not present, rather it doesn't output anything</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">1.7.5</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/1.7.5</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell - StackEdge service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on StackEdge, please visit the following: https://docs.microsoft.com/en-us/azure/databox-online/</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">* Rebranding 'Az.DataboxEdge' to 'Az.StackEdge'_x000D__x000A_* Combined output of 'Get-AzStackEdgeDevice' to single output variable_x000D__x000A_* Bandwidth Schedule by default sets unlimited bandwidth schedule_x000D__x000A_* 'New-AzStackEdgeRole' will accept the Enabled state by default, and switch parameter is not a mandatory field_x000D__x000A_* 'Get-AzStackEdgeOrder' will not through 404 if order is not present, rather it doesn't output anything</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">4558</S>
+          <S N="downloadCount">4754</S>
+          <S N="packageSize">285043</S>
+          <S N="published">5/19/2020 10:38:26 AM -05:00</S>
+          <S N="created">5/19/2020 10:38:26 AM -05:00</S>
+          <S N="lastUpdated">2/15/2024 10:22:57 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM DataBoxEdge StackEdge PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_Get-AzStackEdgeJob PSCommand_Get-AzStackEdgeJob PSCmdlet_Get-AzStackEdgeDevice PSCommand_Get-AzStackEdgeDevice PSCmdlet_Invoke-AzStackEdgeDevice PSCommand_Invoke-AzStackEdgeDevice PSCmdlet_New-AzStackEdgeDevice PSCommand_New-AzStackEdgeDevice PSCmdlet_Remove-AzStackEdgeDevice PSCommand_Remove-AzStackEdgeDevice PSCmdlet_Get-AzStackEdgeUser PSCommand_Get-AzStackEdgeUser PSCmdlet_New-AzStackEdgeUser PSCommand_New-AzStackEdgeUser PSCmdlet_Set-AzStackEdgeUser PSCommand_Set-AzStackEdgeUser PSCmdlet_Remove-AzStackEdgeUser PSCommand_Remove-AzStackEdgeUser PSCmdlet_Get-AzStackEdgeStorageAccountCredential PSCommand_Get-AzStackEdgeStorageAccountCredential PSCmdlet_New-AzStackEdgeStorageAccountCredential PSCommand_New-AzStackEdgeStorageAccountCredential PSCmdlet_Set-AzStackEdgeStorageAccountCredential PSCommand_Set-AzStackEdgeStorageAccountCredential PSCmdlet_Remove-AzStackEdgeStorageAccountCredential PSCommand_Remove-AzStackEdgeStorageAccountCredential PSCmdlet_Get-AzStackEdgeShare PSCommand_Get-AzStackEdgeShare PSCmdlet_New-AzStackEdgeShare PSCommand_New-AzStackEdgeShare PSCmdlet_Set-AzStackEdgeShare PSCommand_Set-AzStackEdgeShare PSCmdlet_Remove-AzStackEdgeShare PSCommand_Remove-AzStackEdgeShare PSCmdlet_Invoke-AzStackEdgeShare PSCommand_Invoke-AzStackEdgeShare PSCmdlet_Get-AzStackEdgeBandwidthSchedule PSCommand_Get-AzStackEdgeBandwidthSchedule PSCmdlet_Set-AzStackEdgeBandwidthSchedule PSCommand_Set-AzStackEdgeBandwidthSchedule PSCmdlet_New-AzStackEdgeBandwidthSchedule PSCommand_New-AzStackEdgeBandwidthSchedule PSCmdlet_Remove-AzStackEdgeBandwidthSchedule PSCommand_Remove-AzStackEdgeBandwidthSchedule PSCmdlet_Get-AzStackEdgeRole PSCommand_Get-AzStackEdgeRole PSCmdlet_Set-AzStackEdgeRole PSCommand_Set-AzStackEdgeRole PSCmdlet_New-AzStackEdgeRole PSCommand_New-AzStackEdgeRole PSCmdlet_Remove-AzStackEdgeRole PSCommand_Remove-AzStackEdgeRole PSCmdlet_Get-AzStackEdgeTrigger PSCommand_Get-AzStackEdgeTrigger PSCmdlet_New-AzStackEdgeTrigger PSCommand_New-AzStackEdgeTrigger PSCmdlet_Remove-AzStackEdgeTrigger PSCommand_Remove-AzStackEdgeTrigger PSCmdlet_Get-AzStackEdgeOrder PSCommand_Get-AzStackEdgeOrder PSCmdlet_New-AzStackEdgeOrder PSCommand_New-AzStackEdgeOrder PSCmdlet_Remove-AzStackEdgeOrder PSCommand_Remove-AzStackEdgeOrder PSCmdlet_Get-AzStackEdgeStorageAccount PSCommand_Get-AzStackEdgeStorageAccount PSCmdlet_New-AzStackEdgeStorageAccount PSCommand_New-AzStackEdgeStorageAccount PSCmdlet_Remove-AzStackEdgeStorageAccount PSCommand_Remove-AzStackEdgeStorageAccount PSCmdlet_Get-AzStackEdgeStorageContainer PSCommand_Get-AzStackEdgeStorageContainer PSCmdlet_New-AzStackEdgeStorageContainer PSCommand_New-AzStackEdgeStorageContainer PSCmdlet_Remove-AzStackEdgeStorageContainer PSCommand_Remove-AzStackEdgeStorageContainer PSCmdlet_Invoke-AzStackEdgeStorageContainer PSCommand_Invoke-AzStackEdgeStorageContainer PSIncludes_Cmdlet</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:22:57Z</S>
+          <S N="NormalizedVersion">0.1.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.StackEdge.nuspec|Az.StackEdge.psd1|Az.StackEdge.psm1|Microsoft.Azure.Management.DataBoxEdge.dll|Microsoft.Azure.PowerShell.Cmdlets.StackEdge.deps.json|Microsoft.Azure.PowerShell.Cmdlets.StackEdge.dll|Microsoft.Azure.PowerShell.Cmdlets.StackEdge.dll-Help.xml|Microsoft.Azure.PowerShell.Cmdlets.StackEdge.generated.format.ps1xml</S>
+          <S N="GUID">3c11ef12-c79f-45fe-acdf-a2c784d99c97</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.StackEdge\0.1.0</S>
+    </MS>
+  </Obj>
+</Objs>

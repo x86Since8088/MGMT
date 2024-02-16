@@ -1,0 +1,178 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.Orbital</S>
+      <S N="Version">0.1.1</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell: Orbital cmdlets</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2023-07-04T09:59:05-05:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>PSModule</S>
+          <S>Orbital</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzOrbitalAvailableGroundStation</S>
+                <S>Get-AzOrbitalAvailableSpacecraftContact</S>
+                <S>Get-AzOrbitalContactProfile</S>
+                <S>Get-AzOrbitalSpacecraft</S>
+                <S>Get-AzOrbitalSpacecraftContact</S>
+                <S>New-AzOrbitalContactProfile</S>
+                <S>New-AzOrbitalContactProfileLinkChannelObject</S>
+                <S>New-AzOrbitalContactProfileLinkObject</S>
+                <S>New-AzOrbitalSpacecraft</S>
+                <S>New-AzOrbitalSpacecraftContact</S>
+                <S>New-AzOrbitalSpacecraftLinkObject</S>
+                <S>Remove-AzOrbitalContactProfile</S>
+                <S>Remove-AzOrbitalSpacecraft</S>
+                <S>Remove-AzOrbitalSpacecraftContact</S>
+                <S>Update-AzOrbitalContactProfile</S>
+                <S>Update-AzOrbitalSpacecraft</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzOrbitalAvailableGroundStation</S>
+                <S>Get-AzOrbitalAvailableSpacecraftContact</S>
+                <S>Get-AzOrbitalContactProfile</S>
+                <S>Get-AzOrbitalSpacecraft</S>
+                <S>Get-AzOrbitalSpacecraftContact</S>
+                <S>New-AzOrbitalContactProfile</S>
+                <S>New-AzOrbitalContactProfileLinkChannelObject</S>
+                <S>New-AzOrbitalContactProfileLinkObject</S>
+                <S>New-AzOrbitalSpacecraft</S>
+                <S>New-AzOrbitalSpacecraftContact</S>
+                <S>New-AzOrbitalSpacecraftLinkObject</S>
+                <S>Remove-AzOrbitalContactProfile</S>
+                <S>Remove-AzOrbitalSpacecraft</S>
+                <S>Remove-AzOrbitalSpacecraftContact</S>
+                <S>Update-AzOrbitalContactProfile</S>
+                <S>Update-AzOrbitalSpacecraft</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Upgraded API version to 2022-11-01_x000D__x000A_* Removed 'Name' and 'InputObject' syntax from the 'Get-AzOrbitalAvailableGroundStation' cmdlet_x000D__x000A_* Required 'NetworkConfigurationSubnetId' and 'Link' parameters in 'New-AzOrbitalContactProfile' cmdlet_x000D__x000A_* Added 'ThirdPartyConfiguration' parameter to 'New-AzOrbitalContactProfile' cmdlet</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.12.4</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.12.4</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell: Orbital cmdlets</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">* Upgraded API version to 2022-11-01_x000D__x000A_* Removed 'Name' and 'InputObject' syntax from the 'Get-AzOrbitalAvailableGroundStation' cmdlet_x000D__x000A_* Required 'NetworkConfigurationSubnetId' and 'Link' parameters in 'New-AzOrbitalContactProfile' cmdlet_x000D__x000A_* Added 'ThirdPartyConfiguration' parameter to 'New-AzOrbitalContactProfile' cmdlet</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">1509</S>
+          <S N="downloadCount">3013</S>
+          <S N="packageSize">509793</S>
+          <S N="published">7/4/2023 9:59:05 AM -05:00</S>
+          <S N="created">7/4/2023 9:59:05 AM -05:00</S>
+          <S N="lastUpdated">2/15/2024 10:12:57 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM PSModule Orbital PSEdition_Core PSEdition_Desktop PSFunction_Get-AzOrbitalAvailableGroundStation PSCommand_Get-AzOrbitalAvailableGroundStation PSFunction_Get-AzOrbitalAvailableSpacecraftContact PSCommand_Get-AzOrbitalAvailableSpacecraftContact PSFunction_Get-AzOrbitalContactProfile PSCommand_Get-AzOrbitalContactProfile PSFunction_Get-AzOrbitalSpacecraft PSCommand_Get-AzOrbitalSpacecraft PSFunction_Get-AzOrbitalSpacecraftContact PSCommand_Get-AzOrbitalSpacecraftContact PSFunction_New-AzOrbitalContactProfile PSCommand_New-AzOrbitalContactProfile PSFunction_New-AzOrbitalContactProfileLinkChannelObject PSCommand_New-AzOrbitalContactProfileLinkChannelObject PSFunction_New-AzOrbitalContactProfileLinkObject PSCommand_New-AzOrbitalContactProfileLinkObject PSFunction_New-AzOrbitalSpacecraft PSCommand_New-AzOrbitalSpacecraft PSFunction_New-AzOrbitalSpacecraftContact PSCommand_New-AzOrbitalSpacecraftContact PSFunction_New-AzOrbitalSpacecraftLinkObject PSCommand_New-AzOrbitalSpacecraftLinkObject PSFunction_Remove-AzOrbitalContactProfile PSCommand_Remove-AzOrbitalContactProfile PSFunction_Remove-AzOrbitalSpacecraft PSCommand_Remove-AzOrbitalSpacecraft PSFunction_Remove-AzOrbitalSpacecraftContact PSCommand_Remove-AzOrbitalSpacecraftContact PSFunction_Update-AzOrbitalContactProfile PSCommand_Update-AzOrbitalContactProfile PSFunction_Update-AzOrbitalSpacecraft PSCommand_Update-AzOrbitalSpacecraft PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:12:57Z</S>
+          <S N="NormalizedVersion">0.1.1</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.Orbital.nuspec|Az.Orbital.format.ps1xml|Az.Orbital.psd1|Az.Orbital.psm1|bin\Az.Orbital.private.deps.json|bin\Az.Orbital.private.dll|custom\Az.Orbital.custom.psm1|custom\New-AzOrbitalContactProfileLinkChannelObject.ps1|custom\New-AzOrbitalContactProfileLinkObject.ps1|custom\New-AzOrbitalSpacecraftLinkObject.ps1|exports\ProxyCmdletDefinitions.ps1|internal\Az.Orbital.internal.psm1|internal\ProxyCmdletDefinitions.ps1|utils\Unprotect-SecureString.ps1</S>
+          <S N="GUID">4fb1d4af-9f8d-4a19-9f17-d8186bf02cfb</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.Orbital\0.1.1</S>
+    </MS>
+  </Obj>
+</Objs>

@@ -1,0 +1,180 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.Search</S>
+      <S N="Version">0.10.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell - Azure Search management cmdlets for Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on Search, please visit the following: https://learn.microsoft.com/azure/search/</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2023-11-14T05:09:06-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>AzureSearch</S>
+          <S>PSModule</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>New-AzSearchService</S>
+                <S>Get-AzSearchService</S>
+                <S>Set-AzSearchService</S>
+                <S>Remove-AzSearchService</S>
+                <S>Get-AzSearchAdminKeyPair</S>
+                <S>New-AzSearchAdminKey</S>
+                <S>Get-AzSearchQueryKey</S>
+                <S>New-AzSearchQueryKey</S>
+                <S>Remove-AzSearchQueryKey</S>
+                <S>Get-AzSearchPrivateEndpointConnection</S>
+                <S>Set-AzSearchPrivateEndpointConnection</S>
+                <S>Remove-AzSearchPrivateEndpointConnection</S>
+                <S>New-AzSearchSharedPrivateLinkResource</S>
+                <S>Get-AzSearchSharedPrivateLinkResource</S>
+                <S>Set-AzSearchSharedPrivateLinkResource</S>
+                <S>Remove-AzSearchSharedPrivateLinkResource</S>
+                <S>Get-AzSearchPrivateLinkResource</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>New-AzSearchService</S>
+                <S>Get-AzSearchService</S>
+                <S>Set-AzSearchService</S>
+                <S>Remove-AzSearchService</S>
+                <S>Get-AzSearchAdminKeyPair</S>
+                <S>New-AzSearchAdminKey</S>
+                <S>Get-AzSearchQueryKey</S>
+                <S>New-AzSearchQueryKey</S>
+                <S>Remove-AzSearchQueryKey</S>
+                <S>Get-AzSearchPrivateEndpointConnection</S>
+                <S>Set-AzSearchPrivateEndpointConnection</S>
+                <S>Remove-AzSearchPrivateEndpointConnection</S>
+                <S>New-AzSearchSharedPrivateLinkResource</S>
+                <S>Get-AzSearchSharedPrivateLinkResource</S>
+                <S>Set-AzSearchSharedPrivateLinkResource</S>
+                <S>Remove-AzSearchSharedPrivateLinkResource</S>
+                <S>Get-AzSearchPrivateLinkResource</S>
+              </LST>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Added support for semantic search option</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.13.2</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.13.2</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell - Azure Search management cmdlets for Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For more information on Search, please visit the following: https://learn.microsoft.com/azure/search/</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">* Added support for semantic search option</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">14846</S>
+          <S N="downloadCount">317626</S>
+          <S N="packageSize">148448</S>
+          <S N="published">11/14/2023 5:09:06 AM -06:00</S>
+          <S N="created">11/14/2023 5:09:06 AM -06:00</S>
+          <S N="lastUpdated">2/15/2024 10:17:56 PM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM AzureSearch PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_New-AzSearchService PSCommand_New-AzSearchService PSCmdlet_Get-AzSearchService PSCommand_Get-AzSearchService PSCmdlet_Set-AzSearchService PSCommand_Set-AzSearchService PSCmdlet_Remove-AzSearchService PSCommand_Remove-AzSearchService PSCmdlet_Get-AzSearchAdminKeyPair PSCommand_Get-AzSearchAdminKeyPair PSCmdlet_New-AzSearchAdminKey PSCommand_New-AzSearchAdminKey PSCmdlet_Get-AzSearchQueryKey PSCommand_Get-AzSearchQueryKey PSCmdlet_New-AzSearchQueryKey PSCommand_New-AzSearchQueryKey PSCmdlet_Remove-AzSearchQueryKey PSCommand_Remove-AzSearchQueryKey PSCmdlet_Get-AzSearchPrivateEndpointConnection PSCommand_Get-AzSearchPrivateEndpointConnection PSCmdlet_Set-AzSearchPrivateEndpointConnection PSCommand_Set-AzSearchPrivateEndpointConnection PSCmdlet_Remove-AzSearchPrivateEndpointConnection PSCommand_Remove-AzSearchPrivateEndpointConnection PSCmdlet_New-AzSearchSharedPrivateLinkResource PSCommand_New-AzSearchSharedPrivateLinkResource PSCmdlet_Get-AzSearchSharedPrivateLinkResource PSCommand_Get-AzSearchSharedPrivateLinkResource PSCmdlet_Set-AzSearchSharedPrivateLinkResource PSCommand_Set-AzSearchSharedPrivateLinkResource PSCmdlet_Remove-AzSearchSharedPrivateLinkResource PSCommand_Remove-AzSearchSharedPrivateLinkResource PSCmdlet_Get-AzSearchPrivateLinkResource PSCommand_Get-AzSearchPrivateLinkResource PSIncludes_Cmdlet</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-15T22:17:56Z</S>
+          <S N="NormalizedVersion">0.10.0</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.Search.nuspec|Az.Search.psd1|Microsoft.Azure.PowerShell.Cmdlets.Search.dll-Help.xml|Az.Search.psm1|Microsoft.Azure.PowerShell.Search.Management.Sdk.dll|Microsoft.Azure.PowerShell.Cmdlets.Search.dll|Search.generated.format.ps1xml</S>
+          <S N="GUID">a97e0c3e-e389-46a6-b73d-2b9bd6909bdb</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.Search\0.10.0</S>
+    </MS>
+  </Obj>
+</Objs>

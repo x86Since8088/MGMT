@@ -1,0 +1,166 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.BootStrapper</S>
+      <S N="Version">1.0.1</S>
+      <S N="Type">Module</S>
+      <S N="Description">Manage Modules for an Azure API Profile. This allows selecting the Azure cmdlets that are compatible with an AzureStack Hub instance, an Azure sovereign cloud, or across Azure instances.</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2021-06-23T02:11:07-05:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azsps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azurestack-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>Az</S>
+          <S>AzureStack</S>
+          <S>PSModule</S>
+          <S>Profile</S>
+          <S>ResourceManager</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Update-AzProfile</S>
+                <S>Uninstall-AzProfile</S>
+                <S>Install-AzProfile</S>
+                <S>Use-AzProfile</S>
+                <S>Get-AzApiProfile</S>
+                <S>Get-AzModule</S>
+                <S>Set-AzDefaultProfile</S>
+                <S>Remove-AzDefaultProfile</S>
+                <S>Set-BootstrapRepo</S>
+                <S>Update-AzProfile</S>
+                <S>Uninstall-AzProfile</S>
+                <S>Install-AzProfile</S>
+                <S>Use-AzProfile</S>
+                <S>Get-AzApiProfile</S>
+                <S>Get-AzModule</S>
+                <S>Set-AzDefaultProfile</S>
+                <S>Remove-AzDefaultProfile</S>
+                <S>Get-ModuleVersion</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Set-BootstrapRepo</S>
+                <S>Update-AzProfile</S>
+                <S>Uninstall-AzProfile</S>
+                <S>Install-AzProfile</S>
+                <S>Use-AzProfile</S>
+                <S>Get-AzApiProfile</S>
+                <S>Get-AzModule</S>
+                <S>Set-AzDefaultProfile</S>
+                <S>Remove-AzDefaultProfile</S>
+                <S>Get-ModuleVersion</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="6">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Update-AzProfile</S>
+                <S>Uninstall-AzProfile</S>
+                <S>Install-AzProfile</S>
+                <S>Use-AzProfile</S>
+                <S>Get-AzApiProfile</S>
+                <S>Get-AzModule</S>
+                <S>Set-AzDefaultProfile</S>
+                <S>Remove-AzDefaultProfile</S>
+              </LST>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">BugFix - Updating Profile Map cache automatically for new profiles</S>
+      <Obj N="Dependencies" RefId="7">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="3">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Manage Modules for an Azure API Profile. This allows selecting the Azure cmdlets that are compatible with an AzureStack Hub instance, an Azure sovereign cloud, or across Azure instances.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="releaseNotes">BugFix - Updating Profile Map cache automatically for new profiles</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">37722</S>
+          <S N="downloadCount">44083</S>
+          <S N="packageSize">96171</S>
+          <S N="published">6/23/2021 2:11:07 AM -05:00</S>
+          <S N="created">6/23/2021 2:11:07 AM -05:00</S>
+          <S N="lastUpdated">2/16/2024 12:12:59 AM -06:00</S>
+          <S N="tags">Azure Az AzureStack PSModule Profile ResourceManager PSEdition_Core PSEdition_Desktop PSCmdlet_Update-AzProfile PSCommand_Update-AzProfile PSCmdlet_Uninstall-AzProfile PSCommand_Uninstall-AzProfile PSCmdlet_Install-AzProfile PSCommand_Install-AzProfile PSCmdlet_Use-AzProfile PSCommand_Use-AzProfile PSCmdlet_Get-AzApiProfile PSCommand_Get-AzApiProfile PSCmdlet_Get-AzModule PSCommand_Get-AzModule PSCmdlet_Set-AzDefaultProfile PSCommand_Set-AzDefaultProfile PSCmdlet_Remove-AzDefaultProfile PSCommand_Remove-AzDefaultProfile PSIncludes_Cmdlet PSFunction_Set-BootstrapRepo PSCommand_Set-BootstrapRepo PSFunction_Update-AzProfile PSCommand_Update-AzProfile PSFunction_Uninstall-AzProfile PSCommand_Uninstall-AzProfile PSFunction_Install-AzProfile PSCommand_Install-AzProfile PSFunction_Use-AzProfile PSCommand_Use-AzProfile PSFunction_Get-AzApiProfile PSCommand_Get-AzApiProfile PSFunction_Get-AzModule PSCommand_Get-AzModule PSFunction_Set-AzDefaultProfile PSCommand_Set-AzDefaultProfile PSFunction_Remove-AzDefaultProfile PSCommand_Remove-AzDefaultProfile PSFunction_Get-ModuleVersion PSCommand_Get-ModuleVersion PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-16T00:12:59Z</S>
+          <S N="NormalizedVersion">1.0.1</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.BootStrapper.nuspec|about_version_profiles.help.txt|Az.Bootstrapper.Format.ps1xml|Az.BootStrapper.psd1|Az.Bootstrapper.psm1|Az.Bootstrapper.ScenarioTests.ps1|Az.BootStrapper.Tests.ps1|azprofilemap.json|Run-ScenarioTests.ps1|Run-UnitTests.ps1|help\about_version_profiles.help.txt|help\about_version_profiles.md|help\Az.Bootstrapper-help.xml|help\Az.BootStrapper.md|help\Get-AzApiProfile.md|help\Get-AzModule.md|help\Install-AzProfile.md|help\Remove-AzDefaultProfile.md|help\Set-AzDefaultProfile.md|help\Uninstall-AzProfile.md|help\Update-AzProfile.md|help\Use-AzProfile.md</S>
+          <S N="GUID">b161fe2d-75ea-4228-b85b-cb92064ff426</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.BootStrapper\1.0.1</S>
+    </MS>
+  </Obj>
+</Objs>

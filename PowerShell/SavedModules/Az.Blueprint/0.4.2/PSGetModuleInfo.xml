@@ -1,0 +1,172 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">Az.Blueprint</S>
+      <S N="Version">0.4.2</S>
+      <S N="Type">Module</S>
+      <S N="Description">Microsoft Azure PowerShell - Blueprint service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For information on Blueprint, please visit the following: https://docs.microsoft.com/azure/governance/blueprints/</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2023-01-10T11:35:00-06:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>Azure</S>
+          <S>ResourceManager</S>
+          <S>ARM</S>
+          <S>Blueprint</S>
+          <S>PSModule</S>
+          <S>PSEdition_Core</S>
+          <S>PSEdition_Desktop</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzBlueprint</S>
+                <S>Get-AzBlueprintAssignment</S>
+                <S>New-AzBlueprintAssignment</S>
+                <S>Remove-AzBlueprintAssignment</S>
+                <S>Set-AzBlueprintAssignment</S>
+                <S>New-AzBlueprint</S>
+                <S>Publish-AzBlueprint</S>
+                <S>New-AzBlueprintArtifact</S>
+                <S>Get-AzBlueprintArtifact</S>
+                <S>Export-AzBlueprintWithArtifact</S>
+                <S>Import-AzBlueprintWithArtifact</S>
+                <S>Set-AzBlueprintArtifact</S>
+                <S>Set-AzBlueprint</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-AzBlueprint</S>
+                <S>Get-AzBlueprintAssignment</S>
+                <S>New-AzBlueprintAssignment</S>
+                <S>Remove-AzBlueprintAssignment</S>
+                <S>Set-AzBlueprintAssignment</S>
+                <S>New-AzBlueprint</S>
+                <S>Publish-AzBlueprint</S>
+                <S>New-AzBlueprintArtifact</S>
+                <S>Get-AzBlueprintArtifact</S>
+                <S>Export-AzBlueprintWithArtifact</S>
+                <S>Import-AzBlueprintWithArtifact</S>
+                <S>Set-AzBlueprintArtifact</S>
+                <S>Set-AzBlueprint</S>
+              </LST>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">* Fixed cannot returning more than 100 artifacts of the 'Get-AzBlueprintArtifact'. [#20112]</S>
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="7">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">Az.Accounts</S>
+              </En>
+              <En>
+                <S N="Key">MinimumVersion</S>
+                <S N="Value">2.11.0</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:Az.Accounts/2.11.0</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="8">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">Microsoft Azure PowerShell - Blueprint service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core._x000D__x000A__x000D__x000A_For information on Blueprint, please visit the following: https://docs.microsoft.com/azure/governance/blueprints/</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">* Fixed cannot returning more than 100 artifacts of the 'Get-AzBlueprintArtifact'. [#20112]</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">98660</S>
+          <S N="downloadCount">534194</S>
+          <S N="packageSize">181878</S>
+          <S N="published">1/10/2023 11:35:00 AM -06:00</S>
+          <S N="created">1/10/2023 11:35:00 AM -06:00</S>
+          <S N="lastUpdated">2/16/2024 12:17:59 AM -06:00</S>
+          <S N="tags">Azure ResourceManager ARM Blueprint PSModule PSEdition_Core PSEdition_Desktop PSCmdlet_Get-AzBlueprint PSCommand_Get-AzBlueprint PSCmdlet_Get-AzBlueprintAssignment PSCommand_Get-AzBlueprintAssignment PSCmdlet_New-AzBlueprintAssignment PSCommand_New-AzBlueprintAssignment PSCmdlet_Remove-AzBlueprintAssignment PSCommand_Remove-AzBlueprintAssignment PSCmdlet_Set-AzBlueprintAssignment PSCommand_Set-AzBlueprintAssignment PSCmdlet_New-AzBlueprint PSCommand_New-AzBlueprint PSCmdlet_Publish-AzBlueprint PSCommand_Publish-AzBlueprint PSCmdlet_New-AzBlueprintArtifact PSCommand_New-AzBlueprintArtifact PSCmdlet_Get-AzBlueprintArtifact PSCommand_Get-AzBlueprintArtifact PSCmdlet_Export-AzBlueprintWithArtifact PSCommand_Export-AzBlueprintWithArtifact PSCmdlet_Import-AzBlueprintWithArtifact PSCommand_Import-AzBlueprintWithArtifact PSCmdlet_Set-AzBlueprintArtifact PSCommand_Set-AzBlueprintArtifact PSCmdlet_Set-AzBlueprint PSCommand_Set-AzBlueprint PSIncludes_Cmdlet</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-16T00:17:59Z</S>
+          <S N="NormalizedVersion">0.4.2</S>
+          <S N="Authors">Microsoft Corporation</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">Az.Blueprint.nuspec|Az.Blueprint.psd1|Az.Blueprint.psm1|Blueprint.format.ps1xml|Microsoft.Azure.Management.Blueprint.dll|Microsoft.Azure.PowerShell.Cmdlets.Blueprint.deps.json|Microsoft.Azure.PowerShell.Cmdlets.Blueprint.dll|Microsoft.Azure.PowerShell.Cmdlets.Blueprint.dll-Help.xml</S>
+          <S N="GUID">ef36c942-4a71-4e19-9450-05a35843deb6</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="DotNetFrameworkVersion">4.7.2</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\Az.Blueprint\0.4.2</S>
+    </MS>
+  </Obj>
+</Objs>

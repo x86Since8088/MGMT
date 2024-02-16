@@ -1,0 +1,9 @@
+You must accept the use terms before you can install or use the software. If you do not accept the use terms, installation will not proceed. 
+
+Microsoft Licensing Terms and Documentation:
+http://go.microsoft.com/fwlink/?LinkId=838442
+http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46
+
+Microsoft Privacy Statement:
+http://go.microsoft.com/fwlink/?LinkId=512156
+https://privacy.microsoft.com/privacystatement
