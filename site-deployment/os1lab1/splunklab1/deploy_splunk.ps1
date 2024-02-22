@@ -9,7 +9,7 @@ $PFSense_Obj = $MGMT_Env.config.sites.($script:Environment).pfsense
 $PFSense_Creds = $MGMT_Env.Auth.($PFSense_Obj.fqdn)
 
 
-Set-DataObject -VariableName MGMT_Env -Name "Status.environment.$script:Environment" @{
+Set-MGMTDataObject -InputObject $global:MGMT_Env -Name "Status.environment.$script:Environment" @{
     Name = $script:Environment
     ESXI = $ESXI_Obj.fqdn
     PFSense = $PFSense_Obj.fqdn
@@ -18,48 +18,20 @@ Set-DataObject -VariableName MGMT_Env -Name "Status.environment.$script:Environm
 Import-Module VMware.VimAutomation.Core -DisableNameChecking -SkipEditionCheck *> $null
 Set-PowerCLIConfiguration -Scope User -ParticipateInCEIP $false -InvalidCertificateAction Ignore -WebOperationTimeoutSeconds 300 -Confirm:$false | out-null
 Connect-VIServer -Server $ESXI_Obj.ip -Credential $ESXI_Creds -Force
-Add-SSHHostKey -HostName $ESXI_Obj.ip -KeyFilePath $KeyFilePath
-Add-SSHHostKey -HostName $PFSense_Obj.ip -KeyFilePath $KeyFilePath
+Add-MGMTSSHHostKey -HostName $ESXI_Obj.ip -KeyFilePath $KeyFilePath -Verbose
+Add-MGMTSSHHostKey -HostName $PFSense_Obj.ip -KeyFilePath $KeyFilePath -Verbose
 
-break
 # Define SSH connection details
-$HostName = $Sandbox.SplunkLinuxHostIP
-$UserName = $Sandbox.UserName
-[string]$KeyFilePath = $Sandbox.SplunkLinuxHostKeyFilePath
+#$HostName = $Sandbox.SplunkLinuxHostIP
+#$UserName = $Sandbox.UserName
+#[string]$KeyFilePath = $Sandbox.SplunkLinuxHostKeyFilePath
 
 # Retrieve the SSH host key (RSA type)
 
-Function Install-SSHKeyFile {
-  param (
-    [string]$HostName,
-    [string]$UserName,
-    [string]$KeyFilePath
-  )
-  Add-SSHHostKey -HostName $HostName -KeyFilePath $KeyFilePath
-  if ('' -eq $KeyFilePath) {
-      $KeyFilePath = "$env:userprofile/.ssh/id_rsa"
-      if (!(test-path $KeyFilePath)) {
-          ssh-keygen.exe -t rsa -b 4096 -C "default" -f $KeyFilePath -N ""
-          icacls $KeyFilePath /inheritance:d
-          icacls $KeyFilePath /remove everyone
-      }
-      #$sandbox.Password| scp $KeyFilePath "$($UserName)@$($HostName):/home/$UserName/$(split-path $KeyFilePath -leaf)"
-      ssh -i $KeyFilePath $UserName@$HostName -t bash @"
-  export  keyinfo='$(Get-Content "$keyFilePath.pub")'
-  echo `$keyinfo
-  echo `$keyinfo >> ~/.ssh/authorized_keys
-  if (( grep -q "`$keyinfo" ~/.ssh/authorized_keys )); then
-    echo "found keyinfo in authorized_keys"
-  else
-    echo "missing keyinfo in authorized_keys"
-    echo `$keyinfo >> ~/.ssh/authorized_keys
-    chmod 600 ~/.ssh/authorized_keys
-  fi
-"@
-  }
-}
 
-Install-SSHKeyFile -
+break
+
+Install-MGMTSSHKeyFile -HostName 
 # SSH into the Alma Linux system
 ssh -i $KeyFilePath $UserName@$HostName "yum install -y wget"  # Install wget (if not already installed)
 

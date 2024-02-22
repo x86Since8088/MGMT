@@ -2,22 +2,14 @@ $Workingfolder = $PSScriptRoot
 $MGMTFolder      = $WorkingFolder -replace "^(.*?\\MGMT).*",'$1'
 . "$MGMTFolder\PowerShell\init.ps1"
 $script:PSSR = $PSScriptRoot
-$script:Environment = "$PSSR" | Split-Path| Split-Path -Leaf
+$script:Environment = "$PSSR" -replace "^.*?site-deployment(\\|/)" -replace "(/|\\).*"
+$Script:ConfigInfo = $global:MGMT_Env.config.sites.($script:Environment)
 Write-Host -Message "Environment Name: $script:Environment pulled from current folder '$script:PSSR'" -ForegroundColor Yellow
 
-function GetMGMTASAppID { 
-    $MGMTASAppID = $MGMT_Env.Auth.($script:Environment).AppID
-    return $MGMTASAppID
-}
-
-function GetMGMTASAppSecret { 
-    $MGMTASAppSecret = $MGMT_Env.Auth.($script:Environment).AppSecret
-    return $MGMTASAppSecret
-}
 
 function Test-MGMTCredentialAZ {
     param (
-        [pscredential]$credential = $global:MGMT_Env.Auth."AZ($script:Environment)"
+        [pscredential]$credential = $global:MGMT_Env.Auth.("AZ($script:Environment)")
     )
     if ($credential -eq $null) {
         $credential = Get-Credential -Message "Enter your Azure credentials for 'AZ($script:Environment)'"
@@ -33,12 +25,14 @@ function Test-MGMTCredentialAZ {
         Write-Host -Message "Successfully connected to Azure" -ForegroundColor Green
         Set-MGMTCredential -FQDN "AZ($script:Environment)" -Credential $credential -Scope currentuser
     }
-    Set-MGMTDataObject -VariableName MGMT_Env -Name "Status.environment.$script:Environment" -Value @{
+    Set-MGMTDataObject -InputObject $MGMT_Env -Name "Status.environment.$script:Environment" -Value @{
         AZConnection = $AZConnection
+        AVCredential = $credential
+        Tested       = (Get-Date)
     }
 }
-Test-MGMTCredentialAZ
-
+#Test-MGMTCredentialAZ
+Get-MGMTCredential 
 function Get-MGMTAZAccountApplications { 
     param (
         [pscredential]$credential = $global:MGMT_Env.Auth."AZ($script:Environment)"

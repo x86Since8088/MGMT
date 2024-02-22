@@ -1,4 +1,4 @@
-$script:PSSR                    = $PSScriptRoot
+$script:PSSR             = $PSScriptRoot
 $script:DataFolder       = $script:PSSR  -replace '^(\\\\.*?|.*?)\\(.*\\.*)','$1\Data\$2'
 $script:ConfigFile       = "$script:DataFolder\Config.yaml"
 $script:MGMTFolder       = $WorkingFolder -replace "^(.*?\\MGMT).*",'$1'
@@ -78,7 +78,7 @@ function Set-MGMTConfig {
         $ParamName = $Name
         $ParamValue = $Value
         if ($null -eq $Global:MGMT_Env) {
-            Load-MGMTConfig
+            Initialize-MGMTConfig
             $Changed = $true
         }
         else {
@@ -211,35 +211,96 @@ $Global:MGMTModule = Get-MGMTConfig -ErrorAction Ignore
 function Get-MGMTCredential {
     [cmdletbinding()]
     param(
-        [parameter(alias='ComputerName','FQDN')]$Name,
-        $UserName,
+        #[parameter(alias='ComputerName','FQDN')]
+        [string]$SystemName,
+        [string]$UserName = '.',
         [string[]]$Tags,
+        [string]$SystemNamesMatchingRegex,
+        [validateset('currentuser','allusers')]
+        [string]$Scope = 'currentuser',
         [pscredential]$SetCredential,
-        [switch]$NoPrompt
+        [switch]$PromptIfMissing
     )
     begin{
+        $Tags = $Taags |Where-Object{$_ -match '\S'} | Sort-Object -unique
+        if ($scope -eq 'global') {
+            return write-error -Message "The global scope is not implemented yet."
+        }
         if ($Tags.count -ne 0) {
-            $Name = "$Name(-)$($Tags -join '-'))"
+            [string]$SystemName = "$SystemName($($Tags -join ','))"
+            [string]$SystemNameMatches = "^$($SystemName -replace "^\s*$",'.*?' )"
+            if ($Tags.count -ne 0) {
+                $SystemNameMatches+="\(\b$($Tags -join '\b.*?\b')\b\)"
+            }
         }
+        if ($SystemNamesMatchingRegex -match '\S') {
+            $SystemNameMatches = $SystemNamesMatchingRegex
+        }
+        [array]$Results = 
+            foreach ($Label in ($Global:MGMT_Env.Auth.Keys | Where-Object {$_ -match $SystemNameMatches})) {
+                foreach ($CredentialItem in $Global:MGMT_Env.Auth.($Label)) {
+                    if ($CredentialItem.UserName -match "^$UserName$") {
+                        [pscustomobject]@{
+                            Label=$Label
+                            UserName=$CredentialItem.UserName
+                            Credential=$CredentialItem
+                        }
+                    }
+                }
+            }
         if ($null -ne $SetCredential) {
-            Set-MGMTCredential -FQDN $Name -Credential $SetCredential
-            $Global:MGMT_Env.Auth.($Name) = $SetCredential
-        }
-        elseif ($Null -eq $Global:MGMT_Env.Auth.($Name)) {
-            if ($NoPrompt) {
-                return Write-Error -Message "The credential for $Name is not found."
+            [array]$ExactMatches = $Results|
+                Where-Object{$_.Label -eq $SystemName}|
+                Where-Object{$_.UserName -eq $SetCredential.UserName}
+            if ($SystemName -match '\S') {
+                if ($ExactMatches.count -eq 1) {
+                    Set-MGMTCredential -FQDN $SystemName -Credential $SetCredential
+                }
+                elseif ($Results.count -ne 0) {
+                    $Results +=                         [pscustomobject]@{
+                        Label=$SystemName
+                        UserName=$Credential.UserName
+                    }
+                    $SelectedCredential = $Results|Out-GridView -OutputMode Multiple -Title "Select the credentials you want to save"
+                    if ($null -ne $SelectedCredential) {
+                        foreach ($CredItem in $SelectedCredential) {
+                            $global:MGMT_Env.Auth.($CredItem.Label) = $global:MGMT_Env.Auth.($CredItem.Label) | 
+                                Where-Object{$_.UserName -ne $CredItem.UserName}
+                            Set-MGMTCredential -FQDN $CredItem.Label -Credential $SetCredential
+                        }
+                    }
+                }
+                else {
+                    Set-MGMTCredential -FQDN $SystemName -Credential $SetCredential
+                }
+                Set-MGMTCredential -FQDN $SystemName -Credential $SetCredential
             }
             else {
-                if ('Y' -eq (Read-Host -Prompt "Do you want to set the credentials for $Name? (Y/N)").ToUpper()) {
-                    $TempCredential = Get-Credential -Message "Enter the credentials for $Name"
+                return Write-Error -Message "The FQDN is required to set the credentials."
+            }
+            $Global:MGMT_Env.Auth.($SystemName) = $SetCredential
+        }
+        elseif ($Null -eq $Results) {
+            if (! $PromptIfMissing) {
+                return Write-Error -Message "The credential for $SystemName is not found."
+            }
+            else {
+                if ('Y' -eq (Read-Host -Prompt "Do you want to set the credentials for $SystemName? (Y/N)").ToUpper()) {
+                    $TempCredential = Get-Credential -Message "Enter the credentials for $SystemName"
                     if ($null -ne $TempCredential) {
-                        Set-MGMTCredential -FQDN $Name -Credential $TempCredential
-                        $Global:MGMT_Env.Auth.($Name) = $TempCredential
+                        Set-MGMTCredential -FQDN $SystemName -Credential $TempCredential
+                        $Global:MGMT_Env.Auth.($SystemName) = $TempCredential
                     }
                 }
             }
         }
-        $Global:MGMT_Env.Auth.($Name)
+        
+        if ($Null -eq $Global:MGMT_Env.Auth.($SystemName)) {
+            $Results.Credential
+        }
+        else {
+            $Global:MGMT_Env.Auth.($SystemName)
+        }
     }
 }
 
@@ -301,15 +362,12 @@ Function Set-MGMTCredential {
         if ($Scope -eq 'global') {
             return write-error -Message "The global scope is not implemented yet."
         }
-        $UserKeyRingFile = "$env:appdata\powershell\MGMT\keyring.yaml"
-        $UserShard = Get-MGMTShardFileValue -LiteralPath $UserKeyRingFile -KeyName 'UShard' -KeyLength 32
-        [byte[]]$Key = 0..32|ForEach-Object{$UserShard[$_] -bxor $global:MGMT_Env.Shard[$_]}
         foreach ($obj in ($global:MGMT_Env.Auth.GetEnumerator()|Where-Object{$null -ne $_.Value})) {
             $Authsave.($obj.Key) =
                 foreach ($CredItem in $obj.Value){
                     @{
                         UserName = $CredItem.UserName
-                        Password = $CredItem.Password | ConvertFrom-SecureString -Key $global:MGMT_Env.Key
+                        Password = $CredItem.Password | ConvertFrom-SecureString -Key $global:MGMT_Env.UKey
                     }
                 }
             if ($null -eq $_.Value){}
@@ -317,7 +375,7 @@ Function Set-MGMTCredential {
             else {
                 $Authsave.($_.Key) = @{
                     UserName = $_.Value.UserName
-                    Password = $_.Value.password | ConvertFrom-SecureString -Key $global:MGMT_Env.Key
+                    Password = $_.Value.password | ConvertFrom-SecureString -Key $global:MGMT_Env.UKey
                 }
             }
         }
@@ -404,7 +462,7 @@ function Get-MGMTShardFileValue {
         return $inputObject.($KeyName)
     }
 }
-function Load-MGMTConfig {
+function Initialize-MGMTConfig {
     Set-SyncHashtable -VariableName MGMT_Env -scope global
     Set-SyncHashtable -VariableName MGMT_Env -scope global -Name Auth
     $script:ConfigFile      = "$Datafolder\config.yaml"
@@ -416,9 +474,15 @@ function Load-MGMTConfig {
     [byte[]]$Shard = 0,11,159,136,217,167,1,185,196,169,243,35,234,88,147,217,223,229,80,38,100,181,255,250,223,177,45,128,109,107,253,110
     # Define the credentials for each site hosts.
     if ($null -eq $global:MGMT_Env.config.Shard) {
-        $global:MGMT_Env.config.Shard = [int[]](get-randonbytes -ByteLength 32)
+        $global:MGMT_Env.config.Shard = [int[]](Get-MGMTRandomBytes -ByteLength 32)
+        Save-MGMTConfig -Force
     }
+
     $global:MGMT_Env.Key = 0..31|ForEach-Object{$global:MGMT_Env.config.Shard[$_] -bxor $shard[$_]}
+    $UserKeyRingFile = "$env:appdata\powershell\MGMT\keyring.yaml"
+    $UserShard = Get-MGMTShardFileValue -LiteralPath $UserKeyRingFile -KeyName 'UShard' -KeyLength 32
+    [byte[]]$Key = 0..32|ForEach-Object{$UserShard[$_] -bxor $global:MGMT_Env.config.Shard[$_]}
+
     $Authsave = Import-MGMTYAML -LiteralPath $MGMT_Env.AuthFile -ErrorAction SilentlyContinue
     foreach ($obj in $Authsave.GetEnumerator()){
         $global:MGMT_Env.Auth.($obj.Name) = 
@@ -480,42 +544,80 @@ function Get-MGMTHashtableKeys {
 }
 
 function Add-MGMTSSHHostKey {
+    [CmdletBinding()]
     param (
         [string]$HostName,
-        [string]$KeyFilePath
+        [switch]$Force
     )
-    [string]$HostKey = ssh-keyscan -t rsa $HostName
-    if ('' -eq $HostKey) {
-        Write-Error "Failed to retrieve the SSH host key for $HostName"
-        break
+    process{
+        [string[]]$Match = Get-Content "$env:USERPROFILE\.ssh\known_hosts" | Where-Object{$_ -like "$Hostname *"}
+        if ($Force) {
+            write-hoat "Overwriting the SSH host key for hostname '$HostName' in the known_hosts file"
+            $NewContent = Get-Content "$env:USERPROFILE\.ssh\known_hosts" | Where-Object{$_ -notlike "$Hostname *"}
+            Set-Content -Path "$env:USERPROFILE\.ssh\known_hosts" -Value $NewContent -Force -Confirm:$False
+        }
+        elseif ($Match.count -eq 0) {
+            return (Write-host "Found SSH host key for hostname '$HostName' to the known_hosts file`n`t$($Match -join "`n`t")`nTo overwrite the existing key, run:`n`t Add-MGMTSSHHostKey -HostName $HostName -Force" -ForegroundColor Yellow)
+        }
+        [string]$HostKey = (ssh-keyscan -t rsa $HostName) -replace '^\s*'
+        Write-Verbose -Message "Host:$Hostname`tKey:$Hostkey"
+        if ('' -eq $HostKey) {
+            Write-Error "Failed to retrieve the SSH host key for $HostName"
+            break
+        }
+        [string[]]$Match = Get-Content "$env:USERPROFILE\.ssh\known_hosts" | Where-Object{$_ -eq $HostKey}
+        if ($Match.count -eq 0) {
+            Write-Host "Adding the SSH host key for $HostName to the known_hosts file"
+            Add-Content -Path "$env:USERPROFILE\.ssh\known_hosts" -Value $HostKey
+        }
+        else {
+            Write-host "The SSH host key for $HostName is already in the known_hosts file."
+        }
+
     }
-    [string[]]$Match = Get-Content "$env:USERPROFILE\.ssh\known_hosts" | Where-Object{$_ -eq $HostKey}
-    if ($Match.count -eq 0) {
-        Write-Host "Adding the SSH host key for $HostName to the known_hosts file"
-        Add-Content -Path "$env:USERPROFILE\.ssh\known_hosts" -Value $HostKey
-    }
-    else {
-        Write-host "The SSH host key for $HostName is already in the known_hosts file."
-    }
+}
+
+Function Install-MGMTSSHKeyFile {
+    [cmdletbinding()]
+    param (
+      [string]$HostName,
+      [string]$UserName,
+      [string]$KeyFilePath,
+      [string]$RunFirst
+    )
+    process {
+      Add-MGMTSSHHostKey -HostName $HostName -KeyFilePath $KeyFilePath
+      if ('' -eq $KeyFilePath) {
+          $KeyFilePath = "$env:userprofile/.ssh/id_rsa"
+          if (!(test-path $KeyFilePath)) {
+              ssh-keygen.exe -t rsa -b 4096 -C "default" -f $KeyFilePath -N ""
+              icacls $KeyFilePath /inheritance:d
+              icacls $KeyFilePath /remove everyone
+          }
+          #$sandbox.Password| scp $KeyFilePath "$($UserName)@$($HostName):/home/$UserName/$(split-path $KeyFilePath -leaf)"
+          ssh -i $KeyFilePath $UserName@$HostName -t bash @"
+          $RunFirst
+          export  keyinfo='$(Get-Content "$keyFilePath.pub")'
+          echo `$keyinfo
+          echo `$keyinfo >> ~/.ssh/authorized_keys
+          if (( grep -q "`$keyinfo" ~/.ssh/authorized_keys )); then
+          echo "found keyinfo in authorized_keys"
+          else
+          echo "missing keyinfo in authorized_keys"
+          echo `$keyinfo >> ~/.ssh/authorized_keys
+          chmod 600 ~/.ssh/authorized_keys
+          fi
+"@
+        }
+    }   
 }
 
 Function Merge-MGMTByteArray {
     param (
-      [byte[]]$ByteArray1,
-      [byte[]]$ByteArray2,
-      [int]$Length = ($ByteArray1.Length),
-      [ArgumentCompleter({
-        [OutputType([System.Management.Automation.CompletionResult])]
-        param(
-          [string] $CommandName,
-          [string] $ParameterName,
-          [string] $WordToComplete,
-          [System.Management.Automation.Language.CommandAst] $CommandAst,
-          [System.Collections.IDictionary] $FakeBoundParameters
-        )
-        return 'bxor' | Where-Object {$_ -like "$WordToComplete*"}
-      })]
-      [string]$operation = 'bxor'
+        [byte[]]$ByteArray1,
+        [byte[]]$ByteArray2,
+        [int]$Length = ($ByteArray1.Length)
     )
     [byte[]]$Key = 0..32|ForEach-Object{$ByteArray1[$_] -bxor $ByteArray2[$_]}
+    return $Key
 }
