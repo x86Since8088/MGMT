@@ -1,7 +1,47 @@
 # Welcome to the MGMT Repo
 This is lab deployment codeset, but I'm working on making it a cross-cloud deployment environment.
 
-Custom Modules are located under MGMT/PowerShell/Modules
+Things to know:
+- Custom Modules are located under MGMT/PowerShell/Modules
+- Saved modules are located under MGMT/Sved-Modules
 
-Saved modules are located under MGMT/Sved-Modules
+## Todo items
+ - Backup functions for keys, data folder
+ - Restore functions
+ - Update functions
+ - Deploy functions
+ - Wrappers of AZ
+ - Wrappers for AWS
+ - Linux compatibility
+ - Unit tests
+ - Error handling
 
+## Security
+ - A 'Data' folder is automatically created at the root of the drive that you run this module from.
+    - Project data is kept there
+
+## Deployment goals
+ - Splunk
+ - Cribl
+ - ELK
+ - Telegraf
+ - Redis - MGMT for cross-system variables and other fun stuff.
+ - RBAC
+ - Web front end
+ - NPM
+ - Node
+ 
+ ## Multi-cloud Tools
+  - Have the ability to move to cheaper options
+  - Deployment parity between on-site, Azure, AWS, Linode, Cloudflare
+  - Reference Architectures for each environemnt
+    - IAM
+    - PKI
+    - DNS
+    - Load Balancers
+    - WAF
+    - ALG
+    - Databases
+    - ML scenarios
+    - Key Management
+    - Credential Vaults
