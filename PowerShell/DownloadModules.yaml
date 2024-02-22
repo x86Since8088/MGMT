@@ -19,3 +19,6 @@
 -
   Name: Microsoft.PowerShell.SecretsManagement
   Version: Latest
+-
+  Name: Posh-SSH
+  Version: Latest

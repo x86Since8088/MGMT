@@ -1,0 +1,183 @@
+{
+    "Events": {
+        "Application": {
+            "11707": {
+                "Action": "Installation Successful"
+            },
+            "11708": {
+                "Action": "Installation Failed"
+            },
+            "11724": {
+                "Action": "Removal Successful"
+            },
+            "11725": {
+                "Action": "Removal Failed"
+            },
+            "11728": {
+                "Action": "Configuration Successful"
+            },
+            "11729": {
+                "Action": "Configuration Failed"
+            }
+        },
+        "Security": {
+            "4624": {
+                "Action": "Account Logon Successful",
+                "Properties": [
+                    "SubjectUserSid",
+                    "SubjectUserName",
+                    "SubjectDomainName",
+                    "SubjectLogonId",
+                    "TargetUserSid",
+                    "TargetUserName",
+                    "TargetDomainName",
+                    "TargetLogonId",
+                    "LogonType",
+                    "LogonProcessName",
+                    "AuthenticationPackageName",
+                    "WorkstationName",
+                    "LogonGuid",
+                    "TransmittedServices",
+                    "LmPackageName",
+                    "KeyLength",
+                    "ProcessId",
+                    "ProcessName",
+                    "IpAddress",
+                    "IpPort",
+                    "ImpersonationLevel"
+                ]
+            },
+            "4625": {
+                "Action": "Account Logon Failed",
+                "Properties": [
+                    "SubjectUserSid",
+                    "SubjectUserName",
+                    "SubjectDomainName",
+                    "SubjectLogonId",
+                    "TargetUserSid",
+                    "TargetUserName",
+                    "TargetDomainName",
+                    "Status",
+                    "FailureReason",
+                    "SubStatus",
+                    "LogonType",
+                    "LogonProcessName",
+                    "AuthenticationPackageName",
+                    "WorkstationName",
+                    "TransmittedServices",
+                    "LmPackageName",
+                    "KeyLength",
+                    "ProcessId",
+                    "ProcessName",
+                    "IpAddress",
+                    "IpPort"
+                ]
+            },
+            "4634": {
+                "Action": "Account Logoff"
+            },
+            "4647": {
+                "Action": "User Initiated Logoff"
+            }
+        },
+        "System": {
+            "1": {
+                "Action": "Leaving Sleep"
+            },
+            "42": {
+                "Action": "Entering Sleep"
+            },
+            "1074": {
+                "Action": "Request System {0}"
+            },
+            "1502": {
+                "Action": "Computer Settings Changed",
+                "Properties": [
+                    "SupportInfo1",
+                    "SupportInfo2",
+                    "ProcessingMode",
+                    "ProcessingTimeInMilliseconds",
+                    "DCName",
+                    "NumberOfGroupPolicyObjects"
+                ]
+            },
+            "1503": {
+                "Action": "User Settings Changed",
+                "Properties": [
+                    "SupportInfo1",
+                    "SupportInfo2",
+                    "ProcessingMode",
+                    "ProcessingTimeInMilliseconds",
+                    "DCName",
+                    "NumberOfGroupPolicyObjects"
+                ]
+            },
+            "6005": {
+                "Action": "System Startup"
+            },
+            "6006": {
+                "Action": "System Shutdown"
+            },
+            "6008": {
+                "Action": "Unexpected Shutdown"
+            },
+            "7000": {
+                "Action": "Service Start Failed"
+            },
+            "7001": {
+                "Action": "Service Dependency Start Failed"
+            },
+            "7011": {
+                "Action": "Service Start/Stop Timeout"
+            },
+            "7023": {
+                "Action": "Service Terminated"
+            },
+            "7026": {
+                "Action": "Boot/System-Start Driver Not Loaded"
+            },
+            "7030": {
+                "Action": "Service Configuration Error: Interactive Service Configured but not Allowed"
+            },
+            "7034": {
+                "Action": "Service Terminated Unexpectedly"
+            },
+            "7038": {
+                "Action": "Service Configuration Error: Unable to Log-On"
+            },
+            "7040": {
+                "Action": "Service Changed: Start Type Updated"
+            },
+            "7045": {
+                "Action": "Service Installed"
+            }
+        }
+    },
+    "Enumerations": {
+        "LogonType": {
+            "2": "Interactive",
+            "3": "Network",
+            "4": "Batch",
+            "5": "Service",
+            "7": "Unlock",
+            "8": "NetworkCleartext",
+            "9": "NewCredentials",
+            "10": "RemoteInteractive",
+            "11": "CachedInteractive"
+        },
+        "FailureCode": {
+            "0xC0000064": "user name does not exist",
+            "0xC000006A": "user name is correct but the password is wrong",
+            "0xC0000234": "user is currently locked out",
+            "0xC0000072": "account is currently disabled",
+            "0xC000006F": "user tried to logon outside his day of week or time of day restrictions",
+            "0xC0000070": "workstation restriction, or Authentication Policy Silo violation (look for event ID 4820 on domain controller)",
+            "0xC0000193": "account expiration",
+            "0xC0000071": "expired password",
+            "0xC0000133": "clocks between DC and other computer too far out of sync",
+            "0xC0000224": "user is required to change password at next logon",
+            "0xC0000225": "evidently a bug in Windows and not a risk",
+            "0xc000015b": "The user has not been granted the requested logon type (aka logon right) at this machine"
+        }
+    }
+}

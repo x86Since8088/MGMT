@@ -1,0 +1,190 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">SecurityFever</S>
+      <S N="Version">3.0.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">PowerShell Module with custom functions and cmdlets related to Windows and application security.</S>
+      <S N="Author">Claudio Spizzi</S>
+      <S N="CompanyName">claudiospizzi</S>
+      <S N="Copyright">Copyright (c) 2019 by Claudio Spizzi. Licensed under MIT license.</S>
+      <DT N="PublishedDate">2023-07-24T23:02:07-05:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://raw.githubusercontent.com/claudiospizzi/SecurityFever/master/LICENSE</URI>
+      <URI N="ProjectUri">https://github.com/claudiospizzi/SecurityFever</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>PSModule</S>
+          <S>Security</S>
+          <S>CredentialManager</S>
+          <S>Impersonation</S>
+          <S>TOTP</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-SecurityAuditPolicy</S>
+                <S>Get-SecurityAuditPolicySetting</S>
+                <S>Convert-Certificate</S>
+                <S>New-DomainSignedCertificate</S>
+                <S>Add-CertificatePrivateKeyPermission</S>
+                <S>Get-CertificatePrivateKeyPermission</S>
+                <S>Get-TimeBasedOneTimePassword</S>
+                <S>New-TimeBasedOneTimeSharedSecret</S>
+                <S>Invoke-Elevated</S>
+                <S>Start-Monitor</S>
+                <S>New-Password</S>
+                <S>Test-Credential</S>
+                <S>Get-ImpersonationContext</S>
+                <S>Pop-ImpersonationContext</S>
+                <S>Push-ImpersonationContext</S>
+                <S>Protect-String</S>
+                <S>Unprotect-SecureString</S>
+                <S>Get-SystemAudit</S>
+                <S>Get-SystemAuditFileSystem</S>
+                <S>Get-SystemAuditGroupPolicy</S>
+                <S>Get-SystemAuditMsiInstaller</S>
+                <S>Get-SystemAuditPowerCycle</S>
+                <S>Get-SystemAuditUserSession</S>
+                <S>Get-SystemAuditWindowsService</S>
+                <S>Add-TrustedHost</S>
+                <S>Get-TrustedHost</S>
+                <S>Remove-TrustedHost</S>
+                <S>Get-VaultCredential</S>
+                <S>Get-VaultEntry</S>
+                <S>Get-VaultSecureString</S>
+                <S>New-VaultEntry</S>
+                <S>Remove-VaultEntry</S>
+                <S>Update-VaultEntry</S>
+                <S>Use-VaultCredential</S>
+                <S>Use-VaultSecureString</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Get-SecurityAuditPolicy</S>
+                <S>Get-SecurityAuditPolicySetting</S>
+                <S>Convert-Certificate</S>
+                <S>New-DomainSignedCertificate</S>
+                <S>Add-CertificatePrivateKeyPermission</S>
+                <S>Get-CertificatePrivateKeyPermission</S>
+                <S>Get-TimeBasedOneTimePassword</S>
+                <S>New-TimeBasedOneTimeSharedSecret</S>
+                <S>Invoke-Elevated</S>
+                <S>Start-Monitor</S>
+                <S>New-Password</S>
+                <S>Test-Credential</S>
+                <S>Get-ImpersonationContext</S>
+                <S>Pop-ImpersonationContext</S>
+                <S>Push-ImpersonationContext</S>
+                <S>Protect-String</S>
+                <S>Unprotect-SecureString</S>
+                <S>Get-SystemAudit</S>
+                <S>Get-SystemAuditFileSystem</S>
+                <S>Get-SystemAuditGroupPolicy</S>
+                <S>Get-SystemAuditMsiInstaller</S>
+                <S>Get-SystemAuditPowerCycle</S>
+                <S>Get-SystemAuditUserSession</S>
+                <S>Get-SystemAuditWindowsService</S>
+                <S>Add-TrustedHost</S>
+                <S>Get-TrustedHost</S>
+                <S>Remove-TrustedHost</S>
+                <S>Get-VaultCredential</S>
+                <S>Get-VaultEntry</S>
+                <S>Get-VaultSecureString</S>
+                <S>New-VaultEntry</S>
+                <S>Remove-VaultEntry</S>
+                <S>Update-VaultEntry</S>
+                <S>Use-VaultCredential</S>
+                <S>Use-VaultSecureString</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="7">
+        <TN RefId="3">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Copyright (c) 2019 by Claudio Spizzi. Licensed under MIT license.</S>
+          <S N="description">PowerShell Module with custom functions and cmdlets related to Windows and application security.</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">869</S>
+          <S N="downloadCount">12356</S>
+          <S N="packageSize">172476</S>
+          <S N="published">7/24/2023 11:02:07 PM -05:00</S>
+          <S N="created">7/24/2023 11:02:07 PM -05:00</S>
+          <S N="lastUpdated">2/21/2024 4:05:13 PM -06:00</S>
+          <S N="tags">PSModule Security CredentialManager Impersonation TOTP PSFunction_Get-SecurityAuditPolicy PSCommand_Get-SecurityAuditPolicy PSFunction_Get-SecurityAuditPolicySetting PSCommand_Get-SecurityAuditPolicySetting PSFunction_Convert-Certificate PSCommand_Convert-Certificate PSFunction_New-DomainSignedCertificate PSCommand_New-DomainSignedCertificate PSFunction_Add-CertificatePrivateKeyPermission PSCommand_Add-CertificatePrivateKeyPermission PSFunction_Get-CertificatePrivateKeyPermission PSCommand_Get-CertificatePrivateKeyPermission PSFunction_Get-TimeBasedOneTimePassword PSCommand_Get-TimeBasedOneTimePassword PSFunction_New-TimeBasedOneTimeSharedSecret PSCommand_New-TimeBasedOneTimeSharedSecret PSFunction_Invoke-Elevated PSCommand_Invoke-Elevated PSFunction_Start-Monitor PSCommand_Start-Monitor PSFunction_New-Password PSCommand_New-Password PSFunction_Test-Credential PSCommand_Test-Credential PSFunction_Get-ImpersonationContext PSCommand_Get-ImpersonationContext PSFunction_Pop-ImpersonationContext PSCommand_Pop-ImpersonationContext PSFunction_Push-ImpersonationContext PSCommand_Push-ImpersonationContext PSFunction_Protect-String PSCommand_Protect-String PSFunction_Unprotect-SecureString PSCommand_Unprotect-SecureString PSFunction_Get-SystemAudit PSCommand_Get-SystemAudit PSFunction_Get-SystemAuditFileSystem PSCommand_Get-SystemAuditFileSystem PSFunction_Get-SystemAuditGroupPolicy PSCommand_Get-SystemAuditGroupPolicy PSFunction_Get-SystemAuditMsiInstaller PSCommand_Get-SystemAuditMsiInstaller PSFunction_Get-SystemAuditPowerCycle PSCommand_Get-SystemAuditPowerCycle PSFunction_Get-SystemAuditUserSession PSCommand_Get-SystemAuditUserSession PSFunction_Get-SystemAuditWindowsService PSCommand_Get-SystemAuditWindowsService PSFunction_Add-TrustedHost PSCommand_Add-TrustedHost PSFunction_Get-TrustedHost PSCommand_Get-TrustedHost PSFunction_Remove-TrustedHost PSCommand_Remove-TrustedHost PSFunction_Get-VaultCredential PSCommand_Get-VaultCredential PSFunction_Get-VaultEntry PSCommand_Get-VaultEntry PSFunction_Get-VaultSecureString PSCommand_Get-VaultSecureString PSFunction_New-VaultEntry PSCommand_New-VaultEntry PSFunction_Remove-VaultEntry PSCommand_Remove-VaultEntry PSFunction_Update-VaultEntry PSCommand_Update-VaultEntry PSFunction_Use-VaultCredential PSCommand_Use-VaultCredential PSFunction_Use-VaultSecureString PSCommand_Use-VaultSecureString PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-02-21T16:05:13Z</S>
+          <S N="NormalizedVersion">3.0.0</S>
+          <S N="Authors">Claudio Spizzi</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">SecurityFever.nuspec|en-US\about_SecurityFever.help.txt|Functions\Common\Invoke-Elevated.ps1|Functions\SecureString\Protect-String.ps1|Functions\SystemAudit\Get-SystemAuditWindowsService.ps1|Functions\Vault\Remove-VaultEntry.ps1|Helpers\Common\Convert-ByteToBase32.ps1|Helpers\EventLog\Convert-EventLogObjectId4625.ps1|Helpers\SystemAudit\Get-WinEventWin32Exception.ps1|Tests\Unit\Credential\Test-Credential.Tests.ps1|Tests\Unit\Certificate\TestData\ca-aes.pfx|Tests\Unit\Certificate\TestData\cert-chain.p7b|SecurityFever.psd1|Functions\Audit\Get-SecurityAuditPolicy.ps1|Functions\Common\New-TimeBasedOneTimeSharedSecret.ps1|Functions\SecureString\Unprotect-SecureString.ps1|Functions\TrustedHost\Add-TrustedHost.ps1|Functions\Vault\Update-VaultEntry.ps1|Helpers\Common\Get-CommandPath.ps1|Helpers\EventLog\Convert-EventLogObjectId4634.ps1|Helpers\SystemAudit\New-WinEventFilterXml.ps1|Tests\Unit\TrustedHost\Add-TrustedHosts.Tests.ps1|Tests\Unit\Certificate\TestData\ca-des.pfx|Tests\Unit\Certificate\TestData\cert-single-aes.pfx|SecurityFever.psm1|Functions\Audit\Get-SecurityAuditPolicySetting.ps1|Functions\Common\Start-Monitor.ps1|Functions\SystemAudit\Get-SystemAudit.ps1|Functions\TrustedHost\Get-TrustedHost.ps1|Functions\Vault\Use-VaultCredential.ps1|Helpers\Common\Test-AdministratorRole.ps1|Helpers\EventLog\Convert-EventLogObjectId4647.ps1|Helpers\SystemAudit\Show-SystemAuditEventLogWarning.ps1|Tests\Unit\TrustedHost\Get-TrustedHosts.Tests.ps1|Tests\Unit\Certificate\TestData\ca.cer|Tests\Unit\Certificate\TestData\cert-single-des.pfx|SecurityFever.Xml.Format.ps1xml|Functions\Certificate\Add-CertificatePrivateKeyPermission.ps1|Functions\Credential\New-Password.ps1|Functions\SystemAudit\Get-SystemAuditFileSystem.ps1|Functions\TrustedHost\Remove-TrustedHost.ps1|Functions\Vault\Use-VaultSecureString.ps1|Helpers\EventLog\Convert-EventLogObject.ps1|Helpers\EventLog\Convert-EventLogObjectId6008.ps1|Helpers\SystemAudit\Show-SystemAuditPolicyWarning.ps1|Tests\Unit\TrustedHost\Remove-TrustedHosts.Tests.ps1|Tests\Unit\Certificate\TestData\ca.p7b|Tests\Unit\Certificate\TestData\cert-single.p7b|SecurityFever.Xml.Types.ps1xml|Functions\Certificate\Convert-Certificate.ps1|Functions\Credential\Test-Credential.ps1|Functions\SystemAudit\Get-SystemAuditGroupPolicy.ps1|Functions\Vault\Get-VaultCredential.ps1|Helpers\Audit\Invoke-AuditPolGetCategoryAllCsv.ps1|Helpers\EventLog\Convert-EventLogObjectId1.ps1|Helpers\Impersonation\Initialize-ImpersonationContext.ps1|Tests\Unit\Audit\Get-SecurityAuditPolicy.Tests.ps1|Tests\Unit\Vault\SecurityFever.CredentialManager.Tests.ps1|Tests\Unit\Certificate\TestData\ca.pem|Tests\Unit\Certificate\TestData\cert.cer|Assemblies\QRCoder.dll|Functions\Certificate\Get-CertificatePrivateKeyPermission.ps1|Functions\Impersonation\Get-ImpersonationContext.ps1|Functions\SystemAudit\Get-SystemAuditMsiInstaller.ps1|Functions\Vault\Get-VaultEntry.ps1|Helpers\Audit\Invoke-AuditPolListSubcategoryAllCsv.ps1|Helpers\EventLog\Convert-EventLogObjectId1074.ps1|Helpers\SystemAudit\Get-WinEventAdvanced.ps1|Tests\Unit\Audit\Get-SecurityAuditPolicySettings.Tests.ps1|Tests\Unit\Audit\TestData\auditpol-getcategoryall.csv|Tests\Unit\Certificate\TestData\cert-chain-aes.pfx|Tests\Unit\Certificate\TestData\cert.pem|Assemblies\SecurityFever.dll|Functions\Certificate\New-DomainSignedCertificate.ps1|Functions\Impersonation\Pop-ImpersonationContext.ps1|Functions\SystemAudit\Get-SystemAuditPowerCycle.ps1|Functions\Vault\Get-VaultSecureString.ps1|Helpers\Certificate\Get-CertificatePrivateKeyFile.ps1|Helpers\EventLog\Convert-EventLogObjectId42.ps1|Helpers\SystemAudit\Get-WinEventRecordProperty.ps1|Tests\Unit\Certificate\Convert-Certificate.Tests.ps1|Tests\Unit\Audit\TestData\auditpol-listsubcategoryall.csv|Tests\Unit\Certificate\TestData\cert-chain-des.pfx|Tests\Unit\Certificate\TestData\README.md|Configurations\SystemAudit.EventLog.json|Functions\Common\Get-TimeBasedOneTimePassword.ps1|Functions\Impersonation\Push-ImpersonationContext.ps1|Functions\SystemAudit\Get-SystemAuditUserSession.ps1|Functions\Vault\New-VaultEntry.ps1|Helpers\Common\Convert-Base32ToByte.ps1|Helpers\EventLog\Convert-EventLogObjectId4624.ps1|Helpers\SystemAudit\Get-WinEventRecordUser.ps1|Tests\Unit\Common\Get-TimeBasedOneTimePassword.Tests.ps1</S>
+          <S N="GUID">6BAE79AD-CE6B-4969-933A-0C37EE3708FA</S>
+          <S N="PowerShellVersion">3.0</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">C:\SC\git\MGMT\PowerShell\SavedModules\SecurityFever\3.0.0</S>
+    </MS>
+  </Obj>
+</Objs>
