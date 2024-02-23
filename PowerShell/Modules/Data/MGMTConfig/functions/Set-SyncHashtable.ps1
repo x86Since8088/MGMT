@@ -1,38 +1,30 @@
 Function Set-SyncHashtable {
     [cmdletbinding()]
     param (
-        $VariableName,
-        $scope = 'global',
-        $InputObject = (Get-Variable -Name $VariableName -Scope $scope -ErrorAction SilentlyContinue),
-        [string]$Name,
-        $Value = (
-            .{
-                if (
-                    ('InputObject' -in $PSBoundParameters.Keys) -or 
-                    ($null -ne $InputObject.value)
-                ) 
-                {($InputObject.Value).($Name)} else {[hashtable]::Synchronized(@{})
-            }
-            }
-        )
+        # Parameter help description
+        [Parameter(ValueFromPipeline=$true,
+                   ValueFromPipelineByPropertyName=$false,
+                   Position=0,
+                   Mandatory=$true)]
+        $InputObject,
+        [string]$Name
     )
     process {
         if ($null -eq $InputObject) {
-            $InputObject = New-Variable   -Name $VariableName -Value $Value -Scope $scope -PassThru
+            return Write-Error -Message "The input object is required."
         }
-        if ($null -eq $InputObject.Value) {
-            $InputObject.Value = [hashtable]::Synchronized(@{})
+        if ('' -eq $Name) {return Write-Error -Message "The name is required."}
+        
+        if ($null -eq $InputObject.($Name)) {
+            $InputObject.($Name) = [hashtable]::Synchronized(@{})
         }
-        elseif ($InputObject.Value.GetType().Name -eq 'Hashtable') {
-            $V = $InputObject.Value
-            $InputObject.Value = [hashtable]::Synchronized($v)
+        if($InputObject.($Name).GetType().Name -eq 'SyncHashtable') {}
+        elseif ($InputObject.($Name).GetType().Name -eq 'Hashtable') {
+            $V = $InputObject.($Name)
+            $InputObject.($Name) = [hashtable]::Synchronized($v)
         }
-        if($InputObject.Value.GetType().Name -eq 'SyncHashtable') {}
         else {
-            #return Write-Error -Message "The input object is not a hashtable or a SyncHashtable."
-        }
-        if ('' -ne $Name) {
-            $InputObject.Value.($Name) = $Value
+            return Write-Error -Message "The input object is not a hashtable or a SyncHashtable."
         }
     }
 }

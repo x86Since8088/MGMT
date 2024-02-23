@@ -9,7 +9,7 @@ $PFSense_Obj = $MGMT_Env.config.sites.($script:Environment).pfsense
 $PFSense_Creds = $MGMT_Env.Auth.($PFSense_Obj.fqdn)
 
 
-Set-MGMTDataObject -InputObject $global:MGMT_Env -Name "Status.environment.$script:Environment" @{
+Set-MGMTDataObject -InputObject $global:MGMT_Env -Name Status,environment,$script:Environment @{
     Name = $script:Environment
     ESXI = $ESXI_Obj.fqdn
     PFSense = $PFSense_Obj.fqdn

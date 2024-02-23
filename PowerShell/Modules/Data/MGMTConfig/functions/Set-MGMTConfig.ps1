@@ -1,7 +1,7 @@
 function Set-MGMTConfig {
     [cmdletbinding()]
     param(
-        [string]$Name,
+        [string[]]$Name,
         $Value,
         [switch]$PassThru
     )

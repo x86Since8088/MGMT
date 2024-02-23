@@ -20,7 +20,7 @@ function Get-MGMTShardFileValue {
             }
             return  'no_data_found'
         })]
-        [string]$KeyName,
+        [string[]]$KeyName,
         [int]$KeyLength = 32,
         [switch]$Force
     )
@@ -34,23 +34,20 @@ function Get-MGMTShardFileValue {
             Out-Null
         if (!(Test-Path $LiteralPath)) {
             $Data = Set-MGMTDataObject -InputObject $inputObject -Name $KeyName -Value (Get-MGMTRandomBytes -ByteLength $KeyLength) -Passthru
-            #Set-SyncHashtable -VariableName InputObject -scope global -Name $KeyName -Value (Get-MGMTRandomBytes -ByteLength $KeyLength)
             Export-MGMTYAML -LiteralPath $LiteralPath -InputObject $Data -Encoding utf8
         }
         else{
             $inputObject = (Import-MGMTYAML -LiteralPath $LiteralPath -ErrorAction Ignore)
         }
         $Data = Get-MGMTDataObject -InputObject $inputObject -Name $KeyName
-        if ($null -eq $inputObject.($KeyName)) {
+        if ($null -eq $Data) {
             $Data = Set-MGMTDataObject -InputObject $inputObject -Name $KeyName -Value (Get-MGMTRandomBytes -ByteLength $KeyLength) -Passthru
-            #Set-SyncHashtable -VariableName InputObject -scope global -Name $KeyName -Value (Get-MGMTRandomBytes -ByteLength $KeyLength)
             Export-MGMTYAML -LiteralPath $LiteralPath -InputObject $Data -Encoding utf8
         }
-        if ($Force -and ($inputObject.($KeyName).length -ne $KeyLength)){
+        if ($Force -and ($Data.length -ne $KeyLength)){
             $Data = Set-MGMTDataObject -InputObject $inputObject -Name $KeyName -Value (Get-MGMTRandomBytes -ByteLength $KeyLength) -Passthru
-            #Set-SyncHashtable -VariableName InputObject -scope global -Name $KeyName -Value (Get-MGMTRandomBytes -ByteLength $KeyLength)
             Export-MGMTYAML -LiteralPath $LiteralPath -InputObject $Data -Encoding utf8
         }
-        return $inputObject.($KeyName)
+        return $Data
     }
 }

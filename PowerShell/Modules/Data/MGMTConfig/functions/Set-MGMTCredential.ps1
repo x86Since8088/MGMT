@@ -10,12 +10,9 @@ Function Set-MGMTCredential {
                 [System.Management.Automation.Language.CommandAst] $CommandAst,
                 [System.Collections.IDictionary] $FakeBoundParameters
             )
-            return [string[]]$global:MGMT_Env.Auth.Keys | Where-Object { $_ -like "*$WordToComplete*" }
+            return [string[]]$global:MGMT_Env.Auth.SystemType.Keys | Where-Object { $_ -like "*$WordToComplete*" }
         })]
-        [string]$FQDN,
-        [System.Management.Automation.PSCredential]$Credential,
-        [validateset('currentuser','allusers')]
-        [string]$Scope = 'currentuser',
+        [string]$SystemType = 'default',        
         [ArgumentCompleter({
             [OutputType([System.Management.Automation.CompletionResult])]
             param(
@@ -25,41 +22,32 @@ Function Set-MGMTCredential {
                 [System.Management.Automation.Language.CommandAst] $CommandAst,
                 [System.Collections.IDictionary] $FakeBoundParameters
             )
-            return [string[]]$global:MGMT_Env.Auth.Keys | Where-Object { $_ -like "*$WordToComplete*" }
+            return [string[]]($global:MGMT_Env.Auth.SystemType).($FakeBoundParameters['SystemType']).Keys | Where-Object { $_ -like "*$WordToComplete*" }
         })]
-        [string]$From
+        [Alias('fqdn','hostname','ComputerName')]
+        [string]$SystemName,
+        [System.Management.Automation.PSCredential]$Credential,
+        [validateset('currentuser','allusers')]
+        [string]$Scope = 'currentuser'
     )
     process {
-        $Global:MGMT_Env.Auth.($FQDN) = $Credential
-        $Authsave = @{}
-        if ('' -ne $From){
-            $Credential = $Global:MGMT_Env.Auth.($From)
+        Set-SyncHashtable -InputObject $global:MGMT_Env      -Name Auth
+        Set-SyncHashtable -InputObject $global:MGMT_Env.Auth -Name SystemType
+        if ('' -eq $SystemName) {}
+        elseif ('' -eq $SystemType) {
+            return Write-Error -Message "The source system type is not found."
         }
-        if ($null -eq $Credential) {
-            Write-Error -Message "The source credential is not found."
-            return
+        elseif ($null -eq $Credential) {
+            return Write-Error -Message "The source credential is not found."
         }
-        if ($Scope -eq 'global') {
+        elseif ($Scope -eq 'global') {
             return write-error -Message "The global scope is not implemented yet."
         }
-        foreach ($obj in ($global:MGMT_Env.Auth.GetEnumerator()|Where-Object{$null -ne $_.Value})) {
-            $Authsave.($obj.Key) =
-                foreach ($CredItem in $obj.Value){
-                    @{
-                        UserName = $CredItem.UserName
-                        Password = $CredItem.Password | ConvertFrom-SecureString -Key $global:MGMT_Env.UKey
-                    }
-                }
-            if ($null -eq $_.Value){}
-            elseif ($null -eq $_.value.password){}
-            else {
-                $Authsave.($_.Key) = @{
-                    UserName = $_.Value.UserName
-                    Password = $_.Value.password | ConvertFrom-SecureString -Key $global:MGMT_Env.UKey
-                }
-            }
+        else {
+            Set-SyncHashtable -InputObject $Global:MGMT_Env.Auth.SystemType -Name $SystemType
+            Set-SyncHashtable -InputObject $Global:MGMT_Env.Auth.SystemType.($SystemType) -Name $SystemName
+            $Global:MGMT_Env.Auth.SystemType.($SystemType).($SystemName).Credential = $Credential
         }
-        Split-Path $MGMT_Env.AuthFile|Where-Object{! (Test-Path $_)}|ForEach-Object{New-Item -Path $_ -ItemType Directory -Force} | Out-Null
-        Export-MGMTYAML -InputObject $Authsave -LiteralPath $MGMT_Env.AuthFile -Encoding utf8
+        Save-MGMTCredential
     }
 }

@@ -45,3 +45,6 @@ Things to know:
     - ML scenarios
     - Key Management
     - Credential Vaults
+     - https://github.com/hashicorp/vault/
+
+
