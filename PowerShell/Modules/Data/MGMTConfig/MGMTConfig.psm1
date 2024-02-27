@@ -4,9 +4,9 @@ $script:ConfigFile       = "$script:DataFolder\Config.yaml"
 $script:MGMTFolder       = $WorkingFolder -replace "^(.*?\\MGMT).*",'$1'
 $Script:ModuleFolder     = $script:PSSR
 Write-Host -Message "MGMT: Loading MGMT module from '$Script:ModuleFolder'" -ForegroundColor Yellow
-Write-Verbose -Message "MGMT: Loading indivifual functions from '$Script:ModuleFolder'" -Verbose
+Write-Verbose -Message "MGMT: Loading indivifual functions from '$Script:ModuleFolder'"
 Get-ChildItem "$Script:ModuleFolder\functions\*.ps1" | ForEach-Object{
-    Write-Verbose -Message "`tLoading function $($_.Name)" -Verbose
+    Write-Verbose -Message "`tLoading function $($_.Name)" 
     . $_.FullName
     Get-Content $_.FullName|
         Where-Object{$_ -match '^\s*function\s'}|

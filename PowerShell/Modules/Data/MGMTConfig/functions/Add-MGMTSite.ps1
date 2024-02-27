@@ -6,6 +6,7 @@ function Add-MGMTSite {
     )
     $Site = Get-MGMTDataObject -InputObject $MGMT_Env -Name config,sites,$Site
     if ($null -eq $Site) {
+        Set-SyncHashtable -InputObject $MGMT_Env.config -Name sites
         Set-SyncHashtable -InputObject $MGMT_Env.config.sites -Name $Site
         $MGMT_Env.config.sites.($site) = [hashtable]::Synchronized(@{
             Name = $Site

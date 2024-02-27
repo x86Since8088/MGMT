@@ -4,10 +4,15 @@ Function Install-MGMTSSHKeyFile {
       [string]$HostName,
       [string]$UserName,
       [string]$KeyFilePath,
-      [string]$RunFirst
+      [string]$RunFirst,
+      [switch]$Force,
+      [string]$authorized_keys_path = '~/.ssh/authorized_keys',
+      [string]$Shell = 'bash',
+      [string]$logoffcommands = 'exit'
     )
     process {
-      Add-MGMTSSHHostKey -HostName $HostName -KeyFilePath $KeyFilePath
+      Add-MGMTSSHHostKey -HostName $HostName -Force:$Force
+      
       if ('' -eq $KeyFilePath) {
           $KeyFilePath = "$env:userprofile/.ssh/id_rsa"
           if (!(test-path $KeyFilePath)) {
@@ -16,18 +21,21 @@ Function Install-MGMTSSHKeyFile {
               icacls $KeyFilePath /remove everyone
           }
           #$sandbox.Password| scp $KeyFilePath "$($UserName)@$($HostName):/home/$UserName/$(split-path $KeyFilePath -leaf)"
-          ssh -i $KeyFilePath $UserName@$HostName -t bash @"
+          ssh -i $KeyFilePath $UserName@$HostName -t $shell @"
           $RunFirst
+
           export  keyinfo='$(Get-Content "$keyFilePath.pub")'
           echo `$keyinfo
-          echo `$keyinfo >> ~/.ssh/authorized_keys
-          if (( grep -q "`$keyinfo" ~/.ssh/authorized_keys )); then
-          echo "found keyinfo in authorized_keys"
+          echo `$keyinfo >> $authorized_keys_path
+          mkdir $(Split-Path $authorized_keys_path) 2> /dev/null
+          if [ grep -q "`$keyinfo" $authorized_keys_path ]; then
+            echo "found keyinfo in authorized_keys"
           else
-          echo "missing keyinfo in authorized_keys"
-          echo `$keyinfo >> ~/.ssh/authorized_keys
-          chmod 600 ~/.ssh/authorized_keys
+            echo "missing keyinfo in authorized_keys"
+            echo `$keyinfo >> $authorized_keys_path
+            chmod 600 $authorized_keys_path
           fi
+          $logoffcommands
 "@
         }
     }   

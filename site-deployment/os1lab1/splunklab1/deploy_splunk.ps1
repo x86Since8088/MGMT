@@ -1,37 +1,48 @@
 $Workingfolder = $PSScriptRoot
-. "$workingfolder\init.ps1"
-$script:PSSR = $PSScriptRoot
-$script:Environment = "$PSSR" | Split-Path| Split-Path -Leaf
-Write-Host -Message "Environment Name: $script:Environment pulled from current folder '$script:PSSR'" -ForegroundColor Yellow
-$ESXI_Obj = $MGMT_Env.config.sites.($script:Environment).esxi
-$ESXI_Creds = $MGMT_Env.Auth.($ESXI_Obj.fqdn)
-$PFSense_Obj = $MGMT_Env.config.sites.($script:Environment).pfsense
-$PFSense_Creds = $MGMT_Env.Auth.($PFSense_Obj.fqdn)
-
-
-Set-MGMTDataObject -InputObject $global:MGMT_Env -Name Status,environment,$script:Environment @{
-    Name = $script:Environment
-    ESXI = $ESXI_Obj.fqdn
-    PFSense = $PFSense_Obj.fqdn
-}
-
-Import-Module VMware.VimAutomation.Core -DisableNameChecking -SkipEditionCheck *> $null
-Set-PowerCLIConfiguration -Scope User -ParticipateInCEIP $false -InvalidCertificateAction Ignore -WebOperationTimeoutSeconds 300 -Confirm:$false | out-null
-Connect-VIServer -Server $ESXI_Obj.ip -Credential $ESXI_Creds -Force
+. "$(split-path $workingfolder)\init.ps1"
+Connect-VIServer -Server $ESXI_Obj.ip -Credential $ESXI_Creds.Credential -Force
 Add-MGMTSSHHostKey -HostName $ESXI_Obj.ip -KeyFilePath $KeyFilePath -Verbose
 Add-MGMTSSHHostKey -HostName $PFSense_Obj.ip -KeyFilePath $KeyFilePath -Verbose
+$Site     = $MGMT_Env.config.sites.($Deployment_Environment)
+Set-SyncHashtable -InputObject $Site -Name splunk
+if ($null -eq $Site.splunk.splunklab1) {$Site.splunk.splunklab1 = @()}
+Set-SyncHashtable -InputObject $Site -Name domain
+if ($null -eq $Site.domain.fqdn) {$Site.domain.fqdn = Read-Host -Prompt "Enter the domain name for the site '$Deployment_Environment'."}
+if ($null -eq $Site.domain.dnsserver) {
+    if (YN -Message "Do you want to use a dnsserver other than '10.10.10.10' for '$($Site.domain.fqdn)'") {
+        $Site.domain.dnsserver = Read-Host -Prompt "Enter the IP address of the DNS server for '$($Site.domain.fqdn)'"
+    }
+    ELSE {
+        $Site.domain.dnsserver = '10.10.10.10'
+    }
+}
+if ($null -eq $Site.splunk.splunk.splunklab1) {
+    $Site.splunk.splunklab1 = @{
+        SystemName = 'splunklab1'
+        fqdn = "splunk1.$($Site.domain)"
+        IP  = Read-Host -Prompt "Enter the IP address for splunklab1"
+        SplunkEnterpriseForLinuxDownloadURLTGZ = 
+            if (YN -Message "Enter the Splunk Enterprise for Linux download URL (tar.gz)" ) {
+                Read-Host -Prompt "Enter the Splunk Enterprise for Linux download URL (tar.gz)"
+            }
+            ELSE {
+                'https://download.splunk.com/products/splunk/releases/9.2.0.1/linux/splunk-9.2.0.1-d8ae995bf219-Linux-x86_64.tgz'
+            }
+    }
+    Save-MGMTConfig
+}
+
 
 # Define SSH connection details
-#$HostName = $Sandbox.SplunkLinuxHostIP
-#$UserName = $Sandbox.UserName
+$HostName = $Site.splunk.splunklab1.IP
+$UserName = $Site.splunk.splunklab1
 #[string]$KeyFilePath = $Sandbox.SplunkLinuxHostKeyFilePath
 
 # Retrieve the SSH host key (RSA type)
 
+$VM = Get-VM -Name $site.splunk.splunklab1.fqdn -ErrorAction Ignore
 
-break
-
-Install-MGMTSSHKeyFile -HostName 
+Install-MGMTSSHKeyFile -HostName $Site.pfsense.ip -UserName $PFSense_Creds.Credential.UserName -Verbose -RunFirst '8'
 # SSH into the Alma Linux system
 ssh -i $KeyFilePath $UserName@$HostName "yum install -y wget"  # Install wget (if not already installed)
 

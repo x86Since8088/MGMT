@@ -7,7 +7,7 @@ function Add-MGMTSSHHostKey {
     process{
         [string[]]$Match = Get-Content "$env:USERPROFILE\.ssh\known_hosts" | Where-Object{$_ -like "$Hostname *"}
         if ($Force) {
-            write-hoat "Overwriting the SSH host key for hostname '$HostName' in the known_hosts file"
+            write-host "Overwriting the SSH host key for hostname '$HostName' in the known_hosts file"
             $NewContent = Get-Content "$env:USERPROFILE\.ssh\known_hosts" | Where-Object{$_ -notlike "$Hostname *"}
             Set-Content -Path "$env:USERPROFILE\.ssh\known_hosts" -Value $NewContent -Force -Confirm:$False
         }
