@@ -1,0 +1,21 @@
+---
+name: vmware_environment
+description: "Related systems and services in the VMware environment"
+fields:
+  - name: "name"
+    description: "vCenter Server"
+  - name: "SystemType"
+    description: "vcenter"
+  - name: "url"
+defaults:
+  vcenter:
+  - name: "[servershortname]"
+    systemtype: "vmware.vcenter"
+    url: "https://127.0.0.1"
+    username: ""
+  esxi:
+  - name: ""
+    systemtype: "vmware.esxi"
+    fqdn: ""
+    username: ""
+  

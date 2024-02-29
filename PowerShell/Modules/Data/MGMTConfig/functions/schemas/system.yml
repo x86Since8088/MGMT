@@ -16,5 +16,5 @@ Validation:
   fqdn: !!str "/w"
   ip: !!str '^/d\.d\.d\.d$'
   os: !!str \w{2}
-  tags: !!str 
+  tags: !!str '[\w-_]{3..30}'
 ---

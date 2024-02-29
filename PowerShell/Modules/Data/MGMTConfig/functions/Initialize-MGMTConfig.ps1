@@ -24,7 +24,7 @@ function Initialize-MGMTConfig {
             $Systems = $SystemTypes.($SystemTypeKey)
             foreach ($System in $Systems) {
                 if ($System.SystemName -match '\w') {
-                    write-host -Message "Checking for credentials for $($System.SystemName) in $($SystemTypeKey) for $($SiteKey)" -ForegroundColor Yellow
+                    write-host "Checking for credentials for $($System.SystemName) in $($SystemTypeKey) for $($SiteKey) " -ForegroundColor Yellow -NoNewline -BackgroundColor Black
                     $Cred = $System.fqdn,$System.ip,$System.systemname | 
                         ForEach-Object {
                             Get-MGMTCredential -SystemType $SystemTypeKey -SystemName $_ -Scope currentuser
@@ -32,8 +32,11 @@ function Initialize-MGMTConfig {
                         Where-Object {$_ -ne $null}|
                         Select-Object -First 1
                     if ($null -eq $Cred) {
-                        Write-Error -Message "No credentials found for Site:$($SiteKey) SystemType:$($SystemTypeKey) SystemName:$($System.SystemName)" 
-                        write-warning -Message "Set-MGMTCredential -SystemType $SystemTypeKey -SystemName $($System.SystemName) -Credential (get-Credential) -Scope currentuser" 
+                        Write-Host "MISSING" -ForegroundColor Red -BackgroundColor Black
+                        write-warning "Set-MGMTCredential -SystemType $SystemTypeKey -SystemName $($System.SystemName) -Credential (get-Credential) -Scope currentuser"  -BackgroundColor Black
+                     }
+                     else {
+                        Write-Host "OK" -ForegroundColor Green -BackgroundColor Black
                      }
                 }
             }

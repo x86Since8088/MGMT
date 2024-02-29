@@ -10,20 +10,72 @@ function Get-MGMTSystem {
                 [System.Management.Automation.Language.CommandAst] $CommandAst,
                 [System.Collections.IDictionary] $FakeBoundParameters
             )
-            return (Get-MGMTHashtableKeys -Hashtable $global:MGMT_Env.config.sites | 
+            return ($global:MGMT_Env.config.sites.Keys | 
                 Where-Object { $_ -like "*$WordToComplete*" }
             )
         })]
-        [string[]]$Site,
-        [string[]]$SystemType,
-        [string[]]$SystemName
+        [string[]]$Environment = '*',
+        [ArgumentCompleter({
+            [OutputType([System.Management.Automation.CompletionResult])]
+            param(
+                [string] $CommandName,
+                [string] $ParameterName,
+                [string] $WordToComplete,
+                [System.Management.Automation.Language.CommandAst] $CommandAst,
+                [System.Collections.IDictionary] $FakeBoundParameters
+            )
+            return ($global:MGMT_Env.config.sites.($FakeBoundParameters['Environment']).Keys |
+                Where-Object { $_ -like "*$WordToComplete*" }
+            )
+        })]
+        [string[]]$SystemType = '*',
+        [ArgumentCompleter({
+            [OutputType([System.Management.Automation.CompletionResult])]
+            param(
+                [string] $CommandName,
+                [string] $ParameterName,
+                [string] $WordToComplete,
+                [System.Management.Automation.Language.CommandAst] $CommandAst,
+                [System.Collections.IDictionary] $FakeBoundParameters
+            )
+            return ($global:MGMT_Env.config.sites.($FakeBoundParameters['Environment']).($FakeBoundParameters['SystemType']).values |
+                Where-Object { $_.SystemName -like "*$WordToComplete*" }
+            )
+        })]
+        [string[]]$SystemName = '*'
     )
     begin {
-        $Schema = Get-MGMTSchema -SchemaName 'SystemSchema.yml'
-        if ($null -eq $Global:MGMT_Env) {
-            Initialize-MGMTConfig
+        #Go through some gymnastics to get the hashtable keys and allow wildcards.
+        [string[]]$Environment  = $Environment | Where-Object{$_ -ne ''}
+        [string[]]$SystemType   = $SystemType | Where-Object{$_ -ne ''}
+        [string[]]$SystemName   = $SystemName | Where-Object{$_ -ne ''}
+        [string[]]$Enviornments = 
+        foreach ($EnvironmentItem in $Environment) {
+            ($global:MGMT_Env.config.sites).Keys |
+                Where-Object{
+                    $_ -like $EnvironmentItem
+                }
         }
-        $global:MGMT_Env.config.sites
-        return $System
+        foreach ($Env in $Enviornments) {
+            [string[]]$SystemTypes = 
+                foreach($Type in $SystemType) {
+                    ($global:MGMT_Env.config.sites.($EnvironmentItem)).Keys|
+                        Where-Object{$_ -like $Type}
+                }
+            foreach ($Type in $SystemTypes) {
+                [array]$DataObjects = foreach ($Name in $SystemName) {
+                    ($global:MGMT_Env.config.sites).($EnvironmentItem).($Type) |
+                        Where-Object{$_.SystemName -like $Name}
+                }
+                foreach ($DataObject in $DataObjects) {
+                    [pscustomobject]@{
+                        Environment = $EnvironmentItem
+                        SystemType = $Type
+                        SystemName = $DataObject.SystemName
+                        Data = $DataObject
+                    }
+                }
+            }
+        }
     }
 }

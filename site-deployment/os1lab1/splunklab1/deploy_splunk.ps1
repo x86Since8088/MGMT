@@ -1,20 +1,25 @@
+param (
+    $DeploymentEnvironment = ($PSScriptRoot -replace "^.*?site-deployment(\\|/)" -replace "(/|\\).*"),
+    [string]$LinuxHostName,
+    [string]$VMwareHostName,
+    [string]$DNSServer = '10.10.10.10'
+)
+$LinuxIP = Resolve-DnsName -Name $LinuxHostName -Server $DNSServer | Select-Object -ExpandProperty IPAddress
+$VMwareHostIP = Resolve-DnsName -Name $VMwareHostName -Server $DNSServer | Select-Object -ExpandProperty IPAddress
 $Workingfolder = $PSScriptRoot
 . "$(split-path $workingfolder)\init.ps1"
 Connect-VIServer -Server $ESXI_Obj.ip -Credential $ESXI_Creds.Credential -Force
 Add-MGMTSSHHostKey -HostName $ESXI_Obj.ip -KeyFilePath $KeyFilePath -Verbose
 Add-MGMTSSHHostKey -HostName $PFSense_Obj.ip -KeyFilePath $KeyFilePath -Verbose
-$Site     = $MGMT_Env.config.sites.($Deployment_Environment)
+$Site     = $MGMT_Env.config.sites.($DeploymentEnvironment)
 Set-SyncHashtable -InputObject $Site -Name splunk
 if ($null -eq $Site.splunk.splunklab1) {$Site.splunk.splunklab1 = @()}
 Set-SyncHashtable -InputObject $Site -Name domain
-if ($null -eq $Site.domain.fqdn) {$Site.domain.fqdn = Read-Host -Prompt "Enter the domain name for the site '$Deployment_Environment'."}
-if ($null -eq $Site.domain.dnsserver) {
-    if (YN -Message "Do you want to use a dnsserver other than '10.10.10.10' for '$($Site.domain.fqdn)'") {
-        $Site.domain.dnsserver = Read-Host -Prompt "Enter the IP address of the DNS server for '$($Site.domain.fqdn)'"
-    }
-    ELSE {
-        $Site.domain.dnsserver = '10.10.10.10'
-    }
+if ($null -eq $Site.domain.fqdn) {$Site.domain.fqdn = Read-Host -Prompt "Enter the domain name for the site '$DeploymentEnvironment'."}
+if ($DNSServer -ne '') {}
+elseif ($null -ne $Site.domain.dnsserver) {$DNSServer=$Site.domain.dnsserver}
+else{
+    return Write-Error -Message "No DNS server specified by -DNSServer for the site $global:MGMT_Env.config.sites.['$DeploymentEnvironment'].domain.dnsserver."
 }
 if ($null -eq $Site.splunk.splunk.splunklab1) {
     $Site.splunk.splunklab1 = @{

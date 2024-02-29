@@ -5,8 +5,22 @@ Remove-Module -Name MGMTConfig -ErrorAction Ignore -Force
 Import-Module "$MGMTFolder\PowerShell\Modules\Data\MGMTConfig" -DisableNameChecking 
 if (!(Test-Path $Datafolder)) {New-Item -Path $Datafolder -ItemType Directory | Out-Null}
 
-Write-Warning -Message "Adding Env:PSModulePath: '$MGMTFolder\PowerShell\SavedModules'"
-[string]$env:PSModulePath = [string[]]"$MGMTFolder\PowerShell\SavedModules" + ($env:PSModulePath -split ';' | 
-    Where-Object {!($_ -eq "$MGMTFolder\PowerShell\SavedModules")}) -join ';'
 
-
+foreach ($ModulePathItem in @(
+    "$MGMTFolder\PowerShell\Modules"
+    "$MGMTFolder\PowerShell\SavedModules"
+))
+{
+    if (test-path $ModulePathItem) {
+        Write-Warning -Message "Adding Env:PSModulePath: '$ModulePathItem'"
+        [string]$env:PSModulePath = 
+            [string[]]$ModulePathItem + 
+            (
+                $env:PSModulePath -split ';' | 
+                    Where-Object {$_ -ne $ModulePathItem}
+            ) -join ';'
+    }
+    else {
+        Write-Warning -Message "Module path '$ModulePathItem' does not exist."
+    }
+}
