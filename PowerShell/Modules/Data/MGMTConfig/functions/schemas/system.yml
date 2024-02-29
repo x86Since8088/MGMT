@@ -1,0 +1,20 @@
+---
+name: !!str system
+description: !!str computer systems
+fields:
+  name: Unique name for a specific system
+  systemtype: Name belonging to a general system type
+  role: Name of the role the system is assigned to
+  fqdn: Fully qualified domain name
+  ip: IP address
+  os: Operating system
+  tags: Tags for the system
+Validation:
+  name: !!str '[\w-_]{3..15}'
+  systemtype: !!str '[\w-_]{3..30}'
+  role: !!str "/w"
+  fqdn: !!str "/w"
+  ip: !!str '^/d\.d\.d\.d$'
+  os: !!str \w{2}
+  tags: !!str 
+---

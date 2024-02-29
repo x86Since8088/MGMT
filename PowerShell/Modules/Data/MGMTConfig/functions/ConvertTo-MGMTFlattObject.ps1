@@ -1,4 +1,4 @@
-function ConvertTo-FlattObject {
+function ConvertTo-MGMTFlatObject {
     [cmdletbinding()]
     param(
         [parameter(ValueFromPipeline)]
@@ -41,7 +41,7 @@ function ConvertTo-FlattObject {
                                 $NewObject[$NewPrefix]=($Property.value|Format-List|out-string) -replace '\s*(\n)','$1' -replace '\n\s*$'
                             }
                             else {
-                                Flatten-Object -NewObject $NewObject -Inputobject $property.value -Prefix $NewPrefix -Depth $Depth
+                                ConvertTo-MGMTFlatObject -NewObject $NewObject -Inputobject $property.value -Prefix $NewPrefix -Depth $Depth
                             }
                         }
                     }
@@ -55,4 +55,4 @@ function ConvertTo-FlattObject {
         }
     }
 }
-New-Alias -Force -Name Flatten-Object -Value ConvertTo-FlattObject
+New-Alias -Force -Name ConvertTo-MGMTFlatObject -Value ConvertTo-FlattObject

@@ -21,6 +21,15 @@ Things to know:
     - Project data is kept there
 
 ## Deployment goals
+ - IPAM
+  - Objectives
+   - DNS Records
+   - IP Address reservations via PTR
+   - VLAN automation
+   - 
+  - Netbox
+    - chat.openai.com
+  - PFsense API
  - Splunk
  - Cribl
  - ELK
@@ -30,6 +39,7 @@ Things to know:
  - Web front end
  - NPM
  - Node
+
  
  ## Multi-cloud Tools
   - Have the ability to move to cheaper options
@@ -42,9 +52,11 @@ Things to know:
     - WAF
     - ALG
     - Databases
+      - Create a testing table by default.
     - ML scenarios
     - Key Management
     - Credential Vaults
      - https://github.com/hashicorp/vault/
-
+    - WSL
+      - https://github.com/okibcn/wslcompact
 

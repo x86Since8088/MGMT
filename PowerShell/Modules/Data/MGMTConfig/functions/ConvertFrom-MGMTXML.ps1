@@ -1,4 +1,4 @@
-function ConvertFrom-XML
+function ConvertFrom-MGMTXML
 {
 	[CmdletBinding()]
 	param

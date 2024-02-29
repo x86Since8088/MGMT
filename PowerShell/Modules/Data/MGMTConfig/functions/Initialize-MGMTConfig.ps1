@@ -32,11 +32,9 @@ function Initialize-MGMTConfig {
                         Where-Object {$_ -ne $null}|
                         Select-Object -First 1
                     if ($null -eq $Cred) {
-                        if (YN -Message "Do you want to enter the credentials for:`n`t$(($System|convertto-yaml) -split "`n" -join "`n`t")") {
-                            $Cred = Get-Credential -Message "Enter credentials:"
-                            Set-MGMTCredential -SystemType $SystemTypeKey -SystemName $System.SystemName -Credential $Cred -Scope currentuser
-                        }
-                    }
+                        Write-Error -Message "No credentials found for Site:$($SiteKey) SystemType:$($SystemTypeKey) SystemName:$($System.SystemName)" 
+                        write-warning -Message "Set-MGMTCredential -SystemType $SystemTypeKey -SystemName $($System.SystemName) -Credential (get-Credential) -Scope currentuser" 
+                     }
                 }
             }
         }
