@@ -1,25 +1,56 @@
 param (
-    $DeploymentEnvironment = ($PSScriptRoot -replace "^.*?site-deployment(\\|/)" -replace "(/|\\).*"),
-    [string]$LinuxHostName,
-    [string]$VMwareHostName,
-    [string]$DNSServer = '10.10.10.10'
+    $Environment = ($PSScriptRoot -replace "^.*?site-deployment(\\|/)" -replace "(/|\\).*"),
+    $EnvironmentObj = $global:MGMT_Env.config.sites.($Environment),
+    $Domain = ($EnvironmentObj.domain.fqdn,$EnvironmentObj.domain|Where-Object {$_ -match '\w'}|Select-Object -First 1),
+    [string]$LinuxHostName = "linux1.$Environment.$domain",
+    [string]$DNSServer = '10.10.10.10',
+    [string]$VLAN = '10',
+    [string]$VMNetwork = 'VM Network',
+    [string]$Subnet = $EnvironmentObj.network.subnet
 )
-$LinuxIP = Resolve-DnsName -Name $LinuxHostName -Server $DNSServer | Select-Object -ExpandProperty IPAddress
-$VMwareHostIP = Resolve-DnsName -Name $VMwareHostName -Server $DNSServer | Select-Object -ExpandProperty IPAddress
+$ErrorActionPreference = 'Stop'
 $Workingfolder = $PSScriptRoot
 . "$(split-path $workingfolder)\init.ps1"
-Connect-VIServer -Server $ESXI_Obj.ip -Credential $ESXI_Creds.Credential -Force
-Add-MGMTSSHHostKey -HostName $ESXI_Obj.ip -KeyFilePath $KeyFilePath -Verbose
-Add-MGMTSSHHostKey -HostName $PFSense_Obj.ip -KeyFilePath $KeyFilePath -Verbose
-$Site     = $MGMT_Env.config.sites.($DeploymentEnvironment)
+
+$LinuxIP = Resolve-DnsName -Name $LinuxHostName -Server $DNSServer | Select-Object -ExpandProperty IPAddress
+if ($null -eq $LinuxIP) {
+    return Write-Error -Message "No IP address found for the hostname '$LinuxHostName' on the DNS server '$DNSServer'."
+}
+$VMwareHostObject = $EnvironmentObj.VMware_ESXi | Select-Object -First 1
+if ($null -eq $VMwareHostObject) {
+    return Write-Error -Message "No VMware ESXi host found for the site '$Environment'."
+}
+$VMwareHostIP = $VMwareHostObject.ip
+if ($null -eq $VMwareHostIP) {
+    return Write-Error -Message "No IP address found for the hostname '$VMwareHostName' on the DNS server '$DNSServer'."
+}
+$VMwareHostCreds = Get-MGMTCredential -SystemType VMware_Esxi -SystemName $VMwareHostObject.SystemName
+if ($null -eq $VMwareHostCreds) {
+    return Write-Error -Message "No credentials found for the VMware ESXi host '$VMwareHostObject.SystemName'."
+}
+$VMwareConnection = Connect-VIServer -Server $VMwareHostIP -Credential $VMwareHostCreds.Credential -Force
+if ($null -eq $VMwareConnection) {
+    return Write-Error -Message "Failed to connect to the VMware host '$($ESXI_Obj.ip)' using the credentials '$($ESXI_Creds.Credential.UserName)'."
+}
+$PFSense_Obj = $EnvironmentObj.pfsense
+if ($null -eq $PFSense_Obj) {
+    return Write-Error -Message "No PFSense firewall found for the site '$Environment'."
+}
+$PFSense_Creds = Get-MGMTCredential -SystemType PFSense -SystemName $PFSense_Obj.SystemName
+if ($null -eq $PFSense_Creds) {
+    return Write-Error -Message "No credentials found for the PFSense firewall '$($EnvironmentObj.pfsense.SystemName)'."
+}
+Add-MGMTSSHHostKey -HostName $VMwareHostIP  -Verbose
+Add-MGMTSSHHostKey -HostName $PFSense_Obj.ip  -Verbose
+$Site     = $MGMT_Env.config.sites.($Environment)
 Set-SyncHashtable -InputObject $Site -Name splunk
 if ($null -eq $Site.splunk.splunklab1) {$Site.splunk.splunklab1 = @()}
 Set-SyncHashtable -InputObject $Site -Name domain
-if ($null -eq $Site.domain.fqdn) {$Site.domain.fqdn = Read-Host -Prompt "Enter the domain name for the site '$DeploymentEnvironment'."}
+if ($null -eq $Site.domain.fqdn) {$Site.domain.fqdn = Read-Host -Prompt "Enter the domain name for the site '$Environment'."}
 if ($DNSServer -ne '') {}
 elseif ($null -ne $Site.domain.dnsserver) {$DNSServer=$Site.domain.dnsserver}
 else{
-    return Write-Error -Message "No DNS server specified by -DNSServer for the site $global:MGMT_Env.config.sites.['$DeploymentEnvironment'].domain.dnsserver."
+    return Write-Error -Message "No DNS server specified by -DNSServer for the site $global:MGMT_Env.config.sites.['$Environment'].domain.dnsserver."
 }
 if ($null -eq $Site.splunk.splunk.splunklab1) {
     $Site.splunk.splunklab1 = @{
