@@ -40,22 +40,23 @@ $PFSense_Creds = Get-MGMTCredential -SystemType PFSense -SystemName $PFSense_Obj
 if ($null -eq $PFSense_Creds) {
     return Write-Error -Message "No credentials found for the PFSense firewall '$($EnvironmentObj.pfsense.SystemName)'."
 }
-Add-MGMTSSHHostKey -HostName $VMwareHostIP  -Verbose
-Add-MGMTSSHHostKey -HostName $PFSense_Obj.ip  -Verbose
-$Site     = $MGMT_Env.config.sites.($Environment)
-Set-SyncHashtable -InputObject $Site -Name splunk
-if ($null -eq $Site.splunk.splunklab1) {$Site.splunk.splunklab1 = @()}
-Set-SyncHashtable -InputObject $Site -Name domain
-if ($null -eq $Site.domain.fqdn) {$Site.domain.fqdn = Read-Host -Prompt "Enter the domain name for the site '$Environment'."}
+
+Add-MGMTSSHHostKey -HostName $VMwareHostIP 
+Add-MGMTSSHHostKey -HostName $PFSense_Obj.ip 
+
+Set-SyncHashtable -InputObject $EnvironmentObj -Name splunk
+if ($null -eq $EnvironmentObj.splunk.splunklab1) {$EnvironmentObj.splunk.splunklab1 = @()}
+Set-SyncHashtable -InputObject $EnvironmentObj -Name domain
+if ($null -eq $EnvironmentObj.domain.fqdn) {$EnvironmentObj.domain.fqdn = Read-Host -Prompt "Enter the domain name for the site '$Environment'."}
 if ($DNSServer -ne '') {}
-elseif ($null -ne $Site.domain.dnsserver) {$DNSServer=$Site.domain.dnsserver}
+elseif ($null -ne $EnvironmentObj.domain.dnsserver) {$DNSServer=$EnvironmentObj.domain.dnsserver}
 else{
     return Write-Error -Message "No DNS server specified by -DNSServer for the site $global:MGMT_Env.config.sites.['$Environment'].domain.dnsserver."
 }
-if ($null -eq $Site.splunk.splunk.splunklab1) {
-    $Site.splunk.splunklab1 = @{
+if ($null -eq $EnvironmentObj.splunk.splunk.splunklab1) {
+    $EnvironmentObj.splunk.splunklab1 = @{
         SystemName = 'splunklab1'
-        fqdn = "splunk1.$($Site.domain)"
+        fqdn = "splunk1.$($EnvironmentObj.domain)"
         IP  = Read-Host -Prompt "Enter the IP address for splunklab1"
         SplunkEnterpriseForLinuxDownloadURLTGZ = 
             if (YN -Message "Enter the Splunk Enterprise for Linux download URL (tar.gz)" ) {
@@ -70,15 +71,15 @@ if ($null -eq $Site.splunk.splunk.splunklab1) {
 
 
 # Define SSH connection details
-$HostName = $Site.splunk.splunklab1.IP
-$UserName = $Site.splunk.splunklab1
+$HostName = $EnvironmentObj.splunk.splunklab1.IP
+$UserName = $EnvironmentObj.splunk.splunklab1
 #[string]$KeyFilePath = $Sandbox.SplunkLinuxHostKeyFilePath
 
 # Retrieve the SSH host key (RSA type)
 
-$VM = Get-VM -Name $site.splunk.splunklab1.fqdn -ErrorAction Ignore
+$VM = Get-VM -Name $EnvironmentObj.splunk.splunklab1.fqdn -ErrorAction Ignore
 
-Install-MGMTSSHKeyFile -HostName $Site.pfsense.ip -UserName $PFSense_Creds.Credential.UserName -Verbose -RunFirst '8'
+Install-MGMTSSHKeyFile -HostName $EnvironmentObj.pfsense.ip -UserName $PFSense_Creds.Credential.UserName -Verbose -RunFirst '8'
 # SSH into the Alma Linux system
 ssh -i $KeyFilePath $UserName@$HostName "yum install -y wget"  # Install wget (if not already installed)
 
