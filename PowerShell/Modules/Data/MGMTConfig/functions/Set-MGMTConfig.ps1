@@ -38,9 +38,9 @@ function Set-MGMTConfig {
                                                                         }
         if ($null -eq $Global:MGMT_Env.config['sites']    )               {$Global:MGMT_Env.config['sites']=@();$Changed=$true}
         if (!$Global:MGMT_Env.Contains('Crypto'))                         {$Global:MGMT_Env.config['Crypto']=[hashtable]::Synchronized(@{});$Changed=$true}
-        if (($Global:MGMT_Env.config['crypto']['salt']).length -ne 8)     {$Global:MGMT_Env.config['Crypto']['salt']=Get-MGMTRandomBytes -ByteLength 8;$Changed=$true}
-        if (($Global:MGMT_Env.config['crypto']['key']).length -ne 32)     {$Global:MGMT_Env.config['Crypto']['key']=Get-MGMTRandomBytes -ByteLength 32;$Changed=$true}
-        if (($Global:MGMT_Env.config['crypto']['iv']).length -ne 16)      {$Global:MGMT_Env.config['Crypto']['iv']=Get-MGMTRandomBytes -ByteLength 16;$Changed=$true}
+        if (($Global:MGMT_Env.config['crypto']['salt']).length -ne 8)     {$Global:MGMT_Env.config['Crypto']['salt']=[string][char[]](Get-MGMTRandomBytes -ByteLength 8)|ConvertTo-Base64UrlString;$Changed=$true}
+        if (($Global:MGMT_Env.config['crypto']['key']).length -ne 32)     {$Global:MGMT_Env.config['Crypto']['key']=[string][char[]](Get-MGMTRandomBytes -ByteLength 32)|ConvertTo-Base64UrlString;$Changed=$true}
+        if (($Global:MGMT_Env.config['crypto']['iv']).length -ne 16)      {$Global:MGMT_Env.config['Crypto']['iv']=[string][char[]](Get-MGMTRandomBytes -ByteLength 16)|ConvertTo-Base64UrlString;$Changed=$true}
         if ($ParamName -notmatch '\w')                  {}
         elseif ($null -ne $ParamValue)                  {
                                                             Set-MGMTDataObject -InputObject $Global:MGMT_Env -Name $ParamName -Value $ParamValue

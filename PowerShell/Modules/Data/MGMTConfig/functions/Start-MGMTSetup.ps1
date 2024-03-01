@@ -1,6 +1,5 @@
 function Start-MGMTSetup {
     [CmdletBinding()]
-    [CmdletBinding()]
     param (
         [ArgumentCompleter({
             [OutputType([System.Management.Automation.CompletionResult])]
@@ -11,10 +10,10 @@ function Start-MGMTSetup {
                 [System.Management.Automation.Language.CommandAst] $CommandAst,
                 [System.Collections.IDictionary] $FakeBoundParameters
             )
-            $global:MGMT_Env.config.sites.Keys | Where-Object { $_ -like "*$WordToComplete*" }|
-                ForEach-Object{[System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)}
+            (Get-MGMTSystem -Environment "*$WordToComplete*" ).Environment
+                
         })]
-        [string]$DeploymentEnvironment,
+        [string]$Environment,
         [ArgumentCompleter({
             [OutputType([System.Management.Automation.CompletionResult])]
             param(
@@ -24,12 +23,14 @@ function Start-MGMTSetup {
                 [System.Management.Automation.Language.CommandAst] $CommandAst,
                 [System.Collections.IDictionary] $FakeBoundParameters
             )
-            $global:MGMT_Env.config.sites.VMwarevCenter.Keys | Where-Object { $_ -like "*$WordToComplete*" }|
-                ForEach-Object{[System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)}
+            (Get-MGMTSystem -Environment $FakeBoundParameters.Environment -SystemType "*$WordToComplete*" -SystemType VMware  )
         })]
         [string[]]$vCeters,
         [string[]]$DNSServer,
         [string[]]$AWSAccount,
         [string[]]$AzureAccount
     )
+    begin {
+        
+    }
 }

@@ -7,7 +7,7 @@ function Edit-MGMTCredential {
     }
     until ($Answer -match '^[YN]$')
     if ($Answer -eq 'Y') {Save-MGMTCredential}
-    & $global:MGMT_Env.AuthFile
+    Start-Process $global:MGMT_Env.AuthFile -Wait
     Write-Host -Message "The credentials have been loaded into the editor." -ForegroundColor Green
     Write-Host -Message "Run 'Import-MGMTCredential' to make your changes available." -ForegroundColor Yellow
 }

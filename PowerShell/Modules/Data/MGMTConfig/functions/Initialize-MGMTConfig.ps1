@@ -16,7 +16,7 @@ function Initialize-MGMTConfig {
     $global:MGMT_Env.Key = Merge-MGMTByteArray -ByteArray1 $global:MGMT_Env.config.Shard -ByteArray2 $shard -Length 32
     $UserKeyRingFile = "$env:appdata\powershell\MGMTConfig\keyring.yaml"
     $UserShard = Get-MGMTShardFileValue -LiteralPath $UserKeyRingFile -KeyName 'UShard' -KeyLength 32 
-    $global:MGMT_Env.UShard = $UserShard
+    $global:MGMT_Env.UShard = $UserShard.UShard
     Import-MGMTCredential
     foreach ($SiteKey in $global:MGMT_Env.config.sites.keys) {
         $SystemTypes = $global:MGMT_Env.config.sites.($SiteKey)
@@ -33,7 +33,7 @@ function Initialize-MGMTConfig {
                         Select-Object -First 1
                     if ($null -eq $Cred) {
                         Write-Host "MISSING" -ForegroundColor Red -BackgroundColor Black
-                        write-warning "Set-MGMTCredential -SystemType $SystemTypeKey -SystemName $($System.SystemName) -Credential (get-Credential) -Scope currentuser"  -BackgroundColor Black
+                        write-warning "Set-MGMTCredential -SystemType $SystemTypeKey -SystemName $($System.SystemName) -Credential (get-Credential) -Scope currentuser" 
                      }
                      else {
                         Write-Host "OK" -ForegroundColor Green -BackgroundColor Black

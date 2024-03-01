@@ -1,12 +1,15 @@
 function Set-MGMTDataObject {
     [cmdletbinding()]
     param(
-        [hashtable]$InputObject = @{},
+        [hashtable]$InputObject,
         [string[]]$Name,
         $Value,
         [switch]$Passthru
     )
     begin{
+        if ($null -eq $InputObject) {
+            write-error -Message "The input object is required and must be a hashtable."
+        }
         if ($InputObject -isnot [hashtable]) {
             $InputObject = [hashtable]::Synchronized(@{})
         }
