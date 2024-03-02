@@ -4,18 +4,19 @@ function Add-MGMTSite {
         [Parameter(Mandatory = $true)]
         [string]$Name
     )
-    $Site = Get-MGMTDataObject -InputObject $MGMT_Env -Name config,sites,$Site
+    $Site = Get-MGMTDataObject -InputObject $global:MGMT_Env -Name config,sites,$Site
     if ($null -eq $Site) {
-        Set-SyncHashtable -InputObject $MGMT_Env.config -Name sites
-        Set-SyncHashtable -InputObject $MGMT_Env.config.sites -Name $Site
-        $MGMT_Env.config.sites.($site) = [hashtable]::Synchronized(@{
+        Set-SyncHashtable -InputObject $global:MGMT_Env.config -Name sites
+        Set-SyncHashtable -InputObject $global:MGMT_Env.config.sites -Name $Site
+        $global:MGMT_Env.config.sites.($site) = [hashtable]::Synchronized(@{
             Name = $Site
-            domain = ''
-            DNS_Servers = @()
-            APIS = @()
-            Type = ''
-            SystemType = @{
-                ESXI = @()
+            domain = @{fqdn=''}
+            network = @{
+                DNS_Servers = @()
+            }
+            SystemTypes = @{
+                VMware_ESXi = @()
+                VMware_vCenter = @()
                 PFSense = @()
                 Windows = @()
                 Linux = @()
@@ -34,10 +35,12 @@ function Add-MGMTSite {
             }
         })
     }
-    $MGMT_Env.config.sites.$Environment = @{
+    $global:MGMT_Env.config.sites.$Environment = @{
         Name = $Name
-        ESXI = $ESXI
-        PFSense = $PFSense
+        domain = @{fqdn=''}
+        SystemTypes = @{}
+            ESXI = $ESXI
+            PFSense = $PFSense
     }
-    Set-MGMTDataObject -InputObject $MGMT_Env -Name MGMT_Env
+    Set-MGMTDataObject -InputObject $global:MGMT_Env -Name MGMT_Env
 }

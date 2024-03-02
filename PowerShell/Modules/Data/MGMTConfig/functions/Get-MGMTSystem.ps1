@@ -24,7 +24,7 @@ function Get-MGMTSystem {
                 [System.Management.Automation.Language.CommandAst] $CommandAst,
                 [System.Collections.IDictionary] $FakeBoundParameters
             )
-            return ($global:MGMT_Env.config.sites.($FakeBoundParameters['Environment']).Keys |
+            return ($global:MGMT_Env.config.sites.($FakeBoundParameters['Environment']).SystemTypes.Keys |
                 Where-Object { $_ -like "*$WordToComplete*" }
             )
         })]
@@ -38,7 +38,7 @@ function Get-MGMTSystem {
                 [System.Management.Automation.Language.CommandAst] $CommandAst,
                 [System.Collections.IDictionary] $FakeBoundParameters
             )
-            return ($global:MGMT_Env.config.sites.($FakeBoundParameters['Environment']).($FakeBoundParameters['SystemType']).values |
+            return ($global:MGMT_Env.config.sites.($FakeBoundParameters['Environment']).SystemTypes.($FakeBoundParameters['SystemType']).values |
                 Where-Object { $_.SystemName -like "*$WordToComplete*" }
             )
         })]
@@ -59,12 +59,12 @@ function Get-MGMTSystem {
         foreach ($Env in $Enviornments) {
             [string[]]$SystemTypes = 
                 foreach($Type in $SystemType) {
-                    ($global:MGMT_Env.config.sites.($EnvironmentItem)).Keys|
+                    ($global:MGMT_Env.config.sites.($EnvironmentItem)).SystemTypes.Keys|
                         Where-Object{$_ -like $Type}
                 }
             foreach ($Type in $SystemTypes) {
                 [array]$DataObjects = foreach ($Name in $SystemName) {
-                    ($global:MGMT_Env.config.sites).($EnvironmentItem).($Type) |
+                    ($global:MGMT_Env.config.sites).($EnvironmentItem).SystemTypes.($Type) |
                         Where-Object{$_.SystemName -like $Name}
                 }
                 foreach ($DataObject in $DataObjects) {

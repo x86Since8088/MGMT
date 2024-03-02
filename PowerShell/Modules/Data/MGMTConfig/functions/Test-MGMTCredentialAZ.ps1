@@ -16,7 +16,7 @@ function Test-MGMTCredentialAZ {
         Write-Host -Message "Successfully connected to Azure" -ForegroundColor Green
         Set-MGMTCredential -FQDN "AZ($Deployment_Environment)" -Credential $credential -Scope currentuser
     }
-    Set-MGMTDataObject -InputObject $MGMT_Env -Name Status,environment,$Deployment_Environment, -Value @{
+    Set-MGMTDataObject -InputObject $global:MGMT_Env -Name Status,environment,$Deployment_Environment, -Value @{
         AZConnection = $AZConnection
         AVCredential = $credential
         Tested       = (Get-Date)

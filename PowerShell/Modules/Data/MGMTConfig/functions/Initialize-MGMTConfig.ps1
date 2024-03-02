@@ -4,7 +4,7 @@ function Initialize-MGMTConfig {
     Set-SyncHashtable -InputObject $global:MGMT_Env.Auth -Name SystemType
     $script:ConfigFile                                = "$Datafolder\config.yaml"
     $Global:MGMT_Env.AuthFile                         = "$env:appdata\powershell\MGMTConfig\auth.yaml"
-                                                        Set-SyncHashtable -InputObject $global:MGMT_Env -Name config 
+                                                        Set-SyncHashtable -InputObject $global:MGMT_Env -Name config
     $global:MGMT_Env.config                           = Get-MGMTConfig
     [byte[]]$Shard = 0,11,159,136,217,167,1,185,196,169,243,35,234,88,147,217,223,229,80,38,100,181,255,250,223,177,45,128,109,107,253,110
     # Define the credentials for each site hosts.
@@ -12,6 +12,10 @@ function Initialize-MGMTConfig {
         $global:MGMT_Env.config.Shard = [int[]](Get-MGMTRandomBytes -ByteLength 32)
         Save-MGMTConfig -Force
     }
+    if ($global:MGMT_Env.config.shard       -is [string] ) {$global:MGMT_Env.config.shard       = ConvertFrom-MGMTBase64 -Base64 $global:MGMT_Env.config.shard}
+    if ($global:MGMT_Env.config.Crypto.salt -is [string] ) {$global:MGMT_Env.config.Crypto.salt = ConvertFrom-MGMTBase64 -Base64 $global:MGMT_Env.config.Crypto.salt}
+    if ($global:MGMT_Env.config.Crypto.iv   -is [string] ) {$global:MGMT_Env.config.Crypto.iv   = ConvertFrom-MGMTBase64 -Base64 $global:MGMT_Env.config.Crypto.iv}
+    if ($global:MGMT_Env.config.Crypto.key  -is [string] ) {$global:MGMT_Env.config.Crypto.key  = ConvertFrom-MGMTBase64 -Base64 $global:MGMT_Env.config.Crypto.key}
 
     $global:MGMT_Env.Key = Merge-MGMTByteArray -ByteArray1 $global:MGMT_Env.config.Shard -ByteArray2 $shard -Length 32
     $UserKeyRingFile = "$env:appdata\powershell\MGMTConfig\keyring.yaml"
@@ -19,7 +23,7 @@ function Initialize-MGMTConfig {
     $global:MGMT_Env.UShard = $UserShard.UShard
     Import-MGMTCredential
     foreach ($SiteKey in $global:MGMT_Env.config.sites.keys) {
-        $SystemTypes = $global:MGMT_Env.config.sites.($SiteKey)
+        $SystemTypes = $global:MGMT_Env.config.sites.($SiteKey).SystemTypes
         foreach ($SystemTypeKey in $SystemTypes.keys) {
             $Systems = $SystemTypes.($SystemTypeKey)
             foreach ($System in $Systems) {

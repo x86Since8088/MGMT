@@ -1,6 +1,6 @@
 function Import-MGMTCredential {
-    $AuthSave = Import-MGMTYAML -LiteralPath $MGMT_Env.AuthFile
-    $YMLFileDate = (Get-Item $MGMT_Env.AuthFile).LastWriteTime
+    $AuthSave = Import-MGMTYAML -LiteralPath $global:MGMT_Env.AuthFile
+    $YMLFileDate = (Get-Item $global:MGMT_Env.AuthFile).LastWriteTime
     if ($Global:MGMT_Env.Auth.LastWriteTime -eq $YMLFileDate) {return}
     [byte[]]$Ukey = Merge-MGMTByteArray -ByteArray1 $global:MGMT_Env.Key -ByteArray2 $global:MGMT_Env.UShard
     foreach ($SystemType in $AuthSave.Keys) {

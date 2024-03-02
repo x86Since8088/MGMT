@@ -2,21 +2,23 @@ param (
     $Environment = ($PSScriptRoot -replace "^.*?site-deployment(\\|/)" -replace "(/|\\).*"),
     $EnvironmentObj = $global:MGMT_Env.config.sites.($Environment),
     $Domain = ($EnvironmentObj.domain.fqdn,$EnvironmentObj.domain|Where-Object {$_ -match '\w'}|Select-Object -First 1),
-    [string]$LinuxHostName = "linux1.$Environment.$domain",
+    $SplunkHostName = 'splunk1',
+    [string]$VMwareHostName = 'esxi1',
+    [validateset('host','k8s','docker','aws')]
+    [string]$Container = 'VM',
+    [validateset('VMware','Hyper-V','KVM','XenServer','Proxmox','azure','aws','gcp','openstack')]
+    [string]$Hypervisor = 'VMware',
     [string]$DNSServer = '10.10.10.10',
     [string]$VLAN = '10',
     [string]$VMNetwork = 'VM Network',
-    [string]$Subnet = $EnvironmentObj.network.subnet
+    [string]$Subnet = $EnvironmentObj.network.subnet,
+    $LinuxISOFIleName = 'AlmaLinux-9.1-x86_64-minimal.iso'
 )
 $ErrorActionPreference = 'Stop'
 $Workingfolder = $PSScriptRoot
 . "$(split-path $workingfolder)\init.ps1"
 
-$LinuxIP = Resolve-DnsName -Name $LinuxHostName -Server $DNSServer | Select-Object -ExpandProperty IPAddress
-if ($null -eq $LinuxIP) {
-    return Write-Error -Message "No IP address found for the hostname '$LinuxHostName' on the DNS server '$DNSServer'."
-}
-$VMwareHostObject = $EnvironmentObj.VMware_ESXi | Select-Object -First 1
+$VMwareHostObject = $EnvironmentObj.SystemTypes.VMware_ESXi | Select-Object -First 1
 if ($null -eq $VMwareHostObject) {
     return Write-Error -Message "No VMware ESXi host found for the site '$Environment'."
 }
@@ -32,20 +34,23 @@ $VMwareConnection = Connect-VIServer -Server $VMwareHostIP -Credential $VMwareHo
 if ($null -eq $VMwareConnection) {
     return Write-Error -Message "Failed to connect to the VMware host '$($ESXI_Obj.ip)' using the credentials '$($ESXI_Creds.Credential.UserName)'."
 }
-$PFSense_Obj = $EnvironmentObj.pfsense
+$PFSense_Obj = $EnvironmentObj.SystemTypes.pfsense
 if ($null -eq $PFSense_Obj) {
     return Write-Error -Message "No PFSense firewall found for the site '$Environment'."
 }
 $PFSense_Creds = Get-MGMTCredential -SystemType PFSense -SystemName $PFSense_Obj.SystemName
 if ($null -eq $PFSense_Creds) {
-    return Write-Error -Message "No credentials found for the PFSense firewall '$($EnvironmentObj.pfsense.SystemName)'."
+    return Write-Error -Message "No credentials found for the PFSense firewall '$($EnvironmentObj.SystemTypes.pfsense.SystemName)'."
 }
 
 Add-MGMTSSHHostKey -HostName $VMwareHostIP 
 Add-MGMTSSHHostKey -HostName $PFSense_Obj.ip 
 
 Set-SyncHashtable -InputObject $EnvironmentObj -Name splunk
-if ($null -eq $EnvironmentObj.splunk.splunklab1) {$EnvironmentObj.splunk.splunklab1 = @()}
+if ($null -eq $EnvironmentObj.splunk.splunklab1) {$EnvironmentObj.SystemTypes.splunk.splunklab1 = @()}
+if ($EnvironmentObj.domain -is [string]){
+    $EnvironmentObj.domain = @{'fqdn' = $EnvironmentObj.domain}
+}
 Set-SyncHashtable -InputObject $EnvironmentObj -Name domain
 if ($null -eq $EnvironmentObj.domain.fqdn) {$EnvironmentObj.domain.fqdn = Read-Host -Prompt "Enter the domain name for the site '$Environment'."}
 if ($DNSServer -ne '') {}
@@ -53,8 +58,8 @@ elseif ($null -ne $EnvironmentObj.domain.dnsserver) {$DNSServer=$EnvironmentObj.
 else{
     return Write-Error -Message "No DNS server specified by -DNSServer for the site $global:MGMT_Env.config.sites.['$Environment'].domain.dnsserver."
 }
-if ($null -eq $EnvironmentObj.splunk.splunk.splunklab1) {
-    $EnvironmentObj.splunk.splunklab1 = @{
+if ($null -eq $EnvironmentObj.SystemTypes.splunk.splunklab1) {
+    $EnvironmentObj.SystemTypes.splunk.splunklab1 = @{
         SystemName = 'splunklab1'
         fqdn = "splunk1.$($EnvironmentObj.domain)"
         IP  = Read-Host -Prompt "Enter the IP address for splunklab1"
@@ -69,17 +74,32 @@ if ($null -eq $EnvironmentObj.splunk.splunk.splunklab1) {
     Save-MGMTConfig
 }
 
+if ($null -eq $EnvironmentObj.SystemTypes.splunk.splunklab1.fqdn) {
+    $EnvironmentObj.splunk.splunklab1.fqdn = "splunk1.$($EnvironmentObj.domain)"
+}
+
+
+$DeploymentTargetObject = $EnvironmentObj.SystemTypes.splunk.splunklab1
 
 # Define SSH connection details
-$HostName = $EnvironmentObj.splunk.splunklab1.IP
-$UserName = $EnvironmentObj.splunk.splunklab1
+$HostName = $DeploymentTargetObject.IP
+
 #[string]$KeyFilePath = $Sandbox.SplunkLinuxHostKeyFilePath
 
-# Retrieve the SSH host key (RSA type)
+$VM = Get-VM -Name $EnvironmentObj.SystemTypes.splunk.splunklab1.fqdn -ErrorAction Ignore
 
-$VM = Get-VM -Name $EnvironmentObj.splunk.splunklab1.fqdn -ErrorAction Ignore
+if ($null -eq $VM) {
+    . Deploy-MGMTVMwareVM -VMName $DeploymentTargetObject.fqdn -VMHost $VMwareHostObject.ip -VMDatastore $VMwareHostObject.datastore `
+    -VMNetwork $VMNetwork -VMTemplate 'AlmaLinux 8.4' -ISOFileName $LinuxISOFIleName `
+    -VMCpuCount 2 -VMRamSizeGB 4 -VMHDDSizeGB 64 -VMHDDType Thin -VMHDDStorageFormat `
+    Thin -HostName $DeploymentTargetObject.fqdn -DomainName $Domain -IPAddress $DeploymentTargetObject.IP `
+    -Subnet $EnvironmentObj.network.subnet -Gateway $EnvironmentObj.network.gateway -DNSServer $DNSServer  `
+    -OS Linux
+}
+$VM = Get-VM -Name $EnvironmentObj.SystemTypes.splunk.splunklab1.fqdn -ErrorAction Ignore
 
-Install-MGMTSSHKeyFile -HostName $EnvironmentObj.pfsense.ip -UserName $PFSense_Creds.Credential.UserName -Verbose -RunFirst '8'
+
+Install-MGMTSSHKeyFile -HostName $EnvironmentObj.SystemTypes.pfsense.ip -UserName $PFSense_Creds.Credential.UserName -Verbose -RunFirst '8'
 # SSH into the Alma Linux system
 ssh -i $KeyFilePath $UserName@$HostName "yum install -y wget"  # Install wget (if not already installed)
 

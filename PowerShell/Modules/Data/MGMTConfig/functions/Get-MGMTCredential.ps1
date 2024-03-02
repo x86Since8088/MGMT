@@ -13,7 +13,7 @@ function Get-MGMTCredential {
             )
             return [string[]]$global:MGMT_Env.Auth.SystemType.Keys | Where-Object { $_ -like "*$WordToComplete*" }
         })]
-        [string[]]$SystemType = 'default',        
+        [string[]]$SystemType = 'default',     
         [ArgumentCompleter({
             [OutputType([System.Management.Automation.CompletionResult])]
             param(

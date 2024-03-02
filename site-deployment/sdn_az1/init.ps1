@@ -11,8 +11,8 @@ $AZCredentialID = @{
 }
 
 Add-MGMTSite -Name $Deployment_Environment
-$global:MGMT_Env.config.sites.($Deployment_Environment).SystemType
-Set-SyncHashtable -InputObject $global:MGMT_Env.config.sites.($Deployment_Environment) -Name SystemType
+$global:MGMT_Env.config.sites.($Deployment_Environment).SystemTypes
+Set-SyncHashtable -InputObject $global:MGMT_Env.config.sites.($Deployment_Environment) -Name SystemTypes
 $global:MGMT_Env.config.sites.($Deployment_Environment) = @{
     Name = $Deployment_Environment
     domain = ''

@@ -5,7 +5,13 @@ Function Save-MGMTConfig {
         [switch]$Force
     )
     process {
-        Export-MGMTYAML -InputObject $global:MGMT_Env.config -LiteralPath $script:ConfigFile -Encoding utf8 -Verify:$((!$force))
+        $ConfigSave = $global:MGMT_Env.config.clone()
+        if ($ConfigSave.shard.count       ) {$ConfigSave.shard             = ConvertTo-MGMTBase64 -Bytes $ConfigSave.shard}
+        if ($ConfigSave.Crypto.salt.count ) {$ConfigSave.Crypto.salt       = ConvertTo-MGMTBase64 -Bytes $ConfigSave.Crypto.salt}
+        if ($ConfigSave.Crypto.iv.count   ) {$ConfigSave.Crypto.iv         = ConvertTo-MGMTBase64 -Bytes $ConfigSave.Crypto.iv}
+        if ($ConfigSave.Crypto.key.count  ) {$ConfigSave.Crypto.key        = ConvertTo-MGMTBase64 -Bytes $ConfigSave.Crypto.key}
+
+        Export-MGMTYAML -InputObject $ConfigSave -LiteralPath $script:ConfigFile -Encoding utf8 -Verify:$((!$force))
         $Authsave = @{}
         $global:MGMT_Env.Auth.GetEnumerator()|ForEach-Object{
             if ($null -eq $_.Value){}
@@ -17,7 +23,7 @@ Function Save-MGMTConfig {
                 }
             }
         }
-        Split-Path $MGMT_Env.AuthFile|Where-Object{! (Test-Path $_)}|ForEach-Object{New-Item -Path $_ -ItemType Directory -Force} | Out-Null
-        Export-MGMTYAML -InputObject $Authsave -LiteralPath $MGMT_Env.AuthFile -Encoding utf8 -Verify:$Verify
+        Split-Path $global:MGMT_Env.AuthFile|Where-Object{! (Test-Path $_)}|ForEach-Object{New-Item -Path $_ -ItemType Directory -Force} | Out-Null
+        Export-MGMTYAML -InputObject $Authsave -LiteralPath $global:MGMT_Env.AuthFile -Encoding utf8 -Verify:$Verify
     }
 }
