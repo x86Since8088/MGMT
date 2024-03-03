@@ -5,6 +5,9 @@ Function Save-MGMTConfig {
         [switch]$Force
     )
     process {
+        if ($null -eq $global:MGMT_Env.config) {
+            return Write-Warning -Message "The configuration is not loaded."
+        }
         $ConfigSave = $global:MGMT_Env.config.clone()
         if ($ConfigSave.shard       -notmatch '\w{4}') {$ConfigSave.shard             = ConvertTo-MGMTBase64 -Bytes $ConfigSave.shard}
         if ($ConfigSave.Crypto.salt -notmatch '\w{4}') {$ConfigSave.Crypto.salt       = ConvertTo-MGMTBase64 -Bytes $ConfigSave.Crypto.salt}

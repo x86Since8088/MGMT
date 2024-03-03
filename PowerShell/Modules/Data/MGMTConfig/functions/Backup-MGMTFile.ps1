@@ -7,6 +7,10 @@ function Backup-MGMTFile {
     )
     begin{
         $WarningPreference = 'Continue'
+        if (!(Test-Path -Path $Path)) {
+            Write-Warning -Message "The file '$Path' does not exist."
+            return
+        }
         if (!(Test-Path -Path $BackupPath)) {
             mkdir $BackupPath |Out-Null
         }

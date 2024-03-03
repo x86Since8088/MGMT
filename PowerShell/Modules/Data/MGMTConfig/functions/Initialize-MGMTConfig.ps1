@@ -4,8 +4,12 @@ function Initialize-MGMTConfig {
     Set-SyncHashtable -InputObject $global:MGMT_Env.Auth -Name SystemType
     $script:ConfigFile                                = "$Datafolder\config.yaml"
     $Global:MGMT_Env.AuthFile                         = "$env:appdata\powershell\MGMTConfig\auth.yaml"
+    split-path $Global:MGMT_Env.AuthFile | Where-Object {if (-not (test-path $_)) {new-item -ItemType Directory -Path $_ -Force}}
                                                         Set-SyncHashtable -InputObject $global:MGMT_Env -Name config
     $global:MGMT_Env.config                           = Get-MGMTConfig
+    if ($null -eq $global:MGMT_Env.config) {
+        $global:MGMT_Env.config = [hashtable]::Synchronized(@{})
+    }
     [byte[]]$Shard = 0,11,159,136,217,167,1,185,196,169,243,35,234,88,147,217,223,229,80,38,100,181,255,250,223,177,45,128,109,107,253,110
     # Define the credentials for each site hosts.
     if ($null -eq $global:MGMT_Env.config.Shard) {
