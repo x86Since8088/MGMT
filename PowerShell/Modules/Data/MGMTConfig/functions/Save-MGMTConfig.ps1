@@ -5,14 +5,16 @@ Function Save-MGMTConfig {
         [switch]$Force
     )
     process {
-        if ($null -eq $global:MGMT_Env.config) {
-            return Write-Warning -Message "The configuration is not loaded."
+        if ($null -eq $global:MGMT_Env) {
+            $Global:MGMT_Env = @{}
         }
         $ConfigSave = $global:MGMT_Env.config.clone()
-        if ($ConfigSave.shard       -notmatch '\w{4}') {$ConfigSave.shard             = ConvertTo-MGMTBase64 -Bytes $ConfigSave.shard}
-        if ($ConfigSave.Crypto.salt -notmatch '\w{4}') {$ConfigSave.Crypto.salt       = ConvertTo-MGMTBase64 -Bytes $ConfigSave.Crypto.salt}
-        if ($ConfigSave.Crypto.iv   -notmatch '\w{4}') {$ConfigSave.Crypto.iv         = ConvertTo-MGMTBase64 -Bytes $ConfigSave.Crypto.iv}
-        if ($ConfigSave.Crypto.key  -notmatch '\w{4}') {$ConfigSave.Crypto.key        = ConvertTo-MGMTBase64 -Bytes $ConfigSave.Crypto.key}
+        [string[]]$Keys = $ConfigSave.Crypto.keys
+        foreach ($key in $keys) {
+            if ($null -eq $ConfigSave.Crypto.$key) {}
+            elseif ($ConfigSave.Crypto.$key.gettype().name  -match '^(list|int|byte)') 
+                {$ConfigSave.Crypto.$key = ConvertTo-MGMTBase64 -Bytes $ConfigSave.Crypto.$key}
+        }
 
         Backup-MGMTFile -Path $script:ConfigFile
         Export-MGMTYAML -InputObject $ConfigSave -LiteralPath $script:ConfigFile -Encoding utf8 -Verify:$((!$force))

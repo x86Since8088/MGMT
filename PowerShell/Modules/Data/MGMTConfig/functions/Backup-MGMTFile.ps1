@@ -26,10 +26,12 @@ function Backup-MGMTFile {
         $BackupFile = Join-Path -Path $BackupPath -ChildPath $BackupFileName
         if ($FileObject.Extension -match '^\.ya{0,1}ml$') {
             $FileData = Import-MGMTYAML -LiteralPath $Path
-            $FileData.Remove('LastWriteTime') | Out-Null
             if ($FileData -eq $null) {
                 Write-Warning -Message "The file '$Path' is empty."
                 return
+            }
+            elseif ($Null -ne ($FileData).LastWriteTime) {
+                $FileData.Remove('LastWriteTime') | Out-Null
             }
             if($FileData.count -eq 0) {
                 Write-Warning -Message "The file '$Path' is empty or corrupt."

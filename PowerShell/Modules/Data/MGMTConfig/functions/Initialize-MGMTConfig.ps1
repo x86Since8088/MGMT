@@ -12,19 +12,27 @@ function Initialize-MGMTConfig {
     }
     [byte[]]$Shard = 0,11,159,136,217,167,1,185,196,169,243,35,234,88,147,217,223,229,80,38,100,181,255,250,223,177,45,128,109,107,253,110
     # Define the credentials for each site hosts.
-    if ($null -eq $global:MGMT_Env.config.Shard) {
-        $global:MGMT_Env.config.Shard = [int[]](Get-MGMTRandomBytes -ByteLength 32)
-        Save-MGMTConfig -Force
+    Set-SyncHashtable -InputObject $global:MGMT_Env -Name Config
+    Set-SyncHashtable -InputObject $global:MGMT_Env.config -Name Crypto
+    if ($null -eq $global:MGMT_Env.Config.Crypto.salt ) {$global:MGMT_Env.Config.Crypto.salt  = Get-MGMTRandomBytes -ByteLength 16}
+    if ($null -eq $global:MGMT_Env.Config.Crypto.iv   ) {$global:MGMT_Env.Config.Crypto.iv    = Get-MGMTRandomBytes -ByteLength 16}
+    if ($null -eq $global:MGMT_Env.Config.Crypto.key  ) {$global:MGMT_Env.Config.Crypto.key   = Get-MGMTRandomBytes -ByteLength 32}
+    if ($null -eq $global:MGMT_Env.config.Crypto.Shard) {$global:MGMT_Env.config.Crypto.Shard = [int[]](Get-MGMTRandomBytes -ByteLength 32)}
+    [string[]]$Keys = $global:MGMT_Env.config.Crypto.keys
+    foreach ($key in $keys) {
+        if ($null -eq $global:MGMT_Env.config.Crypto.$key) {}
+        elseif ($global:MGMT_Env.config.Crypto.$key.count  -gt 1) {}
+        elseif ($global:MGMT_Env.config.Crypto.$key.gettype().name  -match '^(list|int|byte)') {}
+        else {$global:MGMT_Env.config.Crypto.$key = ConvertFrom-MGMTBase64 -Base64 $global:MGMT_Env.config.Crypto.$key}
     }
-    if ($global:MGMT_Env.config.shard       -match '^\w{4}' ) {$global:MGMT_Env.config.shard       = ConvertFrom-MGMTBase64 -Base64 $global:MGMT_Env.config.shard}
-    if ($global:MGMT_Env.config.Crypto.salt -match '^\w{4}' ) {$global:MGMT_Env.config.Crypto.salt = ConvertFrom-MGMTBase64 -Base64 $global:MGMT_Env.config.Crypto.salt}
-    if ($global:MGMT_Env.config.Crypto.iv   -match '^\w{4}' ) {$global:MGMT_Env.config.Crypto.iv   = ConvertFrom-MGMTBase64 -Base64 $global:MGMT_Env.config.Crypto.iv}
-    if ($global:MGMT_Env.config.Crypto.key  -match '^\w{4}' ) {$global:MGMT_Env.config.Crypto.key  = ConvertFrom-MGMTBase64 -Base64 $global:MGMT_Env.config.Crypto.key}
 
-    $global:MGMT_Env.Key = Merge-MGMTByteArray -ByteArray1 $global:MGMT_Env.config.Shard -ByteArray2 $shard -Length 32
+    $global:MGMT_Env.Key = Merge-MGMTByteArray -ByteArray1 $global:MGMT_Env.config.Crypto.Shard -ByteArray2 $shard -Length 32
     $UserKeyRingFile = "$env:appdata\powershell\MGMTConfig\keyring.yaml"
+    split-path $UserKeyRingFile|Where-Object{!(test-path $_)}|ForEach-Object{new-item -ItemType Directory -Path $_ -Force|Out-Null} 
     $UserShard = Get-MGMTShardFileValue -LiteralPath $UserKeyRingFile -KeyName 'UShard' -KeyLength 32 
+    Backup-MGMTFile -Path $UserKeyRingFile
     $global:MGMT_Env.UShard = $UserShard.UShard
+    Save-MGMTConfig -Force
     Import-MGMTCredential
     foreach ($SiteKey in $global:MGMT_Env.config.sites.keys) {
         $SystemTypes = $global:MGMT_Env.config.sites.($SiteKey).SystemTypes

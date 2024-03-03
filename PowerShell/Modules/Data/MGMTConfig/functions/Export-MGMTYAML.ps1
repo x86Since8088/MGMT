@@ -33,6 +33,7 @@ Function Export-MGMTYAML {
         }
         #$YAML|
         #    Set-Content -LiteralPath $LiteralPath -Encoding $Encoding
+        Split-Path $LiteralPath|Where-Object{!(test-path $_)}|ForEach-Object{new-item -ItemType Directory -Path $_ -Force}
         [system.io.file]::WriteAllLines($LiteralPath,$YAML,[System.Text.Encoding]::$Encoding)
     }
 }
