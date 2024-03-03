@@ -4,7 +4,9 @@ function Set-MGMTDataObject {
         [hashtable]$InputObject,
         [string[]]$Name,
         $Value,
-        [switch]$Passthru
+        [switch]$Passthru,
+        [switch]$SaveConfig,
+        [switch]$VerifyConfigBeforeSave
     )
     begin{
         if ($null -eq $InputObject) {
@@ -27,6 +29,9 @@ function Set-MGMTDataObject {
         }
         if ($PassThru.IsPresent) {
             [hashtable]::Synchronized($InputObject)
+        }
+        if ($SaveConfig.IsPresent) {
+            Save-MGMTConfig -Force:(!$VerifyConfigBeforeSave)
         }
     }
 }

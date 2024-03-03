@@ -1,4 +1,5 @@
 function Import-MGMTCredential {
+    Backup-MGMTFile -Path $global:MGMT_Env.AuthFile
     $AuthSave = Import-MGMTYAML -LiteralPath $global:MGMT_Env.AuthFile
     $YMLFileDate = (Get-Item $global:MGMT_Env.AuthFile).LastWriteTime
     if ($Global:MGMT_Env.Auth.LastWriteTime -eq $YMLFileDate) {return}

@@ -12,10 +12,10 @@ function Initialize-MGMTConfig {
         $global:MGMT_Env.config.Shard = [int[]](Get-MGMTRandomBytes -ByteLength 32)
         Save-MGMTConfig -Force
     }
-    if ($global:MGMT_Env.config.shard       -is [string] ) {$global:MGMT_Env.config.shard       = ConvertFrom-MGMTBase64 -Base64 $global:MGMT_Env.config.shard}
-    if ($global:MGMT_Env.config.Crypto.salt -is [string] ) {$global:MGMT_Env.config.Crypto.salt = ConvertFrom-MGMTBase64 -Base64 $global:MGMT_Env.config.Crypto.salt}
-    if ($global:MGMT_Env.config.Crypto.iv   -is [string] ) {$global:MGMT_Env.config.Crypto.iv   = ConvertFrom-MGMTBase64 -Base64 $global:MGMT_Env.config.Crypto.iv}
-    if ($global:MGMT_Env.config.Crypto.key  -is [string] ) {$global:MGMT_Env.config.Crypto.key  = ConvertFrom-MGMTBase64 -Base64 $global:MGMT_Env.config.Crypto.key}
+    if ($global:MGMT_Env.config.shard       -match '^\w{4}' ) {$global:MGMT_Env.config.shard       = ConvertFrom-MGMTBase64 -Base64 $global:MGMT_Env.config.shard}
+    if ($global:MGMT_Env.config.Crypto.salt -match '^\w{4}' ) {$global:MGMT_Env.config.Crypto.salt = ConvertFrom-MGMTBase64 -Base64 $global:MGMT_Env.config.Crypto.salt}
+    if ($global:MGMT_Env.config.Crypto.iv   -match '^\w{4}' ) {$global:MGMT_Env.config.Crypto.iv   = ConvertFrom-MGMTBase64 -Base64 $global:MGMT_Env.config.Crypto.iv}
+    if ($global:MGMT_Env.config.Crypto.key  -match '^\w{4}' ) {$global:MGMT_Env.config.Crypto.key  = ConvertFrom-MGMTBase64 -Base64 $global:MGMT_Env.config.Crypto.key}
 
     $global:MGMT_Env.Key = Merge-MGMTByteArray -ByteArray1 $global:MGMT_Env.config.Shard -ByteArray2 $shard -Length 32
     $UserKeyRingFile = "$env:appdata\powershell\MGMTConfig\keyring.yaml"
@@ -25,19 +25,24 @@ function Initialize-MGMTConfig {
     foreach ($SiteKey in $global:MGMT_Env.config.sites.keys) {
         $SystemTypes = $global:MGMT_Env.config.sites.($SiteKey).SystemTypes
         foreach ($SystemTypeKey in $SystemTypes.keys) {
-            $Systems = $SystemTypes.($SystemTypeKey)
-            foreach ($System in $Systems) {
-                if ($System.SystemName -match '\w') {
-                    write-host "Checking for credentials for $($System.SystemName) in $($SystemTypeKey) for $($SiteKey) " -ForegroundColor Yellow -NoNewline -BackgroundColor Black
-                    $Cred = $System.fqdn,$System.ip,$System.systemname | 
-                        ForEach-Object {
-                            Get-MGMTCredential -SystemType $SystemTypeKey -SystemName $_ -Scope currentuser
-                        }|
-                        Where-Object {$_ -ne $null}|
-                        Select-Object -First 1
+            $SystemTypeObj = $SystemTypes.($SystemTypeKey)
+            if ('ip,fqdn,hostname'|Where-Object{$SystemTypeObj.contains($_)}) {
+                #This data needs to be moved down in the tree under a SystemNameKey
+                $System = $SystemTypeObj.clone()
+                $System.keys | ForEach-Object {
+                    $SystemTypes.$SystemTypeKey.Remove($_)
+                }
+                $SystemTypes.$SystemTypeKey.($System) = $System                
+                $SystemTypes.$SystemTypeKey.$SystemTypeKey = $System
+            }
+            foreach ($SystemNameKey in $SystemTypeObj.keys.clone()) {
+                $System = $SystemTypeObj.($SystemNameKey)
+                if ($SystemNameKey -match '\w') {
+                    write-host "Checking for credentials for $($SystemNameKey) in $($SystemTypeKey) for $($SiteKey) " -ForegroundColor Yellow -NoNewline -BackgroundColor Black
+                    $Cred = Get-MGMTCredential -SystemType $SystemTypeKey -SystemName $SystemNameKey -Scope currentuser
                     if ($null -eq $Cred) {
                         Write-Host "MISSING" -ForegroundColor Red -BackgroundColor Black
-                        write-warning "Set-MGMTCredential -SystemType $SystemTypeKey -SystemName $($System.SystemName) -Credential (get-Credential) -Scope currentuser" 
+                        write-warning "Set-MGMTCredential -SystemType $SystemTypeKey -SystemName $($SystemNameKey) -Credential (get-Credential) -Scope currentuser" 
                      }
                      else {
                         Write-Host "OK" -ForegroundColor Green -BackgroundColor Black

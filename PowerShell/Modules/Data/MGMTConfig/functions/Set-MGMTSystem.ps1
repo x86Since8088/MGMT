@@ -1,4 +1,4 @@
-function Get-MGMTSystem {
+function Set-MGMTSystem {
     [CmdletBinding()]
     param (
         [ArgumentCompleter({
@@ -42,40 +42,22 @@ function Get-MGMTSystem {
                 Where-Object { $_ -like "*$WordToComplete*" }
             )
         })]
-        [string[]]$SystemName = '*'
+        [string[]]$SystemName,
+        [hsahtable]$Data,
+        [switch]$Confirm=$true,
+        [switch]$SaveConfig
     )
     begin {
-        #Go through some gymnastics to get the hashtable keys and allow wildcards.
-        [string[]]$Environment  = $Environment | Where-Object{$_ -ne ''}
-        [string[]]$SystemType   = $SystemType | Where-Object{$_ -ne ''}
-        [string[]]$SystemName   = $SystemName | Where-Object{$_ -ne ''}
-        [string[]]$Enviornments = 
-        foreach ($EnvironmentItem in $Environment) {
-            ($global:MGMT_Env.config.sites).Keys |
-                Where-Object{
-                    $_ -like $EnvironmentItem
-                }
-        }
-        foreach ($Env in $Enviornments) {
-            [string[]]$SystemTypes = 
-                foreach($Type in $SystemType) {
-                    ($global:MGMT_Env.config.sites.($EnvironmentItem)).SystemTypes.Keys|
-                        Where-Object{$_ -like $Type}
-                }
-            foreach ($Type in $SystemTypes) {
-                [array]$SystemNameKeys = foreach ($Name in $SystemName) {
-                    ($global:MGMT_Env.config.sites).($EnvironmentItem).SystemTypes.($Type).keys |
-                        Where-Object{$_ -like $Name}
-                }
-                foreach ($SystemNameKey in $SystemNameKeys) {
-                    [pscustomobject]@{
-                        Environment = $EnvironmentItem
-                        SystemType = $Type
-                        SystemName = $SystemNameKey
-                        Data = $global:MGMT_Env.config.sites.($EnvironmentItem).SystemTypes.($Type).($SystemNameKey)
-                    }
-                }
+        $Clone = $global:MGMT_Env.config.sites.($EnvironmentItem).SystemTypes.($SystemType).($SystemName).clone()
+        if ($Confirm) {
+            [string]$Message = "Are you sure you want to change the following settings for $($EnvironmentItem) $($SystemType) $($SystemName)?`n`t"
+            $Message += ($Data | ConvertTo-Yaml) -split '\n' -join "`n`t"
+            if (YN -Message $Message) {
+                
             }
+        }
+        if (!$Confirm -or $Consent) {
+            Set-MGMTDataObject -InputObject $global:MGMT_Env -Name config,sites,($EnvironmentItem),SystemTypes,($SystemType),($SystemName) -Value $Data -SaveConfig:$SaveConfig
         }
     }
 }

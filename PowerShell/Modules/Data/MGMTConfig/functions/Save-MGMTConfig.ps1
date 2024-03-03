@@ -6,24 +6,14 @@ Function Save-MGMTConfig {
     )
     process {
         $ConfigSave = $global:MGMT_Env.config.clone()
-        if ($ConfigSave.shard.count       ) {$ConfigSave.shard             = ConvertTo-MGMTBase64 -Bytes $ConfigSave.shard}
-        if ($ConfigSave.Crypto.salt.count ) {$ConfigSave.Crypto.salt       = ConvertTo-MGMTBase64 -Bytes $ConfigSave.Crypto.salt}
-        if ($ConfigSave.Crypto.iv.count   ) {$ConfigSave.Crypto.iv         = ConvertTo-MGMTBase64 -Bytes $ConfigSave.Crypto.iv}
-        if ($ConfigSave.Crypto.key.count  ) {$ConfigSave.Crypto.key        = ConvertTo-MGMTBase64 -Bytes $ConfigSave.Crypto.key}
+        if ($ConfigSave.shard       -notmatch '\w{4}') {$ConfigSave.shard             = ConvertTo-MGMTBase64 -Bytes $ConfigSave.shard}
+        if ($ConfigSave.Crypto.salt -notmatch '\w{4}') {$ConfigSave.Crypto.salt       = ConvertTo-MGMTBase64 -Bytes $ConfigSave.Crypto.salt}
+        if ($ConfigSave.Crypto.iv   -notmatch '\w{4}') {$ConfigSave.Crypto.iv         = ConvertTo-MGMTBase64 -Bytes $ConfigSave.Crypto.iv}
+        if ($ConfigSave.Crypto.key  -notmatch '\w{4}') {$ConfigSave.Crypto.key        = ConvertTo-MGMTBase64 -Bytes $ConfigSave.Crypto.key}
 
+        Backup-MGMTFile -Path $script:ConfigFile
         Export-MGMTYAML -InputObject $ConfigSave -LiteralPath $script:ConfigFile -Encoding utf8 -Verify:$((!$force))
-        $Authsave = @{}
-        $global:MGMT_Env.Auth.GetEnumerator()|ForEach-Object{
-            if ($null -eq $_.Value){}
-            elseif ($null -eq $_.value.password){}
-            else {
-                $Authsave.($_.Key) = @{
-                    UserName = $_.Value.UserName
-                    Password = $_.Value.password | ConvertFrom-SecureString -Key $global:MGMT_Env.Key
-                }
-            }
-        }
-        Split-Path $global:MGMT_Env.AuthFile|Where-Object{! (Test-Path $_)}|ForEach-Object{New-Item -Path $_ -ItemType Directory -Force} | Out-Null
-        Export-MGMTYAML -InputObject $Authsave -LiteralPath $global:MGMT_Env.AuthFile -Encoding utf8 -Verify:$Verify
+        Backup-MGMTFile -Path $script:ConfigFile
+        Save-MGMTCredential
     }
 }

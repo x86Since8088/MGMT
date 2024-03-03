@@ -1,5 +1,6 @@
 function Save-MGMTCredential {
-    $Authsave = @{}
+    $Authsave = Import-MGMTYAML -LiteralPath $global:MGMT_Env.AuthFile
+    if ($null -eq $Authsave) {$Authsave = @{}}
     [byte[]]$Ukey = Merge-MGMTByteArray -ByteArray1 $global:MGMT_Env.Key -ByteArray2 $global:MGMT_Env.UShard
     foreach($SystemTypeKey in $global:MGMT_Env.Auth.SystemType.keys) {
         $AuthSave.($SystemTypeKey) = @{}
@@ -13,6 +14,13 @@ function Save-MGMTCredential {
                 }
         }
     }
+    if ($Authsave.count -eq 0) {
+        Write-Warning -Message "No credentials to save."
+        return
+    }
     Split-Path $global:MGMT_Env.AuthFile|Where-Object{! (Test-Path $_)}|ForEach-Object{New-Item -Path $_ -ItemType Directory -Force} | Out-Null
+    Backup-MGMTFile -Path $global:MGMT_Env.AuthFile
+    write-verbose -Message "Saving the credentials to '$($global:MGMT_Env.AuthFile)'"
     Export-MGMTYAML -InputObject $Authsave -LiteralPath $global:MGMT_Env.AuthFile -Encoding utf8
+    Backup-MGMTFile -Path $global:MGMT_Env.AuthFile
 }
