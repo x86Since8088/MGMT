@@ -17,7 +17,7 @@ function Initialize-MGMTConfig {
     if ($null -eq $global:MGMT_Env.Config.Crypto.salt ) {$global:MGMT_Env.Config.Crypto.salt  = Get-MGMTRandomBytes -ByteLength 16}
     if ($null -eq $global:MGMT_Env.Config.Crypto.iv   ) {$global:MGMT_Env.Config.Crypto.iv    = Get-MGMTRandomBytes -ByteLength 16}
     if ($null -eq $global:MGMT_Env.Config.Crypto.key  ) {$global:MGMT_Env.Config.Crypto.key   = Get-MGMTRandomBytes -ByteLength 32}
-    if ($null -eq $global:MGMT_Env.config.Crypto.Shard) {$global:MGMT_Env.config.Crypto.Shard = [int[]](Get-MGMTRandomBytes -ByteLength 32)}
+    if ($null -eq $global:MGMT_Env.config.Crypto.Shard) {$global:MGMT_Env.config.Crypto.Shard = Get-MGMTRandomBytes -ByteLength 32}
     [string[]]$Keys = $global:MGMT_Env.config.Crypto.keys
     foreach ($key in $keys) {
         if ($null -eq $global:MGMT_Env.config.Crypto.$key) {}

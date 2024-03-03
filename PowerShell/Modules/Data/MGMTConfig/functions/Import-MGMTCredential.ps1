@@ -2,8 +2,7 @@ function Import-MGMTCredential {
     Split-path $global:MGMT_Env.AuthFile|Where-Object{!(test-path $_)}|ForEach-Object{new-item -ItemType Directory -Path $_ -Force|Out-Null}
     Backup-MGMTFile -Path $global:MGMT_Env.AuthFile
     if (-not (Test-Path $global:MGMT_Env.AuthFile)) {
-        @{'SystemType' = @{}} |
-            Export-MGMTYAML -LiteralPath $global:MGMT_Env.AuthFile -Encoding utf8 -Forces
+        Export-MGMTYAML -LiteralPath $global:MGMT_Env.AuthFile -Encoding utf8 -InputObject @{'SystemType' = @{}}
     }
     $AuthSave = Import-MGMTYAML -LiteralPath $global:MGMT_Env.AuthFile
     $YMLFileDate = (Get-Item $global:MGMT_Env.AuthFile).LastWriteTime

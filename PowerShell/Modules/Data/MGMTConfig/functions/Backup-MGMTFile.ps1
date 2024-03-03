@@ -26,7 +26,7 @@ function Backup-MGMTFile {
         $BackupFile = Join-Path -Path $BackupPath -ChildPath $BackupFileName
         if ($FileObject.Extension -match '^\.ya{0,1}ml$') {
             $FileData = Import-MGMTYAML -LiteralPath $Path
-            if ($FileData -eq $null) {
+            if ($null -eq $FileData) {
                 Write-Warning -Message "The file '$Path' is empty."
                 return
             }
@@ -45,8 +45,8 @@ function Backup-MGMTFile {
             return
         }
 
-        $BackupFileTimeFromName = $BackupFileName -replace '.*_BACKUP_(\d{8}_\d{6})\..*','$1'
-        $BackupFileTime = [datetime]::ParseExact($BackupFileTimeFromName,'yyyyMMdd_HHmmss',$null)
+        #$BackupFileTimeFromName = $BackupFileName -replace '.*_BACKUP_(\d{8}_\d{6})\..*','$1'
+        #$BackupFileTime = [datetime]::ParseExact($BackupFileTimeFromName,'yyyyMMdd_HHmmss',$null)
         $BackupFileObj = Get-Item -Path $BackupFile
         if ($FileObject.Length -ne $BackupFileObj.Length) {
             Write-Warning -Message "The file '$Path' is different from '$BackupFile'."
