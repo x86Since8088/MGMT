@@ -22,3 +22,6 @@
 -
   Name: Posh-SSH
   Version: Latest
+-
+  Name: pester
+  Version: Latest

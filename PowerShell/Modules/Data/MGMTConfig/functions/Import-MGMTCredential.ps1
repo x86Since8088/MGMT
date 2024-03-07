@@ -11,10 +11,16 @@ function Import-MGMTCredential {
     foreach ($SystemType in $AuthSave.Keys) {
         foreach ($SystemName in $AuthSave.($SystemType).Keys) {
             foreach ($CredItem in $AuthSave.($SystemType).($SystemName)) {
+                try {
+                    $SS = $CredItem.Password | ConvertTo-SecureString -Key $Ukey -ErrorAction Continue
+                }
+                catch {
+                    Write-Error -Message "Failed to read the stored password for $($SystemName) user $($CredItem.UserName) in $($SystemType).  Your Keys may have changed.  Saving the credentials or restoring backup shard files can resolve this issue."
+                }
                 Set-MGMTDataObject -InputObject $Global:MGMT_Env -Name Auth,SystemType,$SystemType,$SystemName,Credential -Value (
                     [pscredential]::new( 
                         $CredItem.UserName,
-                        ($CredItem.Password | ConvertTo-SecureString -Key $Ukey)
+                        $SS
                     )
                 )
             }

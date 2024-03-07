@@ -28,6 +28,7 @@ function Get-MGMTCredential {
         [string[]]$SystemName,
         [string]$UserName = '.*',
         [string[]]$Tags,
+        [switch]$SendPWToClipboard,
         [string]$SystemNamesMatchingRegex = '^ -nomatch$',
         [validateset('currentuser','allusers')]
         [string]$Scope = 'currentuser',
@@ -73,6 +74,10 @@ function Get-MGMTCredential {
                         if ($CredentialItem.UserName -match "^$UserName$") {
                             $CredentialItem = $SetCredential
                         }
+                    }
+                    if ($SendPWToClipboard) {
+                        Write-Verbose -Message "Sending the password for $($CredentialItem.UserName) to the clipboard."
+                        $CredentialItem.GetNetworkCredential().password | Set-Clipboard
                     }
                 }
             }
