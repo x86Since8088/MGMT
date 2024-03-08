@@ -43,21 +43,20 @@ function Set-MGMTSystem {
             )
         })]
         [string[]]$SystemName,
-        [hsahtable]$Data,
+        [hashtable]$Data,
         [switch]$Confirm=$true,
         [switch]$SaveConfig
     )
     begin {
-        $Clone = $global:MGMT_Env.config.sites.($EnvironmentItem).SystemTypes.($SystemType).($SystemName).clone()
         if ($Confirm) {
-            [string]$Message = "Are you sure you want to change the following settings for $($EnvironmentItem) $($SystemType) $($SystemName)?`n`t"
+            [string]$Message = "Are you sure you want to change the following settings for $($Environment) $($SystemType) $($SystemName)?`n`t"
             $Message += ($Data | ConvertTo-Yaml) -split '\n' -join "`n`t"
             if (YN -Message $Message) {
-                
+                $Consent = $true    
             }
         }
         if (!$Confirm -or $Consent) {
-            Set-MGMTDataObject -InputObject $global:MGMT_Env -Name config,sites,($EnvironmentItem),SystemTypes,($SystemType),($SystemName) -Value $Data -SaveConfig:$SaveConfig
+            Set-MGMTDataObject -InputObject $global:MGMT_Env -Name config,sites,($Environment),SystemTypes,($SystemType),($SystemName) -Value $Data -SaveConfig:$SaveConfig
         }
     }
 }

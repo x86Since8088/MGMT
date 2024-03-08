@@ -3,18 +3,31 @@ Function Install-MGMTSSHKeyFile {
     param (
       [string]$HostName,
       [string]$UserName,
-      [validateSet('Linux','PFSense')]
+      [validateSet('Linux','PFSense','VMwareEsxi')]
       [string]$HostType = 'Linux',
       [switch]$ShowCommands,
+      [ArgumentCompleter({
+        [OutputType([System.Management.Automation.CompletionResult])]
+        param(
+          [string] $CommandName,
+          [string] $ParameterName,
+          [string] $WordToComplete,
+          [System.Management.Automation.Language.CommandAst] $CommandAst,
+          [System.Collections.IDictionary] $FakeBoundParameters
+        )
+        (Get-ChildItem -Path "$env:userprofile\.ssh\*.pub" -File).FullName
+      })]
       [string]$KeyFilePath,
       [string]$RunFirst,
       [switch]$Force,
       [string]$authorized_keys_path = '~/.ssh/authorized_keys',
-      [string]$Shell = 'bash',
+      [string]$Shell,
       [string]$logoffcommands = 'exit'
     )
     process {
-      Add-MGMTSSHHostKey -HostName $HostName -Force:$Force
+      if (!$ShowCommands) {
+        Add-MGMTSSHHostKey -HostName $HostName -Force:$Force
+      }
       if ('' -eq $KeyFilePath) {
           $KeyFilePath = "$env:userprofile/.ssh/id_rsa"
           #$sandbox.Password| scp $KeyFilePath "$($UserName)@$($HostName):/home/$UserName/$(split-path $KeyFilePath -leaf)"
@@ -26,54 +39,91 @@ Function Install-MGMTSSHKeyFile {
       }
       switch ($HostType) {
         'Linux' {
-          $shell = 'bash'
+          #if ('' -eq $Shell) {$shell = 'sh'}
           $authorized_keys_path = '~/.ssh/authorized_keys'
           $SSHCommands = @"
           $RunFirst
-
           export  keyinfo='$(Get-Content "$keyFilePath.pub")'
-          echo `$keyinfo
-          echo `$keyinfo >> $authorized_keys_path
-          mkdir $(Split-Path $authorized_keys_path) 2> /dev/null
-          if [ grep -q "`$keyinfo" $authorized_keys_path ]; then
+          #echo `$keyinfo
+          mkdir -p `$(dirname '$authorized_keys_path') 
+          if [ ! -e "$authorized_keys_path" ]; then
+            touch $authorized_keys_path
+          fi
+          if grep -q "`$keyinfo" $authorized_keys_path ; then
             echo "found keyinfo in authorized_keys"
           else
             echo "missing keyinfo in authorized_keys"
-            echo `$keyinfo >> $authorized_keys_path
+            echo "`$keyinfo" >> $authorized_keys_path
+            echo "added keyinfo to authorized_keys"
+            echo "set permissions on authorized_keys"
+            chmod 600 $authorized_keys_path
+          fi
+          $logoffcommands
+"@
+        }
+        'VMwareEsxi' {
+          #if ('' -eq $Shell) {$shell = 'sh'}
+          $authorized_keys_path = '/etc/ssh/keys-root/authorized_keys'
+          $SSHCommands = @"
+          $RunFirst
+          export  keyinfo='$(Get-Content "$keyFilePath.pub")'
+          #echo `$keyinfo
+          mkdir -p `$(dirname '$authorized_keys_path') 
+          if [ ! -e "$authorized_keys_path" ]; then
+            touch $authorized_keys_path
+          fi
+          if grep -q "`$keyinfo" $authorized_keys_path ; then
+            echo "found keyinfo in authorized_keys"
+          else
+            echo "missing keyinfo in authorized_keys"
+            echo "`$keyinfo" >> $authorized_keys_path
+            echo "added keyinfo to authorized_keys"
+            echo "set permissions on authorized_keys"
             chmod 600 $authorized_keys_path
           fi
           $logoffcommands
 "@
         }
         'PFSense' {
-          $shell = 'sh'
+          #if ('' -eq $Shell) {$shell = 'sh'}
           $authorized_keys_path = '/root/.ssh/authorized_keys'
-          $RunFirst = "`n8`nmkdir -p $(split-path $authorized_keys_path) 2> /dev/null"
-          $logoffcommands = "exit`nexit`n0`n"
+          $RunFirst = ""
+          $logoffcommands = "exit"
           $SSHCommands = @"
           $RunFirst
-
-          keyinfo='$(Get-Content "$keyFilePath.pub")'
-          echo "`$keyinfo"
-          echo "`$keyinfo" >> $authorized_keys_path
-          mkdir -p $(Split-Path $authorized_keys_path) 
-          if cat $authorized_keys_path|grep -q "`$keyinfo"; then
+          export keyinfo='$(Get-Content "$keyFilePath.pub")'
+          #echo "`$keyinfo"
+          mkdir -p `$(dirname '$authorized_keys_path') 
+          if [ ! -e "$authorized_keys_path" ]; then
+            touch $authorized_keys_path
+          fi
+          if grep -q "`$keyinfo" $authorized_keys_path ; then
             echo "found keyinfo in authorized_keys"
           else
             echo "missing keyinfo in authorized_keys"
-            echo `$keyinfo >> $authorized_keys_path
+            echo "`$keyinfo" >> $authorized_keys_path
+            echo "added keyinfo to authorized_keys"
+            echo "set permissions on authorized_keys"
             chmod 600 $authorized_keys_path
           fi
           $logoffcommands
 "@
         }
       }
+      #if ('' -eq $Shell) {$shell = 'sh'}
       if ($ShowCommands) {
         Write-Host -ForegroundColor Yellow "Commands to be executed on $HostName"
         Write-Host -ForegroundColor Yellow $SSHCommands
       }
       else {
-        ssh -i $KeyFilePath $UserName@$HostName -t $Shell $SSHCommands
+        $SSHCommands = $SSHCommands -replace '(\n)\s*','$1'
+        $SSHCommands = $SSHCommands -replace '\r'
+        if ('' -ne $Shell) {
+          ssh -i $KeyFilePath $UserName@$HostName -t $Shell $SSHCommands
+        }
+        else {
+          ssh -i $KeyFilePath $UserName@$HostName $SSHCommands
+        }
       }
-  }   
+  }
 }
