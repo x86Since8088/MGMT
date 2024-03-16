@@ -1,3 +1,4 @@
+#Requires -modules MGMTConfig
 [cmdletbinding()]
 param (
     $Environment = ($PSScriptRoot -replace "^.*?site-deployment(\\|/)" -replace "(/|\\).*"),
@@ -7,10 +8,10 @@ param (
     $SystemName = 'splunklab1',
     $DeploymentTargetObject = $EnvironmentObj.SystemTypes.$SystemType.$SystemName,
     $SplunkHostName = $DeploymentTargetObject.hostname,
-    [string]$VMwareHostName = 'esxi1',
+    $MGMTSystem_VMware = (Get-MGMTSystem -Environment $Environment -SystemType VMware_ESXi -SystemName VMware_ESXi),
     [validateset('host','k8s','docker','aws')]
     [string]$Container = 'VM',
-    [validateset('VMware','Hyper-V','KVM','XenServer','Proxmox','azure','aws','gcp','openstack')]
+    [validateset('VMware')]
     [string]$Hypervisor = 'VMware',
     [string[]]$DNSServer = $EnvironmentObj.domain.dnsserver,
     [string]$VLAN = '10',
@@ -19,21 +20,21 @@ param (
     $LinuxISOFIleName = 'AlmaLinux-9.1-x86_64-minimal.iso'
 )
 begin {
-    $ErrorActionPreference = 'Stop'
+   $ErrorActionPreference = 'Stop'
     $Workingfolder = $PSScriptRoot
     . "$(split-path $workingfolder)\init.ps1"
 
-    $VMwareHostObject = $EnvironmentObj.SystemTypes.VMware_ESXi | Select-Object -First 1
-    if ($null -eq $VMwareHostObject) {
+    $MGMTSystem_VMware = $EnvironmentObj.SystemTypes.VMware_ESXi | Select-Object -First 1
+    if ($null -eq $MGMTSystem_VMware) {
         return Write-Error -Message "No VMware ESXi host found for the site '$Environment'."
     }
-    $VMwareHostIP = $VMwareHostObject.ip
+    $VMwareHostIP = $MGMTSystem_VMware.ip
     if ($null -eq $VMwareHostIP) {
         return Write-Error -Message "No IP address found for the hostname '$VMwareHostName' on the DNS server '$DNSServer'."
     }
-    $VMwareHostCreds = Get-MGMTCredential -SystemType VMware_Esxi -SystemName $VMwareHostObject.SystemName
+    $VMwareHostCreds = Get-MGMTCredential -SystemType VMware_Esxi -SystemName $MGMTSystem_VMware.SystemName
     if ($null -eq $VMwareHostCreds) {
-        return Write-Error -Message "No credentials found for the VMware ESXi host '$VMwareHostObject.SystemName'."
+        return Write-Error -Message "No credentials found for the VMware ESXi host '$MGMTSystem_VMware.SystemName'."
     }
     $VMwareConnection = Connect-VIServer -Server $VMwareHostIP -Credential $VMwareHostCreds.Credential -Force
     if ($null -eq $VMwareConnection) {
@@ -89,7 +90,7 @@ begin {
     $VM = Get-VM -Name $EnvironmentObj.SystemTypes.$SystemType.$SystemName.fqdn -ErrorAction Ignore
 
     if ($null -eq $VM) {
-        . Deploy-MGMTVMwareVM -VMName $DeploymentTargetObject.fqdn -VMHost $VMwareHostObject.ip -VMDatastore $VMwareHostObject.datastore `
+        . Deploy-MGMTVMwareVM -VMName $DeploymentTargetObject.fqdn -VMHost $MGMTSystem_VMware.ip -VMDatastore $MGMTSystem_VMware.datastore `
         -VMNetwork $VMNetwork -VMTemplate 'AlmaLinux 8.4' -ISOFileName $LinuxISOFIleName `
         -VMCpuCount 2 -VMRamSizeGB 4 -VMHDDSizeGB 64 -VMHDDType Thin -VMHDDStorageFormat `
         Thin -HostName $DeploymentTargetObject.fqdn -DomainName $Domain -IPAddress $DeploymentTargetObject.IP `

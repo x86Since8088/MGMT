@@ -39,7 +39,7 @@ function Deploy-MGMTVMwareVM {
                 return Write-Error -Message "The datastore '$VMDatastore' does not exist on the VMware host '$VMHost'."
             }
         }
-        $VMwareISODatastore = Get-Datastore | Where-Object{Get-ChildItem $_.DatastoreBrowserPath -filter iso*} | Sort-Object FreeSpaceGB -Descending | select -First 1
+        $VMwareISODatastore = Get-Datastore | Where-Object{Get-ChildItem $_.DatastoreBrowserPath -filter iso*} | Sort-Object FreeSpaceGB -Descending | Select-Object -First 1
         $VMwareIsoFolderPath = $VMwareISODatastore.DatastoreBrowserPath
         $VMwareISOFolders = Get-ChildItem 'vmstore:'  | Get-ChildItem | Get-ChildItem | Where-Object {$_.Name -match '^isos{0,1}$'}
         $VMwareIsoFiles = $VMwareISOFolders | Get-ChildItem -Filter *.iso
@@ -81,6 +81,4 @@ function Deploy-MGMTVMwareVM {
         $VMDeploymentParameters.Keys|Where-Object{$null -eq $VMDeploymentParameters.($_)} | ForEach-Object{ $VMDeploymentParameters.Remove($_)}
         $VM = New-VM  -Confirm:$false @VMDeploymentParameters -Verbose
     }
-
-
 }

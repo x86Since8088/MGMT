@@ -1,4 +1,5 @@
-function Clone-MGMTVMwareESXiVM {
+function Copy-MGMTVMwareESXiVM {
+#requires -modules 'Posh-SSH','VMware.PowerCLI'
         <#
         
         .SYNOPSIS
@@ -30,7 +31,7 @@ function Clone-MGMTVMwareESXiVM {
         .EXAMPLE
             From a PowerShell prompt:
         
-            .\New-GuestClone.ps1 -ESXiHost 192.168.101.100
+            .\New-GuestClone.ps1 -SourceEsxiHost 192.168.101.100
         
         .COMPONENT
             VMware scripts
@@ -47,7 +48,6 @@ function Clone-MGMTVMwareESXiVM {
                 1.0 - 8 July 2021 - first release
         
         #>
-
     [CmdletBinding()]
     param (
         [ArgumentCompleter({
@@ -77,32 +77,50 @@ function Clone-MGMTVMwareESXiVM {
             $Systems = $EnvironmentKeys|ForEach-Object{
                 Get-MGMTSystem -Environment $FakeBoundParameters['Environment'] -SystemType VMware_ESXi -SystemName VMware_ESXi
             }
-            $Systems.data|ForEach-Object{$_.fqdn,$_.ip} | Where-Object { $_ -like "*$WordToComplete*" }
+            return $Systems.data|ForEach-Object{$_.fqdn,$_.ip} | Where-Object { $_ -like "*$WordToComplete*" }
         })]
         [Parameter(Mandatory = $true)]
-        [string]$EsxiHost,
+        [string]$SourceEsxiHost,
+        [string]$TargetEsxiHost,
+        [pscredential]$SourceEsxiCredential = (Get-MGMTCredential -SystemType VMware_ESXi -SystemName VMware_ESXi -Scope currentuser).Credential,
+        [pscredential]$TargetEsxiCredential = (Get-MGMTCredential -SystemType VMware_ESXi -SystemName VMware_ESXi -Scope currentuser).Credential,
         [string]$SourceVMName,
         [string]$NewVMName,
-        [string]$NewVMDatastore
+        [ArgumentCompleter({
+            [OutputType([System.Management.Automation.CompletionResult])]
+            param(
+                [string] $CommandName,
+                [string] $ParameterName,
+                [string] $WordToComplete,
+                [System.Management.Automation.Language.CommandAst] $CommandAst,
+                [System.Collections.IDictionary] $FakeBoundParameters
+            )
+            $SSH = New-SSHSession -Computername $FakeBoundParameters['TargetEsxiHost'] -Credential $FakeBoundParameters['TargetEsxiCredential'] -Acceptkey -Force -WarningAction SilentlyContinue
+            $Out = Invoke-SSHCommand -Index 0 -Command 'ls -lhaF /vmfs/volumes/ | grep ^l' -WarningAction SilentlyContinue
+            [string[]]$Results = $out.output -replace '^.*?:\d\d\s' -replace '\s*-\>.*' -match '^(?!BOOTBANK|OSDATA)'
+            Remove-SSHSession -SessionId $ssh.SessionId
+            $CompletionResults = [System.Collections.Generic.List[System.Management.Automation.CompletionResult]]::new($Results)
+            return $CompletionResults
+        })]
+        [string]$NewVMDatastore,
+        [string]$SourceESXiSystemName = 'VMware_ESXi',
+        [string]$SourceESXiSystemType = 'VMware_ESXi',
+        [string]$TargetESXiSystemName = 'VMware_ESXi',
+        [string]$TargetESXiSystemType = 'VMware_ESXi'
     )
     
     begin {
-        param
-        (
-            [Parameter(Mandatory = $true, Position = 0)][String]$ESXiHost
-        )
-        
         ####################
         ## INITIALISATION ##
         ####################
         
         # Load necessary modules
-        Write-Host Loading PowerShell modules...
-        Import-Module PoSH-SSH
-        Import-Module VMware.PowerCLI
+        #Write-Host Loading PowerShell modules...
+        #Import-Module PoSH-SSH
+        #Import-Module VMware.PowerCLI
         
         # Change to the directory where this script is running
-        Push-Location -Path ([System.IO.Path]::GetDirectoryName($PSCommandPath))
+        #Push-Location -Path ([System.IO.Path]::GetDirectoryName($PSCommandPath))
         
         
         #################
@@ -116,85 +134,74 @@ function Clone-MGMTVMwareESXiVM {
         
         # Looks for credentials file for the VMware host. Passwords are stored encrypted
         # and will only work for the user and machine on which they're stored.
-        $credsFile = ('.\creds\' + $ESXiHost + '.creds')
-        If(-not (Test-Path -Path $credsFile)) {
-            # Request credentials
-            $creds = Get-Credential -Message "Enter root password for VMware host $ESXiHost" -User root
-            $creds.Password | ConvertFrom-SecureString | Set-Content $credsFile
+        $ESXMGMTCredential = Get-MGMTCredential -SystemType $SourceESXiSystemType -SystemName $SourceESXiSystemName -Scope currentuser
+        $ESXICredential = $ESXMGMTCredential.CREDENTIAL
+        if ($null -eq $ESXICredential) {
+            Write-Error -Message "No credentials found for the VMware ESXi host '$SourceEsxiHost'."
+            write-host "`tSet-MGMTCredential -SystemType '$SourceESXiSystemType' -SystemName '$SourceESXiSystemName' -Scope currentuser -Credential (Get-Credential -Message ""Enter the credentials for the VMware ESXi host '$SourceEsxiHost'"")" -ForegroundColor Yellow -BackgroundColor Black
+            return
         }
+        # Disable HTTPS certificate check (not strictly needed if you use -Force) in
+        # later calls.
+        Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Confirm:$false | Out-Null
         
-        $ESXISystem = 
-            Get-MGMTSystem -Environment $Environment -SystemType VMware_ESXi -SystemName VMware_ESXi | 
-                Where-Object{$EsxiHost -in @(
-                        $_.fqdn
-                        $_.ip
-                    )
-                }
-        $ESXMGMTCreddential = Get-MGMTCredential -SystemType $ESXISystem.SystemType -SystemName $ESXISystem.SystemName -Scope currentuser
-        $ESXICredential = $ESXMGMTCreddential.CREDENTIALS
-        
+        # Connect to ESXi systems in the environment.
+        $ESXISystems = Get-MGMTSystem -Environment $Environment -SystemType VMware_ESXi -SystemName VMware_ESXi
+        Connect-VIServer -Force -Server $ESXISystems.data.ip -Credential $ESXMGMTCredential.credential
+        If(-not $?) {
+            Throw "Connection to ESXi failed. If password issue, delete $credsFile and try again."
+        }
+        $SourceVM = Get-VM -Name $SourceVMName -WarningAction Ignore
+        $SourceSourceEsxiHost = $SourceVM.VMHost
+        $SourceEsxiHost = $SourceSourceEsxiHost.Name
+        if ('' -eq $SourceEsxiHost) {
+
+        }
         
         #########################
         ## List VMs (PowerCLI) ##
         #########################
         #
-        # Disable HTTPS certificate check (not strictly needed if you use -Force) in
-        # later calls.
-        Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Confirm:$false | Out-Null
-        
-        # Connect to the ESXi server
-        Connect-VIServer -Server $ESXiHost -Protocol https -Credential $ESXICredential -Force | Out-Null
-        If(-not $?) {
-            Throw "Connection to ESXi failed. If password issue, delete $credsFile and try again."
-        }
         
         # Get all VMs, sorted by name
-        $guests = (Get-VM -Server $ESXiHost | Sort-Object)
-        
-        # Work out how much we need to left-pad the array index, when outputting
-        $padWidth = ([string]($guests.Count - 1)).Length
-        
-        # Output the list of VMs, with array index padded so it lines up nicely
-        Write-Host ("Existing VMs (" + $guests.Count + "), sorted by name:")
-        for ( $i = 0; $i -lt $guests.count; $i++)
-        {
-            If($guests[$i].PowerState -eq "PoweredOn") {
-                Write-Host -ForegroundColor Red ("[" + "$i".PadLeft($padWidth, ' ') + "](ON) : " + $guests[$i].Name) 
-            } Else {
-                Write-Host ("[" + "$i".PadLeft($padWidth, ' ') + "](off): " + $guests[$i].Name) 
+        $guests = (Get-VM | Sort-Object)
+        ($guests | 
+            Select-Object Name,PowerState,NumCPU,MemoryGB,@{Name='ESXi Host';Expression={$_.VMHost.Name}}| 
+            Format-Table -AutoSize -Wrap | 
+            out-string) -split '\n' | 
+            select-string '\w' -Raw |
+            ForEach-Object{
+                if ($_ -match 'poweredoff') {$C='white'} else {$C='red'}; 
+                Write-host $_ -ForegroundColor $C
             }
-        }
-        Write-Host
-        
         
         ##########################
         ## Choose a VM to clone ##
         ##########################
-        
-        $chosenVM = 0
-        do {
-            $inputValid = [int]::TryParse((Read-Host 'Enter the [number] of the VM to clone (the donor)'), [ref]$chosenVM)
-            if($chosenVM -lt 0 -or $chosenVM -ge $guests.Count) {
-                $inputValid = $false
+        if ($SourceVMName -notin $guests.Name) {
+            do {
+                $VMSourceName = Read-Host 'Type the name of the VM to clone'
             }
-            if (-not $inputValid) {
-                Write-Host ("Must be a number in the range 0 to " + ($guests.Count - 1).ToString() + ". Try again.")
-            }
-        } while (-not $inputValid)
-        
+            until ($guests.Name -contains $VMSourceName)
+        }
+        $SourceVM = Get-VM -Name $VMSourceName
+        if ($null -eq $SourceVM) {
+            Write-Error -Message "No VM found with the name '$VMSourceName'."
+            return
+        }
         # Check the VM is powered off
-        if($guests[$chosenVM].PowerState -ne "PoweredOff") {
+        if($SourceVM.PowerState -ne "PoweredOff") {
             Throw "ERROR: VM must be powered off before cloning"
         }
         
         # Get VM's datastore, directory and VMX; we assume this is at /vmfs/volumes
-        If(-not ($guests[$chosenVM].ExtensionData.Config.Files.VmPathName -match '\[(.*)\] ([^\/]*)\/(.*)')) {
+        If(-not ($SourceVM.ExtensionData.Config.Files.VmPathName -match '\[(.*)\] ([^\/]*)\/(.*)')) {
             Throw "ERROR: Could not calculate the datastore"
         }
         $VMdatastore = $Matches[1]
         $VMdirectory = $Matches[2]
         $VMXlocation = ("/vmfs/volumes/" + $VMdatastore + "/" + $VMdirectory + "/" + $Matches[3])
-        $VMdisks     = $guests[$chosenVM] | Get-HardDisk
+        $VMdisks     = $SourceVM | Get-HardDisk
         
         
         ###############################
@@ -205,7 +212,7 @@ function Clone-MGMTVMwareESXiVM {
         Get-SFTPSession | Remove-SFTPSession | Out-Null
         
         # Start a new SFTP session
-        (New-SFTPSession -Computername $ESXiHost -Credential $ESXICredential -Acceptkey -Force -WarningAction SilentlyContinue) | Out-Null
+        (New-SFTPSession -Computername $SourceEsxiHost -Credential $ESXICredential -Acceptkey -Force -WarningAction SilentlyContinue) | Out-Null
         
         # Test that we can locate the VMX file
         If(-not (Test-SFTPPath -SessionId 0 -Path $VMXlocation)) {
@@ -219,7 +226,9 @@ function Clone-MGMTVMwareESXiVM {
         
         $validInput = $false
         While(-not $validInput) {
-            $newVMname = Read-Host "Enter the name of the new VM"
+            if ('' -eq $NewVMName) {
+                $NewVMName = Read-Host "Enter the name of the new VM"
+            }
             $newVMdirectory = ("/vmfs/volumes/" + $VMdatastore + "/" + $newVMname)
         
             # Check if the directory already exists
@@ -259,7 +268,7 @@ function Clone-MGMTVMwareESXiVM {
         Get-SSHSession | Remove-SSHSession | Out-Null
         
         # Connect via SSH to the VMware host
-        (New-SSHSession -Computername $ESXiHost -Credential $ESXICredential -Acceptkey -Force -WarningAction SilentlyContinue) | Out-Null
+        (New-SSHSession -Computername $SourceEsxiHost -Credential $ESXICredential -Acceptkey -Force -WarningAction SilentlyContinue) | Out-Null
         
         # Replace VM name in new VMX file
         Write-Host "Cloning the VMX file..."
@@ -317,12 +326,12 @@ function Clone-MGMTVMwareESXiVM {
         ##########
         
         # Close all connections to the ESXi host
-        Disconnect-VIServer -Server $ESXiHost -Force -Confirm:$false
+        Disconnect-VIServer -Server $SourceEsxiHost -Force -Confirm:$false
         Get-SSHSession | Remove-SSHSession | Out-Null
         Get-SFTPSession | Remove-SFTPSession | Out-Null
         
         # Return to previous directory
-        Pop-Location        
+        #Pop-Location        
     }
     
     process {
