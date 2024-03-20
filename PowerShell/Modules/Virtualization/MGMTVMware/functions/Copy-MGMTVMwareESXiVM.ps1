@@ -1,5 +1,5 @@
 function Copy-MGMTVMwareESXiVM {
-#requires -modules 'Posh-SSH','VMware.PowerCLI'
+#requires -modules 'Posh-SSH','VMware.VimAutomation.Sdk'
         <#
         
         .SYNOPSIS

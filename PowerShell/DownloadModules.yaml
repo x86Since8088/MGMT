@@ -25,3 +25,6 @@
 -
   Name: pester
   Version: Latest
+-
+  Name: VMware.*
+  CompanyName: VMware

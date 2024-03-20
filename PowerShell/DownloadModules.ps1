@@ -12,14 +12,29 @@ foreach ($EntryData in $Global:SavedModules)
         [version]$Version = $EntryData.version
     }
     else{
-        [string]$Version = "$($EntryData.version)"
+        [string]$Version = "$($EntryData.version -replace '\s','')"
     }
     if ('' -eq $Version) {[string]$Version='Latest'}
     if ('Package' -ne $EntryData.type) {
-        $FoundModules = Find-Module -Name $EntryData.name -Verbose -AllVersions
+        $FilterSBText = ""
+        foreach ($Key in $EntryData.keys) {
+            if ($Key -match '^(Name|Version)$') {}
+            else {
+                $FilterSBText += "(`$_.'$Key' -like '$($EntryData.$Key)') -and "
+            }
+        }
+        $FilterSBText = $FilterSBText -replace ' -and\s*$',''
+        if ('' -ne $FilterSBText) {
+            $FilterSB = [scriptblock]::Create($FilterSBText)
+        }
+        else {
+            $FilterSB = {$true}
+        }
+        $FoundModules = Find-Module -Name $EntryData.name -Verbose | 
+            Where-Object $FilterSB
         $FoundModuleArr+=$FoundModules
         
-        if ('Latest' -eq $EntryData.Version) {
+        if ('Latest' -eq $Version) {
             $SelectedModules = $FoundModules|
                 Sort-Object Version -Descending|
                 Select-Object -First 1
@@ -37,7 +52,22 @@ foreach ($EntryData in $Global:SavedModules)
         }
     }
     else {
-        $FoundPackages = Find-Package -Name $EntryData.name -Verbose -AllVersions | 
+        $FilterSBText = ""
+        foreach ($Key in $EntryData.keys) {
+            if ($Key -match '^(Name|Version|Type)$') {}
+            else {
+                $FilterSBText += "(`$_.'$Key' -like '$($EntryData.$Key)') -and "
+            }
+        }
+        $FilterSBText = $FilterSBText -replace ' -and\s*$',''
+        if ('' -ne $FilterSBText) {
+            $FilterSB = [scriptblock]::Create($FilterSBText)
+        }
+        else {
+            $FilterSB = {$true}
+        }
+        $FoundPackages = Find-Package -Name $EntryData.name -Verbose |
+            Where-Object $FilterSB| 
             Select-Object @{Name='Version';Expression={[version]$_.Version}},* -ErrorAction Ignore
         $FoundPackageArr+=$FoundPackages
         if ('Latest' -eq $Version) {
