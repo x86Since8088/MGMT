@@ -1,13 +1,12 @@
 $script:PSSR             = $PSScriptRoot
-$script:DataFolder       = $script:PSSR  -replace '^(\\\\.*?|.*?)\\(.*\\.*)','$1\Data\$2'
+$script:DataFolder       = $script:PSSR -replace '^(\\\\.*?|.*?)\\(.*\\.*)','$1\Data\$2'
 $script:ConfigFile       = "$script:DataFolder\Config.yaml"
 $script:MGMTFolder       = $WorkingFolder -replace "^(.*?\\MGMT).*",'$1'
 $Script:ModuleFolder     = $script:PSSR
-$script:Mycommand        = $MyInvocation.MyCommand
-$Script:ScriptName       = $Mycommand.Name
-Write-Host -Message "$($Script:ScriptName): Loading MGMT module from '$script:PSSR'" -ForegroundColor Yellow
+$Script:ScriptName       = $MyInvocation.MyCommand.Name
+Write-Verbose -Message "$($Script:ScriptName): Loading MGMT module from '$script:PSSR'" -ForegroundColor Yellow
 Write-Verbose -Message "$($Script:ScriptName): Loading individual functions from '$Script:ModuleFolder'"
-Get-ChildItem "$Script:ModuleFolder\functions\*.ps1" | ForEach-Object{
+Get-ChildItem "$Script:ModuleFolder\functions" -directory | Get-ChildItem -Filter *.ps1 | ForEach-Object{
     Write-Verbose -Message "`tLoading function $($_.Name)" 
     . $_.FullName
     Get-Content $_.FullName|
@@ -17,5 +16,3 @@ Get-ChildItem "$Script:ModuleFolder\functions\*.ps1" | ForEach-Object{
             Export-ModuleMember -Function $functionName
         }
 }
-$Global:MGMTModule = Get-MGMTConfig -ErrorAction Ignore
-Initialize-MGMTConfig
