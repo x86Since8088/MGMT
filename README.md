@@ -6,7 +6,7 @@ This is lab deployment codeset, but I'm working on making it a cross-cloud deplo
 Things to know:
 
 - Custom Modules are located under MGMT/PowerShell/Modules
-- Saved modules are located under MGMT/Sved-Modules
+- Saved modules are located under MGMT/Saved-Modules
 
 ## Todo items
 
