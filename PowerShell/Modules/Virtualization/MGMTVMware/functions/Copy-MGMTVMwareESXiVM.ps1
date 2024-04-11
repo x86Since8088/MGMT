@@ -64,7 +64,9 @@ function Copy-MGMTVMwareESXiVM {
                 Foreach-Object{[System.Management.Automation.CompletionResult]::new($_)})
         })]
         [Parameter(Mandatory = $true)]
-        [string]$Environment,
+        [string]$SourceEnvironment,
+        [string]$SourceESXiSystemName = 'VMware_ESXi',
+        [string]$SourceESXiSystemType = 'VMware_ESXi',
         [ArgumentCompleter({
             [OutputType([System.Management.Automation.CompletionResult])]
             param(
@@ -74,14 +76,45 @@ function Copy-MGMTVMwareESXiVM {
                 [System.Management.Automation.Language.CommandAst] $CommandAst,
                 [System.Collections.IDictionary] $FakeBoundParameters
             )
-            $Systems = $EnvironmentKeys|ForEach-Object{
-                Get-MGMTSystem -Environment $FakeBoundParameters['Environment'] -SystemType VMware_ESXi -SystemName VMware_ESXi
+            $Systems = $SourceEnvironmentKeys|ForEach-Object{
+                Get-MGMTSystem -Environment $FakeBoundParameters['SourceEnvironment'] -SystemType $FakeBoundParameters['SourceESXiSystemName'] -SystemName $FakeBoundParameters['SourceESXiSystemType']
             }
             return $Systems.data|ForEach-Object{$_.fqdn,$_.ip} | Where-Object { $_ -like "*$WordToComplete*" }
         })]
         [Parameter(Mandatory = $true)]
         [string]$SourceEsxiHost,
-        [string]$TargetEsxiHost,
+        [ArgumentCompleter({
+            [OutputType([System.Management.Automation.CompletionResult])]
+            param(
+                [string] $CommandName,
+                [string] $ParameterName,
+                [string] $WordToComplete,
+                [System.Management.Automation.Language.CommandAst] $CommandAst,
+                [System.Collections.IDictionary] $FakeBoundParameters
+            )
+            return ($global:MGMT_Env.config.sites.Keys | 
+                Where-Object { $_ -like "*$WordToComplete*" }|
+                Foreach-Object{[System.Management.Automation.CompletionResult]::new($_)})
+        })]
+        [Parameter(Mandatory = $true)]
+        [string]$TargetEnvironment,
+        [string]$TargetESXiSystemName = 'VMware_ESXi',
+        [string]$TargetESXiSystemType = 'VMware_ESXi',
+        [ArgumentCompleter({
+            [OutputType([System.Management.Automation.CompletionResult])]
+            param(
+                [string] $CommandName,
+                [string] $ParameterName,
+                [string] $WordToComplete,
+                [System.Management.Automation.Language.CommandAst] $CommandAst,
+                [System.Collections.IDictionary] $FakeBoundParameters
+            )
+            $Systems = $SourceEnvironmentKeys|ForEach-Object{
+                Get-MGMTSystem -Environment $FakeBoundParameters['TargetEnvironment'] -SystemType $FakeBoundParameters['TargetESXiSystemName'] -SystemName $FakeBoundParameters['TargetESXiSystemType']
+            }
+            return $Systems.data|ForEach-Object{$_.fqdn,$_.ip} | Where-Object { $_ -like "*$WordToComplete*" }
+        })]
+        [string]$TargetEsxiHost = $SourceEsxiHost,
         [pscredential]$SourceEsxiCredential = (Get-MGMTCredential -SystemType VMware_ESXi -SystemName VMware_ESXi -Scope currentuser).Credential,
         [pscredential]$TargetEsxiCredential = (Get-MGMTCredential -SystemType VMware_ESXi -SystemName VMware_ESXi -Scope currentuser).Credential,
         [string]$SourceVMName,
@@ -102,11 +135,7 @@ function Copy-MGMTVMwareESXiVM {
             $CompletionResults = [System.Collections.Generic.List[System.Management.Automation.CompletionResult]]::new($Results)
             return $CompletionResults
         })]
-        [string]$NewVMDatastore,
-        [string]$SourceESXiSystemName = 'VMware_ESXi',
-        [string]$SourceESXiSystemType = 'VMware_ESXi',
-        [string]$TargetESXiSystemName = 'VMware_ESXi',
-        [string]$TargetESXiSystemType = 'VMware_ESXi'
+        [string]$NewVMDatastore
     )
     
     begin {
@@ -146,7 +175,7 @@ function Copy-MGMTVMwareESXiVM {
         Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Confirm:$false | Out-Null
         
         # Connect to ESXi systems in the environment.
-        $ESXISystems = Get-MGMTSystem -Environment $Environment -SystemType VMware_ESXi -SystemName VMware_ESXi
+        $ESXISystems = Get-MGMTSystem -Environment $SourceEnvironment -SystemType VMware_ESXi -SystemName VMware_ESXi
         Connect-VIServer -Force -Server $ESXISystems.data.ip -Credential $ESXMGMTCredential.credential
         If(-not $?) {
             Throw "Connection to ESXi failed. If password issue, delete $credsFile and try again."
@@ -302,6 +331,7 @@ function Copy-MGMTVMwareESXiVM {
         
             # Clone the disk
             $command = ('/bin/vmkfstools -i "' + $oldDisk + '" -d thin "' + $newDisk + '"')
+
             Write-Host "Cloning disk $oldDisk to $newDisk with command:"
             Write-Host $command
             # Set a timeout of 10 minutes/600 seconds for the disk to clone
@@ -310,6 +340,9 @@ function Copy-MGMTVMwareESXiVM {
             
         }
         
+        if ($SourceEsxiHost -ne $TargetEsxiHost) {
+            
+        }
         
         ########################
         ## Register the clone ##
