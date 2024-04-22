@@ -10,6 +10,8 @@ function Initialize-MGMTConfig {
     if ($null -eq $global:MGMT_Env.config) {
         $global:MGMT_Env.config = [hashtable]::Synchronized(@{})
     }
+    # This is not a key, but instead it is only part of the formation of keys.
+    # Following key material will be stored outside of this working folder in locations suitable for per system or per user use.
     [byte[]]$Shard = 0,11,159,136,217,167,1,185,196,169,243,35,234,88,147,217,223,229,80,38,100,181,255,250,223,177,45,128,109,107,253,110
     # Define the credentials for each site hosts.
     Set-SyncHashtable -InputObject $global:MGMT_Env -Name Config

@@ -2,7 +2,7 @@
 function Get-MGMTVMwareVM {
     [cmdletbinding()]
     param(
-        $Server,
+        [string[]]$Server,
         [pscredential]$Credential,
         [ArgumentCompleter({
             [OutputType([System.Management.Automation.CompletionResult])]
@@ -13,18 +13,30 @@ function Get-MGMTVMwareVM {
                 [System.Management.Automation.Language.CommandAst] $CommandAst,
                 [System.Collections.IDictionary] $FakeBoundParameters
             )
-            $ConnectVMHostPatams = @{}
-            if ($null -ne $FakeBoundParameters['Server']) {
-                Connect-MGMTViserver -Server $FakeBoundParameters['Server'] -Credential $FakeBoundParameters['Credential']
+            [string[]]$Server = $FakeBoundParameters['Server']
+            [string]$Regex = $FakeBoundParameters['Regex']
+            if ($null -eq $global:DefaultVIServers) {
+                $UnconnectedServers = $Server
             }
-            $CompletionResults = [System.Collections.Generic.List[System.Management.Automation.CompletionResult]]::new()
-            Get-VM -VMHost $VMHost -VMHostCredential $VMHostCredential | ForEach-Object {
-                $CompletionResults.Add([System.Management.Automation.CompletionResult]::new($_.Name, $_.Name, 'ParameterValue', $_.Name))
+            else {
+                $UnconnectedServers = $Server | 
+                    Where-Object { $_ -notin $global:DefaultVIServers.Name }
             }
-            
+            foreach ($UnconnectedServer in $UnconnectedServers) {
+                Connect-MGMTViserver -Server $UnconnectedServer -Credential $FakeBoundParameters['Credential']
+            }
+            $params = @{}
+            if ($Server.count -gt 0) {
+                $params['Server'] = $Server
+            }
+            $CompletionResults = Get-VM @params | 
+                Where-Object {$_.Name -match $Regex}| 
+                Where-Object { $_.Name -like "$WordToComplete*" } | 
+                ForEach-Object { [System.Management.Automation.CompletionResult]::new($_.Name, $_.Name, 'ParameterValue', $_.Name) }
             return $CompletionResults
         })]
-        $VMName
+        $VMName,
+        [string]$Regex = '.'
     )
     begin{
         $Params = @{}
@@ -34,7 +46,8 @@ function Get-MGMTVMwareVM {
                 $Params['Credential'] = $Credential
             }
         }
-        Get-VM -Name $VMNamn @Params
+        Get-VM -Name $VMName @Params | 
+            Where-Object { $_.Name -match $Regex }
     }
     process{}
 }
