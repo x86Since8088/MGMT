@@ -4,7 +4,7 @@ function Test-MGMTConfig {
     )
     begin {
         [string]$PSSCR                  = $PSScriptRoot
-        [string]$MGMTFolder             = $PSSCR -replace '\\MGMT\\.*','\MGMT'
+        [string]$MGMTFolder             = $PSSCR -replace '[/\\]GMT[/\\]*','\MGMT'
         [string]$ModuleFolder           = $MGMTFolder + '\PowerShell\Modules'
         [string]$SavedModulesFolder     = $MGMTFolder + 'PowerShell\SavedModules'
         [string]$FunctionName           = $MyInvocation.MyCommand.Name

@@ -1,7 +1,7 @@
 $script:PSSR            = $PSScriptRoot
-$script:DataFolder      = $script:PSSR  -replace '^(\\\\.*?|.*?)\\(.*\\.*)','$1\Data\$2'
+$script:DataFolder      = $script:PSSR  -replace '^([/\\]\.*?|.*?)[/\\](.*[/\\]*)','$1\Data\$2'
 $script:ConfigFile      = "$script:DataFolder\Config.yaml"
-$script:MGMTFolder      = $WorkingFolder -replace "^(.*?\\MGMT).*",'$1'
+$script:MGMTFolder      = $WorkingFolder -replace "^(.*?[/\\]MGMT).*",'$1'
 $Script:ModuleFolder    = $script:PSSR
 $Script:Mycommand       = $MyInvocation.MyCommand
 $Script:ScriptName      = $Script:Mycommand.Name

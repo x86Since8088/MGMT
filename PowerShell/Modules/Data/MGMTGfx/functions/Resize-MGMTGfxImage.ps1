@@ -36,7 +36,7 @@ function Resize-MGMTGfxImage {
             }
         }
         if ('' -eq $newOutputPath) {
-            $newOutputPath = $ImagePath -replace '\.\w+$', "_resized_$($newWidth)x$($newHeight)_$($image.RawFormat.ToString().ToLower())" -replace '(^.*[\\/])(.*)',"`$1$Prefix`$2"
+            $newOutputPath = $ImagePath -replace '\.\w+$', "_resized_$($newWidth)x$($newHeight)_$($image.RawFormat.ToString().ToLower())" -replace '(^.*[[/\\]])(.*)',"`$1$Prefix`$2"
         }
         if ((Test-Path $newOutputPath) -and !$force) {
             Write-Warning -Message "Resize-MGMTGfxImage: Skipping existing output file '$newOutputPath'"
