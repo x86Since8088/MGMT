@@ -28,3 +28,6 @@
 -
   Name: VMware.*
   CompanyName: VMware
+-
+  Name: powershell-yaml
+  Version: Latest
