@@ -1,11 +1,11 @@
 function Initialize-MGMTConfig {
     if ($env:USERPROFILE -notmatch '\w') {$env:USERPROFILE = "~"}
-    if ($env:appdata -notmatch '\w') {$env:appdata = "$env:USERPROFILE\AppData\Roaming"}
-    if ($env:localappdata -notmatch '\w') {$env:localappdata = "$env:USERPROFILE\AppData\Local"}
+    if ($env:appdata -notmatch '\w') {$env:appdata = "$env:USERPROFILE/AppData/Roaming"}
+    if ($env:localappdata -notmatch '\w') {$env:localappdata = "$env:USERPROFILE/AppData/Local"}
     if ($null -eq $global:MGMT_Env) {$global:MGMT_Env = [hashtable]::Synchronized(@{})}
     Set-SyncHashtable -InputObject $global:MGMT_Env -Name Auth
     Set-SyncHashtable -InputObject $global:MGMT_Env.Auth -Name SystemType
-    $script:ConfigFile                                = "$script:Datafolder\config.yaml"
+    $script:ConfigFile                                = "$script:Datafolder/config.yaml"
                                                         Split-Path $script:ConfigFile | 
                                                             Where-Object{-not (test-path $_)}|
                                                             ForEach-Object{new-item -ItemType Directory -Path $_ -Force}

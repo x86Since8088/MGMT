@@ -1,7 +1,11 @@
 function Save-MGMTCredential {
     $Authsave = Import-MGMTYAML -LiteralPath $global:MGMT_Env.AuthFile
     if ($null -eq $Authsave) {$Authsave = @{}}
-    [byte[]]$Ukey = Merge-MGMTByteArray -ByteArray1 $global:MGMT_Env.Key -ByteArray2 $global:MGMT_Env.UShard
+    $UShard = $global:MGMT_Env.UShard
+    if ($UShard -is [string]) {
+        $UShard = ConvertFrom-MGMTBase64 -Base64 $UShard
+    }
+    [byte[]]$Ukey = Merge-MGMTByteArray -ByteArray1 $global:MGMT_Env.Key -ByteArray2 $UShard
     foreach($SystemTypeKey in $global:MGMT_Env.Auth.SystemType.keys) {
         $AuthSave.($SystemTypeKey) = @{}
         foreach ($obj in ($global:MGMT_Env.Auth.SystemType.($SystemTypeKey).GetEnumerator()|Where-Object{$null -ne $_.Value})) {

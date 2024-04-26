@@ -65,6 +65,11 @@ function Get-MGMTShardFileValue {
                 write-error -Message "The data under key '$KeyName' was not the correct length."
             }
         }
+        foreach ($KeyName in ($Data.keys)) {
+            if ($Data[$KeyName] -is [string]) {
+                $Data[$KeyName] = [byte[]](ConvertFrom-MGMTBase64 -Base64 $Data[$KeyName] -encoding byte)
+            }
+        }
         return $Data
     }
 }
@@ -93,8 +98,9 @@ function Export-MGMTShard {
             $Keys = $KeyName
         }
         foreach($key in $Keys){
-            if ($ToFile[$key] -is [byte[]]) {}
-            elseif ($ToFile[$key] -is [int[]]) {}
+            if ($ToFile[$key] -is [byte[]]) {ConvertTo-MGMTBase64 -Bytes $ToFile[$key]}
+            elseif ($ToFile[$key][0] -is [int32]) {ConvertTo-MGMTBase64 -Bytes $ToFile[$key]}
+            elseif (($ToFile[$key].count -gt 1) -and -not ($ToFile[$key]|Where-Object{$_ -match '\D'})) {ConvertTo-MGMTBase64 -Bytes $ToFile[$key]}
             elseif ($ToFile[$key] -is [string]) {
                 $test = ConvertFrom-MGMTBase64 -Base64 $ToFile[$key]
                 if ($null -eq $test) {
