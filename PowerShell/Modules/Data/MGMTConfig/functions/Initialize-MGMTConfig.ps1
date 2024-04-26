@@ -9,6 +9,9 @@ function Initialize-MGMTConfig {
                                                         Split-Path $script:ConfigFile | 
                                                             Where-Object{-not (test-path $_)}|
                                                             ForEach-Object{new-item -ItemType Directory -Path $_ -Force}
+                                                        $script:ConfigFile | 
+                                                            Where-Object{-not (test-path $_)}|
+                                                            ForEach-Object{Set-MGMTConfig}
     $Global:MGMT_Env.AuthFile                         = "$env:appdata\powershell\MGMTConfig\auth.yaml"
                                                         Split-Path $Global:MGMT_Env.AuthFile | 
                                                             Where-Object{-not (test-path $_)}|
