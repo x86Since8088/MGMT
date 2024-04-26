@@ -1,7 +1,7 @@
 #requires -modules MGMTConfig
 $script:PSSR             = $PSScriptRoot
-$script:DataFolder       = $script:PSSR  -replace '^([/\\]\.*?|.*?)[/\\](.*[/\\]*)','$1\Data\$2'
-$script:MGMTFolder       = $WorkingFolder -replace "^(.*?[/\\]MGMT).*",'$1'
+$script:MGMTFolder       = $script:PSSR -replace "^(.*?[/\\]MGMT).*",'$1'
+$script:DataFolder       = $script:PSSR.replace($script:MGMTFolder,"$($script:MGMTFolder)-data")
 $Script:ModuleFolder     = $script:PSSR
 $Script:ScriptName       = $MyInvocation.MyCommand.Name
 Write-Verbose -Message "$($Script:ScriptName): Loading MGMT module from '$script:PSSR'"
