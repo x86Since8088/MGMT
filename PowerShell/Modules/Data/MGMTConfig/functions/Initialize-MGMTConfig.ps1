@@ -18,8 +18,11 @@ function Initialize-MGMTConfig {
                                                             ForEach-Object{new-item -ItemType Directory -Path $_ -Force}
                                                         Set-SyncHashtable -InputObject $global:MGMT_Env -Name config
     $global:MGMT_Env.config                           = Get-MGMTConfig
+    [bool]$Changed = $false
     if ($null -eq $global:MGMT_Env.config) {
+        Write-Warning -Message "The configuration file '$script:ConfigFile' is missing or corrupt.  Creating..."
         $global:MGMT_Env.config = [hashtable]::Synchronized(@{})
+        $Changed = $true
     }
     # This is not a key, but instead it is only part of the formation of keys.
     # Following key material will be stored outside of this working folder in locations suitable for per system or per user use.
@@ -27,16 +30,19 @@ function Initialize-MGMTConfig {
     # Define the credentials for each site hosts.
     Set-SyncHashtable -InputObject $global:MGMT_Env -Name Config
     Set-SyncHashtable -InputObject $global:MGMT_Env.config -Name Crypto
-    if ($null -eq $global:MGMT_Env.Config.Crypto.salt ) {$global:MGMT_Env.Config.Crypto.salt  = Get-MGMTRandomBytes -ByteLength 16}
-    if ($null -eq $global:MGMT_Env.Config.Crypto.iv   ) {$global:MGMT_Env.Config.Crypto.iv    = Get-MGMTRandomBytes -ByteLength 16}
-    if ($null -eq $global:MGMT_Env.Config.Crypto.key  ) {$global:MGMT_Env.Config.Crypto.key   = Get-MGMTRandomBytes -ByteLength 32}
-    if ($null -eq $global:MGMT_Env.config.Crypto.Shard) {$global:MGMT_Env.config.Crypto.Shard = Get-MGMTRandomBytes -ByteLength 32}
+    if ($null -eq $global:MGMT_Env.Config.Crypto.salt ) {$global:MGMT_Env.Config.Crypto.salt  = ConvertTo-MGMTBase64 -Bytes (Get-MGMTRandomBytes -ByteLength 8);$Changed=$true}
+    if ($null -eq $global:MGMT_Env.Config.Crypto.iv   ) {$global:MGMT_Env.Config.Crypto.iv    = ConvertTo-MGMTBase64 -Bytes (Get-MGMTRandomBytes -ByteLength 16);$Changed=$true}
+    if ($null -eq $global:MGMT_Env.Config.Crypto.key  ) {$global:MGMT_Env.Config.Crypto.key   = ConvertTo-MGMTBase64 -Bytes (Get-MGMTRandomBytes -ByteLength 32);$Changed=$true}
+    if ($null -eq $global:MGMT_Env.config.Crypto.Shard) {$global:MGMT_Env.config.Crypto.Shard = ConvertTo-MGMTBase64 -Bytes (Get-MGMTRandomBytes -ByteLength 32);$Changed=$true}
     [string[]]$Keys = $global:MGMT_Env.config.Crypto.keys
     foreach ($key in $keys) {
         if ($null -eq $global:MGMT_Env.config.Crypto.$key) {}
         elseif ($global:MGMT_Env.config.Crypto.$key.count  -gt 1) {}
         elseif ($global:MGMT_Env.config.Crypto.$key.gettype().name  -match '^(list|int|byte)') {}
-        else {$global:MGMT_Env.config.Crypto.$key = ConvertFrom-MGMTBase64 -Base64 $global:MGMT_Env.config.Crypto.$key}
+        else {
+            $global:MGMT_Env.config.Crypto.$key = ConvertFrom-MGMTBase64 -Base64 $global:MGMT_Env.config.Crypto.$key
+            $Changed=$true
+        }
     }
 
     $global:MGMT_Env.Key = Merge-MGMTByteArray -ByteArray1 $global:MGMT_Env.config.Crypto.Shard -ByteArray2 $shard -Length 32
@@ -45,7 +51,9 @@ function Initialize-MGMTConfig {
     $UserShard = Get-MGMTShardFileValue -LiteralPath $UserKeyRingFile -KeyName 'UShard' -KeyLength 32 
     Backup-MGMTFile -Path $UserKeyRingFile
     $global:MGMT_Env.UShard = $UserShard.UShard
-    Save-MGMTConfig -Force
+    if ($Changed) {
+        Save-MGMTConfig -Verify:$False -Force 
+    }
     Import-MGMTCredential
     foreach ($SiteKey in $global:MGMT_Env.config.sites.keys) {
         $SystemTypes = $global:MGMT_Env.config.sites.($SiteKey).SystemTypes
@@ -68,10 +76,10 @@ function Initialize-MGMTConfig {
                     if ($null -eq $Cred) {
                         Write-Host "MISSING" -ForegroundColor Red -BackgroundColor Black
                         write-warning "Set-MGMTCredential -SystemType $SystemTypeKey -SystemName $($SystemNameKey) -Credential (get-Credential) -Scope currentuser" 
-                     }
-                     else {
+                    }
+                    else {
                         Write-Host "OK" -ForegroundColor Green -BackgroundColor Black
-                     }
+                    }
                 }
             }
         }
