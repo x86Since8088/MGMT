@@ -1,7 +1,6 @@
 $script:PSSR             = $PSScriptRoot
 $script:MGMTFolder       = $script:PSSR -replace "^(.*?[/\\]MGMT).*",'$1'
 $script:DataFolder       = $script:PSSR.replace($script:MGMTFolder,"$($script:MGMTFolder)-data")
-$script:ConfigFile       = "$script:DataFolder\Config.yaml"
 $Script:ModuleFolder     = $script:PSSR
 $script:Mycommand        = $MyInvocation.MyCommand
 $Script:ScriptName       = $Mycommand.Name

@@ -1,7 +1,6 @@
 $script:PSSR             = $PSScriptRoot
 $script:MGMTFolder       = $script:PSSR -replace "^(.*?[/\\]MGMT).*",'$1'
 $script:DataFolder       = $script:PSSR.replace($script:MGMTFolder,"$($script:MGMTFolder)-data")
-$script:ConfigFile       = "$script:DataFolder\Config.yaml"
 $Script:ModuleFolder     = $script:PSSR
 $Script:ScriptName       = $MyInvocation.MyCommand.Name
 Write-Verbose -Message "$($Script:ScriptName): Loading MGMT module from '$script:PSSR'"

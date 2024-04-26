@@ -6,8 +6,13 @@ function Initialize-MGMTConfig {
     Set-SyncHashtable -InputObject $global:MGMT_Env -Name Auth
     Set-SyncHashtable -InputObject $global:MGMT_Env.Auth -Name SystemType
     $script:ConfigFile                                = "$Datafolder\config.yaml"
+                                                        Split-Path $script:ConfigFile | 
+                                                            Where-Object{-not (test-path $_)}|
+                                                            ForEach-Object{new-item -ItemType Directory -Path $_ -Force}
     $Global:MGMT_Env.AuthFile                         = "$env:appdata\powershell\MGMTConfig\auth.yaml"
-    split-path $Global:MGMT_Env.AuthFile | Where-Object {if (-not (test-path $_)) {new-item -ItemType Directory -Path $_ -Force}}
+                                                        Split-Path $Global:MGMT_Env.AuthFile | 
+                                                            Where-Object{-not (test-path $_)}|
+                                                            ForEach-Object{new-item -ItemType Directory -Path $_ -Force}
                                                         Set-SyncHashtable -InputObject $global:MGMT_Env -Name config
     $global:MGMT_Env.config                           = Get-MGMTConfig
     if ($null -eq $global:MGMT_Env.config) {
