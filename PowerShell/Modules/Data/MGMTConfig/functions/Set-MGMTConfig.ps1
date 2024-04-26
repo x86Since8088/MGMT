@@ -16,9 +16,9 @@ function Set-MGMTConfig {
         }
         if ($null -eq $Global:MGMT_Env)                                 {
                                                                             Write-Warning -Message "The configuration file '$script:ConfigFile' is missing or corrupt."
-                                                                            $Global:MGMT_Env = [hashtable]::Synchronized(@());$Changed=$true
+                                                                            $Global:MGMT_Env = [hashtable]::Synchronized(@{});$Changed=$true
                                                                         }
-        if ($null -eq $Global:MGMT_Env.config)                          {$Global:MGMT_Env.config = [hashtable]::Synchronized(@());$Changed=$true}
+        if ($null -eq $Global:MGMT_Env.config)                          {$Global:MGMT_Env.config = [hashtable]::Synchronized(@{});$Changed=$true}
         if ($ParamName -notmatch '\w')                                  {}
         elseif ($null -ne $ParamValue)                                  {
                                                                             Set-MGMTDataObject -InputObject $Global:MGMT_Env -Name $ParamName -Value $ParamValue
