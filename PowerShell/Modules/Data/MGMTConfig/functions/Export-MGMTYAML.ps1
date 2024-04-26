@@ -1,3 +1,4 @@
+# Requires -Module powershell-yaml
 Function Export-MGMTYAML {
     [cmdletbinding()]
     param (
@@ -24,6 +25,8 @@ Function Export-MGMTYAML {
         [string]$Encoding = 'utf8',
         [switch]$Verify
     )
+    begin {
+    }
     process {
         $YAML = $InputObject|
             ConvertTo-Yaml
