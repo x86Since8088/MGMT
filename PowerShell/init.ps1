@@ -18,5 +18,6 @@ $AddModulePath|
             Write-Warning -Message "Module path '$_' does not exist."
         }
     }
+Import-Module "$MGMTFolder\PowerShell\SavedModules\powershell-yaml" -DisableNameChecking
 Remove-Module -Name MGMTConfig -ErrorAction Ignore -Force
 Import-Module "$MGMTFolder\PowerShell\Modules\Data\MGMTConfig" -DisableNameChecking 
