@@ -45,7 +45,7 @@ function Initialize-MGMTConfig {
         }
     }
 
-    $global:MGMT_Env.Key = Merge-MGMTByteArray -ByteArray1 (ConvertFrom-MGMTBase64 -Base64 $global:MGMT_Env.config.Crypto.Shard) -ByteArray2 $shard -Length 32
+    $global:MGMT_Env.Key = Merge-MGMTByteArray -ByteArray1 $global:MGMT_Env.config.Crypto.Shard -ByteArray2 $shard -Length 32
     $UserKeyRingFile = "$env:appdata\powershell\MGMTConfig\keyring.yaml"
     split-path $UserKeyRingFile|Where-Object{!(test-path $_)}|ForEach-Object{new-item -ItemType Directory -Path $_ -Force|Out-Null} 
     $UserShard = Get-MGMTShardFileValue -LiteralPath $UserKeyRingFile -KeyName 'UShard' -KeyLength 32 
