@@ -1,6 +1,9 @@
 
 # Welcome to the MGMT Repo
 
+## Not all scripts in this repository work.  The powershell modules should be functional in most environments.  
+Please submit an issue if you have questions.  Thanks!
+
 This is lab deployment codeset, but I'm working on making it a cross-cloud deployment environment.
 
 Things to know:
