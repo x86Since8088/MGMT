@@ -1,7 +1,7 @@
 function ConvertFrom-MGMTBase64 {
     [CmdletBinding()]
     param (
-        [Parameter(Mandatory = $false)]
+        [Parameter(Mandatory = $false,ValueFromPipeline)]
         [string]$Base64,
         [string]$encoding
     )
